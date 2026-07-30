@@ -1,0 +1,56 @@
+{
+  "startedAt": "2026-07-30T19:56:24.787Z",
+  "durationMs": 4394,
+  "browser": "Google Chrome headless via Chrome DevTools Protocol",
+  "baseUrl": "http://127.0.0.1:4182",
+  "checks": [
+    {
+      "name": "Home carregada com main, h1, navegação principal e rodapé do repositório",
+      "passed": true
+    },
+    {
+      "name": "Navegação para /filie-se",
+      "passed": true
+    },
+    {
+      "name": "Retorno à Home",
+      "passed": true
+    },
+    {
+      "name": "Navegação para /area-do-filiado",
+      "passed": true
+    },
+    {
+      "name": "Rota inexistente apresenta 404 amigável",
+      "passed": true
+    },
+    {
+      "name": "Menu mobile abre e recebe foco",
+      "passed": true
+    },
+    {
+      "name": "Menu mobile fecha por Escape e restaura foco",
+      "passed": true
+    },
+    {
+      "name": "Console, erros de página e recursos essenciais sem falhas",
+      "passed": true
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "consoleWarnings": [],
+  "resourceFailures": [],
+  "previewOutput": [
+    "  \u001b[32m➜\u001b[39m  \u001b[1mLocal\u001b[22m:   \u001b[36mhttp://127.0.0.1:\u001b[1m4182\u001b[22m/\u001b[39m\n"
+  ],
+  "previewErrors": [],
+  "browserOutput": [],
+  "browserDiagnostics": [
+    "\r\nDevTools listening on ws://127.0.0.1:9334/devtools/browser/d30e4664-9c28-41ea-adbf-4d56f6991649\r\n",
+    "[18428:22896:0730/155627.870:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT\r\n",
+    "[18428:22896:0730/155627.920:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n"
+  ],
+  "passed": true,
+  "failure": null
+}

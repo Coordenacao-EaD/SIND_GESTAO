@@ -12,6 +12,9 @@ interface ImportantDocumentsSectionProps {
 export function ImportantDocumentsSection({ state, onRetry }: ImportantDocumentsSectionProps) {
   return (
     <section className={styles.section} aria-labelledby="documents-title">
+      {state.status !== "ready" ? (
+        <h2 id="documents-title" className="visually-hidden">Documentos Importantes</h2>
+      ) : null}
       {state.status === "loading" ? <SectionLoading label="Carregando documentos..." /> : null}
       {state.status === "error" ? <SectionError message={state.message} onRetry={onRetry} /> : null}
       {state.status === "empty" ? (

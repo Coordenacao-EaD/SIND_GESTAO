@@ -15,7 +15,9 @@ export function RecentNoticesSection({ state, onRetry }: RecentNoticesSectionPro
     <section className={styles.section} aria-labelledby="recent-notices-title">
       <div className={styles.header}>
         <h2 id="recent-notices-title">Comunicados Recentes</h2>
-        <Link to={ROUTES.notices}>Ver todas</Link>
+        {state.status === "ready" && state.data.length > 0 ? (
+          <Link to={ROUTES.notices} aria-label="Ver todos os comunicados">Ver todas</Link>
+        ) : null}
       </div>
       {state.status === "loading" ? <SectionLoading label="Carregando comunicados..." /> : null}
       {state.status === "error" ? <SectionError message={state.message} onRetry={onRetry} /> : null}

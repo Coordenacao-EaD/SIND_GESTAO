@@ -1,17 +1,11 @@
 import { Outlet } from "react-router-dom";
 import { ErrorBoundary } from "../../app/ErrorBoundary";
-import { SITE_FOOTER } from "../../config/site";
 import { SiteHeader } from "./SiteHeader";
-import { SiteFooter } from "./SiteFooter";
 
 /**
- * Shared chrome for every route: header, routed content, footer.
- *
- * Footer content is institutional/static (logo, contact, social links) and
- * does not depend on which page is active, so it is sourced directly from
- * the Home mock for this phase rather than round-tripping through
- * HomeRepository. When a site-wide content source exists, this becomes the
- * seam to swap it out — no page component needs to change.
+ * Shared chrome for every route. Page-owned content, including the Home
+ * footer, stays inside the routed component so it uses that route's data
+ * source instead of a parallel configuration.
  */
 export function AppLayout() {
   return (
@@ -23,7 +17,6 @@ export function AppLayout() {
       <ErrorBoundary>
         <Outlet />
       </ErrorBoundary>
-      <SiteFooter data={SITE_FOOTER} />
     </div>
   );
 }

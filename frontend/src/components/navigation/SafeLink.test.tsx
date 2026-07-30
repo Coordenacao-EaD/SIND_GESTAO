@@ -19,7 +19,7 @@ describe("SafeLink", () => {
         <SafeLink href="https://example.org/comunicado">Comunicado</SafeLink>
       </MemoryRouter>,
     );
-    const link = screen.getByRole("link", { name: "Comunicado" });
+    const link = screen.getByRole("link", { name: /Comunicado.*abre em uma nova aba/ });
     expect(link).toHaveAttribute("target", "_blank");
     expect(link).toHaveAttribute("rel", "noopener noreferrer");
   });

@@ -48,7 +48,9 @@ export function LatestNewsSection({ state, onRetry }: LatestNewsSectionProps) {
     <section className={styles.section} aria-labelledby="latest-news-title">
       <div className={styles.header}>
         <h2 id="latest-news-title">Últimas Notícias</h2>
-        <Link to={ROUTES.news}>Ver todas</Link>
+        {state.status === "ready" && state.data.length > 0 ? (
+          <Link to={ROUTES.news} aria-label="Ver todas as notícias">Ver todas</Link>
+        ) : null}
       </div>
       {state.status === "loading" ? <SectionLoading label="Carregando notícias..." /> : null}
       {state.status === "error" ? <SectionError message={state.message} onRetry={onRetry} /> : null}

@@ -8,8 +8,10 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
+    "audit:a11y": "vitest run src/pages/home/HomePage.accessibility.test.tsx && node scripts/accessibility-audit.mjs",
     "typecheck": "tsc -b",
     "test": "vitest run",
+    "test:e2e": "node e2e/home.spec.ts",
     "test:watch": "vitest"
   },
   "dependencies": {
@@ -26,6 +28,7 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
+    "axe-core": "4.12.1",
     "jsdom": "^29.1.1",
     "oxlint": "^1.71.0",
     "typescript": "~6.0.2",

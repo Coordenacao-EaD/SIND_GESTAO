@@ -25,6 +25,8 @@ interface QuickLinksSectionProps {
 }
 
 export function QuickLinksSection({ links }: QuickLinksSectionProps) {
+  if (links.length === 0) return null;
+
   return (
     <section className={styles.section} aria-label="Atalhos rápidos">
       <nav className={styles.grid} aria-label="Acesso rápido aos serviços">

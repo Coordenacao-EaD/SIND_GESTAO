@@ -22,12 +22,15 @@
 }
 
 .action {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
   justify-self: start;
   margin-top: 18px;
   padding: 8px 13px;
-  border: 1px solid var(--color-gold);
+  border: 1px solid var(--color-gold-deep);
   border-radius: 4px;
-  color: var(--color-gold-dark);
+  color: var(--color-gold-deep);
   font-size: 0.76rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -36,5 +39,22 @@
 .action:hover,
 .action:focus-visible {
   background: var(--color-gold-bright);
-  color: var(--color-white);
+  color: var(--color-text);
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 14px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+  }
+
+  .rule {
+    margin-bottom: 10px;
+  }
+
+  .action {
+    margin-top: 12px;
+  }
 }

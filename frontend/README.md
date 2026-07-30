@@ -2,7 +2,15 @@
 
 Frontend público do SINDGESTÃO, construído em **React 19 + TypeScript (strict) + Vite**. Esta etapa entrega **apenas a Página Inicial** (rota `/`); as demais rotas existem como páginas "Em construção" para que nenhum link do cabeçalho/rodapé fique quebrado.
 
-> **Esta etapa não possui backend, banco de dados, autenticação real, tokens, cookies ou qualquer chamada de rede.** Todos os dados vêm de um repositório mock local (`HomeMockRepository`), resolvido de forma assíncrona apenas para simular o formato de uma futura API.
+> **Esta etapa não possui backend, banco de dados, autenticação real, tokens, cookies ou chamada de API para dados da Home.** Todo o conteúdo visível da Home, inclusive o rodapé, vem do `HomeMockRepository`; os assets são locais. Requisições do navegador para carregar os próprios arquivos da aplicação não são integrações de API.
+
+## Limites da F1
+
+A F1 inclui a Página Inicial pública, componentes React, TypeScript estrito, rotas públicas, mocks tipados, estados de carregamento/vazio/erro, acessibilidade, responsividade, testes e assets locais.
+
+Não fazem parte desta fase: backend, API, banco, autenticação, autorização, painel administrativo, formulários funcionais, upload, persistência, publicação, revisão ou gestão real de conteúdo.
+
+Os botões **Filie-se** e **Área do Filiado** apenas navegam para `/filie-se` e `/area-do-filiado`. A Home não cria conta, não efetiva filiação, não autentica, não coleta documentos e não persiste dados pessoais.
 
 ## Como instalar
 
@@ -66,7 +74,7 @@ Usa **Vitest** + **React Testing Library** + **jsdom**. Os testes cobrem: render
 src/
 ├── app/                 # App raiz, roteador (createBrowserRouter) e ErrorBoundary global
 ├── config/routes.ts     # Único lugar com as strings de rota (ROUTES)
-├── components/layout/   # SiteHeader, SiteFooter, AppLayout (chrome compartilhado)
+├── components/layout/   # SiteHeader, SiteFooter e AppLayout
 ├── pages/
 │   ├── home/            # Tudo relacionado à Página Inicial
 │   │   ├── HomePage.tsx         # Componente de rota: usa useHomePage()
@@ -107,7 +115,7 @@ new HomeMockRepository("empty-documents"); // sem documentos
 new HomeMockRepository("partial-error");   // erro só na seção de comunicados
 ```
 
-Um item de notícia no cenário `"default"` aponta para uma imagem inexistente propositalmente, validando o fallback visual de imagem quebrada.
+O fallback acessível de imagens é validado nos testes por meio da simulação do evento de erro; os assets do cenário padrão permanecem locais.
 
 ## Onde estão os mocks
 
@@ -122,6 +130,14 @@ Um item de notícia no cenário `"default"` aponta para uma imagem inexistente p
 
 Nenhum componente de seção precisa mudar.
 
+## Documentação técnica da F1
+
+- [Segurança do frontend](./docs/SECURITY.md)
+- [Cadastro, filiação e tratamento de dados](./docs/REGISTRATION_AND_DATA.md)
+- [Prevenção de injeção SQL](./docs/SQL_INJECTION_PREVENTION.md)
+- [Política de dependências](./docs/DEPENDENCY_POLICY.md)
+- [Origem dos dados do rodapé da Home](./docs/HOME_FOOTER_DATA_FLOW.md)
+
 ## Declaração explícita
 
-Esta etapa **não possui backend, banco de dados, autenticação real, API ativa, `localStorage`/`sessionStorage`, cookies ou tokens**. Todo o conteúdo é demonstrativo.
+Esta etapa **não possui backend, banco de dados, autenticação real, API ativa, `localStorage`/`sessionStorage`, cookies ou tokens**. A Home não cria conta nem filiação, não envia formulários e não persiste dados. Seu conteúdo é demonstrativo e local.

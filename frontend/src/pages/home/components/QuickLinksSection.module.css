@@ -41,11 +41,11 @@
 .link:hover,
 .link:focus-visible {
   background: var(--color-gold-soft);
-  color: var(--color-gold-dark);
+  color: var(--color-gold-deep);
 }
 
 .icon {
-  color: var(--color-gold-bright);
+  color: var(--color-gold-deep);
 }
 
 .link span {

@@ -27,7 +27,7 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(114, 72, 0, 0.94) 0%, rgba(126, 75, 0, 0.73) 35%, rgba(30, 20, 5, 0.08) 72%);
+  background: linear-gradient(90deg, rgba(74, 45, 0, 0.96) 0%, rgba(82, 49, 0, 0.9) 50%, rgba(30, 20, 5, 0.2) 78%);
 }
 
 .content {
@@ -87,7 +87,7 @@
 .actionPrimary {
   border-color: var(--color-gold-bright);
   background: var(--color-gold-bright);
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 .actionSecondary {
@@ -107,6 +107,11 @@
   background: var(--color-gold-dark);
 }
 
+.actionPrimary:focus-visible,
+.actionSecondary:focus-visible {
+  outline-color: var(--color-white);
+}
+
 .actionSecondary:hover,
 .actionSecondary:focus-visible {
   background: rgba(255, 255, 255, 0.14);
@@ -114,7 +119,7 @@
 
 @media (max-width: 767px) {
   .hero {
-    min-height: 286px;
+    min-height: 356px;
   }
 
   .image {
@@ -122,12 +127,12 @@
   }
 
   .overlay {
-    background: linear-gradient(90deg, rgba(100, 62, 0, 0.9), rgba(83, 50, 0, 0.55) 72%, rgba(20, 12, 0, 0.2));
+    background: linear-gradient(90deg, rgba(74, 45, 0, 0.96), rgba(70, 42, 0, 0.88) 82%, rgba(20, 12, 0, 0.45));
   }
 
   .content {
     width: 100%;
-    min-height: 286px;
+    min-height: 356px;
     align-content: start;
     padding: 28px 14px 20px;
   }
@@ -145,7 +150,10 @@
   }
 
   .description {
-    display: none;
+    max-width: 310px;
+    margin-top: 10px;
+    font-size: 0.82rem;
+    line-height: 1.4;
   }
 
   .actions {
@@ -158,6 +166,6 @@
   .actionPrimary,
   .actionSecondary {
     width: 100%;
-    min-height: 40px;
+    min-height: 44px;
   }
 }

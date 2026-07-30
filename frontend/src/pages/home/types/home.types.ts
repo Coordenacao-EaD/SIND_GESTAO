@@ -103,12 +103,11 @@ export interface FooterLinkGroup {
 
 export interface FooterData {
   institutionName: string;
-  shortDescription: string;
+  shortDescription?: string;
   linkGroups: FooterLinkGroup[];
   phone: string;
   email: string;
   address: string;
-  serviceHours: string;
   socialLinks: SocialLink[];
   privacyPolicyHref: string;
   termsOfUseHref: string;

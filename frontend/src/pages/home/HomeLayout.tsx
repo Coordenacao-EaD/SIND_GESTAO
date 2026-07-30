@@ -16,7 +16,7 @@ interface HomeLayoutProps {
 
 export function HomeLayout({ data, onRetrySection }: HomeLayoutProps) {
   return (
-    <main id="conteudo" className={styles.home}>
+    <div className={styles.home}>
       <div className="container">
         <HeroSection content={data.hero} />
         <QuickLinksSection links={data.quickLinks} />
@@ -34,6 +34,6 @@ export function HomeLayout({ data, onRetrySection }: HomeLayoutProps) {
 
         <MembershipCta cta={data.membershipCta} />
       </div>
-    </main>
+    </div>
   );
 }

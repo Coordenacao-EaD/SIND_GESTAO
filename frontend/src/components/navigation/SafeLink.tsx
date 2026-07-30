@@ -50,9 +50,10 @@ export function SafeLink({
       className={className}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={ariaLabel}
+      aria-label={ariaLabel ? `${ariaLabel} (abre em uma nova aba)` : undefined}
     >
       {children}
+      {ariaLabel ? null : <span className="visually-hidden"> (abre em uma nova aba)</span>}
     </a>
   );
 }

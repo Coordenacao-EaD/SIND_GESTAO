@@ -1,0 +1,83 @@
+{
+  "method": "WCAG relative luminance calculated from CSS custom properties read from the rendered DOM",
+  "pairs": [
+    {
+      "name": "escuro sobre dourado claro",
+      "foreground": "#252525",
+      "background": "#e8ad34",
+      "ratio": 7.63,
+      "wcagAaNormalText": true
+    },
+    {
+      "name": "escuro sobre dourado escuro (hover/foco)",
+      "foreground": "#252525",
+      "background": "#c88b18",
+      "ratio": 5.23,
+      "wcagAaNormalText": true
+    },
+    {
+      "name": "dourado profundo sobre branco",
+      "foreground": "#8a5d00",
+      "background": "#fff",
+      "ratio": 5.76,
+      "wcagAaNormalText": true
+    },
+    {
+      "name": "dourado profundo sobre dourado suave",
+      "foreground": "#8a5d00",
+      "background": "#fff7e5",
+      "ratio": 5.4,
+      "wcagAaNormalText": true
+    },
+    {
+      "name": "branco sobre rodapé escuro",
+      "foreground": "#fff",
+      "background": "#2e3135",
+      "ratio": 13.07,
+      "wcagAaNormalText": true
+    }
+  ],
+  "axeIncomplete": [
+    {
+      "scenario": "home-1440x900",
+      "rule": "color-contrast",
+      "nodes": 14
+    },
+    {
+      "scenario": "home-1024x768",
+      "rule": "color-contrast",
+      "nodes": 14
+    },
+    {
+      "scenario": "home-768x1024",
+      "rule": "color-contrast",
+      "nodes": 14
+    },
+    {
+      "scenario": "home-390x844",
+      "rule": "color-contrast",
+      "nodes": 6
+    },
+    {
+      "scenario": "home-360x800",
+      "rule": "color-contrast",
+      "nodes": 6
+    },
+    {
+      "scenario": "institutional-dropdown-open",
+      "rule": "color-contrast",
+      "nodes": 14
+    },
+    {
+      "scenario": "hero-image-normal",
+      "rule": "color-contrast",
+      "nodes": 14
+    },
+    {
+      "scenario": "hero-image-fallback",
+      "rule": "color-contrast",
+      "nodes": 14
+    }
+  ],
+  "incompleteJustification": "axe-core cannot resolve final colors through CSS gradients and image overlays; screenshots and the previously validated visual measurements remain evidence for those nodes."
+}

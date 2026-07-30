@@ -53,7 +53,7 @@ figure {
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-gold);
+  outline: 3px solid var(--color-gold-deep);
   outline-offset: 3px;
 }
 

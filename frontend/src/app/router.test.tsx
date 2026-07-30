@@ -12,7 +12,9 @@ function renderAt(path: string) {
 describe("app router", () => {
   it("renders the Home page at /", async () => {
     renderAt(ROUTES.home);
-    expect(await screen.findByRole("heading", { level: 1 })).toBeInTheDocument();
+    expect(
+      await screen.findByRole("heading", { level: 1, name: "Juntos somos mais fortes." }),
+    ).toBeInTheDocument();
   });
 
   it("renders the NotFound page for an unknown route", () => {

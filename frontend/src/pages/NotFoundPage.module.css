@@ -32,7 +32,7 @@
   padding: 12px 24px;
   border-radius: var(--radius-sm);
   background: var(--color-gold);
-  color: var(--color-white);
+  color: var(--color-text);
   font-weight: 700;
 }
 

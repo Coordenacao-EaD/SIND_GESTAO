@@ -1,7 +1,7 @@
 import { Mail, MapPin, Phone } from "lucide-react";
-import { Link } from "react-router-dom";
 import logo from "../../assets/home/logo.png";
 import type { FooterData } from "../../pages/home/types/home.types";
+import { SafeLink } from "../navigation/SafeLink";
 import styles from "./SiteFooter.module.css";
 
 interface SiteFooterProps {
@@ -9,6 +9,20 @@ interface SiteFooterProps {
 }
 
 export function SiteFooter({ data }: SiteFooterProps) {
+  const linkGroups = data.linkGroups.filter(
+    (group) => group.title.trim() !== "" && group.links.length > 0,
+  );
+  const socialLinks = data.socialLinks.filter((social) => social.label.trim() !== "");
+  const phone = data.phone.trim();
+  const email = data.email.trim();
+  const address = data.address.trim();
+  const phoneDigits = phone.replace(/\D/g, "");
+  const hasValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const hasContact = phone !== "" || email !== "" || address !== "";
+  const hasLegalLinks = data.privacyPolicyHref.trim() !== "" || data.termsOfUseHref.trim() !== "";
+  const hasBottomContent =
+    data.copyrightLabel.trim() !== "" || hasLegalLinks || socialLinks.length > 0;
+
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.grid}`}>
@@ -17,57 +31,95 @@ export function SiteFooter({ data }: SiteFooterProps) {
             <img src={logo} alt="" />
             <strong>{data.institutionName}</strong>
           </div>
-          <p>{data.shortDescription}</p>
-          <ul className={styles.socialLinks} aria-label="Redes sociais">
-            {data.socialLinks.map((social) => (
-              <li key={social.id}>
-                <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
-                  <strong aria-hidden="true">{social.label.slice(0, 1)}</strong>
-                </a>
-              </li>
-            ))}
-          </ul>
+          {data.shortDescription?.trim() ? <p>{data.shortDescription}</p> : null}
+          {socialLinks.length > 0 ? (
+            <ul className={styles.socialLinks} aria-label="Redes sociais">
+              {socialLinks.map((social) => (
+                <li key={social.id}>
+                  <SafeLink href={social.href} ariaLabel={social.label}>
+                    <strong aria-hidden="true">{social.label.slice(0, 1)}</strong>
+                  </SafeLink>
+                </li>
+              ))}
+            </ul>
+          ) : null}
         </div>
 
-        {data.linkGroups.map((group) => (
+        {linkGroups.map((group) => (
           <nav key={group.title} className={styles.linkGroup} aria-label={group.title}>
             <h2>{group.title}</h2>
             <ul>
               {group.links.map((link) => (
-                <li key={`${group.title}-${link.label}`}><Link to={link.href}>{link.label}</Link></li>
+                <li key={`${group.title}-${link.label}`}>
+                  <SafeLink href={link.href}>{link.label}</SafeLink>
+                </li>
               ))}
             </ul>
           </nav>
         ))}
 
-        <address className={styles.contact}>
-          <h2>Contato</h2>
-          <ul>
-            <li><Phone aria-hidden="true" size={14} /> <a href={`tel:${data.phone.replace(/\D/g, "")}`}>{data.phone}</a></li>
-            <li><Mail aria-hidden="true" size={14} /> <a href={`mailto:${data.email}`}>{data.email}</a></li>
-            <li><MapPin aria-hidden="true" size={14} /> <span>{data.address}</span></li>
-          </ul>
-        </address>
+        {hasContact ? (
+          <address className={styles.contact}>
+            <h2>Contato</h2>
+            <ul>
+              {phone ? (
+                <li>
+                  <Phone aria-hidden="true" size={14} />{" "}
+                  {phoneDigits ? (
+                    <a href={`tel:${phoneDigits}`}>{phone}</a>
+                  ) : (
+                    <span aria-disabled="true">{phone}</span>
+                  )}
+                </li>
+              ) : null}
+              {email ? (
+                <li>
+                  <Mail aria-hidden="true" size={14} />{" "}
+                  {hasValidEmail ? (
+                    <a href={`mailto:${email}`}>{email}</a>
+                  ) : (
+                    <span aria-disabled="true">{email}</span>
+                  )}
+                </li>
+              ) : null}
+              {address ? (
+                <li>
+                  <MapPin aria-hidden="true" size={14} /> <span>{address}</span>
+                </li>
+              ) : null}
+            </ul>
+          </address>
+        ) : null}
       </div>
 
-      <div className={styles.bottom}>
-        <div className={`container ${styles.bottomInner}`}>
-          <p>{data.copyrightLabel}</p>
-          <div className={styles.bottomLinks}>
-            <Link to={data.privacyPolicyHref}>Política de Privacidade</Link>
-            <Link to={data.termsOfUseHref}>Termos de Uso</Link>
+      {hasBottomContent ? (
+        <div className={styles.bottom}>
+          <div className={`container ${styles.bottomInner}`}>
+            {data.copyrightLabel.trim() ? <p>{data.copyrightLabel}</p> : null}
+            {hasLegalLinks ? (
+              <div className={styles.bottomLinks}>
+                {data.privacyPolicyHref.trim() ? (
+                  <SafeLink href={data.privacyPolicyHref}>Política de Privacidade</SafeLink>
+                ) : null}
+                {data.termsOfUseHref.trim() ? (
+                  <SafeLink href={data.termsOfUseHref}>Termos de Uso</SafeLink>
+                ) : null}
+              </div>
+            ) : null}
+            {socialLinks.length > 0 ? (
+              <ul className={styles.mobileSocials} aria-label="Redes sociais">
+                {socialLinks.map((social) => (
+                  <li key={`mobile-${social.id}`}>
+                    <SafeLink href={social.href} ariaLabel={social.label}>
+                      <strong aria-hidden="true">{social.label.slice(0, 1)}</strong>
+                    </SafeLink>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
           </div>
-          <ul className={styles.mobileSocials} aria-label="Redes sociais">
-            {data.socialLinks.map((social) => (
-              <li key={`mobile-${social.id}`}>
-                <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
-                  <strong aria-hidden="true">{social.label.slice(0, 1)}</strong>
-                </a>
-              </li>
-            ))}
-          </ul>
         </div>
-      </div>
+      ) : null}
     </footer>
   );
 }

@@ -34,14 +34,16 @@
   }
 }
 
+@media (max-width: 900px) {
+  .highlightsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 767px) {
   .informationGrid {
     grid-template-columns: 1fr;
     gap: 10px;
-  }
-
-  .informationGrid > :first-child {
-    display: none;
   }
 
   .informationGrid > :last-child {
@@ -49,7 +51,6 @@
   }
 
   .highlightsGrid {
-    grid-template-columns: 1fr;
     gap: 0;
     overflow: hidden;
     border: 1px solid var(--color-border);

@@ -40,7 +40,11 @@ function Brand() {
 export function SiteHeader() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isInstitutionalOpen, setInstitutionalOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+  const headerInnerRef = useRef<HTMLDivElement>(null);
   const toggleButtonRef = useRef<HTMLButtonElement>(null);
+  const institutionalButtonRef = useRef<HTMLButtonElement>(null);
+  const mobilePanelRef = useRef<HTMLDivElement>(null);
   const firstMobileLinkRef = useRef<HTMLAnchorElement>(null);
   const wasMenuOpen = useRef(false);
 
@@ -55,27 +59,74 @@ export function SiteHeader() {
 
     wasMenuOpen.current = true;
     document.body.style.overflow = "hidden";
+    const siteShell = headerRef.current?.parentElement;
+    const backgroundElements = [
+      headerInnerRef.current,
+      ...Array.from(siteShell?.children ?? []).filter((element) => element !== headerRef.current),
+    ].filter((element): element is HTMLElement => element instanceof HTMLElement);
+    const previousInertStates = backgroundElements.map((element) => ({
+      element,
+      inert: element.inert,
+    }));
+
+    backgroundElements.forEach((element) => {
+      element.inert = true;
+    });
     firstMobileLinkRef.current?.focus();
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") closeMenu();
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeMenu();
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+
+      const focusableElements = Array.from(
+        mobilePanelRef.current?.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ) ?? [],
+      );
+      const firstFocusable = focusableElements[0];
+      const lastFocusable = focusableElements.at(-1);
+
+      if (!firstFocusable || !lastFocusable) {
+        event.preventDefault();
+        mobilePanelRef.current?.focus();
+        return;
+      }
+
+      if (!mobilePanelRef.current?.contains(document.activeElement)) {
+        event.preventDefault();
+        firstFocusable.focus();
+      } else if (event.shiftKey && document.activeElement === firstFocusable) {
+        event.preventDefault();
+        lastFocusable.focus();
+      } else if (!event.shiftKey && document.activeElement === lastFocusable) {
+        event.preventDefault();
+        firstFocusable.focus();
+      }
     };
     document.addEventListener("keydown", handleKeyDown);
 
     return () => {
       document.body.style.overflow = "";
+      previousInertStates.forEach(({ element, inert }) => {
+        element.inert = inert;
+      });
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [isMenuOpen]);
 
   return (
-    <header className={styles.header}>
-      <div className={`container ${styles.inner}`}>
+    <header ref={headerRef} className={styles.header}>
+      <div ref={headerInnerRef} className={`container ${styles.inner}`}>
         <button
           ref={toggleButtonRef}
           type="button"
           className={styles.menuToggle}
-          aria-label="Abrir menu"
+          aria-label={isMenuOpen ? "Fechar menu de navegação" : "Abrir menu"}
           aria-controls="mobile-menu"
           aria-expanded={isMenuOpen}
           onClick={() => setMenuOpen(true)}
@@ -97,8 +148,21 @@ export function SiteHeader() {
           <div
             className={styles.dropdown}
             onMouseLeave={() => setInstitutionalOpen(false)}
+            onBlur={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget)) {
+                setInstitutionalOpen(false);
+              }
+            }}
+            onKeyDown={(event) => {
+              if (event.key === "Escape" && isInstitutionalOpen) {
+                event.preventDefault();
+                setInstitutionalOpen(false);
+                institutionalButtonRef.current?.focus();
+              }
+            }}
           >
             <button
+              ref={institutionalButtonRef}
               type="button"
               className={styles.dropdownToggle}
               aria-expanded={isInstitutionalOpen}
@@ -138,21 +202,28 @@ export function SiteHeader() {
 
       {isMenuOpen ? (
         <button
+          type="button"
           className={styles.backdrop}
           onClick={closeMenu}
           aria-label="Fechar menu ao clicar fora"
+          tabIndex={-1}
           data-testid="menu-backdrop"
         />
       ) : null}
 
-      <aside
+      <div
+        ref={mobilePanelRef}
         id="mobile-menu"
         className={`${styles.mobilePanel} ${isMenuOpen ? styles.mobilePanelOpen : ""}`}
+        role="dialog"
+        aria-modal={isMenuOpen ? "true" : undefined}
         aria-hidden={!isMenuOpen}
-        aria-label="Menu mobile"
+        aria-labelledby="mobile-menu-title"
+        inert={!isMenuOpen}
+        tabIndex={-1}
       >
         <div className={styles.mobilePanelHeader}>
-          <span className={styles.mobileTitle}>Navegação</span>
+          <span id="mobile-menu-title" className={styles.mobileTitle}>Navegação</span>
           <button
             type="button"
             className={styles.mobileClose}
@@ -186,7 +257,7 @@ export function SiteHeader() {
         >
           <UserRound aria-hidden="true" size={17} /> Área do Filiado
         </NavLink>
-      </aside>
+      </div>
     </header>
   );
 }

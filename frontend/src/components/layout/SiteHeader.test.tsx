@@ -47,6 +47,12 @@ describe("SiteHeader", () => {
     const firstLink = within(mobileNav).getByRole("link", { name: "Início" });
     expect(firstLink).toHaveFocus();
 
+    const mobileDialog = screen.getByRole("dialog", { name: "Navegação" });
+    const mobileMemberLink = within(mobileDialog).getByRole("link", { name: "Área do Filiado" });
+    mobileMemberLink.focus();
+    await user.tab();
+    expect(within(mobileDialog).getByRole("button", { name: "Fechar menu" })).toHaveFocus();
+
     await user.keyboard("{Escape}");
     expect(toggle).toHaveAttribute("aria-expanded", "false");
     expect(toggle).toHaveFocus();
