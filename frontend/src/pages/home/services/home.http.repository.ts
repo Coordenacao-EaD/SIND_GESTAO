@@ -11,7 +11,11 @@ import type { HomeRepository } from "./home.repository";
  * HomeDataProvider. No visual component needs to change.
  */
 export class HomeHttpRepository implements HomeRepository {
-  constructor(private readonly baseUrl: string) {}
+  private readonly baseUrl: string;
+
+  constructor(baseUrl: string) {
+    this.baseUrl = baseUrl;
+  }
 
   getHomePage(): Promise<HomePageData> {
     throw new Error(

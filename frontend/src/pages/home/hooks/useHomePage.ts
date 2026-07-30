@@ -1,5 +1,5 @@
 import { useCallback, useContext, useEffect, useState } from "react";
-import { HomeRepositoryContext } from "../HomeDataProvider";
+import { HomeRepositoryContext } from "../HomeRepositoryContext";
 import type { UIState } from "../types/home.types";
 
 export interface UseHomePageResult {

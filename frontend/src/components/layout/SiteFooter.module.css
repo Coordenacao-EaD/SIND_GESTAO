@@ -1,135 +1,178 @@
 .footer {
-  background: var(--color-footer);
-  color: rgba(255, 255, 255, 0.86);
+  background: var(--color-white);
+  color: var(--color-text);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1.4fr repeat(3, 1fr);
-  gap: var(--space-xl);
-  padding-block: var(--space-2xl);
+  grid-template-columns: 1.25fr repeat(3, 0.9fr) 1.35fr;
+  gap: 24px;
+  padding-block: 16px 14px;
 }
 
 .brandColumn {
   display: grid;
-  gap: var(--space-sm);
   align-content: start;
+  gap: 7px;
 }
 
 .brandRow {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-xs);
-  color: var(--color-white);
-  font-weight: 800;
-}
-
-.description {
-  max-width: 320px;
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-relaxed);
-}
-
-.socialLinks {
   display: flex;
-  gap: var(--space-sm);
-  margin-top: var(--space-xs);
-}
-
-.socialLink {
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
+  gap: 8px;
+}
+
+.brandRow img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.brandRow strong {
+  font-size: 1rem;
+}
+
+.brandColumn > p {
+  max-width: 180px;
+  color: var(--color-text-muted);
+  font-size: 0.76rem;
+}
+
+.socialLinks,
+.mobileSocials {
+  display: flex;
+  gap: 9px;
+}
+
+.socialLinks a,
+.mobileSocials a {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-gold-bright);
   color: var(--color-white);
-  font-size: 0.7rem;
-  font-weight: 700;
-  transition: background var(--transition-fast);
 }
 
-.socialLink:hover,
-.socialLink:focus-visible {
-  background: var(--color-gold);
-  color: var(--color-blue-deep);
-}
-
-.linkGroup h2 {
-  margin-bottom: var(--space-sm);
-  color: var(--color-white);
-  font-size: var(--font-size-sm);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+.linkGroup h2,
+.contact h2 {
+  margin-bottom: 6px;
+  font-size: 0.82rem;
 }
 
 .linkGroup ul {
   display: grid;
-  gap: var(--space-xs);
+  gap: 2px;
 }
 
-.linkGroup a {
-  font-size: var(--font-size-sm);
-  color: rgba(255, 255, 255, 0.78);
+.linkGroup a,
+.contact li {
+  color: var(--color-text-muted);
+  font-size: 0.74rem;
+  line-height: 1.4;
 }
 
 .linkGroup a:hover,
 .linkGroup a:focus-visible {
-  color: var(--color-gold);
+  color: var(--color-gold-dark);
 }
 
-.contact h2 {
-  margin-bottom: var(--space-sm);
-  color: var(--color-white);
-  font-size: var(--font-size-sm);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+.contact {
+  font-style: normal;
 }
 
 .contact ul {
   display: grid;
-  gap: var(--space-xs);
-  font-size: var(--font-size-sm);
+  gap: 6px;
+}
+
+.contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.contact svg {
+  flex: 0 0 auto;
+  margin-top: 1px;
 }
 
 .bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  background: var(--color-footer);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .bottomInner {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-sm);
-  padding-block: var(--space-md);
-  font-size: var(--font-size-xs);
+  gap: 14px;
+  min-height: 34px;
+  font-size: 0.68rem;
 }
 
 .bottomLinks {
   display: flex;
-  gap: var(--space-md);
+  gap: 18px;
 }
 
-.bottomLinks a:hover,
-.bottomLinks a:focus-visible {
-  color: var(--color-gold);
+.mobileSocials {
+  display: none;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 900px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .brandColumn,
+  .contact {
+    grid-column: auto;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 767px) {
   .grid {
-    grid-template-columns: 1fr;
+    display: block;
+    padding-block: 11px;
+  }
+
+  .brandColumn,
+  .linkGroup {
+    display: none;
+  }
+
+  .contact h2 {
+    display: none;
+  }
+
+  .contact ul {
+    gap: 7px;
+  }
+
+  .contact li {
+    font-size: 0.72rem;
   }
 
   .bottomInner {
-    flex-direction: column;
-    align-items: flex-start;
+    min-height: 52px;
+    justify-content: center;
+  }
+
+  .bottomInner > p,
+  .bottomLinks {
+    display: none;
+  }
+
+  .mobileSocials {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .mobileSocials a {
+    width: 31px;
+    height: 31px;
   }
 }

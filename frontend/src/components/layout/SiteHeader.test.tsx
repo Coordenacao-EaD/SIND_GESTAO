@@ -19,20 +19,17 @@ describe("SiteHeader", () => {
 
     [
       "Início",
-      "O Sindicato",
-      "Diretoria",
-      "Estatuto",
+      "Serviços",
       "Notícias",
-      "Comunicados",
+      "Comunicações",
       "Transparência",
       "Documentos",
-      "Galeria",
-      "Filie-se",
-      "Contato",
+      "Fale Conosco",
     ].forEach((label) => {
       expect(within(desktopNav).getByRole("link", { name: label })).toBeInTheDocument();
     });
 
+    expect(within(desktopNav).getByRole("button", { name: /Institucional/ })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /Área do Filiado/ })).toBeInTheDocument();
   });
 
@@ -73,9 +70,7 @@ describe("SiteHeader", () => {
     await user.click(toggle);
     expect(toggle).toHaveAttribute("aria-expanded", "true");
 
-    // Only the backdrop is rendered with a literal aria-hidden="true" while
-    // the menu is open (the panel itself reports aria-hidden="false").
-    const backdrop = container.querySelector('[aria-hidden="true"]');
+    const backdrop = container.querySelector('[data-testid="menu-backdrop"]');
     expect(backdrop).not.toBeNull();
     await user.click(backdrop as Element);
 
@@ -87,7 +82,9 @@ describe("SiteHeader", () => {
     renderHeader();
 
     await user.tab();
-    expect(screen.getByRole("link", { name: /Início/ })).toHaveFocus();
+    expect(screen.getByRole("button", { name: "Abrir menu" })).toHaveFocus();
+    await user.tab();
+    expect(screen.getByRole("link", { name: "SINDGESTÃO — Início" })).toHaveFocus();
 
     const memberButton = screen.getByRole("link", { name: /Área do Filiado/ });
     await user.tab({ shift: false });

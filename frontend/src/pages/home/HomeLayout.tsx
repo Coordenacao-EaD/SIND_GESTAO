@@ -7,29 +7,33 @@ import { RecentNoticesSection } from "./components/RecentNoticesSection";
 import { TransparencyHighlight } from "./components/TransparencyHighlight";
 import { ImportantDocumentsSection } from "./components/ImportantDocumentsSection";
 import { MembershipCta } from "./components/MembershipCta";
+import styles from "./HomePage.module.css";
 
 interface HomeLayoutProps {
   data: HomePageData;
   onRetrySection?: () => void;
 }
 
-/**
- * Pure presentation: given a fully-resolved HomePageData, renders every Home
- * section in the required order. Knows nothing about repositories, fetch
- * lifecycles, or where the data came from — easy to render in isolation
- * with any mock dataset for tests or Storybook-style exploration.
- */
 export function HomeLayout({ data, onRetrySection }: HomeLayoutProps) {
   return (
-    <>
-      <HeroSection content={data.hero} />
-      <QuickLinksSection links={data.quickLinks} />
-      <AboutUnionSection summary={data.about} />
-      <LatestNewsSection state={data.news} onRetry={onRetrySection} />
-      <RecentNoticesSection state={data.notices} onRetry={onRetrySection} />
-      <TransparencyHighlight state={data.transparency} onRetry={onRetrySection} />
-      <ImportantDocumentsSection state={data.documents} onRetry={onRetrySection} />
-      <MembershipCta cta={data.membershipCta} />
-    </>
+    <main id="conteudo" className={styles.home}>
+      <div className="container">
+        <HeroSection content={data.hero} />
+        <QuickLinksSection links={data.quickLinks} />
+
+        <div className={styles.informationGrid}>
+          <AboutUnionSection summary={data.about} />
+          <LatestNewsSection state={data.news} onRetry={onRetrySection} />
+          <RecentNoticesSection state={data.notices} onRetry={onRetrySection} />
+        </div>
+
+        <div className={styles.highlightsGrid}>
+          <TransparencyHighlight state={data.transparency} onRetry={onRetrySection} />
+          <ImportantDocumentsSection state={data.documents} onRetry={onRetrySection} />
+        </div>
+
+        <MembershipCta cta={data.membershipCta} />
+      </div>
+    </main>
   );
 }

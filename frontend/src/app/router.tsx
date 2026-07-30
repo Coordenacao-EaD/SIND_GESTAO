@@ -18,6 +18,14 @@ const COMING_SOON_ROUTES: Array<{ path: string; title: string }> = [
   { path: ROUTES.membership, title: "Filie-se" },
   { path: ROUTES.contact, title: "Contato" },
   { path: ROUTES.memberArea, title: "Área do Filiado" },
+  { path: ROUTES.services, title: "Serviços" },
+  { path: ROUTES.benefits, title: "Convênios e Benefícios" },
+  { path: ROUTES.legalAdvice, title: "Assessoria Jurídica" },
+  { path: ROUTES.guides, title: "Guias e Requerimentos" },
+  { path: ROUTES.calendar, title: "Calendário de Atividades" },
+  { path: ROUTES.faq, title: "Perguntas Frequentes" },
+  { path: ROUTES.privacy, title: "Política de Privacidade" },
+  { path: ROUTES.terms, title: "Termos de Uso" },
 ];
 
 export const routes: RouteObject[] = [

@@ -1,8 +1,7 @@
-import { createContext, useMemo, type ReactNode } from "react";
+import { useMemo, type ReactNode } from "react";
 import type { HomeRepository } from "./services/home.repository";
 import { HomeMockRepository } from "./services/home.mock.repository";
-
-export const HomeRepositoryContext = createContext<HomeRepository | null>(null);
+import { HomeRepositoryContext } from "./HomeRepositoryContext";
 
 interface HomeDataProviderProps {
   /**

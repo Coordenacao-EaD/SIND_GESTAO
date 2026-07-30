@@ -30,7 +30,11 @@ const SCENARIOS: Record<HomeMockScenario, HomePageData> = {
  * visual components.
  */
 export class HomeMockRepository implements HomeRepository {
-  constructor(private readonly scenario: HomeMockScenario = "default") {}
+  private readonly scenario: HomeMockScenario;
+
+  constructor(scenario: HomeMockScenario = "default") {
+    this.scenario = scenario;
+  }
 
   async getHomePage(): Promise<HomePageData> {
     return SCENARIOS[this.scenario];

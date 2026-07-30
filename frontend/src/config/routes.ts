@@ -11,6 +11,14 @@ export const ROUTES = {
   membership: "/filie-se",
   contact: "/contato",
   memberArea: "/area-do-filiado",
+  services: "/servicos",
+  benefits: "/convenios-e-beneficios",
+  legalAdvice: "/assessoria-juridica",
+  guides: "/guias-e-requerimentos",
+  calendar: "/calendario",
+  faq: "/perguntas-frequentes",
+  privacy: "/politica-de-privacidade",
+  terms: "/termos-de-uso",
 } as const;
 
 export type RouteKey = keyof typeof ROUTES;

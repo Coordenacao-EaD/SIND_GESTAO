@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { ErrorBoundary } from "../../app/ErrorBoundary";
-import { footerDataMock } from "../../pages/home/mocks/home.mock";
+import { SITE_FOOTER } from "../../config/site";
 import { SiteHeader } from "./SiteHeader";
 import { SiteFooter } from "./SiteFooter";
 
@@ -23,7 +23,7 @@ export function AppLayout() {
       <ErrorBoundary>
         <Outlet />
       </ErrorBoundary>
-      <SiteFooter data={footerDataMock} />
+      <SiteFooter data={SITE_FOOTER} />
     </div>
   );
 }

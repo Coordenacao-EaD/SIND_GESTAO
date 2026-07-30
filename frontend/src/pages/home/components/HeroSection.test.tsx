@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
 import { HeroSection } from "./HeroSection";
@@ -18,16 +18,55 @@ describe("HeroSection", () => {
     expect(screen.getByRole("link", { name: heroContentMock.secondaryAction.label })).toBeInTheDocument();
   });
 
-  it("falls back to a solid background when the hero image fails to load", () => {
+  it("does not mount or reserve space for a disabled optional action", () => {
+    const disabledAction = {
+      label: "Ação opcional indisponível",
+      href: "/contato",
+      variant: "secondary" as const,
+      enabled: false,
+    };
+
     render(
+      <MemoryRouter>
+        <HeroSection content={{ ...heroContentMock, optionalAction: disabledAction }} />
+      </MemoryRouter>,
+    );
+
+    expect(screen.queryByText(disabledAction.label)).not.toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: disabledAction.label })).not.toBeInTheDocument();
+  });
+
+  it("renders an enabled optional action", () => {
+    const enabledAction = {
+      label: "Ação opcional disponível",
+      href: "/contato",
+      variant: "secondary" as const,
+      enabled: true,
+    };
+
+    render(
+      <MemoryRouter>
+        <HeroSection content={{ ...heroContentMock, optionalAction: enabledAction }} />
+      </MemoryRouter>,
+    );
+
+    expect(screen.getByRole("link", { name: enabledAction.label })).toHaveAttribute(
+      "href",
+      enabledAction.href,
+    );
+  });
+
+  it("preserves the hero image accessible name when loading fails", () => {
+    const { container } = render(
       <MemoryRouter>
         <HeroSection content={{ ...heroContentMock, imageUrl: "/does-not-exist.jpg" }} />
       </MemoryRouter>,
     );
 
     const image = screen.getByRole("img", { name: heroContentMock.imageAlt });
-    image.dispatchEvent(new Event("error"));
+    fireEvent.error(image);
 
-    expect(screen.queryByRole("img", { name: heroContentMock.imageAlt })).not.toBeInTheDocument();
+    expect(container.querySelector("img")).not.toBeInTheDocument();
+    expect(screen.getByRole("img", { name: heroContentMock.imageAlt })).toBeInTheDocument();
   });
 });

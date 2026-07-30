@@ -2,18 +2,20 @@ import type { RoutePath } from "../../../config/routes";
 
 export interface HeroAction {
   label: string;
-  href: RoutePath;
+  href: string;
   variant: "primary" | "secondary";
+  enabled?: boolean;
 }
 
 export interface HeroContent {
-  eyebrow?: string;
   title: string;
+  subtitle: string;
   description: string;
   imageUrl: string;
   imageAlt: string;
   primaryAction: HeroAction;
   secondaryAction: HeroAction;
+  optionalAction?: HeroAction;
 }
 
 export interface QuickLink {
@@ -24,12 +26,12 @@ export interface QuickLink {
 }
 
 export type QuickLinkIcon =
-  | "union"
-  | "news"
-  | "notices"
-  | "transparency"
-  | "documents"
-  | "contact";
+  | "benefits"
+  | "legal"
+  | "guides"
+  | "calendar"
+  | "contact"
+  | "faq";
 
 export interface InstitutionalSummary {
   title: string;
@@ -91,7 +93,7 @@ export interface SocialLink {
 
 export interface FooterLinkItem {
   label: string;
-  href: string;
+  href: RoutePath;
 }
 
 export interface FooterLinkGroup {

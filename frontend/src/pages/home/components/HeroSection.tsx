@@ -1,10 +1,26 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import type { HeroContent } from "../types/home.types";
+import { UserRound } from "lucide-react";
+import type { HeroAction, HeroContent } from "../types/home.types";
+import { SafeLink } from "../../../components/navigation/SafeLink";
 import styles from "./HeroSection.module.css";
 
 interface HeroSectionProps {
   content: HeroContent;
+}
+
+function HeroButton({ action }: { action: HeroAction }) {
+  if (action.enabled === false) {
+    return null;
+  }
+
+  const className = action.variant === "primary" ? styles.actionPrimary : styles.actionSecondary;
+
+  return (
+    <SafeLink href={action.href} className={className}>
+      <UserRound aria-hidden="true" size={17} />
+      {action.label}
+    </SafeLink>
+  );
 }
 
 export function HeroSection({ content }: HeroSectionProps) {
@@ -13,7 +29,11 @@ export function HeroSection({ content }: HeroSectionProps) {
   return (
     <section className={styles.hero} aria-label="Destaque principal">
       {imageFailed ? (
-        <div className={styles.imageFallback} aria-hidden="true" />
+        <div
+          role="img"
+          aria-label={content.imageAlt}
+          className={styles.imageFallback}
+        />
       ) : (
         <img
           src={content.imageUrl}
@@ -23,18 +43,14 @@ export function HeroSection({ content }: HeroSectionProps) {
         />
       )}
       <div className={styles.overlay} aria-hidden="true" />
-
       <div className={styles.content}>
-        {content.eyebrow ? <span className={styles.eyebrow}>{content.eyebrow}</span> : null}
         <h1 className={styles.title}>{content.title}</h1>
+        <p className={styles.subtitle}>{content.subtitle}</p>
         <p className={styles.description}>{content.description}</p>
         <div className={styles.actions}>
-          <Link to={content.primaryAction.href} className={styles.actionPrimary}>
-            {content.primaryAction.label}
-          </Link>
-          <Link to={content.secondaryAction.href} className={styles.actionSecondary}>
-            {content.secondaryAction.label}
-          </Link>
+          <HeroButton action={content.primaryAction} />
+          <HeroButton action={content.secondaryAction} />
+          {content.optionalAction?.enabled ? <HeroButton action={content.optionalAction} /> : null}
         </div>
       </div>
     </section>

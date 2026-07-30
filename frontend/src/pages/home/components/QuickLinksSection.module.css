@@ -1,31 +1,41 @@
 .section {
-  margin-top: calc(-1 * var(--space-2xl));
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  width: min(86%, 1380px);
+  margin: -52px auto 0;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 1px;
   overflow: hidden;
-  border-radius: var(--radius-md);
-  background: var(--color-border);
-  box-shadow: var(--shadow-soft);
+  min-height: clamp(108px, 7vw, 132px);
+  border: 1px solid var(--color-border);
+  border-radius: 13px;
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
 }
 
 .link {
+  position: relative;
   display: grid;
-  justify-items: center;
-  gap: var(--space-2xs);
-  padding: var(--space-lg) var(--space-xs);
-  min-height: 96px;
-  background: var(--color-white);
-  color: var(--color-text);
-  font-size: 0.82rem;
-  font-weight: 700;
+  place-items: center;
+  align-content: center;
+  gap: 7px;
+  min-width: 0;
+  padding: 15px 10px;
   text-align: center;
   transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.link:not(:last-child)::after {
+  position: absolute;
+  top: 18%;
+  right: 0;
+  width: 1px;
+  height: 64%;
+  background: var(--color-border);
+  content: "";
 }
 
 .link:hover,
@@ -35,21 +45,53 @@
 }
 
 .icon {
-  color: var(--color-gold-dark);
+  color: var(--color-gold-bright);
 }
 
-@media (max-width: 1023px) {
+.link span {
+  max-width: 120px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width: 767px) {
+  .section {
+    width: 100%;
+    margin: 10px auto 0;
+  }
+
   .grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 640px) {
-  .section {
-    margin-top: var(--space-md);
+    min-height: 0;
   }
 
-  .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .link {
+    min-height: 92px;
+    padding: 10px 5px;
+  }
+
+  .link:nth-child(3)::after {
+    display: none;
+  }
+
+  .link:nth-child(-n + 3)::before {
+    position: absolute;
+    right: 8px;
+    bottom: 0;
+    left: 8px;
+    height: 1px;
+    background: var(--color-border);
+    content: "";
+  }
+
+  .link span {
+    max-width: 92px;
+    font-size: 0.69rem;
+  }
+
+  .icon {
+    width: 25px;
+    height: 25px;
   }
 }

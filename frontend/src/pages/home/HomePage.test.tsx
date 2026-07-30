@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
@@ -51,6 +51,21 @@ describe("HomePage", () => {
     expect(screen.getByRole("heading", { name: homePageDataMock.about.title })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "Documentos Importantes" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: homePageDataMock.membershipCta.title })).toBeInTheDocument();
+  });
+
+  it("preserves a news image accessible name when loading fails", async () => {
+    const { container } = renderHomePage(new HomeMockRepository("default"));
+    const news = homePageDataMock.news.status === "ready" ? homePageDataMock.news.data[0] : undefined;
+
+    if (!news) {
+      throw new Error("The default Home mock must include at least one news item.");
+    }
+
+    const image = await screen.findByRole("img", { name: news.imageAlt });
+    fireEvent.error(image);
+
+    expect(container.querySelector(`img[alt="${news.imageAlt}"]`)).not.toBeInTheDocument();
+    expect(screen.getByRole("img", { name: news.imageAlt })).toBeInTheDocument();
   });
 
   it("points hero CTAs at the routes configured in the mock", async () => {
