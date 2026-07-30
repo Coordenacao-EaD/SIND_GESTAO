@@ -1,0 +1,14 @@
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Configurações locais de editores
+.idea/
+.vscode/
+
+# Logs e variáveis locais
+*.log
+.env
+.env.*
+!.env.example

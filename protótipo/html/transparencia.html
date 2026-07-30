@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consulte prestações de contas, demonstrativos financeiros, relatórios e documentos comprobatórios públicos do sindicato.">
+  <title>Transparência | Sinprotec</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/transparencia.js" defer></script>
+</head>
+<body class="union-page transparency-page">
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+
+  <div class="site-shell">
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" data-menu-open>
+          <i class="bi bi-list icon" aria-hidden="true"></i>
+        </button>
+
+        <a class="brand" href="../index.html" aria-label="Sinprotec — Página Inicial">
+          <img src="../assets/images/logo.png" alt="" width="65" height="65">
+          <span class="brand__copy">
+            <strong>Sinprotec</strong>
+            <small>Sindicato de Servidores Públicos</small>
+          </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Menu principal">
+          <a class="nav-link" href="../index.html">Início</a>
+          <div class="nav-dropdown" data-dropdown>
+            <button class="nav-link nav-dropdown__button" type="button" aria-expanded="false" aria-haspopup="true" data-dropdown-toggle>
+              Institucional
+              <i class="bi bi-chevron-down icon icon--small" aria-hidden="true"></i>
+            </button>
+            <div class="nav-dropdown__menu" data-dropdown-menu>
+              <a href="sindicato.html">O Sindicato</a>
+              <a href="diretoria.html">Diretoria</a>
+              <a href="estatuto.html">Estatuto</a>
+            </div>
+          </div>
+          <a class="nav-link" href="../index.html#servicos">Serviços</a>
+          <a class="nav-link" href="noticias.html">Notícias</a>
+          <a class="nav-link" href="comunicados.html">Comunicados</a>
+          <a class="nav-link is-active" href="transparencia.html" aria-current="page">Transparência</a>
+          <a class="nav-link" href="../index.html#documentos">Documentos</a>
+          <a class="nav-link" href="filie-se.html">Filie-se</a>
+          <a class="nav-link" href="contato.html">Fale Conosco</a>
+        </nav>
+
+        <a class="member-button" href="login.html">
+          <i class="bi bi-person icon" aria-hidden="true"></i>
+          <span>Área do Filiado</span>
+        </a>
+        <a class="member-icon" href="login.html" aria-label="Área do Filiado">
+          <i class="bi bi-person icon" aria-hidden="true"></i>
+        </a>
+      </div>
+    </header>
+
+    <div class="menu-backdrop" data-menu-backdrop hidden></div>
+    <aside class="mobile-menu" id="mobile-menu" aria-hidden="true" aria-label="Menu mobile" data-mobile-menu>
+      <div class="mobile-menu__top">
+        <a class="brand brand--panel" href="../index.html" aria-label="Sinprotec — Página Inicial">
+          <img src="../assets/images/logo.png" alt="" width="68" height="68">
+          <span class="brand__copy">
+            <strong>Sinprotec</strong>
+            <small>Sindicato de Servidores Públicos</small>
+          </span>
+        </a>
+        <button class="icon-button" type="button" aria-label="Fechar menu" data-menu-close>
+          <i class="bi bi-x-lg icon" aria-hidden="true"></i>
+        </button>
+      </div>
+      <nav class="mobile-nav" aria-label="Menu principal mobile">
+        <a href="../index.html">Início</a>
+        <button type="button" aria-expanded="false" data-mobile-submenu-toggle>
+          Institucional
+          <i class="bi bi-chevron-down icon icon--small" aria-hidden="true"></i>
+        </button>
+        <div class="mobile-submenu" data-mobile-submenu>
+          <a href="sindicato.html">O Sindicato</a>
+          <a href="diretoria.html">Diretoria</a>
+          <a href="estatuto.html">Estatuto</a>
+        </div>
+        <a href="../index.html#servicos">Serviços</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="comunicados.html">Comunicados</a>
+        <a href="transparencia.html" aria-current="page">Transparência</a>
+        <a href="../index.html#documentos">Documentos</a>
+        <a href="filie-se.html">Filie-se</a>
+        <a href="contato.html">Fale Conosco</a>
+      </nav>
+    </aside>
+
+    <main id="conteudo">
+      <section class="union-hero transparency-hero" aria-labelledby="titulo-pagina">
+        <div class="container union-hero__content">
+          <nav class="breadcrumb" aria-label="Navegação estrutural">
+            <a href="../index.html">Início</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">Transparência</span>
+          </nav>
+          <h1 id="titulo-pagina">Transparência</h1>
+          <p>Informações públicas apresentadas com clareza e responsabilidade.</p>
+        </div>
+      </section>
+
+      <section class="transparency-intro" aria-labelledby="transparencia-titulo">
+        <div class="container">
+          <div class="transparency-intro__copy institution-copy">
+            <span class="section-kicker">Portal da Transparência</span>
+            <h2 id="transparencia-titulo">Portal da Transparência</h2>
+            <p>Consulte prestações de contas, demonstrativos, relatórios e documentos comprobatórios autorizados para divulgação pública.</p>
+            <p>As informações são organizadas por período e categoria para facilitar a consulta e o acompanhamento da gestão institucional.</p>
+          </div>
+          <aside class="document-notice" aria-label="Aviso sobre dados demonstrativos">
+            <i class="bi bi-info-circle" aria-hidden="true"></i>
+            <p>Os dados apresentados neste protótipo são demonstrativos e não representam informações financeiras reais.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="transparency-library" aria-labelledby="consulta-titulo">
+        <div class="container">
+          <h2 class="visually-hidden" id="consulta-titulo">Consulta de documentos de transparência</h2>
+
+          <form class="transparency-filters" data-transparency-filters>
+            <label class="transparency-field">
+              <span>Ano</span>
+              <select data-transparency-year>
+                <option value="todos">Todos os anos</option>
+                <option value="2026" selected>2026</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+              </select>
+            </label>
+            <label class="transparency-field">
+              <span>Período</span>
+              <select data-transparency-period>
+                <option value="todos">Todos os períodos</option>
+                <option value="1-semestre">1º semestre</option>
+                <option value="2-semestre">2º semestre</option>
+                <option value="jan-mar">Janeiro a março</option>
+                <option value="abr-jun">Abril a junho</option>
+                <option value="jul-set">Julho a setembro</option>
+                <option value="out-dez">Outubro a dezembro</option>
+              </select>
+            </label>
+            <label class="transparency-field">
+              <span>Categoria</span>
+              <select data-transparency-category>
+                <option value="todas">Todas as categorias</option>
+                <option value="prestacao-contas">Prestação de Contas</option>
+                <option value="receitas-despesas">Receitas e Despesas</option>
+                <option value="relatorios-financeiros">Relatórios Financeiros</option>
+                <option value="balanco-patrimonial">Balanço Patrimonial</option>
+                <option value="pareceres">Pareceres</option>
+                <option value="documentos-comprobatorios">Documentos Comprobatórios</option>
+              </select>
+            </label>
+            <label class="transparency-field transparency-field--search">
+              <span>Pesquisar</span>
+              <span class="transparency-field__control">
+                <i class="bi bi-search" aria-hidden="true"></i>
+                <input type="search" placeholder="Pesquisar documentos de transparência..." autocomplete="off" data-transparency-search>
+              </span>
+            </label>
+            <button class="document-clear" type="button" data-transparency-clear><i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i>Limpar filtros</button>
+          </form>
+
+          <p class="transparency-count" aria-live="polite" data-transparency-summary-text><strong data-transparency-count>6</strong> documentos encontrados para 2026</p>
+
+          <div class="transparency-summary" aria-label="Resumo do período selecionado">
+            <div class="transparency-summary__item">
+              <i class="bi bi-calendar-range" aria-hidden="true"></i>
+              <span data-transparency-summary-period>2026 — Todos os períodos</span>
+            </div>
+            <div class="transparency-summary__item">
+              <i class="bi bi-file-earmark-text" aria-hidden="true"></i>
+              <span data-transparency-summary-count>6 documentos publicados</span>
+            </div>
+            <div class="transparency-summary__item">
+              <i class="bi bi-clock-history" aria-hidden="true"></i>
+              <span data-transparency-summary-update>Última atualização em 20/07/2026</span>
+            </div>
+            <div class="transparency-summary__item">
+              <i class="bi bi-unlock" aria-hidden="true"></i>
+              <span data-transparency-summary-status>Situação: informações disponíveis</span>
+              <span class="transparency-summary__access">Acesso: público</span>
+            </div>
+          </div>
+
+          <div class="transparency-grid" data-transparency-grid></div>
+
+          <div class="transparency-empty" data-transparency-empty hidden>
+            <i class="bi bi-file-earmark-x" aria-hidden="true"></i>
+            <h3>Nenhum documento encontrado</h3>
+            <p>Revise o período, a categoria ou os termos pesquisados.</p>
+            <button class="button button--secondary" type="button" data-transparency-clear>Limpar filtros</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="institution-section institution-section--soft" aria-labelledby="compromisso-titulo">
+        <div class="container">
+          <div class="institution-heading institution-heading--center">
+            <span class="section-kicker">Gestão responsável</span>
+            <h2 id="compromisso-titulo">Compromisso com a transparência</h2>
+            <p>A disponibilização de informações públicas fortalece a confiança, o controle institucional e a participação dos filiados.</p>
+          </div>
+          <div class="principles-grid">
+            <article class="principle-card">
+              <i class="bi bi-eye" aria-hidden="true"></i>
+              <h3>Clareza das informações</h3>
+              <p>Documentos organizados e apresentados de forma direta e compreensível.</p>
+            </article>
+            <article class="principle-card">
+              <i class="bi bi-globe" aria-hidden="true"></i>
+              <h3>Acesso público</h3>
+              <p>Consulta disponível a qualquer pessoa, sem necessidade de autenticação.</p>
+            </article>
+            <article class="principle-card">
+              <i class="bi bi-calendar3" aria-hidden="true"></i>
+              <h3>Organização por período</h3>
+              <p>Filtros por ano e período facilitam o acompanhamento da gestão.</p>
+            </article>
+            <article class="principle-card">
+              <i class="bi bi-shield-lock" aria-hidden="true"></i>
+              <h3>Proteção de dados restritos</h3>
+              <p>Apenas informações classificadas como públicas são disponibilizadas.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="transparency-guidance-section">
+        <div class="container">
+          <aside class="document-guidance" aria-labelledby="orientacoes-titulo">
+            <div class="document-guidance__icon"><i class="bi bi-info-lg" aria-hidden="true"></i></div>
+            <div>
+              <h2 id="orientacoes-titulo">Orientações para consulta</h2>
+              <ul>
+                <li>Selecione o ano e o período desejados.</li>
+                <li>Utilize os filtros para localizar o documento.</li>
+                <li>Verifique a data da última atualização.</li>
+                <li>Consulte somente documentos classificados como públicos.</li>
+                <li>Entre em contato em caso de dúvidas.</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="institution-cta transparency-cta" aria-labelledby="chamada-titulo">
+        <div class="container institution-cta__inner">
+          <div>
+            <h2 id="chamada-titulo">Transparência que gera confiança.</h2>
+            <p>Acompanhe as informações públicas e conheça como os recursos institucionais são apresentados.</p>
+          </div>
+          <div class="institution-cta__actions">
+            <a class="button button--white" href="#" data-demo="Ver documentos públicos">Ver documentos públicos</a>
+            <a class="button button--outline-light" href="contato.html">Fale Conosco</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="footer-logo" href="../index.html" aria-label="Sinprotec — Página Inicial">
+            <img src="../assets/images/logo.png" alt="" width="65" height="65">
+            <span class="brand__copy"><strong>Sindicato</strong><small>de Servidores Públicos</small></span>
+          </a>
+          <p>Em defesa dos servidores, em benefício da sociedade.</p>
+          <div class="social-links" aria-label="Redes sociais">
+            <a href="#" aria-label="Facebook" data-demo="Facebook"><i class="bi bi-facebook icon" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram" data-demo="Instagram"><i class="bi bi-instagram icon" aria-hidden="true"></i></a>
+            <a href="#" aria-label="YouTube" data-demo="YouTube"><i class="bi bi-youtube icon" aria-hidden="true"></i></a>
+            <a href="#" aria-label="E-mail" data-demo="E-mail"><i class="bi bi-envelope-fill icon" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <nav class="footer-links" aria-label="Institucional">
+          <h2>Institucional</h2>
+          <a href="sindicato.html">Quem Somos</a>
+          <a href="diretoria.html">Diretoria</a>
+          <a href="estatuto.html">Estatuto</a>
+          <a href="sindicato.html#historia-titulo">História</a>
+          <a href="#" data-demo="Trabalhe Conosco">Trabalhe Conosco</a>
+        </nav>
+        <nav class="footer-links" aria-label="Serviços">
+          <h2>Serviços</h2>
+          <a href="#" data-demo="Convênios e Benefícios">Convênios e Benefícios</a>
+          <a href="#" data-demo="Assessoria Jurídica">Assessoria Jurídica</a>
+          <a href="#" data-demo="Guias e Requerimentos">Guias e Requerimentos</a>
+          <a href="#" data-demo="Atendimento">Atendimento</a>
+          <a href="#" data-demo="Perguntas Frequentes">Perguntas Frequentes</a>
+        </nav>
+        <nav class="footer-links" aria-label="Transparência">
+          <h2>Transparência</h2>
+          <a href="transparencia.html">Prestação de Contas</a>
+          <a href="transparencia.html">Receitas e Despesas</a>
+          <a href="transparencia.html">Relatórios</a>
+          <a href="#" data-demo="Licitações e Contratos">Licitações e Contratos</a>
+          <a href="#" data-demo="Planejamento">Planejamento</a>
+        </nav>
+        <address class="footer-contact" id="rodape-contato">
+          <h2>Contato</h2>
+          <p><i class="bi bi-telephone icon" aria-hidden="true"></i> (11) 1234-5678</p>
+          <p><i class="bi bi-envelope icon" aria-hidden="true"></i> contato@sindicatoservidores.org.br</p>
+          <p><i class="bi bi-geo-alt icon" aria-hidden="true"></i> Rua dos Servidores, 123 — Centro<br>São Paulo/SP</p>
+          <a class="footer-contact__link" href="contato.html">Fale Conosco<i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </address>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom__inner">
+          <p>© 2024 Sindicato de Servidores Públicos. Todos os direitos reservados.</p>
+          <div>
+            <a href="#" data-demo="Política de Privacidade">Política de Privacidade</a>
+            <a href="#" data-demo="Termos de Uso">Termos de Uso</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <dialog class="transparency-modal" aria-labelledby="transparency-modal-title" aria-describedby="transparency-modal-description" aria-modal="true" data-transparency-modal>
+    <div class="transparency-modal__panel">
+      <button class="icon-button transparency-modal__close" type="button" aria-label="Fechar informações do documento" data-transparency-modal-close>
+        <i class="bi bi-x-lg icon" aria-hidden="true"></i>
+      </button>
+      <div class="transparency-modal__header">
+        <i class="bi bi-clipboard-data" data-transparency-modal-icon aria-hidden="true"></i>
+        <div>
+          <span data-transparency-modal-category>Categoria</span>
+          <h2 id="transparency-modal-title" data-transparency-modal-title>Documento</h2>
+          <p data-transparency-modal-period>Período</p>
+        </div>
+      </div>
+      <div class="transparency-modal__body">
+        <p id="transparency-modal-description" data-transparency-modal-description>Descrição do documento.</p>
+
+        <dl class="transparency-modal__meta">
+          <div><dt>Situação</dt><dd><span class="document-status" data-transparency-modal-status>Publicado</span></dd></div>
+          <div><dt>Publicação</dt><dd data-transparency-modal-publish>—</dd></div>
+          <div><dt>Última atualização</dt><dd data-transparency-modal-update>—</dd></div>
+          <div><dt>Responsável institucional</dt><dd data-transparency-modal-responsible>—</dd></div>
+        </dl>
+
+        <div class="transparency-modal__file">
+          <div class="transparency-modal__file-icon" aria-hidden="true"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+          <div class="transparency-modal__file-info">
+            <strong data-transparency-modal-filename>Arquivo</strong>
+            <span>Documento público</span>
+          </div>
+          <div class="transparency-modal__file-actions" data-transparency-modal-file-actions></div>
+        </div>
+
+        <section class="transparency-modal__supporting" data-transparency-modal-supporting hidden aria-labelledby="transparency-supporting-titulo">
+          <h3 id="transparency-supporting-titulo">Documentos comprobatórios anexos</h3>
+          <ul class="transparency-supporting-list" data-transparency-supporting-list></ul>
+        </section>
+
+        <div class="transparency-modal__actions">
+          <button class="button button--secondary" type="button" data-transparency-modal-close>Fechar</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" aria-modal="true" data-modal>
+    <div class="modal__content">
+      <button class="icon-button modal__close" type="button" aria-label="Fechar janela" data-modal-close>
+        <i class="bi bi-x-lg icon" aria-hidden="true"></i>
+      </button>
+      <i class="bi bi-people icon modal__icon" data-modal-icon aria-hidden="true"></i>
+      <h2 data-modal-title>Recurso demonstrativo</h2>
+      <p data-modal-message>Esta ação está preparada para a próxima etapa do portal.</p>
+      <button class="button button--primary" type="button" data-modal-close>Entendi</button>
+    </div>
+  </dialog>
+
+  <div class="toast" role="status" aria-live="polite" aria-atomic="true" data-toast hidden></div>
+</body>
+</html>

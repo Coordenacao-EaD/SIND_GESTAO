@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Acesse a Área do Filiado do sindicato. Ambiente demonstrativo, sem autenticação real.">
+  <title>Área do Filiado | Sinprotec</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/autenticacao-demo.js" defer></script>
+</head>
+<body class="union-page auth-page">
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+
+  <div class="site-shell">
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" data-menu-open>
+          <i class="bi bi-list icon" aria-hidden="true"></i>
+        </button>
+
+        <a class="brand" href="../index.html" aria-label="Sinprotec — Página Inicial">
+          <img src="../assets/images/logo.png" alt="" width="65" height="65">
+          <span class="brand__copy">
+            <strong>Sinprotec</strong>
+            <small>Sindicato de Servidores Públicos</small>
+          </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Menu principal">
+          <a class="nav-link" href="../index.html">Início</a>
+          <div class="nav-dropdown" data-dropdown>
+            <button class="nav-link nav-dropdown__button" type="button" aria-expanded="false" aria-haspopup="true" data-dropdown-toggle>
+              Institucional
+              <i class="bi bi-chevron-down icon icon--small" aria-hidden="true"></i>
+            </button>
+            <div class="nav-dropdown__menu" data-dropdown-menu>
+              <a href="sindicato.html">O Sindicato</a>
+              <a href="diretoria.html">Diretoria</a>
+              <a href="estatuto.html">Estatuto</a>
+            </div>
+          </div>
+          <a class="nav-link" href="../index.html#servicos">Serviços</a>
+          <a class="nav-link" href="noticias.html">Notícias</a>
+          <a class="nav-link" href="comunicados.html">Comunicados</a>
+          <a class="nav-link" href="transparencia.html">Transparência</a>
+          <a class="nav-link" href="../index.html#documentos">Documentos</a>
+          <a class="nav-link" href="filie-se.html">Filie-se</a>
+          <a class="nav-link" href="contato.html">Fale Conosco</a>
+        </nav>
+
+        <a class="member-button is-active" href="login.html" aria-current="page">
+          <i class="bi bi-person icon" aria-hidden="true"></i>
+          <span>Área do Filiado</span>
+        </a>
+        <a class="member-icon" href="login.html" aria-label="Área do Filiado" aria-current="page">
+          <i class="bi bi-person icon" aria-hidden="true"></i>
+        </a>
+      </div>
+    </header>
+
+    <div class="menu-backdrop" data-menu-backdrop hidden></div>
+    <aside class="mobile-menu" id="mobile-menu" aria-hidden="true" aria-label="Menu mobile" data-mobile-menu>
+      <div class="mobile-menu__top">
+        <a class="brand brand--panel" href="../index.html" aria-label="Sinprotec — Página Inicial">
+          <img src="../assets/images/logo.png" alt="" width="68" height="68">
+          <span class="brand__copy">
+            <strong>Sinprotec</strong>
+            <small>Sindicato de Servidores Públicos</small>
+          </span>
+        </a>
+        <button class="icon-button" type="button" aria-label="Fechar menu" data-menu-close>
+          <i class="bi bi-x-lg icon" aria-hidden="true"></i>
+        </button>
+      </div>
+      <nav class="mobile-nav" aria-label="Menu principal mobile">
+        <a href="../index.html">Início</a>
+        <button type="button" aria-expanded="false" data-mobile-submenu-toggle>
+          Institucional
+          <i class="bi bi-chevron-down icon icon--small" aria-hidden="true"></i>
+        </button>
+        <div class="mobile-submenu" data-mobile-submenu>
+          <a href="sindicato.html">O Sindicato</a>
+          <a href="diretoria.html">Diretoria</a>
+          <a href="estatuto.html">Estatuto</a>
+        </div>
+        <a href="../index.html#servicos">Serviços</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="comunicados.html">Comunicados</a>
+        <a href="transparencia.html">Transparência</a>
+        <a href="../index.html#documentos">Documentos</a>
+        <a href="filie-se.html">Filie-se</a>
+        <a href="contato.html">Fale Conosco</a>
+        <a href="login.html" aria-current="page">Área do Filiado</a>
+      </nav>
+    </aside>
+
+    <main id="conteudo">
+      <section class="union-hero auth-hero" aria-labelledby="titulo-pagina">
+        <div class="container union-hero__content">
+          <nav class="breadcrumb" aria-label="Navegação estrutural">
+            <a href="../index.html">Início</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">Área do Filiado</span>
+          </nav>
+          <h1 id="titulo-pagina">Área do Filiado</h1>
+          <p>Acesse os serviços e informações disponíveis no ambiente restrito.</p>
+        </div>
+      </section>
+
+      <section class="auth-main" aria-labelledby="login-titulo">
+        <div class="container auth-main__grid">
+          <article class="auth-card">
+            <div class="auth-card__icon" aria-hidden="true"><i class="bi bi-shield-lock"></i></div>
+            <span class="auth-card__badge">Ambiente demonstrativo</span>
+            <h2 id="login-titulo">Acesse sua conta</h2>
+            <p>Informe seus dados de acesso para entrar na Área do Filiado.</p>
+            <p class="auth-card__disclaimer">Este protótipo não realiza autenticação real.</p>
+
+            <div class="auth-demo-credentials">
+              <i class="bi bi-info-circle" aria-hidden="true"></i>
+              <p>Para testar o protótipo, utilize:<br><strong>E-mail:</strong> filiado@demo.com<br><strong>Senha:</strong> 123456</p>
+            </div>
+
+            <div class="auth-error-summary" data-auth-login-summary role="alert" hidden>
+              <h3><i class="bi bi-exclamation-circle" aria-hidden="true"></i>Revise os campos destacados</h3>
+              <ul data-auth-login-summary-list></ul>
+            </div>
+
+            <p class="auth-message" data-auth-login-message role="alert" hidden></p>
+
+            <form class="auth-form" data-auth-login-form novalidate>
+              <div class="auth-field">
+                <label for="login-email">E-mail</label>
+                <input type="email" id="login-email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email" aria-describedby="login-email-erro" required>
+                <p class="auth-error" id="login-email-erro" hidden></p>
+              </div>
+
+              <div class="auth-field">
+                <label for="login-senha">Senha</label>
+                <div class="auth-password-field">
+                  <input type="password" id="login-senha" name="senha" placeholder="Digite sua senha" autocomplete="current-password" aria-describedby="login-senha-erro" required>
+                  <button type="button" class="auth-password-toggle" data-auth-toggle-password="login-senha" aria-pressed="false" aria-label="Mostrar senha">
+                    <i class="bi bi-eye" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <p class="auth-error" id="login-senha-erro" hidden></p>
+              </div>
+
+              <div class="auth-remember">
+                <label class="auth-checkbox">
+                  <input type="checkbox" id="login-lembrar" name="lembrar">
+                  <span>Lembrar meu e-mail neste dispositivo</span>
+                </label>
+                <p class="auth-remember__note">Opção apenas demonstrativa. Nenhum dado será salvo.</p>
+              </div>
+
+              <a class="auth-forgot-link" href="recuperar-senha.html">Esqueci minha senha</a>
+
+              <button class="button button--primary auth-submit" type="submit" data-auth-login-submit>
+                <i class="bi bi-box-arrow-in-right icon" aria-hidden="true"></i>Entrar
+              </button>
+
+              <p class="auth-secondary-link">Ainda não é filiado? <a href="filie-se.html">Solicite sua filiação</a></p>
+            </form>
+
+            <p class="auth-responsibility-note">O Site Institucional disponibiliza apenas o acesso à Área do Filiado. A autenticação, as permissões e os conteúdos restritos pertencem aos módulos internos do sistema.</p>
+          </article>
+
+          <aside class="document-guidance auth-security" aria-labelledby="seguranca-titulo">
+            <img class="auth-security__illustration" src="../assets/images/login/acesso-seguro.svg" alt="" width="160" height="120">
+            <div>
+              <h2 id="seguranca-titulo">Segurança no acesso</h2>
+              <p>Na solução definitiva, a autenticação deverá utilizar conexão segura, proteção de credenciais, controle de tentativas e gerenciamento de sessão.</p>
+              <ul>
+                <li>Nunca compartilhe sua senha.</li>
+                <li>Verifique o endereço do site.</li>
+                <li>Não utilize computadores públicos sem necessidade.</li>
+                <li>Encerre a sessão após o uso.</li>
+                <li>Em caso de dúvida, entre em contato com o sindicato.</li>
+              </ul>
+              <p class="auth-security__highlight"><i class="bi bi-shield-check" aria-hidden="true"></i>Neste protótipo, nenhuma credencial é enviada ou armazenada.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="footer-logo" href="../index.html" aria-label="Sinprotec — Página Inicial">
+            <img src="../assets/images/logo.png" alt="" width="65" height="65">
+            <span class="brand__copy"><strong>Sindicato</strong><small>de Servidores Públicos</small></span>
+          </a>
+          <p>Em defesa dos servidores, em benefício da sociedade.</p>
+          <div class="social-links" aria-label="Redes sociais">
+            <a href="#" aria-label="Facebook" data-demo="Facebook"><i class="bi bi-facebook icon" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram" data-demo="Instagram"><i class="bi bi-instagram icon" aria-hidden="true"></i></a>
+            <a href="#" aria-label="YouTube" data-demo="YouTube"><i class="bi bi-youtube icon" aria-hidden="true"></i></a>
+            <a href="#" aria-label="E-mail" data-demo="E-mail"><i class="bi bi-envelope-fill icon" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <nav class="footer-links" aria-label="Institucional">
+          <h2>Institucional</h2>
+          <a href="sindicato.html">Quem Somos</a>
+          <a href="diretoria.html">Diretoria</a>
+          <a href="estatuto.html">Estatuto</a>
+          <a href="sindicato.html#historia-titulo">História</a>
+          <a href="#" data-demo="Trabalhe Conosco">Trabalhe Conosco</a>
+        </nav>
+        <nav class="footer-links" aria-label="Serviços">
+          <h2>Serviços</h2>
+          <a href="#" data-demo="Convênios e Benefícios">Convênios e Benefícios</a>
+          <a href="#" data-demo="Assessoria Jurídica">Assessoria Jurídica</a>
+          <a href="#" data-demo="Guias e Requerimentos">Guias e Requerimentos</a>
+          <a href="contato.html">Atendimento</a>
+          <a href="#" data-demo="Perguntas Frequentes">Perguntas Frequentes</a>
+        </nav>
+        <nav class="footer-links" aria-label="Transparência">
+          <h2>Transparência</h2>
+          <a href="transparencia.html">Prestação de Contas</a>
+          <a href="transparencia.html">Receitas e Despesas</a>
+          <a href="transparencia.html">Relatórios</a>
+          <a href="#" data-demo="Licitações e Contratos">Licitações e Contratos</a>
+          <a href="#" data-demo="Planejamento">Planejamento</a>
+        </nav>
+        <address class="footer-contact" id="rodape-contato">
+          <h2>Contato</h2>
+          <p><i class="bi bi-telephone icon" aria-hidden="true"></i> (11) 1234-5678</p>
+          <p><i class="bi bi-envelope icon" aria-hidden="true"></i> contato@sindicatoservidores.org.br</p>
+          <p><i class="bi bi-geo-alt icon" aria-hidden="true"></i> Rua dos Servidores, 123 — Centro<br>São Paulo/SP</p>
+          <a class="footer-contact__link" href="contato.html">Fale Conosco<i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </address>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom__inner">
+          <p>© 2024 Sindicato de Servidores Públicos. Todos os direitos reservados.</p>
+          <div>
+            <a href="#" data-demo="Política de Privacidade">Política de Privacidade</a>
+            <a href="#" data-demo="Termos de Uso">Termos de Uso</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <dialog class="modal" aria-modal="true" data-modal>
+    <div class="modal__content">
+      <button class="icon-button modal__close" type="button" aria-label="Fechar janela" data-modal-close>
+        <i class="bi bi-x-lg icon" aria-hidden="true"></i>
+      </button>
+      <i class="bi bi-people icon modal__icon" data-modal-icon aria-hidden="true"></i>
+      <h2 data-modal-title>Recurso demonstrativo</h2>
+      <p data-modal-message>Esta ação está preparada para a próxima etapa do portal.</p>
+      <button class="button button--primary" type="button" data-modal-close>Entendi</button>
+    </div>
+  </dialog>
+
+  <div class="toast" role="status" aria-live="polite" aria-atomic="true" data-toast hidden></div>
+</body>
+</html>

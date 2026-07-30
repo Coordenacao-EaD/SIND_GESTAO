@@ -1,0 +1,210 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-blue-deep);
+  box-shadow: var(--shadow-soft);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  min-height: var(--header-height);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  flex: 0 0 auto;
+  color: var(--color-white);
+}
+
+.brandMark {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--color-gold);
+  color: var(--color-blue-deep);
+  font-weight: 800;
+}
+
+.brandName {
+  font-size: var(--font-size-md);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.nav {
+  display: none;
+  align-items: center;
+  gap: var(--space-xs);
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.navLink {
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.86rem;
+  font-weight: 650;
+  white-space: nowrap;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.navLink:hover,
+.navLink:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+}
+
+.navLinkActive {
+  color: var(--color-gold);
+}
+
+.memberButton {
+  display: none;
+  flex: 0 0 auto;
+  padding: 10px 18px;
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-sm);
+  color: var(--color-gold);
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.memberButton:hover,
+.memberButton:focus-visible {
+  background: var(--color-gold);
+  color: var(--color-blue-deep);
+}
+
+.menuToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-left: auto;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-white);
+}
+
+.menuToggle:hover,
+.menuToggle:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  background: rgba(0, 10, 30, 0.5);
+}
+
+.mobilePanel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 120;
+  display: grid;
+  align-content: start;
+  width: min(85vw, 340px);
+  padding: var(--space-lg);
+  background: var(--color-white);
+  box-shadow: -12px 0 32px rgba(0, 27, 79, 0.18);
+  transform: translateX(100%);
+  transition: transform var(--transition-base);
+}
+
+.mobilePanelOpen {
+  transform: translateX(0);
+}
+
+.mobilePanelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+
+.mobileClose {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.mobileNav {
+  display: grid;
+  gap: 2px;
+}
+
+.mobileNavLink {
+  display: block;
+  padding: 12px 10px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-weight: 650;
+}
+
+.mobileNavLink:hover,
+.mobileNavLink:focus-visible {
+  background: var(--color-gold-soft);
+  color: var(--color-gold-dark);
+}
+
+.mobileNavLinkActive {
+  color: var(--color-gold-dark);
+  background: var(--color-gold-soft);
+}
+
+.mobileMemberButton {
+  margin-top: var(--space-lg);
+  padding: 12px;
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-sm);
+  color: var(--color-gold-dark);
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1180px) {
+  .nav {
+    display: flex;
+  }
+
+  .memberButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menuToggle {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobilePanel {
+    transition: none;
+  }
+}

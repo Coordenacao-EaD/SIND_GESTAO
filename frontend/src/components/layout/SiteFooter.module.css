@@ -1,0 +1,135 @@
+.footer {
+  background: var(--color-footer);
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: var(--space-xl);
+  padding-block: var(--space-2xl);
+}
+
+.brandColumn {
+  display: grid;
+  gap: var(--space-sm);
+  align-content: start;
+}
+
+.brandRow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-white);
+  font-weight: 800;
+}
+
+.description {
+  max-width: 320px;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+}
+
+.socialLinks {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-xs);
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  transition: background var(--transition-fast);
+}
+
+.socialLink:hover,
+.socialLink:focus-visible {
+  background: var(--color-gold);
+  color: var(--color-blue-deep);
+}
+
+.linkGroup h2 {
+  margin-bottom: var(--space-sm);
+  color: var(--color-white);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.linkGroup ul {
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.linkGroup a {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.linkGroup a:hover,
+.linkGroup a:focus-visible {
+  color: var(--color-gold);
+}
+
+.contact h2 {
+  margin-bottom: var(--space-sm);
+  color: var(--color-white);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.contact ul {
+  display: grid;
+  gap: var(--space-xs);
+  font-size: var(--font-size-sm);
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.bottomInner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding-block: var(--space-md);
+  font-size: var(--font-size-xs);
+}
+
+.bottomLinks {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.bottomLinks a:hover,
+.bottomLinks a:focus-visible {
+  color: var(--color-gold);
+}
+
+@media (max-width: 1023px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottomInner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

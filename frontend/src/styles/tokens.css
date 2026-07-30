@@ -1,0 +1,57 @@
+:root {
+  /* Color tokens */
+  --color-gold: #e8ad34;
+  --color-gold-dark: #c88b18;
+  --color-gold-soft: #fff6de;
+  --color-blue-deep: #001b4f;
+  --color-blue-secondary: #1e467a;
+  --color-green: #2e7d32;
+  --color-green-dark: #235f27;
+  --color-red: #c62828;
+  --color-white: #ffffff;
+  --color-surface: #f5f7f9;
+  --color-text: #303f46;
+  --color-text-muted: #5b6b73;
+  --color-border: #dfe4e8;
+  --color-footer: #001b4f;
+
+  /* Typography */
+  --font-family-base: "Segoe UI", Roboto, Arial, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.375rem;
+  --font-size-xl: clamp(1.75rem, 3vw, 2.25rem);
+  --font-size-hero: clamp(2rem, 4vw, 3rem);
+  --line-height-tight: 1.15;
+  --line-height-base: 1.5;
+  --line-height-relaxed: 1.7;
+
+  /* Spacing scale */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-soft: 0 10px 28px rgba(0, 27, 79, 0.08);
+  --shadow-card: 0 6px 18px rgba(0, 27, 79, 0.06);
+  --shadow-focus: 0 0 0 3px rgba(232, 173, 52, 0.35);
+
+  /* Layout */
+  --container-max-width: 1280px;
+  --header-height: 84px;
+  --transition-fast: 160ms ease;
+  --transition-base: 220ms ease;
+}

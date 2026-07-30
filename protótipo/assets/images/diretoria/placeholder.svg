@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-labelledby="title desc">
+  <title id="title">Fotografia institucional pendente</title>
+  <desc id="desc">Silhueta neutra usada enquanto a fotografia oficial não está disponível.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef3f6"/>
+      <stop offset="1" stop-color="#d8e2e8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8ad34"/>
+      <stop offset="1" stop-color="#c88b18"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="720" fill="url(#background)"/>
+  <circle cx="100" cy="105" r="180" fill="#fff6de" opacity=".7"/>
+  <circle cx="655" cy="620" r="230" fill="#12304a" opacity=".06"/>
+  <path d="M40 610C180 505 290 575 410 490s195-58 270-122" fill="none" stroke="#12304a" stroke-opacity=".08" stroke-width="18"/>
+  <circle cx="360" cy="273" r="105" fill="#12304a" opacity=".88"/>
+  <path d="M150 650c12-150 92-245 210-245s198 95 210 245" fill="#12304a" opacity=".88"/>
+  <circle cx="580" cy="118" r="28" fill="url(#accent)"/>
+  <path d="M569 118l8 8 15-18" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+</svg>

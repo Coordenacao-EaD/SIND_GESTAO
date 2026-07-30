@@ -1,0 +1,112 @@
+.section {
+  padding-block: var(--space-3xl);
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.title {
+  color: var(--color-blue-deep);
+  font-size: var(--font-size-xl);
+}
+
+.viewAll {
+  flex: 0 0 auto;
+  color: var(--color-gold-dark);
+  font-weight: 800;
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+}
+
+.viewAll:hover,
+.viewAll:focus-visible {
+  color: var(--color-blue-deep);
+}
+
+.list {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.item:hover,
+.item:focus-within {
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-card);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--color-gold-soft);
+  color: var(--color-gold-dark);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.itemBody h3 {
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+}
+
+.excerpt {
+  margin-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.itemFooter {
+  display: grid;
+  justify-items: end;
+  gap: 4px;
+  text-align: right;
+}
+
+.date {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.details {
+  color: var(--color-gold-dark);
+  font-size: var(--font-size-sm);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.details:hover,
+.details:focus-visible {
+  color: var(--color-blue-deep);
+}
+
+@media (max-width: 640px) {
+  .item {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .itemFooter {
+    justify-items: start;
+    text-align: left;
+  }
+}
