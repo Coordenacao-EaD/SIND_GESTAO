@@ -1,0 +1,48 @@
+{
+  "auditReportVersion": 2,
+  "capturedAt": "2026-08-03",
+  "command": "npm audit --json",
+  "exitCode": 1,
+  "vulnerabilities": {
+    "react-router": {
+      "severity": "high",
+      "isDirect": false,
+      "via": "GHSA-qwww-vcr4-c8h2",
+      "affectedRange": ">=7.12.0 <8.3.0",
+      "installed": "7.18.1",
+      "path": "react-router-dom > react-router",
+      "patchedVersion": "8.3.0",
+      "npmFixAvailable": { "name": "react-router-dom", "version": "7.11.0", "isSemVerMajor": true },
+      "reachable": false,
+      "reachabilityReason": "O advisory limita o impacto às APIs RSC instáveis; a F1 é uma SPA cliente e não usa RSC nem actions de servidor."
+    },
+    "react-router-dom": {
+      "severity": "high",
+      "isDirect": true,
+      "via": "react-router",
+      "installed": "7.18.1",
+      "path": "react-router-dom > react-router",
+      "patchedVersion": "8.3.0",
+      "npmFixAvailable": { "name": "react-router-dom", "version": "7.11.0", "isSemVerMajor": true },
+      "reachable": false,
+      "decision": "Risco residual documentado; correção exige major e não foi autorizada."
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 2,
+      "critical": 0,
+      "total": 2
+    },
+    "dependencies": {
+      "prod": 9,
+      "dev": 168,
+      "optional": 55,
+      "peer": 14,
+      "total": 176
+    }
+  }
+}

@@ -64,9 +64,14 @@ npm run test:watch  # modo watch
 
 Usa **Vitest** + **React Testing Library** + **jsdom**. Os testes cobrem: renderização da Home, todas as seções, conteúdo do Hero, rotas dos CTAs, menu desktop, menu mobile (abrir/fechar/Escape/clique externo/foco), navegação por teclado, estados de loading/empty/error, erro parcial sem derrubar a página, fallback de imagem, injeção de um `HomeRepository` alternativo, rota `NotFound`, rota "em construção", e ausência de chamadas de rede.
 
-### E2E (Playwright)
+### E2E (Chrome CDP)
 
-`e2e/home.spec.ts` existe apenas como **stub documentado** reservando o local da futura suíte E2E. O Playwright não está instalado nesta fase — não há script `test:e2e`. Veja o comentário no topo do arquivo para os passos de ativação futura.
+```bash
+npm run build
+npm run test:e2e
+```
+
+O E2E real usa Node e Google Chrome headless diretamente pelo Chrome DevTools Protocol, sem Playwright. O executável pode ser informado por `CHROME_PATH`; no Windows, o script usa como fallback o caminho padrão do Google Chrome. O runner inicia e encerra o preview e o navegador e grava as evidências em `test-results/e2e/`.
 
 ## Estrutura principal
 

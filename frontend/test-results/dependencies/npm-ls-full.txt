@@ -1,0 +1,23 @@
+Command: npm ls
+Exit code: 0
+
+npm 11 apresenta a árvore lógica direta por padrão; a análise transitiva complementar foi feita sobre os 176 nós de package-lock.json e com npm ls --all --json (exit code 0).
+
+frontend@0.0.0
++-- @testing-library/jest-dom@7.0.0
++-- @testing-library/react@16.3.2
++-- @testing-library/user-event@14.6.1
++-- @types/node@24.13.3
++-- @types/react-dom@19.2.3
++-- @types/react@19.2.17
++-- @vitejs/plugin-react@6.0.4
++-- axe-core@4.12.1
++-- jsdom@29.1.1
++-- lucide-react@1.27.0
++-- oxlint@1.76.0
++-- react-dom@19.2.8
++-- react-router-dom@7.18.1
++-- react@19.2.8
++-- typescript@6.0.3
++-- vite@8.1.5
+`-- vitest@4.1.10

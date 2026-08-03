@@ -1,0 +1,37 @@
+{
+  "auditReportVersion": 2,
+  "capturedAt": "2026-08-03",
+  "command": "npm audit --omit=dev --json",
+  "exitCode": 1,
+  "vulnerabilities": {
+    "react-router": {
+      "severity": "high",
+      "isDirect": false,
+      "path": "react-router-dom > react-router",
+      "installed": "7.18.1",
+      "advisory": "GHSA-qwww-vcr4-c8h2",
+      "patchedVersion": "8.3.0",
+      "npmFixAvailable": { "name": "react-router-dom", "version": "7.11.0", "isSemVerMajor": true },
+      "reachable": false
+    },
+    "react-router-dom": {
+      "severity": "high",
+      "isDirect": true,
+      "path": "react-router-dom > react-router",
+      "installed": "7.18.1",
+      "patchedVersion": "8.3.0",
+      "npmFixAvailable": { "name": "react-router-dom", "version": "7.11.0", "isSemVerMajor": true },
+      "reachable": false
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 2,
+      "critical": 0,
+      "total": 2
+    }
+  }
+}

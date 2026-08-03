@@ -10,7 +10,13 @@ interface SafeLinkProps {
 }
 
 function isInternalPath(href: string): boolean {
-  return href.startsWith("/") && !href.startsWith("//");
+  // Browsers strip tabs/newlines and treat backslashes as forward slashes when
+  // resolving an href (WHATWG URL spec), so "/\evil.com" or "/\t/evil.com"
+  // resolve to the external host "evil.com" despite starting with a single "/".
+  // Normalize the same way before checking, or such disguised hosts would be
+  // misclassified as internal routes and rendered without external-link safeguards.
+  const normalized = href.replace(/[\t\r\n]/g, "").replace(/\\/g, "/");
+  return normalized.startsWith("/") && !normalized.startsWith("//");
 }
 
 function isSafeExternalUrl(href: string): boolean {

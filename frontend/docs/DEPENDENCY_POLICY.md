@@ -38,11 +38,13 @@ Não adicionar bibliotecas “para uso futuro” sem uso atual aprovado.
 ## 4. Gerenciador, versões e lockfile
 
 - npm é o gerenciador adotado.
+- O registro confiável padrão é `https://registry.npmjs.org/`; pacote por URL, tarball externo, caminho local ou Git exige justificativa técnica e aprovação explícita.
 - `package-lock.json` deve permanecer versionado e coerente com `package.json`.
+- Validações reproduzíveis e CI devem instalar a árvore com `npm ci`; `npm install` fica reservado a mudanças deliberadas de dependências.
 - Não criar `yarn.lock`, `pnpm-lock.yaml`, `bun.lock` ou lockfile adicional.
 - Não usar versão `*`.
 - Mudanças de dependência devem incluir a alteração correspondente do lockfile.
-- Ferramentas usadas apenas por testes, build ou lint pertencem a `devDependencies`.
+- Bibliotecas necessárias no bundle pertencem a `dependencies`; ferramentas de build, teste, lint, tipagem e auditoria pertencem a `devDependencies`.
 
 Instalações e atualizações não devem ocorrer como efeito colateral de uma tarefa que não as autorizou.
 
@@ -57,7 +59,7 @@ npm outdated
 
 Regras:
 
-- não executar `npm audit fix` automaticamente;
+- não executar `npm audit fix` automaticamente nem atualização forçada indiscriminada, especialmente `npm audit fix --force`;
 - vulnerabilidade crítica ou alta deve bloquear a entrega até correção ou justificativa formal;
 - atualizações de segurança devem ser testadas com lint, typecheck, testes e build;
 - uma correção não pode introduzir pacote alternativo duplicado sem decisão explícita;
@@ -87,12 +89,20 @@ A F1 ainda não define um orçamento numérico formal de bundle. Um limite somen
 ## 8. Atualizações
 
 - Atualizações devem ser pequenas, rastreáveis e acompanhadas por notas relevantes.
-- Mudanças major exigem análise de migração e compatibilidade.
-- Dependências sem uso devem ser removidas.
+- Mudanças major exigem análise prévia de migração, compatibilidade, peer dependencies, notas de versão e regressão completa.
+- Dependências só devem ser removidas após confirmar ausência de imports, uso por configuração, script npm, CLI, build, teste, E2E e auditoria.
+- Após inclusão, remoção, movimentação, atualização ou deduplicação, executar `npm ci`, lint, typecheck, testes, build e as auditorias E2E/acessibilidade aplicáveis.
 - O lockfile não deve ser regenerado sem necessidade.
 - Atualização de ferramenta não deve ser misturada com mudança funcional não relacionada quando isso dificultar a revisão.
 
-## 9. Controles atuais e futuros
+## 9. Duplicações e uso direto
+
+- Revisar versões múltiplas com `npm ls --all` e `npm dedupe --dry-run`.
+- Duplicações por faixas transitivas incompatíveis podem permanecer quando justificadas; não usar `overrides` para forçar compatibilidade não comprovada.
+- Executar `npm dedupe` real somente quando o benefício estiver demonstrado e a regressão completa puder ser executada.
+- Todo pacote importado ou executado diretamente pelo projeto deve estar declarado no grupo correto; não depender acidentalmente de pacote transitivo.
+
+## 10. Controles atuais e futuros
 
 Controles atuais:
 
@@ -112,7 +122,7 @@ Controles futuros, ainda não implementados:
 - orçamento de bundle automatizado;
 - política formal de prazo para correção por severidade.
 
-## 10. Checklist de mudança
+## 11. Checklist de mudança
 
 - [ ] A dependência é necessária para requisito atual.
 - [ ] Não duplica capacidade já disponível.
@@ -121,7 +131,8 @@ Controles futuros, ainda não implementados:
 - [ ] O impacto no bundle foi medido quando aplicável.
 - [ ] Produção e desenvolvimento foram classificados corretamente.
 - [ ] `package.json` e `package-lock.json` permanecem coerentes.
+- [ ] `npm ci` reproduz a instalação aprovada.
+- [ ] Duplicações e dependências diretas não usadas ou implícitas foram revisadas.
 - [ ] Não foi criado outro lockfile.
-- [ ] Lint, typecheck, testes e build existentes foram executados.
+- [ ] Lint, typecheck, testes, build, E2E e acessibilidade aplicáveis foram executados.
 - [ ] A documentação foi atualizada quando a arquitetura ou operação mudou.
-

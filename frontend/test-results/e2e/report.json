@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-07-30T19:56:24.787Z",
-  "durationMs": 4394,
+  "startedAt": "2026-08-03T17:40:15.897Z",
+  "durationMs": 4717,
   "browser": "Google Chrome headless via Chrome DevTools Protocol",
   "baseUrl": "http://127.0.0.1:4182",
   "checks": [
@@ -47,9 +47,8 @@
   "previewErrors": [],
   "browserOutput": [],
   "browserDiagnostics": [
-    "\r\nDevTools listening on ws://127.0.0.1:9334/devtools/browser/d30e4664-9c28-41ea-adbf-4d56f6991649\r\n",
-    "[18428:22896:0730/155627.870:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT\r\n",
-    "[18428:22896:0730/155627.920:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n"
+    "\r\nDevTools listening on ws://127.0.0.1:9334/devtools/browser/2cec1257-c444-44be-92fe-87daea3b54aa\r\n",
+    "[13576:38496:0803/134019.387:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n"
   ],
   "passed": true,
   "failure": null

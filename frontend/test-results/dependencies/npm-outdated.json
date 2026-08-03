@@ -1,0 +1,17 @@
+{
+  "capturedAt": "2026-08-03",
+  "command": "npm outdated --json",
+  "exitCode": 1,
+  "packages": {
+    "@types/node": { "current": "24.13.3", "wanted": "24.13.3", "latest": "26.1.2" },
+    "@types/react": { "current": "19.2.17", "wanted": "19.2.18", "latest": "19.2.18" },
+    "@types/react-dom": { "current": "19.2.3", "wanted": "19.2.4", "latest": "19.2.4" },
+    "@vitejs/plugin-react": { "current": "6.0.4", "wanted": "6.0.5", "latest": "6.0.5" },
+    "lucide-react": { "current": "1.27.0", "wanted": "1.28.0", "latest": "1.28.0" },
+    "oxlint": { "current": "1.76.0", "wanted": "1.77.0", "latest": "1.77.0" },
+    "react-router-dom": { "current": "7.18.1", "wanted": "7.18.2", "latest": "7.18.2" },
+    "typescript": { "current": "6.0.3", "wanted": "6.0.3", "latest": "7.0.2" },
+    "vite": { "current": "8.1.5", "wanted": "8.2.0", "latest": "8.2.0" }
+  },
+  "decision": "Nenhuma atualização indiscriminada. O patch de segurança do React Router está apenas em 8.3.0 e exigiria major; os demais itens não corrigem vulnerabilidade comprovada nesta árvore."
+}
