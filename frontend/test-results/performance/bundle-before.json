@@ -1,0 +1,172 @@
+{
+  "generatedAt": "2026-08-03T18:43:05.088Z",
+  "command": "npm run measure:bundle -- test-results/performance/bundle-before.json",
+  "totals": {
+    "files": 9,
+    "bytes": 9023383,
+    "gzipBytes": 8714195,
+    "brotliBytes": 8668935
+  },
+  "categories": {
+    "images": {
+      "files": 6,
+      "bytes": 8676551,
+      "gzipBytes": 8608043,
+      "brotliBytes": 8576637
+    },
+    "javascript": {
+      "files": 1,
+      "bytes": 320916,
+      "gzipBytes": 100375,
+      "brotliBytes": 87293
+    },
+    "css": {
+      "files": 1,
+      "bytes": 25304,
+      "gzipBytes": 5406,
+      "brotliBytes": 4775
+    },
+    "fonts": {
+      "files": 0,
+      "bytes": 0,
+      "gzipBytes": 0,
+      "brotliBytes": 0
+    },
+    "other": {
+      "files": 1,
+      "bytes": 612,
+      "gzipBytes": 371,
+      "brotliBytes": 230
+    }
+  },
+  "largestFiles": [
+    {
+      "path": "assets/news-assembly-BX3kknJi.png",
+      "extension": ".png",
+      "bytes": 2459322,
+      "gzipBytes": 2444951,
+      "brotliBytes": 2431783
+    },
+    {
+      "path": "assets/news-rights-DxAVxxHu.png",
+      "extension": ".png",
+      "bytes": 1941086,
+      "gzipBytes": 1928101,
+      "brotliBytes": 1920019
+    },
+    {
+      "path": "assets/news-negotiation-CDArzPB3.png",
+      "extension": ".png",
+      "bytes": 1883673,
+      "gzipBytes": 1869699,
+      "brotliBytes": 1865330
+    },
+    {
+      "path": "assets/hero-union-uRZv_2_l.jpg",
+      "extension": ".jpg",
+      "bytes": 1882636,
+      "gzipBytes": 1869598,
+      "brotliBytes": 1865262
+    },
+    {
+      "path": "assets/logo-BoDb8VpG.png",
+      "extension": ".png",
+      "bytes": 500312,
+      "gzipBytes": 494209,
+      "brotliBytes": 493006
+    },
+    {
+      "path": "assets/index-DyG4kYCV.js",
+      "extension": ".js",
+      "bytes": 320916,
+      "gzipBytes": 100375,
+      "brotliBytes": 87293
+    },
+    {
+      "path": "assets/index-DmWdHOa0.css",
+      "extension": ".css",
+      "bytes": 25304,
+      "gzipBytes": 5406,
+      "brotliBytes": 4775
+    },
+    {
+      "path": "favicon.svg",
+      "extension": ".svg",
+      "bytes": 9522,
+      "gzipBytes": 1485,
+      "brotliBytes": 1237
+    },
+    {
+      "path": "index.html",
+      "extension": ".html",
+      "bytes": 612,
+      "gzipBytes": 371,
+      "brotliBytes": 230
+    }
+  ],
+  "files": [
+    {
+      "path": "assets/news-assembly-BX3kknJi.png",
+      "extension": ".png",
+      "bytes": 2459322,
+      "gzipBytes": 2444951,
+      "brotliBytes": 2431783
+    },
+    {
+      "path": "assets/news-rights-DxAVxxHu.png",
+      "extension": ".png",
+      "bytes": 1941086,
+      "gzipBytes": 1928101,
+      "brotliBytes": 1920019
+    },
+    {
+      "path": "assets/news-negotiation-CDArzPB3.png",
+      "extension": ".png",
+      "bytes": 1883673,
+      "gzipBytes": 1869699,
+      "brotliBytes": 1865330
+    },
+    {
+      "path": "assets/hero-union-uRZv_2_l.jpg",
+      "extension": ".jpg",
+      "bytes": 1882636,
+      "gzipBytes": 1869598,
+      "brotliBytes": 1865262
+    },
+    {
+      "path": "assets/logo-BoDb8VpG.png",
+      "extension": ".png",
+      "bytes": 500312,
+      "gzipBytes": 494209,
+      "brotliBytes": 493006
+    },
+    {
+      "path": "assets/index-DyG4kYCV.js",
+      "extension": ".js",
+      "bytes": 320916,
+      "gzipBytes": 100375,
+      "brotliBytes": 87293
+    },
+    {
+      "path": "assets/index-DmWdHOa0.css",
+      "extension": ".css",
+      "bytes": 25304,
+      "gzipBytes": 5406,
+      "brotliBytes": 4775
+    },
+    {
+      "path": "favicon.svg",
+      "extension": ".svg",
+      "bytes": 9522,
+      "gzipBytes": 1485,
+      "brotliBytes": 1237
+    },
+    {
+      "path": "index.html",
+      "extension": ".html",
+      "bytes": 612,
+      "gzipBytes": 371,
+      "brotliBytes": 230
+    }
+  ]
+}

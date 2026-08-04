@@ -1,5 +1,5 @@
 import { Mail, MapPin, Phone } from "lucide-react";
-import logo from "../../assets/home/logo.png";
+import logo from "../../assets/home/logo-128.png";
 import type { FooterData } from "../../pages/home/types/home.types";
 import { SafeLink } from "../navigation/SafeLink";
 import styles from "./SiteFooter.module.css";
@@ -28,7 +28,7 @@ export function SiteFooter({ data }: SiteFooterProps) {
       <div className={`container ${styles.grid}`}>
         <div className={styles.brandColumn}>
           <div className={styles.brandRow}>
-            <img src={logo} alt="" />
+            <img src={logo} alt="" width={128} height={128} loading="lazy" decoding="async" />
             <strong>{data.institutionName}</strong>
           </div>
           {data.shortDescription?.trim() ? <p>{data.shortDescription}</p> : null}

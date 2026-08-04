@@ -1,0 +1,200 @@
+{
+  "generatedAt": "2026-08-03T19:48:27.688Z",
+  "command": "npm run measure:bundle -- test-results/performance/f2-2a-bundle.json",
+  "totals": {
+    "files": 12,
+    "bytes": 617407,
+    "gzipBytes": 332863,
+    "brotliBytes": 316885
+  },
+  "categories": {
+    "images": {
+      "files": 7,
+      "bytes": 219951,
+      "gzipBytes": 212033,
+      "brotliBytes": 211599
+    },
+    "javascript": {
+      "files": 2,
+      "bytes": 357274,
+      "gzipBytes": 111566,
+      "brotliBytes": 97262
+    },
+    "css": {
+      "files": 2,
+      "bytes": 39570,
+      "gzipBytes": 8888,
+      "brotliBytes": 7793
+    },
+    "fonts": {
+      "files": 0,
+      "bytes": 0,
+      "gzipBytes": 0,
+      "brotliBytes": 0
+    },
+    "other": {
+      "files": 1,
+      "bytes": 612,
+      "gzipBytes": 376,
+      "brotliBytes": 231
+    }
+  },
+  "largestFiles": [
+    {
+      "path": "assets/index-A_VX3ZrR.js",
+      "extension": ".js",
+      "bytes": 322953,
+      "gzipBytes": 101173,
+      "brotliBytes": 87999
+    },
+    {
+      "path": "assets/hero-union-1672-D6SQlQCF.webp",
+      "extension": ".webp",
+      "bytes": 84356,
+      "gzipBytes": 84404,
+      "brotliBytes": 84361
+    },
+    {
+      "path": "assets/news-assembly-480-CJTU9LdM.webp",
+      "extension": ".webp",
+      "bytes": 37326,
+      "gzipBytes": 37359,
+      "brotliBytes": 37330
+    },
+    {
+      "path": "assets/HomeManagementPage-Kpqxp5_z.js",
+      "extension": ".js",
+      "bytes": 34321,
+      "gzipBytes": 10393,
+      "brotliBytes": 9263
+    },
+    {
+      "path": "assets/hero-union-840-CPp8meld.webp",
+      "extension": ".webp",
+      "bytes": 33988,
+      "gzipBytes": 34021,
+      "brotliBytes": 33992
+    },
+    {
+      "path": "assets/index-DmWdHOa0.css",
+      "extension": ".css",
+      "bytes": 25304,
+      "gzipBytes": 5406,
+      "brotliBytes": 4775
+    },
+    {
+      "path": "assets/news-rights-480-BtWLD6xM.webp",
+      "extension": ".webp",
+      "bytes": 21638,
+      "gzipBytes": 21666,
+      "brotliBytes": 21642
+    },
+    {
+      "path": "assets/news-negotiation-480-RTuRUR2J.webp",
+      "extension": ".webp",
+      "bytes": 21006,
+      "gzipBytes": 21034,
+      "brotliBytes": 21010
+    },
+    {
+      "path": "assets/HomeManagementPage-ByHdJGnN.css",
+      "extension": ".css",
+      "bytes": 14266,
+      "gzipBytes": 3482,
+      "brotliBytes": 3018
+    },
+    {
+      "path": "assets/logo-128-DIZQeAPY.png",
+      "extension": ".png",
+      "bytes": 12115,
+      "gzipBytes": 12064,
+      "brotliBytes": 12027
+    }
+  ],
+  "files": [
+    {
+      "path": "assets/index-A_VX3ZrR.js",
+      "extension": ".js",
+      "bytes": 322953,
+      "gzipBytes": 101173,
+      "brotliBytes": 87999
+    },
+    {
+      "path": "assets/hero-union-1672-D6SQlQCF.webp",
+      "extension": ".webp",
+      "bytes": 84356,
+      "gzipBytes": 84404,
+      "brotliBytes": 84361
+    },
+    {
+      "path": "assets/news-assembly-480-CJTU9LdM.webp",
+      "extension": ".webp",
+      "bytes": 37326,
+      "gzipBytes": 37359,
+      "brotliBytes": 37330
+    },
+    {
+      "path": "assets/HomeManagementPage-Kpqxp5_z.js",
+      "extension": ".js",
+      "bytes": 34321,
+      "gzipBytes": 10393,
+      "brotliBytes": 9263
+    },
+    {
+      "path": "assets/hero-union-840-CPp8meld.webp",
+      "extension": ".webp",
+      "bytes": 33988,
+      "gzipBytes": 34021,
+      "brotliBytes": 33992
+    },
+    {
+      "path": "assets/index-DmWdHOa0.css",
+      "extension": ".css",
+      "bytes": 25304,
+      "gzipBytes": 5406,
+      "brotliBytes": 4775
+    },
+    {
+      "path": "assets/news-rights-480-BtWLD6xM.webp",
+      "extension": ".webp",
+      "bytes": 21638,
+      "gzipBytes": 21666,
+      "brotliBytes": 21642
+    },
+    {
+      "path": "assets/news-negotiation-480-RTuRUR2J.webp",
+      "extension": ".webp",
+      "bytes": 21006,
+      "gzipBytes": 21034,
+      "brotliBytes": 21010
+    },
+    {
+      "path": "assets/HomeManagementPage-ByHdJGnN.css",
+      "extension": ".css",
+      "bytes": 14266,
+      "gzipBytes": 3482,
+      "brotliBytes": 3018
+    },
+    {
+      "path": "assets/logo-128-DIZQeAPY.png",
+      "extension": ".png",
+      "bytes": 12115,
+      "gzipBytes": 12064,
+      "brotliBytes": 12027
+    },
+    {
+      "path": "favicon.svg",
+      "extension": ".svg",
+      "bytes": 9522,
+      "gzipBytes": 1485,
+      "brotliBytes": 1237
+    },
+    {
+      "path": "index.html",
+      "extension": ".html",
+      "bytes": 612,
+      "gzipBytes": 376,
+      "brotliBytes": 231
+    }
+  ]
+}

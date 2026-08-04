@@ -23,3 +23,7 @@ export const ROUTES = {
 
 export type RouteKey = keyof typeof ROUTES;
 export type RoutePath = (typeof ROUTES)[RouteKey];
+
+export const ADMIN_ROUTES = {
+  home: "/admin/home",
+} as const;

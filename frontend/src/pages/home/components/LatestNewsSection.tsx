@@ -23,8 +23,12 @@ function NewsCard({ news }: { news: NewsSummary }) {
         ) : (
           <img
             src={news.imageUrl}
+            width={news.imageWidth}
+            height={news.imageHeight}
             alt={news.imageAlt}
             className={styles.image}
+            loading="lazy"
+            decoding="async"
             onError={() => setImageFailed(true)}
           />
         )}

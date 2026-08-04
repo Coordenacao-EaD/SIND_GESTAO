@@ -91,6 +91,44 @@ describe("HomePage", () => {
     expect(screen.getByRole("heading", { name: homePageDataMock.membershipCta.title })).toBeInTheDocument();
   });
 
+  it("formalizes CA-HOM-001 with the complete public Home from the F1 mock repository", async () => {
+    const repository = new HomeMockRepository("default");
+    const repositorySpy = vi.spyOn(repository, "getHomePage");
+    const { container } = renderHomePage(repository);
+
+    expect(
+      await screen.findByRole("heading", { level: 1, name: homePageDataMock.hero.title }),
+    ).toBeInTheDocument();
+    expect(repositorySpy).toHaveBeenCalledOnce();
+    expect(container.querySelectorAll("main")).toHaveLength(1);
+    expect(container.querySelectorAll("h1")).toHaveLength(1);
+    expect(screen.getByRole("img", { name: homePageDataMock.hero.imageAlt })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: homePageDataMock.hero.primaryAction.label })).toHaveAttribute(
+      "href",
+      homePageDataMock.hero.primaryAction.href,
+    );
+    expect(screen.getByRole("navigation", { name: "Acesso rápido aos serviços" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: homePageDataMock.about.title })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Últimas Notícias" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Comunicados Recentes" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: homePageDataMock.transparency.status === "ready"
+      ? homePageDataMock.transparency.data.title
+      : "" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Documentos Importantes" })).toBeInTheDocument();
+
+    const footer = screen.getByRole("contentinfo");
+    expect(within(footer).getByRole("link", { name: homePageDataMock.footer.phone })).toBeInTheDocument();
+    expect(within(footer).getByRole("link", { name: homePageDataMock.footer.email })).toBeInTheDocument();
+    expect(within(footer).getByRole("link", { name: "Política de Privacidade" })).toBeInTheDocument();
+    expect(within(footer).getByRole("link", { name: "Termos de Uso" })).toBeInTheDocument();
+    for (const social of homePageDataMock.footer.socialLinks) {
+      expect(within(footer).getAllByRole("link", {
+        name: `${social.label} (abre em uma nova aba)`,
+      }).length).toBeGreaterThan(0);
+    }
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
   it("preserves a news image accessible name when loading fails", async () => {
     const { container } = renderHomePage(new HomeMockRepository("default"));
     const news = homePageDataMock.news.status === "ready" ? homePageDataMock.news.data[0] : undefined;
@@ -104,6 +142,21 @@ describe("HomePage", () => {
 
     expect(container.querySelector(`img[alt="${news.imageAlt}"]`)).not.toBeInTheDocument();
     expect(screen.getByRole("img", { name: news.imageAlt })).toBeInTheDocument();
+  });
+
+  it("loads news thumbnails lazily with stable intrinsic dimensions", async () => {
+    renderHomePage(new HomeMockRepository("default"));
+    const news = homePageDataMock.news.status === "ready" ? homePageDataMock.news.data[0] : undefined;
+
+    if (!news) {
+      throw new Error("The default Home mock must include at least one news item.");
+    }
+
+    const image = await screen.findByRole("img", { name: news.imageAlt });
+    expect(image).toHaveAttribute("loading", "lazy");
+    expect(image).toHaveAttribute("decoding", "async");
+    expect(image).toHaveAttribute("width", "480");
+    expect(image).toHaveAttribute("height", "288");
   });
 
   it("points hero CTAs at the routes configured in the mock", async () => {
@@ -208,6 +261,44 @@ describe("HomePage", () => {
     expect(await screen.findByRole("alert")).toHaveTextContent(homePageDataPartialErrorMock.notices.status === "error" ? homePageDataPartialErrorMock.notices.message : "");
     // Hero and other sections are unaffected by the notices failure.
     expect(screen.getByRole("heading", { name: "Últimas Notícias" })).toBeInTheDocument();
+  });
+
+  it("formalizes CA-HOM-007 by isolating a controlled News failure from the rest of the Home", async () => {
+    const errorSpy = vi.spyOn(console, "error").mockImplementation(() => undefined);
+    const warnSpy = vi.spyOn(console, "warn").mockImplementation(() => undefined);
+    const newsErrorMessage = "Não foi possível carregar as notícias no momento.";
+    const repository: HomeRepository = {
+      getHomePage: async () => ({
+        ...homePageDataMock,
+        news: { status: "error", message: newsErrorMessage },
+      }),
+    };
+
+    try {
+      renderHomePage(repository);
+
+      const newsSection = await screen.findByRole("region", { name: "Últimas Notícias" });
+      expect(within(newsSection).getByRole("alert")).toHaveTextContent(newsErrorMessage);
+      expect(within(newsSection).getByRole("heading", { name: "Últimas Notícias" })).toBeInTheDocument();
+      expect(within(newsSection).queryByRole("link", { name: "Ver todas as notícias" })).not.toBeInTheDocument();
+      expect(within(newsSection).queryAllByRole("article")).toHaveLength(0);
+
+      expect(screen.getByRole("heading", { level: 1, name: homePageDataMock.hero.title })).toBeInTheDocument();
+      expect(screen.getByRole("navigation", { name: "Acesso rápido aos serviços" })).toBeInTheDocument();
+      expect(screen.getByRole("heading", { name: homePageDataMock.about.title })).toBeInTheDocument();
+      expect(screen.getByRole("heading", { name: "Comunicados Recentes" })).toBeInTheDocument();
+      expect(screen.getByRole("heading", { name: "Documentos Importantes" })).toBeInTheDocument();
+      expect(screen.getByRole("contentinfo")).toBeInTheDocument();
+      expect(screen.queryByRole("heading", {
+        level: 1,
+        name: "Erro ao carregar a Página Inicial",
+      })).not.toBeInTheDocument();
+      expect(errorSpy).not.toHaveBeenCalled();
+      expect(warnSpy).not.toHaveBeenCalled();
+    } finally {
+      errorSpy.mockRestore();
+      warnSpy.mockRestore();
+    }
   });
 
   it("shows a full-page error state when the repository rejects, with a working retry", async () => {

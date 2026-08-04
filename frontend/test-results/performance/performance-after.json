@@ -1,0 +1,1368 @@
+{
+  "generatedAt": "2026-08-03T19:27:40.807Z",
+  "method": "Chrome headless/CDP with PerformanceObserver; local production build; cache disabled",
+  "lighthouse": "not installed; no score invented",
+  "baseUrl": "http://127.0.0.1:4182",
+  "previewOutput": [
+    "  \u001b[32m➜\u001b[39m  \u001b[1mLocal\u001b[22m:   \u001b[36mhttp://127.0.0.1:\u001b[1m4182\u001b[22m/\u001b[39m\n"
+  ],
+  "previewErrors": [],
+  "browserErrors": [
+    "\r\nDevTools listening on ws://127.0.0.1:9334/devtools/browser/d19a5921-d268-45a2-9dde-4b716527ce07\r\n",
+    "[26168:23932:0803/152724.562:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n",
+    "[26168:23932:0803/152724.577:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n",
+    "[26168:23932:0803/152724.577:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n",
+    "[26168:23932:0803/152724.679:ERROR:google_apis\\gcm\\engine\\mcs_client.cc:702]   Error code: 401  Error message: Authentication Failed: wrong_secret\r\n[26168:23932:0803/152724.679:ERROR:google_apis\\gcm\\engine\\mcs_client.cc:704] Failed to log in to GCM, resetting connection.\r\n",
+    "Created TensorFlow Lite XNNPACK delegate for CPU.\r\n"
+  ],
+  "results": [
+    {
+      "viewport": {
+        "id": "desktop-1440x900",
+        "width": 1440,
+        "height": 900
+      },
+      "readyState": "complete",
+      "lcpMs": 172,
+      "cls": 0.00051,
+      "horizontalOverflow": false,
+      "images": [
+        {
+          "alt": "",
+          "src": "/assets/logo-128-DIZQeAPY.png",
+          "currentSrc": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "srcset": null,
+          "sizes": null,
+          "loading": "auto",
+          "fetchPriority": "auto",
+          "naturalWidth": 128,
+          "naturalHeight": 128,
+          "displayedWidth": 49,
+          "displayedHeight": 49,
+          "complete": true
+        },
+        {
+          "alt": "Mãos de servidores unidas, representando cooperação e força coletiva",
+          "src": "/assets/hero-union-1672-D6SQlQCF.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/hero-union-1672-D6SQlQCF.webp",
+          "srcset": "/assets/hero-union-840-CPp8meld.webp 840w, /assets/hero-union-1672-D6SQlQCF.webp 1672w",
+          "sizes": "(max-width: 767px) calc(100vw - 32px), (max-width: 1920px) calc(100vw - 6vw - 24px), 1840px",
+          "loading": "eager",
+          "fetchPriority": "high",
+          "naturalWidth": 1329,
+          "naturalHeight": 748,
+          "displayedWidth": 1343.39,
+          "displayedHeight": 340,
+          "complete": true
+        },
+        {
+          "alt": "Representantes em mesa de negociação",
+          "src": "/assets/news-negotiation-480-RTuRUR2J.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 480,
+          "naturalHeight": 288,
+          "displayedWidth": 191.55,
+          "displayedHeight": 106.41,
+          "complete": true
+        },
+        {
+          "alt": "Reunião institucional sobre direitos",
+          "src": "/assets/news-rights-480-BtWLD6xM.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 480,
+          "naturalHeight": 288,
+          "displayedWidth": 191.56,
+          "displayedHeight": 106.42,
+          "complete": true
+        },
+        {
+          "alt": "Assembleia sindical com votação",
+          "src": "/assets/news-assembly-480-CJTU9LdM.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 480,
+          "naturalHeight": 288,
+          "displayedWidth": 191.56,
+          "displayedHeight": 106.42,
+          "complete": true
+        },
+        {
+          "alt": "",
+          "src": "/assets/logo-128-DIZQeAPY.png",
+          "currentSrc": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 128,
+          "naturalHeight": 128,
+          "displayedWidth": 42,
+          "displayedHeight": 42,
+          "complete": true
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4182/assets/index-c0QG2y5F.js",
+          "initiatorType": "script",
+          "transferSize": 101069,
+          "encodedBodySize": 100769,
+          "decodedBodySize": 321537
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/index-DmWdHOa0.css",
+          "initiatorType": "link",
+          "transferSize": 5725,
+          "encodedBodySize": 5425,
+          "decodedBodySize": 25304
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "initiatorType": "img",
+          "transferSize": 12415,
+          "encodedBodySize": 12115,
+          "decodedBodySize": 12115
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/hero-union-1672-D6SQlQCF.webp",
+          "initiatorType": "img",
+          "transferSize": 84656,
+          "encodedBodySize": 84356,
+          "decodedBodySize": 84356
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "initiatorType": "img",
+          "transferSize": 21306,
+          "encodedBodySize": 21006,
+          "decodedBodySize": 21006
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "initiatorType": "img",
+          "transferSize": 37626,
+          "encodedBodySize": 37326,
+          "decodedBodySize": 37326
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "initiatorType": "img",
+          "transferSize": 21938,
+          "encodedBodySize": 21638,
+          "decodedBodySize": 21638
+        },
+        {
+          "name": "http://127.0.0.1:4182/favicon.svg",
+          "initiatorType": "other",
+          "transferSize": 1790,
+          "encodedBodySize": 1490,
+          "decodedBodySize": 9522
+        }
+      ],
+      "initialNetwork": [
+        {
+          "url": "http://127.0.0.1:4182/assets/index-c0QG2y5F.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "encodedBytes": 101214,
+          "type": "Script"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/hero-union-1672-D6SQlQCF.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 84624,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 37594,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21906,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21274,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encodedBytes": 12382,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/index-DmWdHOa0.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encodedBytes": 5790,
+          "type": "Stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:4182/favicon.svg",
+          "status": 200,
+          "mimeType": "image/svg+xml",
+          "encodedBytes": 1806,
+          "type": "Other"
+        },
+        {
+          "url": "http://127.0.0.1:4182/?performance=desktop-1440x900-1785785241780",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedBytes": 862,
+          "type": "Document"
+        }
+      ],
+      "completeNetwork": [
+        {
+          "url": "http://127.0.0.1:4182/assets/index-c0QG2y5F.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "encodedBytes": 101214,
+          "type": "Script"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/hero-union-1672-D6SQlQCF.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 84624,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 37594,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21906,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21274,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encodedBytes": 12382,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/index-DmWdHOa0.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encodedBytes": 5790,
+          "type": "Stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:4182/favicon.svg",
+          "status": 200,
+          "mimeType": "image/svg+xml",
+          "encodedBytes": 1806,
+          "type": "Other"
+        },
+        {
+          "url": "http://127.0.0.1:4182/?performance=desktop-1440x900-1785785241780",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedBytes": 862,
+          "type": "Document"
+        }
+      ],
+      "failures": []
+    },
+    {
+      "viewport": {
+        "id": "desktop-1024x768",
+        "width": 1024,
+        "height": 768
+      },
+      "readyState": "complete",
+      "lcpMs": 64,
+      "cls": 0,
+      "horizontalOverflow": false,
+      "images": [
+        {
+          "alt": "",
+          "src": "/assets/logo-128-DIZQeAPY.png",
+          "currentSrc": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "srcset": null,
+          "sizes": null,
+          "loading": "auto",
+          "fetchPriority": "auto",
+          "naturalWidth": 128,
+          "naturalHeight": 128,
+          "displayedWidth": 49,
+          "displayedHeight": 49,
+          "complete": true
+        },
+        {
+          "alt": "Mãos de servidores unidas, representando cooperação e força coletiva",
+          "src": "/assets/hero-union-1672-D6SQlQCF.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/hero-union-1672-D6SQlQCF.webp",
+          "srcset": "/assets/hero-union-840-CPp8meld.webp 840w, /assets/hero-union-1672-D6SQlQCF.webp 1672w",
+          "sizes": "(max-width: 767px) calc(100vw - 32px), (max-width: 1920px) calc(100vw - 6vw - 24px), 1840px",
+          "loading": "eager",
+          "fetchPriority": "high",
+          "naturalWidth": 938,
+          "naturalHeight": 528,
+          "displayedWidth": 944.03,
+          "displayedHeight": 340,
+          "complete": true
+        },
+        {
+          "alt": "Representantes em mesa de negociação",
+          "src": "/assets/news-negotiation-480-RTuRUR2J.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 480,
+          "naturalHeight": 288,
+          "displayedWidth": 188,
+          "displayedHeight": 104.44,
+          "complete": true
+        },
+        {
+          "alt": "Reunião institucional sobre direitos",
+          "src": "/assets/news-rights-480-BtWLD6xM.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 480,
+          "naturalHeight": 288,
+          "displayedWidth": 188.02,
+          "displayedHeight": 104.45,
+          "complete": true
+        },
+        {
+          "alt": "Assembleia sindical com votação",
+          "src": "/assets/news-assembly-480-CJTU9LdM.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 480,
+          "naturalHeight": 288,
+          "displayedWidth": 188.02,
+          "displayedHeight": 104.45,
+          "complete": true
+        },
+        {
+          "alt": "",
+          "src": "/assets/logo-128-DIZQeAPY.png",
+          "currentSrc": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 128,
+          "naturalHeight": 128,
+          "displayedWidth": 42,
+          "displayedHeight": 42,
+          "complete": true
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4182/assets/index-c0QG2y5F.js",
+          "initiatorType": "script",
+          "transferSize": 101069,
+          "encodedBodySize": 100769,
+          "decodedBodySize": 321537
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/index-DmWdHOa0.css",
+          "initiatorType": "link",
+          "transferSize": 5725,
+          "encodedBodySize": 5425,
+          "decodedBodySize": 25304
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "initiatorType": "img",
+          "transferSize": 12415,
+          "encodedBodySize": 12115,
+          "decodedBodySize": 12115
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/hero-union-1672-D6SQlQCF.webp",
+          "initiatorType": "img",
+          "transferSize": 84656,
+          "encodedBodySize": 84356,
+          "decodedBodySize": 84356
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "initiatorType": "img",
+          "transferSize": 37626,
+          "encodedBodySize": 37326,
+          "decodedBodySize": 37326
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "initiatorType": "img",
+          "transferSize": 21306,
+          "encodedBodySize": 21006,
+          "decodedBodySize": 21006
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "initiatorType": "img",
+          "transferSize": 21938,
+          "encodedBodySize": 21638,
+          "decodedBodySize": 21638
+        }
+      ],
+      "initialNetwork": [
+        {
+          "url": "http://127.0.0.1:4182/assets/index-c0QG2y5F.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "encodedBytes": 101214,
+          "type": "Script"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/hero-union-1672-D6SQlQCF.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 84624,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 37594,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21906,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21274,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encodedBytes": 12382,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/index-DmWdHOa0.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encodedBytes": 5790,
+          "type": "Stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:4182/?performance=desktop-1024x768-1785785245411",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedBytes": 862,
+          "type": "Document"
+        }
+      ],
+      "completeNetwork": [
+        {
+          "url": "http://127.0.0.1:4182/assets/index-c0QG2y5F.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "encodedBytes": 101214,
+          "type": "Script"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/hero-union-1672-D6SQlQCF.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 84624,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 37594,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21906,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21274,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encodedBytes": 12382,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/index-DmWdHOa0.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encodedBytes": 5790,
+          "type": "Stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:4182/?performance=desktop-1024x768-1785785245411",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedBytes": 862,
+          "type": "Document"
+        }
+      ],
+      "failures": []
+    },
+    {
+      "viewport": {
+        "id": "tablet-768x1024",
+        "width": 768,
+        "height": 1024
+      },
+      "readyState": "complete",
+      "lcpMs": 68,
+      "cls": 0,
+      "horizontalOverflow": false,
+      "images": [
+        {
+          "alt": "",
+          "src": "/assets/logo-128-DIZQeAPY.png",
+          "currentSrc": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "srcset": null,
+          "sizes": null,
+          "loading": "auto",
+          "fetchPriority": "auto",
+          "naturalWidth": 128,
+          "naturalHeight": 128,
+          "displayedWidth": 49,
+          "displayedHeight": 49,
+          "complete": true
+        },
+        {
+          "alt": "Mãos de servidores unidas, representando cooperação e força coletiva",
+          "src": "/assets/hero-union-1672-D6SQlQCF.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/hero-union-840-CPp8meld.webp",
+          "srcset": "/assets/hero-union-840-CPp8meld.webp 840w, /assets/hero-union-1672-D6SQlQCF.webp 1672w",
+          "sizes": "(max-width: 767px) calc(100vw - 32px), (max-width: 1920px) calc(100vw - 6vw - 24px), 1840px",
+          "loading": "eager",
+          "fetchPriority": "high",
+          "naturalWidth": 697,
+          "naturalHeight": 392,
+          "displayedWidth": 712,
+          "displayedHeight": 340,
+          "complete": true
+        },
+        {
+          "alt": "Representantes em mesa de negociação",
+          "src": "/assets/news-negotiation-480-RTuRUR2J.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 480,
+          "naturalHeight": 288,
+          "displayedWidth": 136.44,
+          "displayedHeight": 75.8,
+          "complete": true
+        },
+        {
+          "alt": "Reunião institucional sobre direitos",
+          "src": "/assets/news-rights-480-BtWLD6xM.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 480,
+          "naturalHeight": 288,
+          "displayedWidth": 136.45,
+          "displayedHeight": 75.8,
+          "complete": true
+        },
+        {
+          "alt": "Assembleia sindical com votação",
+          "src": "/assets/news-assembly-480-CJTU9LdM.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 480,
+          "naturalHeight": 288,
+          "displayedWidth": 136.45,
+          "displayedHeight": 75.8,
+          "complete": true
+        },
+        {
+          "alt": "",
+          "src": "/assets/logo-128-DIZQeAPY.png",
+          "currentSrc": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 128,
+          "naturalHeight": 128,
+          "displayedWidth": 42,
+          "displayedHeight": 42,
+          "complete": true
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4182/assets/index-c0QG2y5F.js",
+          "initiatorType": "script",
+          "transferSize": 101069,
+          "encodedBodySize": 100769,
+          "decodedBodySize": 321537
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/index-DmWdHOa0.css",
+          "initiatorType": "link",
+          "transferSize": 5725,
+          "encodedBodySize": 5425,
+          "decodedBodySize": 25304
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "initiatorType": "img",
+          "transferSize": 12415,
+          "encodedBodySize": 12115,
+          "decodedBodySize": 12115
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/hero-union-840-CPp8meld.webp",
+          "initiatorType": "img",
+          "transferSize": 34288,
+          "encodedBodySize": 33988,
+          "decodedBodySize": 33988
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "initiatorType": "img",
+          "transferSize": 21306,
+          "encodedBodySize": 21006,
+          "decodedBodySize": 21006
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "initiatorType": "img",
+          "transferSize": 21938,
+          "encodedBodySize": 21638,
+          "decodedBodySize": 21638
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "initiatorType": "img",
+          "transferSize": 37626,
+          "encodedBodySize": 37326,
+          "decodedBodySize": 37326
+        }
+      ],
+      "initialNetwork": [
+        {
+          "url": "http://127.0.0.1:4182/assets/index-c0QG2y5F.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "encodedBytes": 101214,
+          "type": "Script"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 37594,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/hero-union-840-CPp8meld.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 34256,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21906,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21274,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encodedBytes": 12382,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/index-DmWdHOa0.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encodedBytes": 5790,
+          "type": "Stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:4182/?performance=tablet-768x1024-1785785249120",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedBytes": 862,
+          "type": "Document"
+        }
+      ],
+      "completeNetwork": [
+        {
+          "url": "http://127.0.0.1:4182/assets/index-c0QG2y5F.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "encodedBytes": 101214,
+          "type": "Script"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 37594,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/hero-union-840-CPp8meld.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 34256,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21906,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21274,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encodedBytes": 12382,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/index-DmWdHOa0.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encodedBytes": 5790,
+          "type": "Stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:4182/?performance=tablet-768x1024-1785785249120",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedBytes": 862,
+          "type": "Document"
+        }
+      ],
+      "failures": []
+    },
+    {
+      "viewport": {
+        "id": "mobile-390x844",
+        "width": 390,
+        "height": 844
+      },
+      "readyState": "complete",
+      "lcpMs": 80,
+      "cls": 0,
+      "horizontalOverflow": false,
+      "images": [
+        {
+          "alt": "",
+          "src": "/assets/logo-128-DIZQeAPY.png",
+          "currentSrc": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "srcset": null,
+          "sizes": null,
+          "loading": "auto",
+          "fetchPriority": "auto",
+          "naturalWidth": 128,
+          "naturalHeight": 128,
+          "displayedWidth": 38,
+          "displayedHeight": 38,
+          "complete": true
+        },
+        {
+          "alt": "Mãos de servidores unidas, representando cooperação e força coletiva",
+          "src": "/assets/hero-union-1672-D6SQlQCF.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/hero-union-840-CPp8meld.webp",
+          "srcset": "/assets/hero-union-840-CPp8meld.webp 840w, /assets/hero-union-1672-D6SQlQCF.webp 1672w",
+          "sizes": "(max-width: 767px) calc(100vw - 32px), (max-width: 1920px) calc(100vw - 6vw - 24px), 1840px",
+          "loading": "eager",
+          "fetchPriority": "high",
+          "naturalWidth": 358,
+          "naturalHeight": 201,
+          "displayedWidth": 358,
+          "displayedHeight": 356,
+          "complete": true
+        },
+        {
+          "alt": "Representantes em mesa de negociação",
+          "src": "/assets/news-negotiation-480-RTuRUR2J.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 480,
+          "naturalHeight": 288,
+          "displayedWidth": 115.59,
+          "displayedHeight": 116,
+          "complete": true
+        },
+        {
+          "alt": "Reunião institucional sobre direitos",
+          "src": "/assets/news-rights-480-BtWLD6xM.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 480,
+          "naturalHeight": 288,
+          "displayedWidth": 115.59,
+          "displayedHeight": 116,
+          "complete": true
+        },
+        {
+          "alt": "Assembleia sindical com votação",
+          "src": "/assets/news-assembly-480-CJTU9LdM.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 480,
+          "naturalHeight": 288,
+          "displayedWidth": 115.59,
+          "displayedHeight": 116,
+          "complete": true
+        },
+        {
+          "alt": "",
+          "src": "/assets/logo-128-DIZQeAPY.png",
+          "currentSrc": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 128,
+          "naturalHeight": 128,
+          "displayedWidth": 42,
+          "displayedHeight": 42,
+          "complete": false
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4182/assets/index-c0QG2y5F.js",
+          "initiatorType": "script",
+          "transferSize": 101069,
+          "encodedBodySize": 100769,
+          "decodedBodySize": 321537
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/index-DmWdHOa0.css",
+          "initiatorType": "link",
+          "transferSize": 5725,
+          "encodedBodySize": 5425,
+          "decodedBodySize": 25304
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "initiatorType": "img",
+          "transferSize": 12415,
+          "encodedBodySize": 12115,
+          "decodedBodySize": 12115
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/hero-union-840-CPp8meld.webp",
+          "initiatorType": "img",
+          "transferSize": 34288,
+          "encodedBodySize": 33988,
+          "decodedBodySize": 33988
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "initiatorType": "img",
+          "transferSize": 21306,
+          "encodedBodySize": 21006,
+          "decodedBodySize": 21006
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "initiatorType": "img",
+          "transferSize": 37626,
+          "encodedBodySize": 37326,
+          "decodedBodySize": 37326
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "initiatorType": "img",
+          "transferSize": 21938,
+          "encodedBodySize": 21638,
+          "decodedBodySize": 21638
+        }
+      ],
+      "initialNetwork": [
+        {
+          "url": "http://127.0.0.1:4182/assets/index-c0QG2y5F.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "encodedBytes": 101214,
+          "type": "Script"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 37594,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/hero-union-840-CPp8meld.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 34256,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21906,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21274,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encodedBytes": 12382,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/index-DmWdHOa0.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encodedBytes": 5790,
+          "type": "Stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:4182/?performance=mobile-390x844-1785785252793",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedBytes": 862,
+          "type": "Document"
+        }
+      ],
+      "completeNetwork": [
+        {
+          "url": "http://127.0.0.1:4182/assets/index-c0QG2y5F.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "encodedBytes": 101214,
+          "type": "Script"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 37594,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/hero-union-840-CPp8meld.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 34256,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21906,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21274,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encodedBytes": 12382,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/index-DmWdHOa0.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encodedBytes": 5790,
+          "type": "Stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:4182/?performance=mobile-390x844-1785785252793",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedBytes": 862,
+          "type": "Document"
+        }
+      ],
+      "failures": []
+    },
+    {
+      "viewport": {
+        "id": "mobile-360x800",
+        "width": 360,
+        "height": 800
+      },
+      "readyState": "complete",
+      "lcpMs": 80,
+      "cls": 0,
+      "horizontalOverflow": false,
+      "images": [
+        {
+          "alt": "",
+          "src": "/assets/logo-128-DIZQeAPY.png",
+          "currentSrc": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "srcset": null,
+          "sizes": null,
+          "loading": "auto",
+          "fetchPriority": "auto",
+          "naturalWidth": 128,
+          "naturalHeight": 128,
+          "displayedWidth": 38,
+          "displayedHeight": 38,
+          "complete": true
+        },
+        {
+          "alt": "Mãos de servidores unidas, representando cooperação e força coletiva",
+          "src": "/assets/hero-union-1672-D6SQlQCF.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/hero-union-840-CPp8meld.webp",
+          "srcset": "/assets/hero-union-840-CPp8meld.webp 840w, /assets/hero-union-1672-D6SQlQCF.webp 1672w",
+          "sizes": "(max-width: 767px) calc(100vw - 32px), (max-width: 1920px) calc(100vw - 6vw - 24px), 1840px",
+          "loading": "eager",
+          "fetchPriority": "high",
+          "naturalWidth": 328,
+          "naturalHeight": 184,
+          "displayedWidth": 328,
+          "displayedHeight": 356,
+          "complete": true
+        },
+        {
+          "alt": "Representantes em mesa de negociação",
+          "src": "/assets/news-negotiation-480-RTuRUR2J.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 480,
+          "naturalHeight": 288,
+          "displayedWidth": 105.39,
+          "displayedHeight": 116,
+          "complete": true
+        },
+        {
+          "alt": "Reunião institucional sobre direitos",
+          "src": "/assets/news-rights-480-BtWLD6xM.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 480,
+          "naturalHeight": 288,
+          "displayedWidth": 105.39,
+          "displayedHeight": 116,
+          "complete": true
+        },
+        {
+          "alt": "Assembleia sindical com votação",
+          "src": "/assets/news-assembly-480-CJTU9LdM.webp",
+          "currentSrc": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 480,
+          "naturalHeight": 288,
+          "displayedWidth": 105.39,
+          "displayedHeight": 116,
+          "complete": true
+        },
+        {
+          "alt": "",
+          "src": "/assets/logo-128-DIZQeAPY.png",
+          "currentSrc": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "srcset": null,
+          "sizes": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "naturalWidth": 128,
+          "naturalHeight": 128,
+          "displayedWidth": 42,
+          "displayedHeight": 42,
+          "complete": false
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4182/assets/index-c0QG2y5F.js",
+          "initiatorType": "script",
+          "transferSize": 101069,
+          "encodedBodySize": 100769,
+          "decodedBodySize": 321537
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/index-DmWdHOa0.css",
+          "initiatorType": "link",
+          "transferSize": 5725,
+          "encodedBodySize": 5425,
+          "decodedBodySize": 25304
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "initiatorType": "img",
+          "transferSize": 12415,
+          "encodedBodySize": 12115,
+          "decodedBodySize": 12115
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/hero-union-840-CPp8meld.webp",
+          "initiatorType": "img",
+          "transferSize": 34288,
+          "encodedBodySize": 33988,
+          "decodedBodySize": 33988
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "initiatorType": "img",
+          "transferSize": 21306,
+          "encodedBodySize": 21006,
+          "decodedBodySize": 21006
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "initiatorType": "img",
+          "transferSize": 37626,
+          "encodedBodySize": 37326,
+          "decodedBodySize": 37326
+        },
+        {
+          "name": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "initiatorType": "img",
+          "transferSize": 21938,
+          "encodedBodySize": 21638,
+          "decodedBodySize": 21638
+        }
+      ],
+      "initialNetwork": [
+        {
+          "url": "http://127.0.0.1:4182/assets/index-c0QG2y5F.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "encodedBytes": 101214,
+          "type": "Script"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 37594,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/hero-union-840-CPp8meld.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 34256,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21906,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21274,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encodedBytes": 12382,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/index-DmWdHOa0.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encodedBytes": 5790,
+          "type": "Stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:4182/?performance=mobile-360x800-1785785256811",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedBytes": 862,
+          "type": "Document"
+        }
+      ],
+      "completeNetwork": [
+        {
+          "url": "http://127.0.0.1:4182/assets/index-c0QG2y5F.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "encodedBytes": 101214,
+          "type": "Script"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-assembly-480-CJTU9LdM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 37594,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/hero-union-840-CPp8meld.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 34256,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-rights-480-BtWLD6xM.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21906,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/news-negotiation-480-RTuRUR2J.webp",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedBytes": 21274,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/logo-128-DIZQeAPY.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encodedBytes": 12382,
+          "type": "Image"
+        },
+        {
+          "url": "http://127.0.0.1:4182/assets/index-DmWdHOa0.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encodedBytes": 5790,
+          "type": "Stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:4182/?performance=mobile-360x800-1785785256811",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedBytes": 862,
+          "type": "Document"
+        }
+      ],
+      "failures": []
+    }
+  ],
+  "consoleErrors": [],
+  "consoleWarnings": []
+}

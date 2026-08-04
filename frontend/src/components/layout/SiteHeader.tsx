@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { ChevronDown, Menu, UserRound, X } from "lucide-react";
 import { ROUTES } from "../../config/routes";
-import logo from "../../assets/home/logo.png";
+import logo from "../../assets/home/logo-128.png";
 import styles from "./SiteHeader.module.css";
 
 const NAV_ITEMS = [
@@ -28,7 +28,7 @@ function navClass(isActive: boolean, base?: string, active?: string): string {
 function Brand() {
   return (
     <NavLink to={ROUTES.home} className={styles.brand} aria-label="SINDGESTÃO — Início">
-      <img src={logo} alt="" className={styles.logo} />
+      <img src={logo} alt="" className={styles.logo} width={128} height={128} decoding="async" />
       <span className={styles.brandCopy}>
         <strong>SINDGESTÃO</strong>
         <small>Servidores públicos</small>

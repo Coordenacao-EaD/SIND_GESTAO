@@ -1,8 +1,9 @@
 import { ROUTES } from "../../../config/routes";
-import heroImage from "../../../assets/home/hero-union.jpg";
-import newsNegotiation from "../../../assets/home/news-negotiation.png";
-import newsRights from "../../../assets/home/news-rights.png";
-import newsAssembly from "../../../assets/home/news-assembly.png";
+import heroImage from "../../../assets/home/hero-union-1672.webp";
+import heroImageSmall from "../../../assets/home/hero-union-840.webp";
+import newsNegotiation from "../../../assets/home/news-negotiation-480.webp";
+import newsRights from "../../../assets/home/news-rights-480.webp";
+import newsAssembly from "../../../assets/home/news-assembly-480.webp";
 import type {
   DocumentsSectionState,
   FooterData,
@@ -22,6 +23,10 @@ export const heroContentMock: HeroContent = {
   description:
     "Defendemos os direitos, valorizamos o servidor e construímos um serviço público cada vez melhor para toda a sociedade.",
   imageUrl: heroImage,
+  imageSrcSet: `${heroImageSmall} 840w, ${heroImage} 1672w`,
+  imageSizes: "(max-width: 767px) calc(100vw - 32px), (max-width: 1920px) calc(100vw - 6vw - 24px), 1840px",
+  imageWidth: 1672,
+  imageHeight: 941,
   imageAlt: "Mãos de servidores unidas, representando cooperação e força coletiva",
   primaryAction: { label: "Filie-se", href: ROUTES.membership, variant: "primary" },
   secondaryAction: { label: "Área do Filiado", href: ROUTES.memberArea, variant: "secondary" },
@@ -56,6 +61,8 @@ export const newsSectionMock: NewsSectionState = {
       excerpt: "Representantes discutem a pauta da categoria.",
       publishedAtLabel: "20 de maio de 2026",
       imageUrl: newsNegotiation,
+      imageWidth: 480,
+      imageHeight: 288,
       imageAlt: "Representantes em mesa de negociação",
       href: ROUTES.news,
     },
@@ -66,6 +73,8 @@ export const newsSectionMock: NewsSectionState = {
       excerpt: "Categoria comemora importante conquista.",
       publishedAtLabel: "17 de maio de 2026",
       imageUrl: newsRights,
+      imageWidth: 480,
+      imageHeight: 288,
       imageAlt: "Reunião institucional sobre direitos",
       href: ROUTES.news,
     },
@@ -76,6 +85,8 @@ export const newsSectionMock: NewsSectionState = {
       excerpt: "Servidores aprovam os próximos encaminhamentos.",
       publishedAtLabel: "15 de maio de 2026",
       imageUrl: newsAssembly,
+      imageWidth: 480,
+      imageHeight: 288,
       imageAlt: "Assembleia sindical com votação",
       href: ROUTES.news,
     },

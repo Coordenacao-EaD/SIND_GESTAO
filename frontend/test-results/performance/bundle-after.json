@@ -1,0 +1,186 @@
+{
+  "generatedAt": "2026-08-03T19:27:09.906Z",
+  "command": "npm run measure:bundle -- test-results/performance/bundle-after.json",
+  "totals": {
+    "files": 10,
+    "bytes": 567404,
+    "gzipBytes": 318411,
+    "brotliBytes": 304039
+  },
+  "categories": {
+    "images": {
+      "files": 7,
+      "bytes": 219951,
+      "gzipBytes": 212033,
+      "brotliBytes": 211599
+    },
+    "javascript": {
+      "files": 1,
+      "bytes": 321537,
+      "gzipBytes": 100600,
+      "brotliBytes": 87434
+    },
+    "css": {
+      "files": 1,
+      "bytes": 25304,
+      "gzipBytes": 5406,
+      "brotliBytes": 4775
+    },
+    "fonts": {
+      "files": 0,
+      "bytes": 0,
+      "gzipBytes": 0,
+      "brotliBytes": 0
+    },
+    "other": {
+      "files": 1,
+      "bytes": 612,
+      "gzipBytes": 372,
+      "brotliBytes": 231
+    }
+  },
+  "largestFiles": [
+    {
+      "path": "assets/index-c0QG2y5F.js",
+      "extension": ".js",
+      "bytes": 321537,
+      "gzipBytes": 100600,
+      "brotliBytes": 87434
+    },
+    {
+      "path": "assets/hero-union-1672-D6SQlQCF.webp",
+      "extension": ".webp",
+      "bytes": 84356,
+      "gzipBytes": 84404,
+      "brotliBytes": 84361
+    },
+    {
+      "path": "assets/news-assembly-480-CJTU9LdM.webp",
+      "extension": ".webp",
+      "bytes": 37326,
+      "gzipBytes": 37359,
+      "brotliBytes": 37330
+    },
+    {
+      "path": "assets/hero-union-840-CPp8meld.webp",
+      "extension": ".webp",
+      "bytes": 33988,
+      "gzipBytes": 34021,
+      "brotliBytes": 33992
+    },
+    {
+      "path": "assets/index-DmWdHOa0.css",
+      "extension": ".css",
+      "bytes": 25304,
+      "gzipBytes": 5406,
+      "brotliBytes": 4775
+    },
+    {
+      "path": "assets/news-rights-480-BtWLD6xM.webp",
+      "extension": ".webp",
+      "bytes": 21638,
+      "gzipBytes": 21666,
+      "brotliBytes": 21642
+    },
+    {
+      "path": "assets/news-negotiation-480-RTuRUR2J.webp",
+      "extension": ".webp",
+      "bytes": 21006,
+      "gzipBytes": 21034,
+      "brotliBytes": 21010
+    },
+    {
+      "path": "assets/logo-128-DIZQeAPY.png",
+      "extension": ".png",
+      "bytes": 12115,
+      "gzipBytes": 12064,
+      "brotliBytes": 12027
+    },
+    {
+      "path": "favicon.svg",
+      "extension": ".svg",
+      "bytes": 9522,
+      "gzipBytes": 1485,
+      "brotliBytes": 1237
+    },
+    {
+      "path": "index.html",
+      "extension": ".html",
+      "bytes": 612,
+      "gzipBytes": 372,
+      "brotliBytes": 231
+    }
+  ],
+  "files": [
+    {
+      "path": "assets/index-c0QG2y5F.js",
+      "extension": ".js",
+      "bytes": 321537,
+      "gzipBytes": 100600,
+      "brotliBytes": 87434
+    },
+    {
+      "path": "assets/hero-union-1672-D6SQlQCF.webp",
+      "extension": ".webp",
+      "bytes": 84356,
+      "gzipBytes": 84404,
+      "brotliBytes": 84361
+    },
+    {
+      "path": "assets/news-assembly-480-CJTU9LdM.webp",
+      "extension": ".webp",
+      "bytes": 37326,
+      "gzipBytes": 37359,
+      "brotliBytes": 37330
+    },
+    {
+      "path": "assets/hero-union-840-CPp8meld.webp",
+      "extension": ".webp",
+      "bytes": 33988,
+      "gzipBytes": 34021,
+      "brotliBytes": 33992
+    },
+    {
+      "path": "assets/index-DmWdHOa0.css",
+      "extension": ".css",
+      "bytes": 25304,
+      "gzipBytes": 5406,
+      "brotliBytes": 4775
+    },
+    {
+      "path": "assets/news-rights-480-BtWLD6xM.webp",
+      "extension": ".webp",
+      "bytes": 21638,
+      "gzipBytes": 21666,
+      "brotliBytes": 21642
+    },
+    {
+      "path": "assets/news-negotiation-480-RTuRUR2J.webp",
+      "extension": ".webp",
+      "bytes": 21006,
+      "gzipBytes": 21034,
+      "brotliBytes": 21010
+    },
+    {
+      "path": "assets/logo-128-DIZQeAPY.png",
+      "extension": ".png",
+      "bytes": 12115,
+      "gzipBytes": 12064,
+      "brotliBytes": 12027
+    },
+    {
+      "path": "favicon.svg",
+      "extension": ".svg",
+      "bytes": 9522,
+      "gzipBytes": 1485,
+      "brotliBytes": 1237
+    },
+    {
+      "path": "index.html",
+      "extension": ".html",
+      "bytes": 612,
+      "gzipBytes": 372,
+      "brotliBytes": 231
+    }
+  ]
+}

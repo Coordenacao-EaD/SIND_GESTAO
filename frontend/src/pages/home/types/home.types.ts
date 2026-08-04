@@ -12,6 +12,10 @@ export interface HeroContent {
   subtitle: string;
   description: string;
   imageUrl: string;
+  imageSrcSet?: string;
+  imageSizes?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   imageAlt: string;
   primaryAction: HeroAction;
   secondaryAction: HeroAction;
@@ -49,6 +53,8 @@ export interface NewsSummary {
   excerpt: string;
   publishedAtLabel: string;
   imageUrl: string;
+  imageWidth?: number;
+  imageHeight?: number;
   imageAlt: string;
   href: string;
 }

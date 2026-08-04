@@ -1,10 +1,11 @@
 import { createBrowserRouter, type RouteObject } from "react-router-dom";
-import { ROUTES } from "../config/routes";
+import { ADMIN_ROUTES, ROUTES } from "../config/routes";
 import { AppLayout } from "../components/layout/AppLayout";
 import { HomePage } from "../pages/home/HomePage";
 import { HomeDataProvider } from "../pages/home/HomeDataProvider";
 import { ComingSoonPage } from "../pages/ComingSoonPage";
 import { NotFoundPage } from "../pages/NotFoundPage";
+import { LazyHomeManagementPage } from "../pages/admin/home/LazyHomeManagementPage";
 
 const COMING_SOON_ROUTES: Array<{ path: string; title: string }> = [
   { path: ROUTES.union, title: "O Sindicato" },
@@ -29,6 +30,10 @@ const COMING_SOON_ROUTES: Array<{ path: string; title: string }> = [
 ];
 
 export const routes: RouteObject[] = [
+  {
+    path: ADMIN_ROUTES.home,
+    element: <LazyHomeManagementPage />,
+  },
   {
     element: <AppLayout />,
     children: [

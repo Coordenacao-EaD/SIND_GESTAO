@@ -18,6 +18,23 @@ describe("HeroSection", () => {
     expect(screen.getByRole("link", { name: heroContentMock.secondaryAction.label })).toBeInTheDocument();
   });
 
+  it("prioritizes the responsive hero image without changing its accessible name", () => {
+    render(
+      <MemoryRouter>
+        <HeroSection content={heroContentMock} />
+      </MemoryRouter>,
+    );
+
+    const image = screen.getByRole("img", { name: heroContentMock.imageAlt });
+    expect(image).toHaveAttribute("srcset", heroContentMock.imageSrcSet);
+    expect(image).toHaveAttribute("sizes", heroContentMock.imageSizes);
+    expect(image).toHaveAttribute("width", "1672");
+    expect(image).toHaveAttribute("height", "941");
+    expect(image).toHaveAttribute("loading", "eager");
+    expect(image).toHaveAttribute("fetchpriority", "high");
+    expect(image).toHaveAttribute("decoding", "async");
+  });
+
   it("does not mount or reserve space for a disabled optional action", () => {
     const disabledAction = {
       label: "Ação opcional indisponível",

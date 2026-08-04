@@ -37,8 +37,15 @@ export function HeroSection({ content }: HeroSectionProps) {
       ) : (
         <img
           src={content.imageUrl}
+          srcSet={content.imageSrcSet}
+          sizes={content.imageSizes}
+          width={content.imageWidth}
+          height={content.imageHeight}
           alt={content.imageAlt}
           className={styles.image}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
           onError={() => setImageFailed(true)}
         />
       )}

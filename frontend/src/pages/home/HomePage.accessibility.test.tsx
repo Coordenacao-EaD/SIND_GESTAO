@@ -1,5 +1,5 @@
 import axe from "axe-core";
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
 import { HomeDataProvider } from "./HomeDataProvider";
@@ -72,6 +72,29 @@ describe("HomePage state accessibility", () => {
       "Não foi possível carregar a Página Inicial no momento.",
     );
     expect(screen.getByRole("heading", { level: 1, name: "Erro ao carregar a Página Inicial" })).toBeInTheDocument();
+    await expectNoWcagViolations(container);
+  });
+
+  it("audits the isolated News error required by CA-HOM-007", async () => {
+    const repository: HomeRepository = {
+      getHomePage: async () => ({
+        ...homePageDataMock,
+        news: {
+          status: "error",
+          message: "Não foi possível carregar as notícias no momento.",
+        },
+      }),
+    };
+    const { container } = renderHomeState(repository);
+
+    const newsSection = await screen.findByRole("region", { name: "Últimas Notícias" });
+    expect(within(newsSection).getByRole("alert")).toHaveTextContent(
+      "Não foi possível carregar as notícias no momento.",
+    );
+    expect(within(newsSection).queryByRole("link", { name: "Ver todas as notícias" })).not.toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 1, name: homePageDataMock.hero.title })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Comunicados Recentes" })).toBeInTheDocument();
+    expect(screen.getByRole("contentinfo")).toBeInTheDocument();
     await expectNoWcagViolations(container);
   });
 });

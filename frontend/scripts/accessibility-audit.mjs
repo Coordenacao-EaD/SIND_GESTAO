@@ -20,6 +20,12 @@ const scenarios = [
   { id: "not-found-route", path: "/rota-inexistente-a11y", width: 1440, height: 900, state: "default" },
   { id: "hero-image-normal", path: "/", width: 1440, height: 900, state: "hero-normal" },
   { id: "hero-image-fallback", path: "/", width: 1440, height: 900, state: "hero-fallback" },
+  { id: "admin-home-1440x1000", path: "/admin/home", width: 1440, height: 1000, state: "default" },
+  { id: "admin-home-390x844", path: "/admin/home", width: 390, height: 844, state: "default" },
+  { id: "admin-loading", path: "/admin/home?scenario=loading", width: 1440, height: 900, state: "default" },
+  { id: "admin-empty", path: "/admin/home?scenario=empty", width: 1440, height: 900, state: "default" },
+  { id: "admin-conflict", path: "/admin/home?scenario=conflict", width: 1440, height: 900, state: "default" },
+  { id: "admin-validation-mobile", path: "/admin/home?scenario=validation", width: 390, height: 844, state: "default" },
 ];
 
 mkdirSync(outputDirectory, { recursive: true });

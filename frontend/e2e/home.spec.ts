@@ -25,6 +25,7 @@ const pageErrors = [];
 const consoleErrors = [];
 const consoleWarnings = [];
 const resourceFailures = [];
+const dataEndpointRequests = [];
 const resourceRequests = new Map();
 const checks = [];
 const startedAt = Date.now();
@@ -153,6 +154,13 @@ async function captureScreenshot(name) {
 function handleProtocolEvent(message) {
   if (message.method === "Network.requestWillBeSent") {
     resourceRequests.set(message.params.requestId, message.params.request.url);
+    if (message.params.type === "Fetch" || message.params.type === "XHR") {
+      dataEndpointRequests.push({
+        url: message.params.request.url,
+        type: message.params.type,
+        method: message.params.request.method,
+      });
+    }
   }
   if (message.method === "Runtime.exceptionThrown") {
     pageErrors.push(message.params.exceptionDetails.text);
@@ -187,7 +195,8 @@ function handleProtocolEvent(message) {
 
 let failure;
 try {
-  await waitForUrl(baseUrl);
+  const homeResponse = await waitForUrl(baseUrl);
+  assert.equal(homeResponse.status, 200);
   await waitForUrl(`${debugUrl}/json/version`);
   const targets = await (await fetch(`${debugUrl}/json`)).json();
   const page = targets.find((target) => target.type === "page");
@@ -223,6 +232,21 @@ try {
     mainCount: document.querySelectorAll("main").length,
     h1Count: document.querySelectorAll("h1").length,
     h1: document.querySelector("h1")?.textContent.trim(),
+    hasVisibleContent: document.querySelector("main")?.textContent.trim().length > 0,
+    heroImageVisible: (() => {
+      const image = document.querySelector("main section img");
+      const bounds = image?.getBoundingClientRect();
+      return Boolean(image?.complete && image.naturalWidth > 0 && bounds?.width > 0 && bounds?.height > 0);
+    })(),
+    hasQuickLinks: Boolean(document.querySelector('nav[aria-label="Acesso rápido aos serviços"]')),
+    essentialSections: [
+      "Sobre o Sindicato",
+      "Últimas Notícias",
+      "Comunicados Recentes",
+      "Transparência que gera confiança",
+      "Documentos Importantes"
+    ].every((label) => [...document.querySelectorAll("h2")]
+      .some((heading) => heading.textContent.trim() === label)),
     headerLinks: document.querySelectorAll('header nav[aria-label="Menu principal"] a').length,
     footerCount: document.querySelectorAll("footer").length,
     footerInstitution: document.querySelector("footer strong")?.textContent.trim(),
@@ -248,6 +272,10 @@ try {
     mainCount: 1,
     h1Count: 1,
     h1: "Juntos somos mais fortes.",
+    hasVisibleContent: true,
+    heroImageVisible: true,
+    hasQuickLinks: true,
+    essentialSections: true,
     headerLinks: 10,
     footerCount: 1,
     footerInstitution: "SINDGESTÃO",
@@ -260,7 +288,9 @@ try {
     externalFooterLinks: 6,
     unprotectedExternalFooterLinks: 0,
   });
-  recordCheck("Home carregada com main, h1, navegação principal e rodapé do repositório");
+  recordCheck("CA-HOM-001: Home pública HTTP 200 com Hero, blocos, contato e rodapé mockados", {
+    httpStatus: homeResponse.status,
+  });
   await captureScreenshot("home-desktop");
 
   await evaluate(`[...document.querySelectorAll("main a")].find((link) => link.textContent.trim() === "Filie-se").click()`);
@@ -286,6 +316,60 @@ try {
   recordCheck("Rota inexistente apresenta 404 amigável");
   await captureScreenshot("not-found");
 
+  const adminResponse = await waitForUrl(`${baseUrl}/admin/home`);
+  assert.equal(adminResponse.status, 200);
+  await navigate("/admin/home", 1440, 1000);
+  const admin = await evaluate(`(() => ({
+    pathname: location.pathname,
+    mainCount: document.querySelectorAll("main").length,
+    h1Count: document.querySelectorAll("h1").length,
+    h1: document.querySelector("h1")?.textContent.trim(),
+    hasAdminNavigation: Boolean(document.querySelector('nav[aria-label="Navegação administrativa"]')),
+    hasPublicNavigation: Boolean(document.querySelector('nav[aria-label="Menu principal"]')),
+    demoNotice: document.querySelector('[role="note"]')?.textContent.includes("Nenhuma alteração é persistida"),
+    titleInput: document.querySelector('input[maxlength="90"]')?.value,
+    saveInitiallyDisabled: [...document.querySelectorAll("button")]
+      .find((button) => button.textContent.includes("Salvar rascunho"))?.disabled
+  }))()`);
+  assert.deepEqual(admin, {
+    pathname: "/admin/home",
+    mainCount: 1,
+    h1Count: 1,
+    h1: "Página Inicial",
+    hasAdminNavigation: true,
+    hasPublicNavigation: false,
+    demoNotice: true,
+    titleInput: "Juntos somos mais fortes.",
+    saveInitiallyDisabled: true,
+  });
+  recordCheck("F2.2A: /admin/home responde diretamente no preview e isola o layout público", {
+    httpStatus: adminResponse.status,
+  });
+  await captureScreenshot("admin-home-desktop");
+
+  await evaluate(`(() => {
+    const input = document.querySelector('input[maxlength="90"]');
+    const setter = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value").set;
+    setter.call(input, "Servidor em primeiro lugar");
+    input.dispatchEvent(new Event("input", { bubbles: true }));
+  })()`);
+  await wait(150);
+  assert.equal(await evaluate("document.querySelector('section[aria-labelledby=\"banner-preview-title\"] h3').textContent"), "Servidor em primeiro lugar");
+  assert.equal(await evaluate(`[...document.querySelectorAll("button")].find((button) => button.textContent.includes("Salvar rascunho")).disabled`), false);
+  await evaluate(`[...document.querySelectorAll("button")].find((button) => button.textContent.includes("Salvar rascunho")).click()`);
+  await wait(150);
+  assert.equal(await evaluate("document.querySelector('[role=\"status\"]')?.textContent.includes('somente na memória')"), true);
+  recordCheck("F2.2A: edição atualiza a prévia e salva rascunho somente em memória");
+
+  await navigate("/admin/home?scenario=conflict", 1440, 900);
+  assert.equal(await evaluate("document.querySelector('[role=\"alert\"]')?.textContent.includes('409')"), true);
+  await navigate("/admin/home?scenario=validation", 390, 844);
+  assert.equal(await evaluate("document.querySelector('[role=\"alert\"]')?.textContent.includes('422')"), true);
+  assert.equal(await evaluate("document.documentElement.scrollWidth > document.documentElement.clientWidth"), false);
+  assert.equal(await evaluate("document.querySelector('[aria-controls=\"admin-navigation\"]') !== null"), true);
+  recordCheck("F2.2A: estados 409/422 e layout administrativo mobile responsivo");
+  await captureScreenshot("admin-home-mobile-validation");
+
   await navigate("/", 390, 844);
   assert.equal(
     await evaluate("document.documentElement.scrollWidth > document.documentElement.clientWidth"),
@@ -308,7 +392,8 @@ try {
   assert.deepEqual(consoleErrors, []);
   assert.deepEqual(consoleWarnings, []);
   assert.deepEqual(resourceFailures, []);
-  recordCheck("Console, erros de página e recursos essenciais sem falhas");
+  assert.deepEqual(dataEndpointRequests, []);
+  recordCheck("Console, erros de página, recursos e chamadas a endpoint de dados ausentes");
 } catch (error) {
   failure = error;
 } finally {
@@ -328,6 +413,7 @@ try {
     consoleErrors,
     consoleWarnings,
     resourceFailures,
+    dataEndpointRequests,
     previewOutput,
     previewErrors,
     browserOutput,

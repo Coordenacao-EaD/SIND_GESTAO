@@ -51,7 +51,7 @@
       "orientationAngle": 0,
       "orientationType": "landscape-primary"
     },
-    "timestamp": "2026-08-03T17:41:01.862Z",
+    "timestamp": "2026-08-03T19:27:02.517Z",
     "url": "http://127.0.0.1:4180/",
     "toolOptions": {
       "runOnly": {
@@ -857,7 +857,7 @@
               }
             ],
             "impact": null,
-            "html": "<a aria-label=\"SINDGESTÃO — Início\" aria-current=\"page\" class=\"_brand_14fok_15 active\" href=\"/\" data-discover=\"true\"><img alt=\"\" class=\"_logo_14fok_23\" src=\"/assets/logo-BoDb8VpG.png\"><span class=\"_brandCopy_14fok_29\"><strong>SINDGESTÃO</strong><small>Servidores públicos</small></span></a>",
+            "html": "<a aria-label=\"SINDGESTÃO — Início\" aria-current=\"page\" class=\"_brand_14fok_15 active\" href=\"/\" data-discover=\"true\">",
             "target": [
               "._brand_14fok_15"
             ]
@@ -1253,7 +1253,7 @@
               }
             ],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Sindicato e governo retomam mesa de negociação\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Representantes em mesa de negociação\" class=\"_image_fqr5v_44\" src=\"/assets/news-negotiation-CDArzPB3.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Sindicato e governo retomam mesa de negociação\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(1) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -1286,7 +1286,7 @@
               }
             ],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Vitória: reajuste garante recomposição salarial\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Reunião institucional sobre direitos\" class=\"_image_fqr5v_44\" src=\"/assets/news-rights-DxAVxxHu.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Vitória: reajuste garante recomposição salarial\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(2) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -1319,7 +1319,7 @@
               }
             ],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Assembleia aprova pauta de reivindicações\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Assembleia sindical com votação\" class=\"_image_fqr5v_44\" src=\"/assets/news-assembly-BX3kknJi.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Assembleia aprova pauta de reivindicações\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(3) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -1751,7 +1751,7 @@
             ],
             "none": [],
             "impact": null,
-            "html": "<a aria-label=\"SINDGESTÃO — Início\" aria-current=\"page\" class=\"_brand_14fok_15 active\" href=\"/\" data-discover=\"true\"><img alt=\"\" class=\"_logo_14fok_23\" src=\"/assets/logo-BoDb8VpG.png\"><span class=\"_brandCopy_14fok_29\"><strong>SINDGESTÃO</strong><small>Servidores públicos</small></span></a>",
+            "html": "<a aria-label=\"SINDGESTÃO — Início\" aria-current=\"page\" class=\"_brand_14fok_15 active\" href=\"/\" data-discover=\"true\">",
             "target": [
               "._brand_14fok_15"
             ]
@@ -1967,7 +1967,7 @@
             ],
             "none": [],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Sindicato e governo retomam mesa de negociação\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Representantes em mesa de negociação\" class=\"_image_fqr5v_44\" src=\"/assets/news-negotiation-CDArzPB3.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Sindicato e governo retomam mesa de negociação\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(1) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -1985,7 +1985,7 @@
             ],
             "none": [],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Vitória: reajuste garante recomposição salarial\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Reunião institucional sobre direitos\" class=\"_image_fqr5v_44\" src=\"/assets/news-rights-DxAVxxHu.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Vitória: reajuste garante recomposição salarial\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(2) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -2003,7 +2003,7 @@
             ],
             "none": [],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Assembleia aprova pauta de reivindicações\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Assembleia sindical com votação\" class=\"_image_fqr5v_44\" src=\"/assets/news-assembly-BX3kknJi.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Assembleia aprova pauta de reivindicações\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(3) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -3309,7 +3309,7 @@
               }
             ],
             "impact": null,
-            "html": "<a aria-label=\"SINDGESTÃO — Início\" aria-current=\"page\" class=\"_brand_14fok_15 active\" href=\"/\" data-discover=\"true\"><img alt=\"\" class=\"_logo_14fok_23\" src=\"/assets/logo-BoDb8VpG.png\"><span class=\"_brandCopy_14fok_29\"><strong>SINDGESTÃO</strong><small>Servidores públicos</small></span></a>",
+            "html": "<a aria-label=\"SINDGESTÃO — Início\" aria-current=\"page\" class=\"_brand_14fok_15 active\" href=\"/\" data-discover=\"true\">",
             "target": [
               "._brand_14fok_15"
             ]
@@ -3525,7 +3525,7 @@
               }
             ],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Sindicato e governo retomam mesa de negociação\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Representantes em mesa de negociação\" class=\"_image_fqr5v_44\" src=\"/assets/news-negotiation-CDArzPB3.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Sindicato e governo retomam mesa de negociação\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(1) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -3543,7 +3543,7 @@
               }
             ],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Vitória: reajuste garante recomposição salarial\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Reunião institucional sobre direitos\" class=\"_image_fqr5v_44\" src=\"/assets/news-rights-DxAVxxHu.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Vitória: reajuste garante recomposição salarial\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(2) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -3561,7 +3561,7 @@
               }
             ],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Assembleia aprova pauta de reivindicações\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Assembleia sindical com votação\" class=\"_image_fqr5v_44\" src=\"/assets/news-assembly-BX3kknJi.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Assembleia aprova pauta de reivindicações\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(3) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -3913,7 +3913,7 @@
             ],
             "none": [],
             "impact": null,
-            "html": "<a aria-label=\"SINDGESTÃO — Início\" aria-current=\"page\" class=\"_brand_14fok_15 active\" href=\"/\" data-discover=\"true\"><img alt=\"\" class=\"_logo_14fok_23\" src=\"/assets/logo-BoDb8VpG.png\"><span class=\"_brandCopy_14fok_29\"><strong>SINDGESTÃO</strong><small>Servidores públicos</small></span></a>",
+            "html": "<a aria-label=\"SINDGESTÃO — Início\" aria-current=\"page\" class=\"_brand_14fok_15 active\" href=\"/\" data-discover=\"true\">",
             "target": [
               "._brand_14fok_15"
             ]
@@ -4297,7 +4297,7 @@
             ],
             "none": [],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Sindicato e governo retomam mesa de negociação\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Representantes em mesa de negociação\" class=\"_image_fqr5v_44\" src=\"/assets/news-negotiation-CDArzPB3.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Sindicato e governo retomam mesa de negociação\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(1) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -4329,7 +4329,7 @@
             ],
             "none": [],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Vitória: reajuste garante recomposição salarial\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Reunião institucional sobre direitos\" class=\"_image_fqr5v_44\" src=\"/assets/news-rights-DxAVxxHu.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Vitória: reajuste garante recomposição salarial\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(2) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -4361,7 +4361,7 @@
             ],
             "none": [],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Assembleia aprova pauta de reivindicações\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Assembleia sindical com votação\" class=\"_image_fqr5v_44\" src=\"/assets/news-assembly-BX3kknJi.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Assembleia aprova pauta de reivindicações\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(3) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -4781,7 +4781,7 @@
             "all": [],
             "none": [],
             "impact": null,
-            "html": "<a aria-label=\"SINDGESTÃO — Início\" aria-current=\"page\" class=\"_brand_14fok_15 active\" href=\"/\" data-discover=\"true\"><img alt=\"\" class=\"_logo_14fok_23\" src=\"/assets/logo-BoDb8VpG.png\"><span class=\"_brandCopy_14fok_29\"><strong>SINDGESTÃO</strong><small>Servidores públicos</small></span></a>",
+            "html": "<a aria-label=\"SINDGESTÃO — Início\" aria-current=\"page\" class=\"_brand_14fok_15 active\" href=\"/\" data-discover=\"true\">",
             "target": [
               "._brand_14fok_15"
             ]
@@ -4997,7 +4997,7 @@
             "all": [],
             "none": [],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Sindicato e governo retomam mesa de negociação\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Representantes em mesa de negociação\" class=\"_image_fqr5v_44\" src=\"/assets/news-negotiation-CDArzPB3.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Sindicato e governo retomam mesa de negociação\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(1) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -5015,7 +5015,7 @@
             "all": [],
             "none": [],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Vitória: reajuste garante recomposição salarial\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Reunião institucional sobre direitos\" class=\"_image_fqr5v_44\" src=\"/assets/news-rights-DxAVxxHu.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Vitória: reajuste garante recomposição salarial\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(2) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -5033,7 +5033,7 @@
             "all": [],
             "none": [],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Assembleia aprova pauta de reivindicações\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Assembleia sindical com votação\" class=\"_image_fqr5v_44\" src=\"/assets/news-assembly-BX3kknJi.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Assembleia aprova pauta de reivindicações\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(3) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -7606,7 +7606,7 @@
               }
             ],
             "impact": null,
-            "html": "<img alt=\"\" class=\"_logo_14fok_23\" src=\"/assets/logo-BoDb8VpG.png\">",
+            "html": "<img alt=\"\" class=\"_logo_14fok_23\" width=\"128\" height=\"128\" decoding=\"async\" src=\"/assets/logo-128-DIZQeAPY.png\">",
             "target": [
               "._logo_14fok_23"
             ]
@@ -7632,9 +7632,9 @@
               }
             ],
             "impact": null,
-            "html": "<img alt=\"Representantes em mesa de negociação\" class=\"_image_fqr5v_44\" src=\"/assets/news-negotiation-CDArzPB3.png\">",
+            "html": "<img width=\"480\" height=\"288\" alt=\"Representantes em mesa de negociação\" class=\"_image_fqr5v_44\" loading=\"lazy\" decoding=\"async\" src=\"/assets/news-negotiation-480-RTuRUR2J.webp\">",
             "target": [
-              "article:nth-child(1) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44"
+              "article:nth-child(1) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44[width=\"480\"][height=\"288\"]"
             ]
           },
           {
@@ -7658,9 +7658,9 @@
               }
             ],
             "impact": null,
-            "html": "<img alt=\"Reunião institucional sobre direitos\" class=\"_image_fqr5v_44\" src=\"/assets/news-rights-DxAVxxHu.png\">",
+            "html": "<img width=\"480\" height=\"288\" alt=\"Reunião institucional sobre direitos\" class=\"_image_fqr5v_44\" loading=\"lazy\" decoding=\"async\" src=\"/assets/news-rights-480-BtWLD6xM.webp\">",
             "target": [
-              "article:nth-child(2) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44"
+              "article:nth-child(2) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44[width=\"480\"][height=\"288\"]"
             ]
           },
           {
@@ -7684,9 +7684,9 @@
               }
             ],
             "impact": null,
-            "html": "<img alt=\"Assembleia sindical com votação\" class=\"_image_fqr5v_44\" src=\"/assets/news-assembly-BX3kknJi.png\">",
+            "html": "<img width=\"480\" height=\"288\" alt=\"Assembleia sindical com votação\" class=\"_image_fqr5v_44\" loading=\"lazy\" decoding=\"async\" src=\"/assets/news-assembly-480-CJTU9LdM.webp\">",
             "target": [
-              "article:nth-child(3) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44"
+              "article:nth-child(3) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44[width=\"480\"][height=\"288\"]"
             ]
           },
           {
@@ -7719,9 +7719,9 @@
               }
             ],
             "impact": null,
-            "html": "<img alt=\"\" src=\"/assets/logo-BoDb8VpG.png\">",
+            "html": "<img alt=\"\" width=\"128\" height=\"128\" loading=\"lazy\" decoding=\"async\" src=\"/assets/logo-128-DIZQeAPY.png\">",
             "target": [
-              "._brandRow_199y8_19 > img[alt=\"\"][src$=\"logo-BoDb8VpG.png\"]"
+              "._brandRow_199y8_19 > img[alt=\"\"][width=\"128\"][height=\"128\"]"
             ]
           }
         ]
@@ -7803,7 +7803,7 @@
               }
             ],
             "impact": null,
-            "html": "<a aria-label=\"SINDGESTÃO — Início\" aria-current=\"page\" class=\"_brand_14fok_15 active\" href=\"/\" data-discover=\"true\"><img alt=\"\" class=\"_logo_14fok_23\" src=\"/assets/logo-BoDb8VpG.png\"><span class=\"_brandCopy_14fok_29\"><strong>SINDGESTÃO</strong><small>Servidores públicos</small></span></a>",
+            "html": "<a aria-label=\"SINDGESTÃO — Início\" aria-current=\"page\" class=\"_brand_14fok_15 active\" href=\"/\" data-discover=\"true\">",
             "target": [
               "._brand_14fok_15"
             ]
@@ -8318,7 +8318,7 @@
               }
             ],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Sindicato e governo retomam mesa de negociação\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Representantes em mesa de negociação\" class=\"_image_fqr5v_44\" src=\"/assets/news-negotiation-CDArzPB3.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Sindicato e governo retomam mesa de negociação\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(1) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -8377,7 +8377,7 @@
               }
             ],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Vitória: reajuste garante recomposição salarial\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Reunião institucional sobre direitos\" class=\"_image_fqr5v_44\" src=\"/assets/news-rights-DxAVxxHu.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Vitória: reajuste garante recomposição salarial\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(2) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -8436,7 +8436,7 @@
               }
             ],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Assembleia aprova pauta de reivindicações\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Assembleia sindical com votação\" class=\"_image_fqr5v_44\" src=\"/assets/news-assembly-BX3kknJi.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Assembleia aprova pauta de reivindicações\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(3) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -9910,9 +9910,9 @@
             "all": [],
             "none": [],
             "impact": null,
-            "html": "<img alt=\"Representantes em mesa de negociação\" class=\"_image_fqr5v_44\" src=\"/assets/news-negotiation-CDArzPB3.png\">",
+            "html": "<img width=\"480\" height=\"288\" alt=\"Representantes em mesa de negociação\" class=\"_image_fqr5v_44\" loading=\"lazy\" decoding=\"async\" src=\"/assets/news-negotiation-480-RTuRUR2J.webp\">",
             "target": [
-              "article:nth-child(1) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44"
+              "article:nth-child(1) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44[width=\"480\"][height=\"288\"]"
             ]
           },
           {
@@ -9928,9 +9928,9 @@
             "all": [],
             "none": [],
             "impact": null,
-            "html": "<img alt=\"Reunião institucional sobre direitos\" class=\"_image_fqr5v_44\" src=\"/assets/news-rights-DxAVxxHu.png\">",
+            "html": "<img width=\"480\" height=\"288\" alt=\"Reunião institucional sobre direitos\" class=\"_image_fqr5v_44\" loading=\"lazy\" decoding=\"async\" src=\"/assets/news-rights-480-BtWLD6xM.webp\">",
             "target": [
-              "article:nth-child(2) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44"
+              "article:nth-child(2) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44[width=\"480\"][height=\"288\"]"
             ]
           },
           {
@@ -9946,9 +9946,9 @@
             "all": [],
             "none": [],
             "impact": null,
-            "html": "<img alt=\"Assembleia sindical com votação\" class=\"_image_fqr5v_44\" src=\"/assets/news-assembly-BX3kknJi.png\">",
+            "html": "<img width=\"480\" height=\"288\" alt=\"Assembleia sindical com votação\" class=\"_image_fqr5v_44\" loading=\"lazy\" decoding=\"async\" src=\"/assets/news-assembly-480-CJTU9LdM.webp\">",
             "target": [
-              "article:nth-child(3) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44"
+              "article:nth-child(3) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44[width=\"480\"][height=\"288\"]"
             ]
           }
         ]
@@ -10489,7 +10489,7 @@
       "orientationAngle": 0,
       "orientationType": "landscape-primary"
     },
-    "timestamp": "2026-08-03T17:41:01.916Z",
+    "timestamp": "2026-08-03T19:27:02.563Z",
     "url": "http://127.0.0.1:4180/",
     "toolOptions": {
       "runOnly": {
@@ -11448,7 +11448,7 @@
               }
             ],
             "impact": null,
-            "html": "<img alt=\"\" class=\"_logo_14fok_23\" src=\"/assets/logo-BoDb8VpG.png\">",
+            "html": "<img alt=\"\" class=\"_logo_14fok_23\" width=\"128\" height=\"128\" decoding=\"async\" src=\"/assets/logo-128-DIZQeAPY.png\">",
             "target": [
               "._logo_14fok_23"
             ]
@@ -11466,9 +11466,9 @@
               }
             ],
             "impact": null,
-            "html": "<img alt=\"Representantes em mesa de negociação\" class=\"_image_fqr5v_44\" src=\"/assets/news-negotiation-CDArzPB3.png\">",
+            "html": "<img width=\"480\" height=\"288\" alt=\"Representantes em mesa de negociação\" class=\"_image_fqr5v_44\" loading=\"lazy\" decoding=\"async\" src=\"/assets/news-negotiation-480-RTuRUR2J.webp\">",
             "target": [
-              "article:nth-child(1) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44"
+              "article:nth-child(1) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44[width=\"480\"][height=\"288\"]"
             ]
           },
           {
@@ -11484,9 +11484,9 @@
               }
             ],
             "impact": null,
-            "html": "<img alt=\"Reunião institucional sobre direitos\" class=\"_image_fqr5v_44\" src=\"/assets/news-rights-DxAVxxHu.png\">",
+            "html": "<img width=\"480\" height=\"288\" alt=\"Reunião institucional sobre direitos\" class=\"_image_fqr5v_44\" loading=\"lazy\" decoding=\"async\" src=\"/assets/news-rights-480-BtWLD6xM.webp\">",
             "target": [
-              "article:nth-child(2) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44"
+              "article:nth-child(2) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44[width=\"480\"][height=\"288\"]"
             ]
           },
           {
@@ -11502,9 +11502,9 @@
               }
             ],
             "impact": null,
-            "html": "<img alt=\"Assembleia sindical com votação\" class=\"_image_fqr5v_44\" src=\"/assets/news-assembly-BX3kknJi.png\">",
+            "html": "<img width=\"480\" height=\"288\" alt=\"Assembleia sindical com votação\" class=\"_image_fqr5v_44\" loading=\"lazy\" decoding=\"async\" src=\"/assets/news-assembly-480-CJTU9LdM.webp\">",
             "target": [
-              "article:nth-child(3) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44"
+              "article:nth-child(3) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44[width=\"480\"][height=\"288\"]"
             ]
           },
           {
@@ -11520,9 +11520,9 @@
               }
             ],
             "impact": null,
-            "html": "<img alt=\"\" src=\"/assets/logo-BoDb8VpG.png\">",
+            "html": "<img alt=\"\" width=\"128\" height=\"128\" loading=\"lazy\" decoding=\"async\" src=\"/assets/logo-128-DIZQeAPY.png\">",
             "target": [
-              "._brandRow_199y8_19 > img[alt=\"\"][src$=\"logo-BoDb8VpG.png\"]"
+              "._brandRow_199y8_19 > img[alt=\"\"][width=\"128\"][height=\"128\"]"
             ]
           }
         ]
@@ -12207,7 +12207,7 @@
               }
             ],
             "impact": null,
-            "html": "<img alt=\"\" class=\"_logo_14fok_23\" src=\"/assets/logo-BoDb8VpG.png\">",
+            "html": "<img alt=\"\" class=\"_logo_14fok_23\" width=\"128\" height=\"128\" decoding=\"async\" src=\"/assets/logo-128-DIZQeAPY.png\">",
             "target": [
               "._logo_14fok_23"
             ]
@@ -12232,9 +12232,9 @@
               }
             ],
             "impact": null,
-            "html": "<img alt=\"\" src=\"/assets/logo-BoDb8VpG.png\">",
+            "html": "<img alt=\"\" width=\"128\" height=\"128\" loading=\"lazy\" decoding=\"async\" src=\"/assets/logo-128-DIZQeAPY.png\">",
             "target": [
-              "._brandRow_199y8_19 > img[alt=\"\"][src$=\"logo-BoDb8VpG.png\"]"
+              "._brandRow_199y8_19 > img[alt=\"\"][width=\"128\"][height=\"128\"]"
             ]
           }
         ]
@@ -12367,7 +12367,7 @@
             "all": [],
             "none": [],
             "impact": null,
-            "html": "<a aria-label=\"SINDGESTÃO — Início\" aria-current=\"page\" class=\"_brand_14fok_15 active\" href=\"/\" data-discover=\"true\"><img alt=\"\" class=\"_logo_14fok_23\" src=\"/assets/logo-BoDb8VpG.png\"><span class=\"_brandCopy_14fok_29\"><strong>SINDGESTÃO</strong><small>Servidores públicos</small></span></a>",
+            "html": "<a aria-label=\"SINDGESTÃO — Início\" aria-current=\"page\" class=\"_brand_14fok_15 active\" href=\"/\" data-discover=\"true\">",
             "target": [
               "._brand_14fok_15"
             ]
@@ -12387,7 +12387,7 @@
             "all": [],
             "none": [],
             "impact": null,
-            "html": "<img alt=\"\" class=\"_logo_14fok_23\" src=\"/assets/logo-BoDb8VpG.png\">",
+            "html": "<img alt=\"\" class=\"_logo_14fok_23\" width=\"128\" height=\"128\" decoding=\"async\" src=\"/assets/logo-128-DIZQeAPY.png\">",
             "target": [
               "._logo_14fok_23"
             ]
@@ -13447,7 +13447,7 @@
             "all": [],
             "none": [],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Sindicato e governo retomam mesa de negociação\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Representantes em mesa de negociação\" class=\"_image_fqr5v_44\" src=\"/assets/news-negotiation-CDArzPB3.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Sindicato e governo retomam mesa de negociação\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(1) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -13467,9 +13467,9 @@
             "all": [],
             "none": [],
             "impact": null,
-            "html": "<img alt=\"Representantes em mesa de negociação\" class=\"_image_fqr5v_44\" src=\"/assets/news-negotiation-CDArzPB3.png\">",
+            "html": "<img width=\"480\" height=\"288\" alt=\"Representantes em mesa de negociação\" class=\"_image_fqr5v_44\" loading=\"lazy\" decoding=\"async\" src=\"/assets/news-negotiation-480-RTuRUR2J.webp\">",
             "target": [
-              "article:nth-child(1) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44"
+              "article:nth-child(1) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44[width=\"480\"][height=\"288\"]"
             ]
           },
           {
@@ -13607,7 +13607,7 @@
             "all": [],
             "none": [],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Vitória: reajuste garante recomposição salarial\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Reunião institucional sobre direitos\" class=\"_image_fqr5v_44\" src=\"/assets/news-rights-DxAVxxHu.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Vitória: reajuste garante recomposição salarial\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(2) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -13627,9 +13627,9 @@
             "all": [],
             "none": [],
             "impact": null,
-            "html": "<img alt=\"Reunião institucional sobre direitos\" class=\"_image_fqr5v_44\" src=\"/assets/news-rights-DxAVxxHu.png\">",
+            "html": "<img width=\"480\" height=\"288\" alt=\"Reunião institucional sobre direitos\" class=\"_image_fqr5v_44\" loading=\"lazy\" decoding=\"async\" src=\"/assets/news-rights-480-BtWLD6xM.webp\">",
             "target": [
-              "article:nth-child(2) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44"
+              "article:nth-child(2) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44[width=\"480\"][height=\"288\"]"
             ]
           },
           {
@@ -13767,7 +13767,7 @@
             "all": [],
             "none": [],
             "impact": null,
-            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Assembleia aprova pauta de reivindicações\" href=\"/noticias\" data-discover=\"true\"><img alt=\"Assembleia sindical com votação\" class=\"_image_fqr5v_44\" src=\"/assets/news-assembly-BX3kknJi.png\"></a>",
+            "html": "<a class=\"_imageWrapper_fqr5v_44\" aria-label=\"Leia: Assembleia aprova pauta de reivindicações\" href=\"/noticias\" data-discover=\"true\">",
             "target": [
               "article:nth-child(3) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"]"
             ]
@@ -13787,9 +13787,9 @@
             "all": [],
             "none": [],
             "impact": null,
-            "html": "<img alt=\"Assembleia sindical com votação\" class=\"_image_fqr5v_44\" src=\"/assets/news-assembly-BX3kknJi.png\">",
+            "html": "<img width=\"480\" height=\"288\" alt=\"Assembleia sindical com votação\" class=\"_image_fqr5v_44\" loading=\"lazy\" decoding=\"async\" src=\"/assets/news-assembly-480-CJTU9LdM.webp\">",
             "target": [
-              "article:nth-child(3) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44"
+              "article:nth-child(3) > ._imageWrapper_fqr5v_44[href$=\"noticias\"][data-discover=\"true\"] > ._image_fqr5v_44[width=\"480\"][height=\"288\"]"
             ]
           },
           {
@@ -14767,7 +14767,7 @@
             "all": [],
             "none": [],
             "impact": null,
-            "html": "<div class=\"_brandRow_199y8_19\"><img alt=\"\" src=\"/assets/logo-BoDb8VpG.png\"><strong>SINDGESTÃO</strong></div>",
+            "html": "<div class=\"_brandRow_199y8_19\"><img alt=\"\" width=\"128\" height=\"128\" loading=\"lazy\" decoding=\"async\" src=\"/assets/logo-128-DIZQeAPY.png\"><strong>SINDGESTÃO</strong></div>",
             "target": [
               "._brandRow_199y8_19"
             ]
@@ -14787,9 +14787,9 @@
             "all": [],
             "none": [],
             "impact": null,
-            "html": "<img alt=\"\" src=\"/assets/logo-BoDb8VpG.png\">",
+            "html": "<img alt=\"\" width=\"128\" height=\"128\" loading=\"lazy\" decoding=\"async\" src=\"/assets/logo-128-DIZQeAPY.png\">",
             "target": [
-              "._brandRow_199y8_19 > img[alt=\"\"][src$=\"logo-BoDb8VpG.png\"]"
+              "._brandRow_199y8_19 > img[alt=\"\"][width=\"128\"][height=\"128\"]"
             ]
           },
           {

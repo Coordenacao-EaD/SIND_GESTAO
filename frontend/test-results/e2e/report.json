@@ -1,12 +1,13 @@
 {
-  "startedAt": "2026-08-03T17:40:15.897Z",
-  "durationMs": 4717,
+  "startedAt": "2026-08-03T19:48:19.545Z",
+  "durationMs": 7214,
   "browser": "Google Chrome headless via Chrome DevTools Protocol",
   "baseUrl": "http://127.0.0.1:4182",
   "checks": [
     {
-      "name": "Home carregada com main, h1, navegação principal e rodapé do repositório",
-      "passed": true
+      "name": "CA-HOM-001: Home pública HTTP 200 com Hero, blocos, contato e rodapé mockados",
+      "passed": true,
+      "httpStatus": 200
     },
     {
       "name": "Navegação para /filie-se",
@@ -25,6 +26,19 @@
       "passed": true
     },
     {
+      "name": "F2.2A: /admin/home responde diretamente no preview e isola o layout público",
+      "passed": true,
+      "httpStatus": 200
+    },
+    {
+      "name": "F2.2A: edição atualiza a prévia e salva rascunho somente em memória",
+      "passed": true
+    },
+    {
+      "name": "F2.2A: estados 409/422 e layout administrativo mobile responsivo",
+      "passed": true
+    },
+    {
       "name": "Menu mobile abre e recebe foco",
       "passed": true
     },
@@ -33,7 +47,7 @@
       "passed": true
     },
     {
-      "name": "Console, erros de página e recursos essenciais sem falhas",
+      "name": "Console, erros de página, recursos e chamadas a endpoint de dados ausentes",
       "passed": true
     }
   ],
@@ -41,14 +55,18 @@
   "consoleErrors": [],
   "consoleWarnings": [],
   "resourceFailures": [],
+  "dataEndpointRequests": [],
   "previewOutput": [
     "  \u001b[32m➜\u001b[39m  \u001b[1mLocal\u001b[22m:   \u001b[36mhttp://127.0.0.1:\u001b[1m4182\u001b[22m/\u001b[39m\n"
   ],
   "previewErrors": [],
   "browserOutput": [],
   "browserDiagnostics": [
-    "\r\nDevTools listening on ws://127.0.0.1:9334/devtools/browser/2cec1257-c444-44be-92fe-87daea3b54aa\r\n",
-    "[13576:38496:0803/134019.387:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n"
+    "\r\nDevTools listening on ws://127.0.0.1:9334/devtools/browser/c8dbb06b-fc65-4a30-9e46-6a094c763f21\r\n",
+    "[8388:19840:0803/154823.032:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n",
+    "[8388:19840:0803/154823.041:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n",
+    "[8388:19840:0803/154823.065:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n",
+    "[8388:19840:0803/154823.154:ERROR:google_apis\\gcm\\engine\\mcs_client.cc:702]   Error code: 401  Error message: Authentication Failed: wrong_secret\r\n[8388:19840:0803/154823.154:ERROR:google_apis\\gcm\\engine\\mcs_client.cc:704] Failed to log in to GCM, resetting connection.\r\n"
   ],
   "passed": true,
   "failure": null
