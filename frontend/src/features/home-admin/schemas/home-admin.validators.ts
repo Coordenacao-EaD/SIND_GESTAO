@@ -242,6 +242,9 @@ export function normalizeFooterContacts(value: AdminFooterContacts): AdminFooter
     phone: value.phone.trim(),
     email: value.email.trim().toLowerCase(),
     address: value.address.trim(),
+    municipality: value.municipality.trim(),
+    postalCode: value.postalCode.trim(),
+    businessHours: value.businessHours.trim(),
   };
 }
 
@@ -251,11 +254,17 @@ export function parseAdminFooterContacts(value: unknown): ValidationResult<Admin
   }
   const issues = checkExactKeys(value, [
     "resourceType", "id", "state", "previousState", "version", "review",
-    "phone", "email", "address",
+    "phone", "email", "address", "municipality", "stateCode", "postalCode", "businessHours",
   ], "contacts");
   issues.push(...validateResourceBase(value, "footer_contacts", "contacts"));
   if (typeof value.phone !== "string" || (value.phone.trim() && value.phone.replace(/\D/g, "").length < 8)) {
-    issues.push(issue("contacts.phone", "invalid", "Telefone inválido."));
+    issues.push(
+      issue(
+        "contacts.phone",
+        "invalid",
+        "Informe um telefone nacional ou internacional válido.",
+      ),
+    );
   }
   if (typeof value.email !== "string" || (value.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.email.trim()))) {
     issues.push(issue("contacts.email", "invalid", "E-mail inválido."));

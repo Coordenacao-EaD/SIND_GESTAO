@@ -1,5 +1,6 @@
 import {
   HOME_ADMIN_CAPABILITIES,
+  editCapabilityFor,
   hasCapability,
   publishCapabilityFor,
   type HomeAdminCapability,
@@ -33,9 +34,12 @@ export type ActionBlockReason =
   | "invalid_state"
   | "review_not_pending"
   | "own_content"
+  | "own_submission"
   | "no_changes"
   | "stale_approval"
   | "hash_mismatch"
+  | "version_mismatch"
+  | "not_review_author"
   | "not_applicable";
 
 export type ActionAvailability =
@@ -55,6 +59,15 @@ export interface ActionMatrixContext {
   approvedVersion: number | null;
   currentHash: ContentHash;
   approvedHash: ContentHash | null;
+  /**
+   * Responsável pelo envio para revisão, quando difere do autor. A segregação de funções da F2.2C
+   * exige bloquear ambos; quando omitido, o comportamento anterior (só autor) é preservado.
+   */
+  submittedById?: string;
+  /** Versão submetida no ciclo, para bloquear decisão sobre conteúdo alterado após o envio. */
+  submittedVersion?: number;
+  /** Hash submetido no ciclo, comparado com `currentHash` sem recalcular. */
+  submittedHash?: ContentHash;
 }
 
 export type ActionMatrix = Record<AdminAction, ActionAvailability>;
@@ -127,9 +140,11 @@ export type ReviewDecisionBlockReason =
 export function evaluateReviewDecision(
   command: ReviewDecisionCommand,
 ): RuleResult<ReviewDecisionBlockReason> {
-  const { cycle, reviewerId, decision, opinion, reason, currentVersion, currentHash } = command;
+  const { cycle, reviewerId, decision, opinion, reason, currentVersion, currentHash, authorId } = command;
   if (cycle.decision !== "pending") return { allowed: false, reason: "review_not_pending" };
-  if (decision === "approved" && cycle.submittedBy === reviewerId) {
+  // Segregação de funções: quem decide não pode ser o responsável pelo envio nem o autor do conteúdo.
+  const decidesOwnWork = cycle.submittedBy === reviewerId || (authorId !== undefined && authorId === reviewerId);
+  if (decidesOwnWork && (decision === "approved" || decision === "changes_requested")) {
     return { allowed: false, reason: "own_content" };
   }
   if (cycle.submittedVersion !== currentVersion) return { allowed: false, reason: "version_mismatch" };
@@ -162,45 +177,49 @@ function requireCapability(
   return hasCapability(profile, capability) ? enabled() : blocked("missing_capability");
 }
 
-function editCapabilityFor(context: ActionMatrixContext): HomeAdminCapability {
-  return context.resourceType === "banner"
-    ? HOME_ADMIN_CAPABILITIES.editBanner
-    : publishCapabilityFor(context.resourceType);
-}
-
 export function buildActionMatrix(context: ActionMatrixContext): ActionMatrix {
-  const editCapability = editCapabilityFor(context);
+  const editCapability = editCapabilityFor(context.resourceType);
   const canEdit = requireCapability(context.profile, editCapability);
   const canDecide = requireCapability(context.profile, HOME_ADMIN_CAPABILITIES.decideReview);
   const publishCapability = publishCapabilityFor(context.resourceType);
   const publishPermission = requireCapability(context.profile, publishCapability);
   const pendingReview = context.state === "review" && context.reviewDecision === "pending";
   const ownContent = context.authorId === context.profile.actorId;
+  const ownSubmission = context.submittedById !== undefined
+    && context.submittedById === context.profile.actorId;
+  const submittedVersionMatches = context.submittedVersion === undefined
+    || context.submittedVersion === context.currentVersion;
+  const submittedHashMatches = context.submittedHash === undefined
+    || context.submittedHash === context.currentHash;
   const hashesMatch = context.approvedHash === context.currentHash;
   const versionsMatch = context.approvedVersion === context.currentVersion;
+
+  // Ordem única de avaliação das decisões de revisão, para que a interface nunca reimplemente a regra.
+  const decisionAvailability = (): ActionAvailability => {
+    if (!pendingReview) return blocked("review_not_pending");
+    if (ownContent) return blocked("own_content");
+    if (ownSubmission) return blocked("own_submission");
+    if (!submittedVersionMatches) return blocked("version_mismatch");
+    if (!submittedHashMatches) return blocked("hash_mismatch");
+    return canDecide;
+  };
 
   return {
     edit: ["draft", "approved"].includes(context.state) ? canEdit : hidden(),
     save_draft: context.state === "draft"
       ? (context.hasChanges ? canEdit : blocked("no_changes"))
       : hidden(),
-    preview: ["draft", "review", "approved", "published"].includes(context.state) ? enabled() : hidden(),
+    preview: ["draft", "review", "approved", "published"].includes(context.state)
+      ? requireCapability(context.profile, HOME_ADMIN_CAPABILITIES.previewHome)
+      : hidden(),
     submit_review: context.state === "draft"
       ? (context.hasChanges ? canEdit : blocked("no_changes"))
       : hidden(),
     cancel_review: context.state === "review"
-      ? (pendingReview ? canEdit : blocked("review_not_pending"))
+      ? (!pendingReview ? blocked("review_not_pending") : ownContent ? canEdit : blocked("not_review_author"))
       : hidden(),
-    approve: context.state === "review"
-      ? (!pendingReview
-        ? blocked("review_not_pending")
-        : ownContent
-          ? blocked("own_content")
-          : canDecide)
-      : hidden(),
-    request_changes: context.state === "review"
-      ? (pendingReview ? canDecide : blocked("review_not_pending"))
-      : hidden(),
+    approve: context.state === "review" ? decisionAvailability() : hidden(),
+    request_changes: context.state === "review" ? decisionAvailability() : hidden(),
     publish: context.state === "approved"
       ? (!context.approvalValid || !versionsMatch
         ? blocked("stale_approval")

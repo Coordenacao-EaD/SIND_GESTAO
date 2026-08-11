@@ -26,4 +26,19 @@ export type RoutePath = (typeof ROUTES)[RouteKey];
 
 export const ADMIN_ROUTES = {
   home: "/admin/home",
+  contacts: "/admin/home/contacts",
+  social: "/admin/home/social",
+  reviews: "/admin/home/reviews",
+  reviewDetail: "/admin/home/reviews/:reviewId",
+  publication: "/admin/home/publication",
+  history: "/admin/home/history",
+  historyDetail: "/admin/home/history/:versionId",
 } as const;
+
+export function adminReviewDetailPath(reviewId: string): string {
+  return `${ADMIN_ROUTES.reviews}/${encodeURIComponent(reviewId)}`;
+}
+
+export function adminHistoryDetailPath(versionId: string): string {
+  return `${ADMIN_ROUTES.history}/${encodeURIComponent(versionId)}`;
+}

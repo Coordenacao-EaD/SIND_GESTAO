@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T19:27:02.749Z",
+  "generatedAt": "2026-08-11T17:15:57.298Z",
   "tool": "axe-core 4.12.1",
   "browser": "Google Chrome headless via Chrome DevTools Protocol",
   "baseUrl": "http://127.0.0.1:4180",
@@ -650,6 +650,3398 @@
         "incomplete": 1,
         "passes": 41,
         "inapplicable": 48
+      }
+    },
+    {
+      "id": "admin-home-1440x1000",
+      "path": "/admin/home",
+      "viewport": "1440x1000",
+      "state": {
+        "scenario": "admin-home-1440x1000",
+        "url": "http://127.0.0.1:4180/admin/home",
+        "title": "Página Inicial | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": true,
+        "heroImageAlt": "Mãos de servidores unidas",
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 2,
+        "passes": 37,
+        "inapplicable": 52
+      }
+    },
+    {
+      "id": "admin-home-390x844",
+      "path": "/admin/home",
+      "viewport": "390x844",
+      "state": {
+        "scenario": "admin-home-390x844",
+        "url": "http://127.0.0.1:4180/admin/home",
+        "title": "Página Inicial | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": true,
+        "heroImageAlt": "Mãos de servidores unidas",
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 2,
+        "passes": 39,
+        "inapplicable": 50
+      }
+    },
+    {
+      "id": "admin-loading",
+      "path": "/admin/home?scenario=loading",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-loading",
+        "url": "http://127.0.0.1:4180/admin/home?scenario=loading",
+        "title": "Página Inicial | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 33,
+        "inapplicable": 56
+      }
+    },
+    {
+      "id": "admin-empty",
+      "path": "/admin/home?scenario=empty",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-empty",
+        "url": "http://127.0.0.1:4180/admin/home?scenario=empty",
+        "title": "Página Inicial | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 34,
+        "inapplicable": 55
+      }
+    },
+    {
+      "id": "admin-conflict",
+      "path": "/admin/home?scenario=conflict",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-conflict",
+        "url": "http://127.0.0.1:4180/admin/home?scenario=conflict",
+        "title": "Página Inicial | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 34,
+        "inapplicable": 55
+      }
+    },
+    {
+      "id": "admin-validation-mobile",
+      "path": "/admin/home?scenario=validation",
+      "viewport": "390x844",
+      "state": {
+        "scenario": "admin-validation-mobile",
+        "url": "http://127.0.0.1:4180/admin/home?scenario=validation",
+        "title": "Página Inicial | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 36,
+        "inapplicable": 53
+      }
+    },
+    {
+      "id": "admin-contacts-1440x1000",
+      "path": "/admin/home/contacts",
+      "viewport": "1440x1000",
+      "state": {
+        "scenario": "admin-contacts-1440x1000",
+        "url": "http://127.0.0.1:4180/admin/home/contacts",
+        "title": "Contatos públicos | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 37,
+        "inapplicable": 52
+      }
+    },
+    {
+      "id": "admin-contacts-390x844",
+      "path": "/admin/home/contacts",
+      "viewport": "390x844",
+      "state": {
+        "scenario": "admin-contacts-390x844",
+        "url": "http://127.0.0.1:4180/admin/home/contacts",
+        "title": "Contatos públicos | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 39,
+        "inapplicable": 50
+      }
+    },
+    {
+      "id": "admin-social-1440x1000",
+      "path": "/admin/home/social",
+      "viewport": "1440x1000",
+      "state": {
+        "scenario": "admin-social-1440x1000",
+        "url": "http://127.0.0.1:4180/admin/home/social",
+        "title": "Redes sociais | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 39,
+        "inapplicable": 50
+      }
+    },
+    {
+      "id": "admin-social-390x844",
+      "path": "/admin/home/social",
+      "viewport": "390x844",
+      "state": {
+        "scenario": "admin-social-390x844",
+        "url": "http://127.0.0.1:4180/admin/home/social",
+        "title": "Redes sociais | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 41,
+        "inapplicable": 48
+      }
+    },
+    {
+      "id": "admin-contacts-401",
+      "path": "/admin/home/contacts?scenario=unauthenticated",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-contacts-401",
+        "url": "http://127.0.0.1:4180/admin/home/contacts?scenario=unauthenticated",
+        "title": "Contatos públicos | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 33,
+        "inapplicable": 56
+      }
+    },
+    {
+      "id": "admin-contacts-403",
+      "path": "/admin/home/contacts?scenario=forbidden",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-contacts-403",
+        "url": "http://127.0.0.1:4180/admin/home/contacts?scenario=forbidden",
+        "title": "Contatos públicos | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 37,
+        "inapplicable": 52
+      }
+    },
+    {
+      "id": "admin-contacts-409",
+      "path": "/admin/home/contacts?scenario=conflict",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-contacts-409",
+        "url": "http://127.0.0.1:4180/admin/home/contacts?scenario=conflict",
+        "title": "Contatos públicos | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 37,
+        "inapplicable": 52
+      }
+    },
+    {
+      "id": "admin-contacts-invalid",
+      "path": "/admin/home/contacts",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-contacts-invalid",
+        "url": "http://127.0.0.1:4180/admin/home/contacts",
+        "title": "Contatos públicos | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 37,
+        "inapplicable": 52
+      }
+    },
+    {
+      "id": "admin-contacts-review",
+      "path": "/admin/home/contacts",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-contacts-review",
+        "url": "http://127.0.0.1:4180/admin/home/contacts",
+        "title": "Contatos públicos | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 37,
+        "inapplicable": 52
+      }
+    },
+    {
+      "id": "admin-contacts-422",
+      "path": "/admin/home/contacts?scenario=validation",
+      "viewport": "390x844",
+      "state": {
+        "scenario": "admin-contacts-422",
+        "url": "http://127.0.0.1:4180/admin/home/contacts?scenario=validation",
+        "title": "Contatos públicos | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 39,
+        "inapplicable": 50
+      }
+    },
+    {
+      "id": "admin-social-empty",
+      "path": "/admin/home/social?scenario=empty",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-social-empty",
+        "url": "http://127.0.0.1:4180/admin/home/social?scenario=empty",
+        "title": "Redes sociais | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 34,
+        "inapplicable": 55
+      }
+    },
+    {
+      "id": "admin-social-403",
+      "path": "/admin/home/social?scenario=forbidden",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-social-403",
+        "url": "http://127.0.0.1:4180/admin/home/social?scenario=forbidden",
+        "title": "Redes sociais | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 39,
+        "inapplicable": 50
+      }
+    },
+    {
+      "id": "admin-social-review",
+      "path": "/admin/home/social",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-social-review",
+        "url": "http://127.0.0.1:4180/admin/home/social",
+        "title": "Redes sociais | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 39,
+        "inapplicable": 50
+      }
+    },
+    {
+      "id": "admin-social-menu-open",
+      "path": "/admin/home/social",
+      "viewport": "390x844",
+      "state": {
+        "scenario": "admin-social-menu-open",
+        "url": "http://127.0.0.1:4180/admin/home/social",
+        "title": "Redes sociais | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 41,
+        "inapplicable": 48
+      }
+    },
+    {
+      "id": "admin-social-409",
+      "path": "/admin/home/social?scenario=conflict",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-social-409",
+        "url": "http://127.0.0.1:4180/admin/home/social?scenario=conflict",
+        "title": "Redes sociais | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 39,
+        "inapplicable": 50
+      }
+    },
+    {
+      "id": "admin-social-422",
+      "path": "/admin/home/social?scenario=validation",
+      "viewport": "390x844",
+      "state": {
+        "scenario": "admin-social-422",
+        "url": "http://127.0.0.1:4180/admin/home/social?scenario=validation",
+        "title": "Redes sociais | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 41,
+        "inapplicable": 48
+      }
+    },
+    {
+      "id": "admin-reviews-1440x1000",
+      "path": "/admin/home/reviews",
+      "viewport": "1440x1000",
+      "state": {
+        "scenario": "admin-reviews-1440x1000",
+        "url": "http://127.0.0.1:4180/admin/home/reviews",
+        "title": "Revisões | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 39,
+        "inapplicable": 50
+      }
+    },
+    {
+      "id": "admin-reviews-390x844",
+      "path": "/admin/home/reviews",
+      "viewport": "390x844",
+      "state": {
+        "scenario": "admin-reviews-390x844",
+        "url": "http://127.0.0.1:4180/admin/home/reviews",
+        "title": "Revisões | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 41,
+        "inapplicable": 48
+      }
+    },
+    {
+      "id": "admin-reviews-empty",
+      "path": "/admin/home/reviews?scenario=empty",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-reviews-empty",
+        "url": "http://127.0.0.1:4180/admin/home/reviews?scenario=empty",
+        "title": "Revisões | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 37,
+        "inapplicable": 52
+      }
+    },
+    {
+      "id": "admin-reviews-filtered",
+      "path": "/admin/home/reviews",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-reviews-filtered",
+        "url": "http://127.0.0.1:4180/admin/home/reviews",
+        "title": "Revisões | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 39,
+        "inapplicable": 50
+      }
+    },
+    {
+      "id": "admin-reviews-filtered-empty",
+      "path": "/admin/home/reviews",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-reviews-filtered-empty",
+        "url": "http://127.0.0.1:4180/admin/home/reviews",
+        "title": "Revisões | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 39,
+        "inapplicable": 50
+      }
+    },
+    {
+      "id": "admin-reviews-401",
+      "path": "/admin/home/reviews?scenario=unauthenticated",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-reviews-401",
+        "url": "http://127.0.0.1:4180/admin/home/reviews?scenario=unauthenticated",
+        "title": "Revisões | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 37,
+        "inapplicable": 52
+      }
+    },
+    {
+      "id": "admin-reviews-403",
+      "path": "/admin/home/reviews?scenario=forbidden",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-reviews-403",
+        "url": "http://127.0.0.1:4180/admin/home/reviews?scenario=forbidden",
+        "title": "Revisões | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 37,
+        "inapplicable": 52
+      }
+    },
+    {
+      "id": "admin-reviews-unavailable",
+      "path": "/admin/home/reviews?scenario=unavailable",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-reviews-unavailable",
+        "url": "http://127.0.0.1:4180/admin/home/reviews?scenario=unavailable",
+        "title": "Revisões | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 38,
+        "inapplicable": 51
+      }
+    },
+    {
+      "id": "admin-reviews-menu-open",
+      "path": "/admin/home/reviews",
+      "viewport": "390x844",
+      "state": {
+        "scenario": "admin-reviews-menu-open",
+        "url": "http://127.0.0.1:4180/admin/home/reviews",
+        "title": "Revisões | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 41,
+        "inapplicable": 48
+      }
+    },
+    {
+      "id": "admin-review-detail-1440x1000",
+      "path": "/admin/home/reviews/review-banner-1",
+      "viewport": "1440x1000",
+      "state": {
+        "scenario": "admin-review-detail-1440x1000",
+        "url": "http://127.0.0.1:4180/admin/home/reviews/review-banner-1",
+        "title": "Detalhe da revisão | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": true,
+        "heroImageAlt": "Servidores reunidos em frente à sede do sindicato",
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 2,
+        "passes": 45,
+        "inapplicable": 44
+      }
+    },
+    {
+      "id": "admin-review-detail-390x844",
+      "path": "/admin/home/reviews/review-banner-1",
+      "viewport": "390x844",
+      "state": {
+        "scenario": "admin-review-detail-390x844",
+        "url": "http://127.0.0.1:4180/admin/home/reviews/review-banner-1",
+        "title": "Detalhe da revisão | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": true,
+        "heroImageAlt": "Servidores reunidos em frente à sede do sindicato",
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 2,
+        "passes": 47,
+        "inapplicable": 42
+      }
+    },
+    {
+      "id": "admin-review-detail-approved",
+      "path": "/admin/home/reviews/review-banner-2",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-review-detail-approved",
+        "url": "http://127.0.0.1:4180/admin/home/reviews/review-banner-2",
+        "title": "Detalhe da revisão | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": true,
+        "heroImageAlt": "Servidores reunidos em frente à sede do sindicato",
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 2,
+        "passes": 45,
+        "inapplicable": 44
+      }
+    },
+    {
+      "id": "admin-review-detail-changes",
+      "path": "/admin/home/reviews/review-contacts-2",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-review-detail-changes",
+        "url": "http://127.0.0.1:4180/admin/home/reviews/review-contacts-2",
+        "title": "Detalhe da revisão | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 43,
+        "inapplicable": 46
+      }
+    },
+    {
+      "id": "admin-review-detail-cancelled",
+      "path": "/admin/home/reviews/review-social-2",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-review-detail-cancelled",
+        "url": "http://127.0.0.1:4180/admin/home/reviews/review-social-2",
+        "title": "Detalhe da revisão | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 43,
+        "inapplicable": 46
+      }
+    },
+    {
+      "id": "admin-review-detail-invalidated",
+      "path": "/admin/home/reviews/review-banner-3",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-review-detail-invalidated",
+        "url": "http://127.0.0.1:4180/admin/home/reviews/review-banner-3",
+        "title": "Detalhe da revisão | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": true,
+        "heroImageAlt": "Servidores reunidos em frente à sede do sindicato",
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 2,
+        "passes": 45,
+        "inapplicable": 44
+      }
+    },
+    {
+      "id": "admin-review-detail-author",
+      "path": "/admin/home/reviews/review-banner-1?scenario=author",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-review-detail-author",
+        "url": "http://127.0.0.1:4180/admin/home/reviews/review-banner-1?scenario=author",
+        "title": "Detalhe da revisão | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": true,
+        "heroImageAlt": "Servidores reunidos em frente à sede do sindicato",
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 2,
+        "passes": 45,
+        "inapplicable": 44
+      }
+    },
+    {
+      "id": "admin-review-detail-hash",
+      "path": "/admin/home/reviews/review-banner-1?scenario=hash_mismatch",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-review-detail-hash",
+        "url": "http://127.0.0.1:4180/admin/home/reviews/review-banner-1?scenario=hash_mismatch",
+        "title": "Detalhe da revisão | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": true,
+        "heroImageAlt": "Servidores reunidos em frente à sede do sindicato",
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 2,
+        "passes": 45,
+        "inapplicable": 44
+      }
+    },
+    {
+      "id": "admin-review-detail-404",
+      "path": "/admin/home/reviews/review-inexistente",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-review-detail-404",
+        "url": "http://127.0.0.1:4180/admin/home/reviews/review-inexistente",
+        "title": "Detalhe da revisão | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 33,
+        "inapplicable": 56
+      }
+    },
+    {
+      "id": "admin-review-detail-401",
+      "path": "/admin/home/reviews/review-banner-1?scenario=unauthenticated",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-review-detail-401",
+        "url": "http://127.0.0.1:4180/admin/home/reviews/review-banner-1?scenario=unauthenticated",
+        "title": "Detalhe da revisão | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 33,
+        "inapplicable": 56
+      }
+    },
+    {
+      "id": "admin-review-detail-403",
+      "path": "/admin/home/reviews/review-banner-1?scenario=forbidden",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-review-detail-403",
+        "url": "http://127.0.0.1:4180/admin/home/reviews/review-banner-1?scenario=forbidden",
+        "title": "Detalhe da revisão | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 33,
+        "inapplicable": 56
+      }
+    },
+    {
+      "id": "admin-review-detail-422",
+      "path": "/admin/home/reviews/review-banner-1?scenario=validation",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-review-detail-422",
+        "url": "http://127.0.0.1:4180/admin/home/reviews/review-banner-1?scenario=validation",
+        "title": "Detalhe da revisão | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 33,
+        "inapplicable": 56
+      }
+    },
+    {
+      "id": "admin-review-detail-unavailable",
+      "path": "/admin/home/reviews/review-banner-1?scenario=unavailable",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-review-detail-unavailable",
+        "url": "http://127.0.0.1:4180/admin/home/reviews/review-banner-1?scenario=unavailable",
+        "title": "Detalhe da revisão | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 34,
+        "inapplicable": 55
+      }
+    },
+    {
+      "id": "admin-review-approve-dialog",
+      "path": "/admin/home/reviews/review-banner-1",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-review-approve-dialog",
+        "url": "http://127.0.0.1:4180/admin/home/reviews/review-banner-1",
+        "title": "Detalhe da revisão | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": true,
+        "heroImageAlt": "Servidores reunidos em frente à sede do sindicato",
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 2,
+        "passes": 47,
+        "inapplicable": 42
+      }
+    },
+    {
+      "id": "admin-review-changes-dialog",
+      "path": "/admin/home/reviews/review-banner-1",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-review-changes-dialog",
+        "url": "http://127.0.0.1:4180/admin/home/reviews/review-banner-1",
+        "title": "Detalhe da revisão | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": true,
+        "heroImageAlt": "Servidores reunidos em frente à sede do sindicato",
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 2,
+        "passes": 47,
+        "inapplicable": 42
+      }
+    },
+    {
+      "id": "admin-review-409",
+      "path": "/admin/home/reviews/review-banner-1?scenario=concurrent",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-review-409",
+        "url": "http://127.0.0.1:4180/admin/home/reviews/review-banner-1?scenario=concurrent",
+        "title": "Detalhe da revisão | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": true,
+        "heroImageAlt": "Servidores reunidos em frente à sede do sindicato",
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 2,
+        "passes": 47,
+        "inapplicable": 42
+      }
+    },
+    {
+      "id": "admin-publication-1440x900",
+      "path": "/admin/home/publication",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-publication-1440x900",
+        "url": "http://127.0.0.1:4180/admin/home/publication",
+        "title": "Publicação simulada | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 0,
+        "passes": 38,
+        "inapplicable": 51
+      }
+    },
+    {
+      "id": "admin-publication-390x844",
+      "path": "/admin/home/publication",
+      "viewport": "390x844",
+      "state": {
+        "scenario": "admin-publication-390x844",
+        "url": "http://127.0.0.1:4180/admin/home/publication",
+        "title": "Publicação simulada | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 0,
+        "passes": 40,
+        "inapplicable": 49
+      }
+    },
+    {
+      "id": "admin-publication-banner-dialog",
+      "path": "/admin/home/publication",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-publication-banner-dialog",
+        "url": "http://127.0.0.1:4180/admin/home/publication",
+        "title": "Publicação simulada | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 39,
+        "inapplicable": 50
+      }
+    },
+    {
+      "id": "admin-publication-contacts-dialog",
+      "path": "/admin/home/publication",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-publication-contacts-dialog",
+        "url": "http://127.0.0.1:4180/admin/home/publication",
+        "title": "Publicação simulada | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 39,
+        "inapplicable": 50
+      }
+    },
+    {
+      "id": "admin-publication-social-dialog",
+      "path": "/admin/home/publication",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-publication-social-dialog",
+        "url": "http://127.0.0.1:4180/admin/home/publication",
+        "title": "Publicação simulada | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 39,
+        "inapplicable": 50
+      }
+    },
+    {
+      "id": "admin-publication-success",
+      "path": "/admin/home/publication",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-publication-success",
+        "url": "http://127.0.0.1:4180/admin/home/publication",
+        "title": "Publicação simulada | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 0,
+        "passes": 38,
+        "inapplicable": 51
+      }
+    },
+    {
+      "id": "admin-publication-403",
+      "path": "/admin/home/publication?scenario=readonly",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-publication-403",
+        "url": "http://127.0.0.1:4180/admin/home/publication?scenario=readonly",
+        "title": "Publicação simulada | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 0,
+        "passes": 38,
+        "inapplicable": 51
+      }
+    },
+    {
+      "id": "admin-publication-409",
+      "path": "/admin/home/publication?scenario=publication_conflict",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-publication-409",
+        "url": "http://127.0.0.1:4180/admin/home/publication?scenario=publication_conflict",
+        "title": "Publicação simulada | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 0,
+        "passes": 38,
+        "inapplicable": 51
+      }
+    },
+    {
+      "id": "admin-publication-approval-expired",
+      "path": "/admin/home/publication?scenario=approval_expired",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-publication-approval-expired",
+        "url": "http://127.0.0.1:4180/admin/home/publication?scenario=approval_expired",
+        "title": "Publicação simulada | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 0,
+        "passes": 38,
+        "inapplicable": 51
+      }
+    },
+    {
+      "id": "admin-publication-hash",
+      "path": "/admin/home/publication?scenario=hash_mismatch",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-publication-hash",
+        "url": "http://127.0.0.1:4180/admin/home/publication?scenario=hash_mismatch",
+        "title": "Publicação simulada | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 0,
+        "passes": 38,
+        "inapplicable": 51
+      }
+    },
+    {
+      "id": "admin-history-1440x900",
+      "path": "/admin/home/history",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-history-1440x900",
+        "url": "http://127.0.0.1:4180/admin/home/history",
+        "title": "Histórico de versões | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 0,
+        "passes": 38,
+        "inapplicable": 51
+      }
+    },
+    {
+      "id": "admin-history-390x844",
+      "path": "/admin/home/history",
+      "viewport": "390x844",
+      "state": {
+        "scenario": "admin-history-390x844",
+        "url": "http://127.0.0.1:4180/admin/home/history",
+        "title": "Histórico de versões | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 0,
+        "passes": 41,
+        "inapplicable": 48
+      }
+    },
+    {
+      "id": "admin-history-empty",
+      "path": "/admin/home/history?scenario=empty",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-history-empty",
+        "url": "http://127.0.0.1:4180/admin/home/history?scenario=empty",
+        "title": "Histórico de versões | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 0,
+        "passes": 34,
+        "inapplicable": 55
+      }
+    },
+    {
+      "id": "admin-history-403",
+      "path": "/admin/home/history?scenario=readonly",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-history-403",
+        "url": "http://127.0.0.1:4180/admin/home/history?scenario=readonly",
+        "title": "Histórico de versões | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 0,
+        "passes": 33,
+        "inapplicable": 56
+      }
+    },
+    {
+      "id": "admin-history-detail",
+      "path": "/admin/home/history/history-banner-v0",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-history-detail",
+        "url": "http://127.0.0.1:4180/admin/home/history/history-banner-v0",
+        "title": "Detalhe da versão | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 0,
+        "passes": 35,
+        "inapplicable": 54
+      }
+    },
+    {
+      "id": "admin-history-restore-dialog",
+      "path": "/admin/home/history/history-banner-v0",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-history-restore-dialog",
+        "url": "http://127.0.0.1:4180/admin/home/history/history-banner-v0",
+        "title": "Detalhe da versão | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 1,
+        "passes": 36,
+        "inapplicable": 53
+      }
+    },
+    {
+      "id": "admin-history-restore-409",
+      "path": "/admin/home/history/history-banner-v0?scenario=restore_conflict",
+      "viewport": "1440x900",
+      "state": {
+        "scenario": "admin-history-restore-409",
+        "url": "http://127.0.0.1:4180/admin/home/history/history-banner-v0?scenario=restore_conflict",
+        "title": "Detalhe da versão | Gestão da Home — SINDGESTÃO",
+        "mainCount": 1,
+        "h1Count": 1,
+        "nestedMain": false,
+        "duplicateIds": [],
+        "horizontalOverflow": false,
+        "skipTargetExists": false,
+        "mobileExpanded": null,
+        "mobileDialogModal": null,
+        "mobileDialogName": null,
+        "backgroundInert": null,
+        "dropdownExpanded": null,
+        "heroImagePresent": false,
+        "heroImageAlt": null,
+        "heroFallbackPresent": false,
+        "heroFallbackName": null,
+        "colorTokens": {
+          "color-gold": "#e8ad34",
+          "color-gold-dark": "#c88b18",
+          "color-gold-deep": "#8a5d00",
+          "color-gold-soft": "#fff7e5",
+          "color-text": "#252525",
+          "color-white": "#fff",
+          "color-footer": "#2e3135"
+        }
+      },
+      "counts": {
+        "wcag": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "bestPractice": {
+          "critical": 0,
+          "serious": 0,
+          "moderate": 0,
+          "minor": 0,
+          "unknown": 0
+        },
+        "incomplete": 0,
+        "passes": 35,
+        "inapplicable": 54
       }
     }
   ],

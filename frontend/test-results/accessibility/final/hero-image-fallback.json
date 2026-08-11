@@ -45,13 +45,13 @@
       "name": "axe"
     },
     "testEnvironment": {
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
       "windowWidth": 1440,
       "windowHeight": 900,
       "orientationAngle": 0,
       "orientationType": "landscape-primary"
     },
-    "timestamp": "2026-08-03T19:27:02.517Z",
+    "timestamp": "2026-08-11T17:14:36.965Z",
     "url": "http://127.0.0.1:4180/",
     "toolOptions": {
       "runOnly": {
@@ -10483,13 +10483,13 @@
       "name": "axe"
     },
     "testEnvironment": {
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
       "windowWidth": 1440,
       "windowHeight": 900,
       "orientationAngle": 0,
       "orientationType": "landscape-primary"
     },
-    "timestamp": "2026-08-03T19:27:02.563Z",
+    "timestamp": "2026-08-11T17:14:37.012Z",
     "url": "http://127.0.0.1:4180/",
     "toolOptions": {
       "runOnly": {

@@ -6,6 +6,7 @@ interface AdminFeedbackProps {
   error?: AdminError;
   success?: string;
   onRetry?: () => void;
+  retryLabel?: string;
 }
 
 function errorDetails(error: AdminError) {
@@ -19,7 +20,7 @@ function errorDetails(error: AdminError) {
   }
 }
 
-export function AdminFeedback({ error, success, onRetry }: AdminFeedbackProps) {
+export function AdminFeedback({ error, success, onRetry, retryLabel = "Tentar novamente" }: AdminFeedbackProps) {
   if (success) {
     return <div className={`${styles.feedback} ${styles.feedbackSuccess}`} role="status"><CheckCircle2 aria-hidden="true" /><div><strong>Ação simulada concluída</strong><p>{success}</p></div></div>;
   }
@@ -35,7 +36,7 @@ export function AdminFeedback({ error, success, onRetry }: AdminFeedbackProps) {
         {error.kind === "forbidden" && <small>Capacidade necessária: {error.requiredCapability}</small>}
         {error.kind === "conflict" && <small>Revisão esperada: {error.expectedRevision}; revisão atual: {error.actualRevision}.</small>}
         {error.kind === "validation" && Object.entries(error.fields).map(([field, messages]) => <small key={field}>{field}: {messages.join(" ")}</small>)}
-        {onRetry && <button className={styles.secondaryButton} onClick={onRetry} type="button"><RotateCw aria-hidden="true" /> Tentar novamente</button>}
+        {onRetry && <button className={styles.secondaryButton} onClick={onRetry} type="button"><RotateCw aria-hidden="true" /> {retryLabel}</button>}
       </div>
     </div>
   );

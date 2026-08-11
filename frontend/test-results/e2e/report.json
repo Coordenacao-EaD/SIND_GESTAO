@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-08-03T19:48:19.545Z",
-  "durationMs": 7214,
+  "startedAt": "2026-08-11T17:13:23.119Z",
+  "durationMs": 33261,
   "browser": "Google Chrome headless via Chrome DevTools Protocol",
   "baseUrl": "http://127.0.0.1:4182",
   "checks": [
@@ -39,6 +39,130 @@
       "passed": true
     },
     {
+      "name": "F2.2B: rotas diretas de contatos e redes sociais respondem no preview",
+      "passed": true,
+      "contactsStatus": 200,
+      "socialStatus": 200
+    },
+    {
+      "name": "F2.2B: cards do painel abrem os dois novos editores",
+      "passed": true
+    },
+    {
+      "name": "F2.2B: contatos atualizam a prévia e salvam a configuração somente em memória",
+      "passed": true
+    },
+    {
+      "name": "F2.2B: contatos são enviados como unidade e a edição fica bloqueada",
+      "passed": true
+    },
+    {
+      "name": "F2.2B: contatos preservam o rascunho no 422 e permanecem responsivos",
+      "passed": true
+    },
+    {
+      "name": "F2.2B: redes adicionam, rejeitam duplicidade, corrigem, reordenam, atualizam a prévia e salvam em memória",
+      "passed": true
+    },
+    {
+      "name": "F2.2B: conflito de redes preserva a configuração e o layout mobile",
+      "passed": true
+    },
+    {
+      "name": "F2.2C: rotas diretas da fila e do detalhe respondem no preview",
+      "passed": true,
+      "queueStatus": 200,
+      "detailStatus": 200
+    },
+    {
+      "name": "F2.2C: Revisões deixou de ser 'Em breve' e abre pelo menu administrativo",
+      "passed": true
+    },
+    {
+      "name": "F2.2C: fila lista os três tipos e filtra por tipo de conteúdo",
+      "passed": true
+    },
+    {
+      "name": "F2.2C: detalhe apresenta a comparação entre versão pública e conteúdo submetido",
+      "passed": true
+    },
+    {
+      "name": "F2.2C: autoaprovação bloqueada para o autor mesmo com a capability",
+      "passed": true
+    },
+    {
+      "name": "F2.2C: responsável pelo envio não pode decidir a própria submissão",
+      "passed": true
+    },
+    {
+      "name": "F2.2C: aprovação simulada registra a decisão, não publica e bloqueia nova decisão",
+      "passed": true
+    },
+    {
+      "name": "F2.2C: solicitação de ajustes valida a justificativa e devolve o conteúdo para rascunho",
+      "passed": true
+    },
+    {
+      "name": "F2.2C: hash divergente bloqueia a decisão e explica o motivo",
+      "passed": true
+    },
+    {
+      "name": "F2.2C: decisão concorrente devolve 409 sem simular sucesso e permite recarregar",
+      "passed": true
+    },
+    {
+      "name": "F2.2C: fila e detalhe permanecem sem rolagem horizontal em 390x844",
+      "passed": true
+    },
+    {
+      "name": "F2.2D: rotas reais de publicação e histórico estão disponíveis sem ação publicar tudo",
+      "passed": true
+    },
+    {
+      "name": "F2.2D: banner aprovado é publicado separadamente com resumo e metadata mockada",
+      "passed": true
+    },
+    {
+      "name": "F2.2D: contatos são publicados separadamente e exibem comparação completa",
+      "passed": true
+    },
+    {
+      "name": "F2.2D: redes sociais são publicadas como configuração indivisível, nunca por link",
+      "passed": true
+    },
+    {
+      "name": "F2.2D: histórico somente leitura lista versões e filtra por tipo",
+      "passed": true
+    },
+    {
+      "name": "F2.2D: detalhe é imutável e restore cria novo draft sem reutilizar aprovação",
+      "passed": true
+    },
+    {
+      "name": "F2.2D: pós-restore abre o editor correto exibindo um rascunho",
+      "passed": true
+    },
+    {
+      "name": "F2.2D: conflito 409 preserva a versão pública, não simula sucesso e oferece recarga",
+      "passed": true
+    },
+    {
+      "name": "F2.2D: publicação, histórico e detalhe não têm overflow em 390x844",
+      "passed": true
+    },
+    {
+      "name": "F2.2C: nenhuma decisão alterou a Home pública e o menu público não expõe rotas administrativas",
+      "passed": true
+    },
+    {
+      "name": "F2.2B: menu administrativo mobile abre, rotula, fecha por Escape e restaura o foco em 390x844",
+      "passed": true
+    },
+    {
+      "name": "F2.2B: o gatilho do menu administrativo permanece oculto no layout desktop",
+      "passed": true
+    },
+    {
       "name": "Menu mobile abre e recebe foco",
       "passed": true
     },
@@ -48,13 +172,18 @@
     },
     {
       "name": "Console, erros de página, recursos e chamadas a endpoint de dados ausentes",
-      "passed": true
+      "passed": true,
+      "unsavedGuardNotices": 2
     }
   ],
   "pageErrors": [],
   "consoleErrors": [],
   "consoleWarnings": [],
   "resourceFailures": [],
+  "unsavedGuardNotices": [
+    "Blocked attempt to show a 'beforeunload' confirmation panel for a frame that never had a user gesture since its load. https://www.chromestatus.com/feature/5082396709879808",
+    "Blocked attempt to show a 'beforeunload' confirmation panel for a frame that never had a user gesture since its load. https://www.chromestatus.com/feature/5082396709879808"
+  ],
   "dataEndpointRequests": [],
   "previewOutput": [
     "  \u001b[32m➜\u001b[39m  \u001b[1mLocal\u001b[22m:   \u001b[36mhttp://127.0.0.1:\u001b[1m4182\u001b[22m/\u001b[39m\n"
@@ -62,11 +191,12 @@
   "previewErrors": [],
   "browserOutput": [],
   "browserDiagnostics": [
-    "\r\nDevTools listening on ws://127.0.0.1:9334/devtools/browser/c8dbb06b-fc65-4a30-9e46-6a094c763f21\r\n",
-    "[8388:19840:0803/154823.032:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n",
-    "[8388:19840:0803/154823.041:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n",
-    "[8388:19840:0803/154823.065:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n",
-    "[8388:19840:0803/154823.154:ERROR:google_apis\\gcm\\engine\\mcs_client.cc:702]   Error code: 401  Error message: Authentication Failed: wrong_secret\r\n[8388:19840:0803/154823.154:ERROR:google_apis\\gcm\\engine\\mcs_client.cc:704] Failed to log in to GCM, resetting connection.\r\n"
+    "\r\nDevTools listening on ws://127.0.0.1:9334/devtools/browser/1a6a3744-6bd9-4946-9ee7-cff623165ea0\r\n",
+    "[11312:23188:0811/131326.428:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n",
+    "[11312:23188:0811/131326.436:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n",
+    "[11312:23188:0811/131326.436:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n",
+    "[11312:23188:0811/131326.587:ERROR:google_apis\\gcm\\engine\\mcs_client.cc:702]   Error code: 401  Error message: Authentication Failed: wrong_secret\r\n[11312:23188:0811/131326.587:ERROR:google_apis\\gcm\\engine\\mcs_client.cc:704] Failed to log in to GCM, resetting connection.\r\n",
+    "[11312:23188:0811/131351.614:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT\r\n"
   ],
   "passed": true,
   "failure": null

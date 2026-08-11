@@ -14,7 +14,7 @@
 .navItemActive { background: rgba(232,173,52,.15); color: #ffd881; box-shadow: inset 3px 0 var(--color-gold); }
 .futureScope { margin-top: auto; padding: 14px; border: 1px solid rgba(255,255,255,.1); border-radius: var(--radius-md); background: rgba(255,255,255,.035); }
 .futureScope span { color: #ffd881; font-size: var(--font-size-xs); font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
-.futureScope p { margin: 7px 0 0; color: #b9bdc2; font-size: .76rem; line-height: 1.55; }
+.futureScope p { display: flex; align-items: center; gap: 7px; margin: 7px 0 0; color: #b9bdc2; font-size: .76rem; line-height: 1.55; }.futureScope p svg { width: 15px; }
 .profileCard { display: flex; align-items: center; gap: 10px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.11); }
 .profileCard > span { display: grid; width: 35px; height: 35px; place-items: center; border-radius: 50%; background: var(--color-gold-soft); color: var(--color-gold-deep); font-size: .72rem; font-weight: 850; }
 .profileCard strong, .profileCard small { display: block; }

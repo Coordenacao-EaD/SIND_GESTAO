@@ -46,6 +46,7 @@ export interface VersionMetadata {
   approvedAt: string | null;
   publishedAt: string | null;
   archivedAt: string | null;
+  publishedBy?: string | null;
 }
 
 export type BannerCta =
@@ -106,11 +107,25 @@ export interface AdminFooterContacts extends AdminResourceBase<"footer_contacts"
   phone: string;
   email: string;
   address: string;
+  municipality: string;
+  stateCode: BrazilianStateCode;
+  postalCode: string;
+  businessHours: string;
 }
+
+export const BRAZILIAN_STATE_CODES = [
+  "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG",
+  "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO",
+] as const;
+
+export type BrazilianStateCode = (typeof BRAZILIAN_STATE_CODES)[number];
+
+export const SOCIAL_PLATFORMS = ["Facebook", "Instagram", "YouTube", "LinkedIn", "X"] as const;
+export type SocialPlatform = (typeof SOCIAL_PLATFORMS)[number];
 
 export interface AdminSocialLink {
   id: string;
-  platform: string;
+  platform: SocialPlatform;
   url: string;
   accessibleLabel: string;
   order: number;
@@ -125,6 +140,27 @@ export type HomeAdminResource =
   | AdminBanner
   | AdminFooterContacts
   | AdminSocialConfiguration;
+
+export interface VersionHistoryEntry {
+  versionId: string;
+  resource: HomeAdminResource;
+  authorId: string;
+  reviewerId: string | null;
+  reviewDecision: ReviewDecision | null;
+  publishedBy: string | null;
+  isCurrentPublic: boolean;
+}
+
+export interface PublishResourceResult {
+  published: HomeAdminResource;
+  archived: VersionHistoryEntry | null;
+  historyEntry: VersionHistoryEntry;
+}
+
+export interface RestoreVersionResult {
+  source: VersionHistoryEntry;
+  draft: HomeAdminResource;
+}
 
 export interface AdminResourceSummary {
   resourceType: AdminResourceType;
@@ -167,4 +203,9 @@ export interface ReviewDecisionCommand {
   reason?: string;
   currentVersion: EditorialVersionNumber;
   currentHash: ContentHash;
+  /**
+   * Autor do conteúdo, quando difere de `cycle.submittedBy`. Permite bloquear a autoaprovação também
+   * pelo autor; quando omitido, apenas o responsável pelo envio é verificado.
+   */
+  authorId?: string;
 }

@@ -13,7 +13,7 @@
     "measure:bundle": "node scripts/measure-bundle.mjs",
     "measure:performance": "node scripts/measure-home-performance.mjs",
     "preview": "vite preview",
-    "audit:a11y": "vitest run src/pages/home/HomePage.accessibility.test.tsx src/pages/admin/home/HomeManagementPage.accessibility.test.tsx && node scripts/accessibility-audit.mjs",
+    "audit:a11y": "vitest run src/pages/home/HomePage.accessibility.test.tsx src/pages/admin/home/HomeManagementPage.accessibility.test.tsx src/pages/admin/home/publication-history/PublicationHistory.accessibility.test.tsx && node scripts/accessibility-audit.mjs",
     "typecheck": "tsc -b",
     "test": "vitest run",
     "test:e2e": "node e2e/home.spec.ts",

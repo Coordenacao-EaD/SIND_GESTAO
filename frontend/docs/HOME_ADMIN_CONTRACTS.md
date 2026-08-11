@@ -80,12 +80,12 @@ O catálogo administrativo deriva os caminhos de `ROUTES`. A chave `memberArea` 
 Identificadores canônicos estabelecidos a partir das capacidades granulares documentadas:
 
 - `home.banner.edit`;
-- `home.review.decide`;
-- `home.banner.publish`;
-- `home.footer_contacts.publish`;
-- `home.footer_social_links.publish`;
-- `home.history.view`;
-- `home.version.restore`.
+- `site.home.review`;
+- `site.home.banner.publish`;
+- `site.footer.contacts.publish`;
+- `site.footer.social_links.publish`;
+- `site.home.history.view`;
+- `site.home.version.restore`.
 
 A matriz avalia recurso, estado, decisão, autoria, capabilities, alterações, validade da aprovação, versão e hash. Cada ação resulta em um estado completo (`visible`, `enabled`, `blocked`, `reason`) para editar, salvar, pré-visualizar, enviar/cancelar revisão, aprovar, solicitar ajustes, publicar, consultar histórico ou restaurar.
 
@@ -104,11 +104,18 @@ Não havia biblioteca de schema instalada. Para evitar dependência concorrente 
 
 ## Repositórios e mocks
 
-`HomeAdminContentRepository` expressa listagem, detalhe, rascunho, publicação futura, histórico e restauração. `HomeAdminReviewRepository` expressa envio, cancelamento e decisão. Nenhuma interface conhece URL, endpoint ou código HTTP de transporte; números 401/403/409/422 são apenas categorias de erro que a F2.2 deverá representar.
+`HomeAdminContentRepository` expressa listagem, detalhe, rascunho, publicação simulada, histórico e restauração. `HomeAdminReviewRepository` expressa envio, cancelamento e decisão. Nenhuma interface conhece URL, endpoint ou código HTTP de transporte; números 401/403/409/422 são apenas categorias de erro representadas localmente.
+
+## Extensão F2.2D
+
+`VersionHistoryEntry` referencia um snapshot administrativo imutável, seus atores, decisão e indicação de versão pública vigente. `PublishResourceResult` devolve a nova versão pública, a versão anterior arquivada e a entrada histórica criada. `RestoreVersionResult` devolve a origem histórica e o novo draft.
+
+Publicação somente transita `approved → published` quando aprovação, versão e hash continuam vigentes e a capability específica do recurso está presente. Banner, contatos e configuração social possuem comandos independentes; não existe publicação em lote nem publicação de link social isolado.
+
+Restauração sempre copia uma versão `published` ou `archived` para um novo `draft`, com novo ID, versão e hash, removendo revisão e aprovação e mantendo a versão pública atual. Nenhuma aprovação histórica é reutilizada.
 
 `HomeAdminMockRepository` usa dados determinísticos e memória efêmera isolada por instância. Os cenários são sucesso, loading, vazio, validação, não autenticado, sem capacidade, conflito e indisponibilidade. Não usa timer, arquivo, storage ou rede; em cenário de erro, nenhuma mutação é aplicada.
 
 ## Responsabilidades futuras
 
 F2.2 poderá criar telas e consumir estes contratos, sem executar publicação real. A F3 deverá implementar autenticação, autorização e validação definitiva no servidor, além dos adaptadores reais. A F4 poderá integrar publicação/consulta pública. Nenhuma dessas responsabilidades foi antecipada na F2.1.
-

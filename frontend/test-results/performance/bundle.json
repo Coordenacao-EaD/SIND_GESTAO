@@ -1,0 +1,326 @@
+{
+  "generatedAt": "2026-08-11T17:16:05.087Z",
+  "command": "npm run measure:bundle -- test-results/performance/bundle.json",
+  "totals": {
+    "files": 30,
+    "bytes": 757901,
+    "gzipBytes": 375120,
+    "brotliBytes": 354349
+  },
+  "categories": {
+    "images": {
+      "files": 7,
+      "bytes": 219951,
+      "gzipBytes": 212033,
+      "brotliBytes": 211599
+    },
+    "javascript": {
+      "files": 17,
+      "bytes": 473993,
+      "gzipBytes": 148010,
+      "brotliBytes": 129721
+    },
+    "css": {
+      "files": 5,
+      "bytes": 63345,
+      "gzipBytes": 14703,
+      "brotliBytes": 12784
+    },
+    "fonts": {
+      "files": 0,
+      "bytes": 0,
+      "gzipBytes": 0,
+      "brotliBytes": 0
+    },
+    "other": {
+      "files": 1,
+      "bytes": 612,
+      "gzipBytes": 374,
+      "brotliBytes": 245
+    }
+  },
+  "largestFiles": [
+    {
+      "path": "assets/index-vJTZt-7N.js",
+      "extension": ".js",
+      "bytes": 325703,
+      "gzipBytes": 101983,
+      "brotliBytes": 88570
+    },
+    {
+      "path": "assets/hero-union-1672-D6SQlQCF.webp",
+      "extension": ".webp",
+      "bytes": 84356,
+      "gzipBytes": 84404,
+      "brotliBytes": 84361
+    },
+    {
+      "path": "assets/news-assembly-480-CJTU9LdM.webp",
+      "extension": ".webp",
+      "bytes": 37326,
+      "gzipBytes": 37359,
+      "brotliBytes": 37330
+    },
+    {
+      "path": "assets/HomeManagementPage-DMK2iDXh.js",
+      "extension": ".js",
+      "bytes": 36403,
+      "gzipBytes": 9684,
+      "brotliBytes": 8616
+    },
+    {
+      "path": "assets/hero-union-840-CPp8meld.webp",
+      "extension": ".webp",
+      "bytes": 33988,
+      "gzipBytes": 34021,
+      "brotliBytes": 33992
+    },
+    {
+      "path": "assets/AdminHomeLayout-12drlUVG.js",
+      "extension": ".js",
+      "bytes": 32319,
+      "gzipBytes": 8663,
+      "brotliBytes": 7752
+    },
+    {
+      "path": "assets/index-DmWdHOa0.css",
+      "extension": ".css",
+      "bytes": 25304,
+      "gzipBytes": 5406,
+      "brotliBytes": 4775
+    },
+    {
+      "path": "assets/ReviewDetailPage-CYKeu-rQ.js",
+      "extension": ".js",
+      "bytes": 21988,
+      "gzipBytes": 6912,
+      "brotliBytes": 6254
+    },
+    {
+      "path": "assets/news-rights-480-BtWLD6xM.webp",
+      "extension": ".webp",
+      "bytes": 21638,
+      "gzipBytes": 21666,
+      "brotliBytes": 21642
+    },
+    {
+      "path": "assets/news-negotiation-480-RTuRUR2J.webp",
+      "extension": ".webp",
+      "bytes": 21006,
+      "gzipBytes": 21034,
+      "brotliBytes": 21010
+    }
+  ],
+  "files": [
+    {
+      "path": "assets/index-vJTZt-7N.js",
+      "extension": ".js",
+      "bytes": 325703,
+      "gzipBytes": 101983,
+      "brotliBytes": 88570
+    },
+    {
+      "path": "assets/hero-union-1672-D6SQlQCF.webp",
+      "extension": ".webp",
+      "bytes": 84356,
+      "gzipBytes": 84404,
+      "brotliBytes": 84361
+    },
+    {
+      "path": "assets/news-assembly-480-CJTU9LdM.webp",
+      "extension": ".webp",
+      "bytes": 37326,
+      "gzipBytes": 37359,
+      "brotliBytes": 37330
+    },
+    {
+      "path": "assets/HomeManagementPage-DMK2iDXh.js",
+      "extension": ".js",
+      "bytes": 36403,
+      "gzipBytes": 9684,
+      "brotliBytes": 8616
+    },
+    {
+      "path": "assets/hero-union-840-CPp8meld.webp",
+      "extension": ".webp",
+      "bytes": 33988,
+      "gzipBytes": 34021,
+      "brotliBytes": 33992
+    },
+    {
+      "path": "assets/AdminHomeLayout-12drlUVG.js",
+      "extension": ".js",
+      "bytes": 32319,
+      "gzipBytes": 8663,
+      "brotliBytes": 7752
+    },
+    {
+      "path": "assets/index-DmWdHOa0.css",
+      "extension": ".css",
+      "bytes": 25304,
+      "gzipBytes": 5406,
+      "brotliBytes": 4775
+    },
+    {
+      "path": "assets/ReviewDetailPage-CYKeu-rQ.js",
+      "extension": ".js",
+      "bytes": 21988,
+      "gzipBytes": 6912,
+      "brotliBytes": 6254
+    },
+    {
+      "path": "assets/news-rights-480-BtWLD6xM.webp",
+      "extension": ".webp",
+      "bytes": 21638,
+      "gzipBytes": 21666,
+      "brotliBytes": 21642
+    },
+    {
+      "path": "assets/news-negotiation-480-RTuRUR2J.webp",
+      "extension": ".webp",
+      "bytes": 21006,
+      "gzipBytes": 21034,
+      "brotliBytes": 21010
+    },
+    {
+      "path": "assets/SocialPreview-BVCG5QZ1.js",
+      "extension": ".js",
+      "bytes": 19207,
+      "gzipBytes": 6064,
+      "brotliBytes": 5402
+    },
+    {
+      "path": "assets/AdminHomeLayout-awpVzKD8.css",
+      "extension": ".css",
+      "bytes": 14346,
+      "gzipBytes": 3491,
+      "brotliBytes": 3033
+    },
+    {
+      "path": "assets/logo-128-DIZQeAPY.png",
+      "extension": ".png",
+      "bytes": 12115,
+      "gzipBytes": 12064,
+      "brotliBytes": 12027
+    },
+    {
+      "path": "assets/ReviewStatusBadge-kZnnBj1g.css",
+      "extension": ".css",
+      "bytes": 11158,
+      "gzipBytes": 2440,
+      "brotliBytes": 2098
+    },
+    {
+      "path": "favicon.svg",
+      "extension": ".svg",
+      "bytes": 9522,
+      "gzipBytes": 1485,
+      "brotliBytes": 1237
+    },
+    {
+      "path": "assets/ReviewsQueuePage-DHVPpwMQ.js",
+      "extension": ".js",
+      "bytes": 8961,
+      "gzipBytes": 2873,
+      "brotliBytes": 2635
+    },
+    {
+      "path": "assets/SocialPreview-DTXH8Qov.css",
+      "extension": ".css",
+      "bytes": 8366,
+      "gzipBytes": 2071,
+      "brotliBytes": 1778
+    },
+    {
+      "path": "assets/ReviewStatusBadge-B4_6jH69.js",
+      "extension": ".js",
+      "bytes": 7171,
+      "gzipBytes": 2719,
+      "brotliBytes": 2455
+    },
+    {
+      "path": "assets/PublicationPage-Cie9Dsfd.js",
+      "extension": ".js",
+      "bytes": 5981,
+      "gzipBytes": 2347,
+      "brotliBytes": 2099
+    },
+    {
+      "path": "assets/HistoryPage-DYi1NSMV.js",
+      "extension": ".js",
+      "bytes": 5635,
+      "gzipBytes": 1985,
+      "brotliBytes": 1754
+    },
+    {
+      "path": "assets/HistoryDetailPage-C9iY7W8R.js",
+      "extension": ".js",
+      "bytes": 5216,
+      "gzipBytes": 1916,
+      "brotliBytes": 1721
+    },
+    {
+      "path": "assets/F22D-CDc1X-Qj.css",
+      "extension": ".css",
+      "bytes": 4171,
+      "gzipBytes": 1295,
+      "brotliBytes": 1100
+    },
+    {
+      "path": "assets/CriticalActionDialog-D36zMx0t.js",
+      "extension": ".js",
+      "bytes": 3365,
+      "gzipBytes": 1403,
+      "brotliBytes": 1219
+    },
+    {
+      "path": "assets/F22D.module-C3yGSTAn.js",
+      "extension": ".js",
+      "bytes": 686,
+      "gzipBytes": 331,
+      "brotliBytes": 269
+    },
+    {
+      "path": "index.html",
+      "extension": ".html",
+      "bytes": 612,
+      "gzipBytes": 374,
+      "brotliBytes": 245
+    },
+    {
+      "path": "assets/home-admin.types-CFpiG3f1.js",
+      "extension": ".js",
+      "bytes": 515,
+      "gzipBytes": 395,
+      "brotliBytes": 323
+    },
+    {
+      "path": "assets/EditorialStatusBadge-DSmfjwG6.js",
+      "extension": ".js",
+      "bytes": 331,
+      "gzipBytes": 270,
+      "brotliBytes": 224
+    },
+    {
+      "path": "assets/circle-alert-BC9Y6IzA.js",
+      "extension": ".js",
+      "bytes": 239,
+      "gzipBytes": 180,
+      "brotliBytes": 178
+    },
+    {
+      "path": "assets/arrow-left-BS446yvR.js",
+      "extension": ".js",
+      "bytes": 154,
+      "gzipBytes": 153,
+      "brotliBytes": 127
+    },
+    {
+      "path": "assets/chevron-right-8r71I-9w.js",
+      "extension": ".js",
+      "bytes": 119,
+      "gzipBytes": 132,
+      "brotliBytes": 123
+    }
+  ]
+}

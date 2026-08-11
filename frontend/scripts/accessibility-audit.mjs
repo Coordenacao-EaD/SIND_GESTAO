@@ -26,6 +26,64 @@ const scenarios = [
   { id: "admin-empty", path: "/admin/home?scenario=empty", width: 1440, height: 900, state: "default" },
   { id: "admin-conflict", path: "/admin/home?scenario=conflict", width: 1440, height: 900, state: "default" },
   { id: "admin-validation-mobile", path: "/admin/home?scenario=validation", width: 390, height: 844, state: "default" },
+  { id: "admin-contacts-1440x1000", path: "/admin/home/contacts", width: 1440, height: 1000, state: "default" },
+  { id: "admin-contacts-390x844", path: "/admin/home/contacts", width: 390, height: 844, state: "default" },
+  { id: "admin-social-1440x1000", path: "/admin/home/social", width: 1440, height: 1000, state: "default" },
+  { id: "admin-social-390x844", path: "/admin/home/social", width: 390, height: 844, state: "default" },
+  { id: "admin-contacts-401", path: "/admin/home/contacts?scenario=unauthenticated", width: 1440, height: 900, state: "default" },
+  { id: "admin-contacts-403", path: "/admin/home/contacts?scenario=forbidden", width: 1440, height: 900, state: "default" },
+  { id: "admin-contacts-409", path: "/admin/home/contacts?scenario=conflict", width: 1440, height: 900, state: "default" },
+  { id: "admin-contacts-invalid", path: "/admin/home/contacts", width: 1440, height: 900, state: "contacts-invalid" },
+  { id: "admin-contacts-review", path: "/admin/home/contacts", width: 1440, height: 900, state: "contacts-review" },
+  { id: "admin-contacts-422", path: "/admin/home/contacts?scenario=validation", width: 390, height: 844, state: "contacts-save" },
+  { id: "admin-social-empty", path: "/admin/home/social?scenario=empty", width: 1440, height: 900, state: "default" },
+  { id: "admin-social-403", path: "/admin/home/social?scenario=forbidden", width: 1440, height: 900, state: "default" },
+  { id: "admin-social-review", path: "/admin/home/social", width: 1440, height: 900, state: "social-review" },
+  { id: "admin-social-menu-open", path: "/admin/home/social", width: 390, height: 844, state: "admin-menu" },
+  { id: "admin-social-409", path: "/admin/home/social?scenario=conflict", width: 1440, height: 900, state: "social-save" },
+  { id: "admin-social-422", path: "/admin/home/social?scenario=validation", width: 390, height: 844, state: "social-save" },
+  { id: "admin-reviews-1440x1000", path: "/admin/home/reviews", width: 1440, height: 1000, state: "default" },
+  { id: "admin-reviews-390x844", path: "/admin/home/reviews", width: 390, height: 844, state: "default" },
+  { id: "admin-reviews-empty", path: "/admin/home/reviews?scenario=empty", width: 1440, height: 900, state: "default" },
+  { id: "admin-reviews-filtered", path: "/admin/home/reviews", width: 1440, height: 900, state: "reviews-filter" },
+  { id: "admin-reviews-filtered-empty", path: "/admin/home/reviews", width: 1440, height: 900, state: "reviews-filter-empty" },
+  { id: "admin-reviews-401", path: "/admin/home/reviews?scenario=unauthenticated", width: 1440, height: 900, state: "default" },
+  { id: "admin-reviews-403", path: "/admin/home/reviews?scenario=forbidden", width: 1440, height: 900, state: "default" },
+  { id: "admin-reviews-unavailable", path: "/admin/home/reviews?scenario=unavailable", width: 1440, height: 900, state: "default" },
+  { id: "admin-reviews-menu-open", path: "/admin/home/reviews", width: 390, height: 844, state: "admin-menu" },
+  { id: "admin-review-detail-1440x1000", path: "/admin/home/reviews/review-banner-1", width: 1440, height: 1000, state: "default" },
+  { id: "admin-review-detail-390x844", path: "/admin/home/reviews/review-banner-1", width: 390, height: 844, state: "default" },
+  { id: "admin-review-detail-approved", path: "/admin/home/reviews/review-banner-2", width: 1440, height: 900, state: "default" },
+  { id: "admin-review-detail-changes", path: "/admin/home/reviews/review-contacts-2", width: 1440, height: 900, state: "default" },
+  { id: "admin-review-detail-cancelled", path: "/admin/home/reviews/review-social-2", width: 1440, height: 900, state: "default" },
+  { id: "admin-review-detail-invalidated", path: "/admin/home/reviews/review-banner-3", width: 1440, height: 900, state: "default" },
+  { id: "admin-review-detail-author", path: "/admin/home/reviews/review-banner-1?scenario=author", width: 1440, height: 900, state: "default" },
+  { id: "admin-review-detail-hash", path: "/admin/home/reviews/review-banner-1?scenario=hash_mismatch", width: 1440, height: 900, state: "default" },
+  { id: "admin-review-detail-404", path: "/admin/home/reviews/review-inexistente", width: 1440, height: 900, state: "default" },
+  { id: "admin-review-detail-401", path: "/admin/home/reviews/review-banner-1?scenario=unauthenticated", width: 1440, height: 900, state: "default" },
+  { id: "admin-review-detail-403", path: "/admin/home/reviews/review-banner-1?scenario=forbidden", width: 1440, height: 900, state: "default" },
+  { id: "admin-review-detail-422", path: "/admin/home/reviews/review-banner-1?scenario=validation", width: 1440, height: 900, state: "default" },
+  { id: "admin-review-detail-unavailable", path: "/admin/home/reviews/review-banner-1?scenario=unavailable", width: 1440, height: 900, state: "default" },
+  { id: "admin-review-approve-dialog", path: "/admin/home/reviews/review-banner-1", width: 1440, height: 900, state: "review-approve-dialog" },
+  { id: "admin-review-changes-dialog", path: "/admin/home/reviews/review-banner-1", width: 1440, height: 900, state: "review-changes-dialog" },
+  { id: "admin-review-409", path: "/admin/home/reviews/review-banner-1?scenario=concurrent", width: 1440, height: 900, state: "review-conflict" },
+  { id: "admin-publication-1440x900", path: "/admin/home/publication", width: 1440, height: 900, state: "default" },
+  { id: "admin-publication-390x844", path: "/admin/home/publication", width: 390, height: 844, state: "default" },
+  { id: "admin-publication-banner-dialog", path: "/admin/home/publication", width: 1440, height: 900, state: "publication-banner-dialog" },
+  { id: "admin-publication-contacts-dialog", path: "/admin/home/publication", width: 1440, height: 900, state: "publication-contacts-dialog" },
+  { id: "admin-publication-social-dialog", path: "/admin/home/publication", width: 1440, height: 900, state: "publication-social-dialog" },
+  { id: "admin-publication-success", path: "/admin/home/publication", width: 1440, height: 900, state: "publication-success" },
+  { id: "admin-publication-403", path: "/admin/home/publication?scenario=readonly", width: 1440, height: 900, state: "default" },
+  { id: "admin-publication-409", path: "/admin/home/publication?scenario=publication_conflict", width: 1440, height: 900, state: "publication-conflict" },
+  { id: "admin-publication-approval-expired", path: "/admin/home/publication?scenario=approval_expired", width: 1440, height: 900, state: "default" },
+  { id: "admin-publication-hash", path: "/admin/home/publication?scenario=hash_mismatch", width: 1440, height: 900, state: "default" },
+  { id: "admin-history-1440x900", path: "/admin/home/history", width: 1440, height: 900, state: "default" },
+  { id: "admin-history-390x844", path: "/admin/home/history", width: 390, height: 844, state: "default" },
+  { id: "admin-history-empty", path: "/admin/home/history?scenario=empty", width: 1440, height: 900, state: "default" },
+  { id: "admin-history-403", path: "/admin/home/history?scenario=readonly", width: 1440, height: 900, state: "default" },
+  { id: "admin-history-detail", path: "/admin/home/history/history-banner-v0", width: 1440, height: 900, state: "default" },
+  { id: "admin-history-restore-dialog", path: "/admin/home/history/history-banner-v0", width: 1440, height: 900, state: "restore-dialog" },
+  { id: "admin-history-restore-409", path: "/admin/home/history/history-banner-v0?scenario=restore_conflict", width: 1440, height: 900, state: "restore-conflict" },
 ];
 
 mkdirSync(outputDirectory, { recursive: true });
@@ -99,6 +157,79 @@ async function prepareScenario(scenario) {
       `document.querySelector("main section img").dispatchEvent(new Event("error", { bubbles: true }))`,
     );
     await wait(150);
+  }
+  if (scenario.state === "admin-menu") {
+    await evaluate(`document.querySelector('[aria-controls="admin-navigation"]').click()`);
+    await wait(150);
+  }
+  if (["contacts-invalid", "contacts-save", "contacts-review"].includes(scenario.state)) {
+    await evaluate(`(() => {
+      const input = document.querySelector(${scenario.state === "contacts-invalid" ? "'input[type=\"email\"]'" : "'input[data-error-field=\"municipality\"]'"});
+      const setter = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value").set;
+      setter.call(input, ${scenario.state === "contacts-invalid" ? '"email-invalido"' : '"Cuiabá Centro"'});
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+    })()`);
+    await wait(100);
+    await evaluate(`[...document.querySelectorAll("button")].find((button) => button.textContent.includes(${scenario.state === "contacts-review" ? '"Enviar para revisão"' : '"Salvar rascunho"'})).click()`);
+    await wait(150);
+  }
+  if (scenario.state === "social-save" || scenario.state === "social-review") {
+    await evaluate(`document.querySelector('[role="switch"][aria-label="Inativar Facebook"]').click()`);
+    await wait(100);
+    await evaluate(`[...document.querySelectorAll("button")].find((button) => button.textContent.includes(${scenario.state === "social-review" ? '"Enviar para revisão"' : '"Salvar rascunho"'})).click()`);
+    await wait(150);
+  }
+  // A fila filtrada precisa passar pelo setter nativo do <select> para que o React registre a mudança.
+  if (scenario.state === "reviews-filter" || scenario.state === "reviews-filter-empty") {
+    await evaluate(`(() => {
+      const setter = Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype, "value").set;
+      const apply = (id, value) => {
+        const select = document.getElementById(id);
+        setter.call(select, value);
+        select.dispatchEvent(new Event("change", { bubbles: true }));
+      };
+      apply("filter-type", "banner");
+      ${scenario.state === "reviews-filter-empty" ? 'apply("filter-decision", "cancelled");' : ""}
+    })()`);
+    await wait(150);
+  }
+  if (scenario.state === "review-approve-dialog" || scenario.state === "review-conflict") {
+    await evaluate(`[...document.querySelectorAll("button")].find((button) => button.textContent.trim() === "Aprovar").click()`);
+    await wait(200);
+  }
+  if (scenario.state === "review-changes-dialog") {
+    await evaluate(`[...document.querySelectorAll("button")].find((button) => button.textContent.trim() === "Solicitar ajustes").click()`);
+    await wait(200);
+  }
+  // O 409 concorrente só aparece depois que a decisão é confirmada com um parecer válido.
+  if (scenario.state === "review-conflict") {
+    await evaluate(`(() => {
+      const textarea = document.querySelector('[role="dialog"] textarea');
+      Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, "value").set
+        .call(textarea, "Parecer suficiente para aprovar esta revisão.");
+      textarea.dispatchEvent(new Event("input", { bubbles: true }));
+    })()`);
+    await wait(100);
+    await evaluate(`[...document.querySelectorAll('[role="dialog"] button')].find((button) => button.textContent.trim() === "Aprovar revisão").click()`);
+    await wait(300);
+  }
+  if (["publication-banner-dialog", "publication-contacts-dialog", "publication-social-dialog", "publication-success", "publication-conflict"].includes(scenario.state)) {
+    const label = scenario.state === "publication-contacts-dialog" ? "Publicar contatos"
+      : scenario.state === "publication-social-dialog" ? "Publicar redes sociais" : "Publicar banner";
+    await evaluate(`[...document.querySelectorAll("button")].find((button) => button.textContent.trim() === ${JSON.stringify(label)}).click()`);
+    await wait(200);
+    if (scenario.state === "publication-success" || scenario.state === "publication-conflict") {
+      await evaluate(`[...document.querySelectorAll('[role="dialog"] button')].find((button) => button.textContent.trim() === ${JSON.stringify(label)}).click()`);
+      await wait(300);
+    }
+  }
+  if (scenario.state === "restore-dialog" || scenario.state === "restore-conflict") {
+    await evaluate(`[...document.querySelectorAll("button")].find((button) => button.textContent.trim() === "Restaurar como novo rascunho").click()`);
+    await wait(200);
+    if (scenario.state === "restore-conflict") {
+      await evaluate(`[...document.querySelectorAll('[role="dialog"] button')].find((button) => button.textContent.trim() === "Restaurar como novo rascunho").click()`);
+      await wait(300);
+    }
   }
 }
 
@@ -183,6 +314,23 @@ async function verifyInteraction(scenario) {
       };
     })()`);
     return { forwardWrap, close };
+  }
+
+  if (scenario.state === "admin-menu") {
+    const trigger = `document.querySelector('[aria-controls="admin-navigation"]')`;
+    const open = await evaluate(`({
+      triggerName: ${trigger}.getAttribute("aria-label"),
+      expanded: ${trigger}.getAttribute("aria-expanded"),
+      navigationVisible: getComputedStyle(document.getElementById("admin-navigation").closest("aside")).visibility
+    })`);
+    await evaluate(`document.querySelector("#admin-navigation a").focus()`);
+    await dispatchKey("Escape", "Escape", 27);
+    const close = await evaluate(`({
+      triggerName: ${trigger}.getAttribute("aria-label"),
+      expanded: ${trigger}.getAttribute("aria-expanded"),
+      focusRestored: document.activeElement === ${trigger}
+    })`);
+    return { open, close };
   }
 
   if (scenario.state === "dropdown") {

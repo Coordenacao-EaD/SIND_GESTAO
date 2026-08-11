@@ -1,6 +1,7 @@
 import { AlertCircle, ChevronRight, Clock3, FilePenLine, Image as ImageIcon, Layers3 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
+import { ADMIN_ROUTES } from "../../../config/routes";
 import { buildActionMatrix } from "../../../features/home-admin/domain/editorial-rules";
 import type { AdminBanner, AdminError } from "../../../features/home-admin/domain/home-admin.types";
 import { adminBannerMock } from "../../../features/home-admin/mocks/home-admin.mock-data";
@@ -12,10 +13,14 @@ import { BannerPreview } from "./banner/BannerPreview";
 import { AdminFeedback, DemoNotice } from "./components/AdminFeedback";
 import { AdminHomeLayout } from "./components/AdminHomeLayout";
 import { EditorialStatusBadge } from "./components/EditorialStatusBadge";
+import { ManagementResourceCards } from "./components/ManagementResourceCards";
+import { ContactsEditorPage } from "./contacts/ContactsEditorPage";
+import { SocialEditorPage } from "./social/SocialEditorPage";
 import styles from "./HomeManagementPage.module.css";
 
 const SCENARIOS: ReadonlyArray<{ value: HomeAdminMockScenario; label: string }> = [
   { value: "success", label: "Conteúdo disponível" },
+  { value: "readonly", label: "Somente leitura" },
   { value: "loading", label: "Carregando" },
   { value: "empty", label: "Sem conteúdo" },
   { value: "unauthenticated", label: "Erro 401" },
@@ -23,13 +28,15 @@ const SCENARIOS: ReadonlyArray<{ value: HomeAdminMockScenario; label: string }> 
   { value: "conflict", label: "Erro 409" },
   { value: "validation", label: "Erro 422" },
   { value: "unavailable", label: "Indisponível" },
+  { value: "unexpected", label: "Erro inesperado" },
+  { value: "restored", label: "Novo rascunho restaurado" },
 ];
 
 const scenarioValues = new Set(SCENARIOS.map((scenario) => scenario.value));
 const editorProfile: SimulatedAdminProfile = {
   actorId: "actor-editor-1",
   displayName: "Editor de demonstração",
-  capabilities: [HOME_ADMIN_CAPABILITIES.editBanner, HOME_ADMIN_CAPABILITIES.viewHistory],
+  capabilities: [HOME_ADMIN_CAPABILITIES.editBanner, HOME_ADMIN_CAPABILITIES.previewHome, HOME_ADMIN_CAPABILITIES.viewHistory],
 };
 
 function cloneBanner() {
@@ -153,43 +160,65 @@ function BannerManagement({ repository }: { repository: HomeAdminMockRepository 
 }
 
 export default function HomeManagementPage() {
+  const location = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
+  const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
   const requestedScenario = searchParams.get("scenario") ?? "success";
   const scenario = scenarioValues.has(requestedScenario as HomeAdminMockScenario) ? requestedScenario as HomeAdminMockScenario : "success";
   const repository = useMemo(() => new HomeAdminMockRepository(scenario), [scenario]);
   const loadState = repository.getResourceListState();
+  const pageKind = location.pathname === ADMIN_ROUTES.contacts ? "contacts" : location.pathname === ADMIN_ROUTES.social ? "social" : "banner";
+  const pageCopy = pageKind === "contacts"
+    ? { title: "Contatos públicos", description: "Gerencie telefone, e-mail, endereço e atendimento exibidos no rodapé." }
+    : pageKind === "social"
+      ? { title: "Redes sociais", description: "Configure plataformas, links, ordem e visibilidade como uma unidade versionada." }
+      : { title: "Página Inicial", description: "Acompanhe os conteúdos públicos e edite o banner principal." };
+  const editorCanRender = pageKind !== "banner" && !["loading", "empty", "unauthenticated", "unavailable", "unexpected"].includes(scenario);
 
-  useEffect(() => { document.title = "Gestão da Home | SINDGESTÃO"; }, []);
+  useEffect(() => { document.title = `${pageCopy.title} | Gestão da Home — SINDGESTÃO`; }, [pageCopy.title]);
+  useEffect(() => {
+    if (!hasUnsavedChanges) return;
+    const warnBeforeLeaving = (event: BeforeUnloadEvent) => {
+      event.preventDefault();
+      event.returnValue = "";
+    };
+    window.addEventListener("beforeunload", warnBeforeLeaving);
+    return () => window.removeEventListener("beforeunload", warnBeforeLeaving);
+  }, [hasUnsavedChanges]);
 
   const changeScenario = (next: HomeAdminMockScenario) => {
+    if (hasUnsavedChanges && !window.confirm("Descartar alterações não salvas ao trocar de cenário?")) return;
     if (next === "success") setSearchParams({});
     else setSearchParams({ scenario: next });
+    setHasUnsavedChanges(false);
   };
 
   return (
-    <AdminHomeLayout>
+    <AdminHomeLayout hasUnsavedChanges={hasUnsavedChanges}>
       <main id="admin-content" className={styles.main}>
-        <div className={styles.breadcrumb} aria-label="Você está em"><span>Administração</span><ChevronRight aria-hidden="true" /><strong>Página Inicial</strong></div>
+        <div className={styles.breadcrumb} aria-label="Você está em"><span>Administração</span><ChevronRight aria-hidden="true" /><span>Página Inicial</span>{pageKind !== "banner" && <><ChevronRight aria-hidden="true" /><strong>{pageCopy.title}</strong></>}</div>
         <div className={styles.managementHeader} id="overview">
-          <div><span className={styles.eyebrow}>Gestão de conteúdo</span><h1>Página Inicial</h1><p>Edite e acompanhe o banner principal em um fluxo editorial demonstrativo.</p></div>
+          <div><span className={styles.eyebrow}>Gestão de conteúdo · F2.2B</span><h1>{pageCopy.title}</h1><p>{pageCopy.description}</p></div>
           <ScenarioControl scenario={scenario} onChange={changeScenario} />
         </div>
         <DemoNotice />
 
         <div className={styles.summaryGrid} aria-label="Resumo da gestão">
-          <div><FilePenLine aria-hidden="true" /><span><strong>1</strong> conteúdo editável</span></div>
+          <div><FilePenLine aria-hidden="true" /><span><strong>3</strong> conteúdos gerenciáveis</span></div>
           <div><Clock3 aria-hidden="true" /><span><strong>{scenario === "success" ? "Rascunho" : "—"}</strong> situação atual</span></div>
-          <div><Layers3 aria-hidden="true" /><span><strong>F2.2A</strong> recorte ativo</span></div>
+          <div><Layers3 aria-hidden="true" /><span><strong>F2.2B</strong> recorte ativo</span></div>
         </div>
 
         {loadState.status === "loading" && (
-          <section className={styles.loadingCard} aria-busy="true" aria-live="polite"><span className={styles.spinner} aria-hidden="true" /><div><h2>Carregando gestão da Home</h2><p>Preparando os dados administrativos simulados...</p></div></section>
+          <section className={styles.loadingCard} aria-busy="true" aria-live="polite"><span className={styles.spinner} aria-hidden="true" /><div><h2>Carregando {pageCopy.title.toLowerCase()}</h2><p>Preparando os dados administrativos simulados...</p></div></section>
         )}
         {loadState.status === "empty" && (
-          <section className={styles.emptyCard}><AlertCircle aria-hidden="true" /><h2>Nenhum banner configurado</h2><p>O estado vazio é somente uma representação visual. A criação de novos recursos não faz parte desta etapa.</p><button className={styles.secondaryButton} onClick={() => changeScenario("success")} type="button">Voltar à demonstração</button></section>
+          <section className={styles.emptyCard}><AlertCircle aria-hidden="true" /><h2>Nenhum conteúdo configurado</h2><p>O estado vazio é somente uma representação visual local.</p><button className={styles.secondaryButton} onClick={() => changeScenario("success")} type="button">Voltar à demonstração</button></section>
         )}
-        {loadState.status === "error" && <AdminFeedback error={loadState.error} onRetry={() => changeScenario("success")} />}
-        {loadState.status === "ready" && <BannerManagement key={scenario} repository={repository} />}
+        {loadState.status === "error" && !editorCanRender && <AdminFeedback error={loadState.error} onRetry={pageKind === "banner" || loadState.error.kind === "unavailable" ? () => changeScenario("success") : undefined} />}
+        {pageKind === "banner" && loadState.status === "ready" && <><ManagementResourceCards /><BannerManagement key={scenario} repository={repository} /></>}
+        {pageKind === "contacts" && editorCanRender && <ContactsEditorPage key={scenario} repository={repository} scenario={scenario} onDirtyChange={setHasUnsavedChanges} />}
+        {pageKind === "social" && editorCanRender && <SocialEditorPage key={scenario} repository={repository} scenario={scenario} onDirtyChange={setHasUnsavedChanges} />}
       </main>
     </AdminHomeLayout>
   );

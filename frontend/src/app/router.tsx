@@ -6,6 +6,8 @@ import { HomeDataProvider } from "../pages/home/HomeDataProvider";
 import { ComingSoonPage } from "../pages/ComingSoonPage";
 import { NotFoundPage } from "../pages/NotFoundPage";
 import { LazyHomeManagementPage } from "../pages/admin/home/LazyHomeManagementPage";
+import { LazyReviewDetailPage, LazyReviewsQueuePage } from "../pages/admin/home/reviews/LazyReviewPages";
+import { LazyHistoryDetailPage, LazyHistoryPage, LazyPublicationPage } from "../pages/admin/home/publication-history/LazyF22DPages";
 
 const COMING_SOON_ROUTES: Array<{ path: string; title: string }> = [
   { path: ROUTES.union, title: "O Sindicato" },
@@ -33,6 +35,34 @@ export const routes: RouteObject[] = [
   {
     path: ADMIN_ROUTES.home,
     element: <LazyHomeManagementPage />,
+  },
+  {
+    path: ADMIN_ROUTES.contacts,
+    element: <LazyHomeManagementPage />,
+  },
+  {
+    path: ADMIN_ROUTES.social,
+    element: <LazyHomeManagementPage />,
+  },
+  {
+    path: ADMIN_ROUTES.reviews,
+    element: <LazyReviewsQueuePage />,
+  },
+  {
+    path: ADMIN_ROUTES.reviewDetail,
+    element: <LazyReviewDetailPage />,
+  },
+  {
+    path: ADMIN_ROUTES.publication,
+    element: <LazyPublicationPage />,
+  },
+  {
+    path: ADMIN_ROUTES.history,
+    element: <LazyHistoryPage />,
+  },
+  {
+    path: ADMIN_ROUTES.historyDetail,
+    element: <LazyHistoryDetailPage />,
   },
   {
     element: <AppLayout />,

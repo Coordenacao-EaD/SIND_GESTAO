@@ -77,6 +77,81 @@
       "scenario": "hero-image-fallback",
       "rule": "color-contrast",
       "nodes": 14
+    },
+    {
+      "scenario": "admin-home-1440x1000",
+      "rule": "color-contrast",
+      "nodes": 3
+    },
+    {
+      "scenario": "admin-home-390x844",
+      "rule": "color-contrast",
+      "nodes": 3
+    },
+    {
+      "scenario": "admin-review-detail-1440x1000",
+      "rule": "color-contrast",
+      "nodes": 3
+    },
+    {
+      "scenario": "admin-review-detail-390x844",
+      "rule": "color-contrast",
+      "nodes": 3
+    },
+    {
+      "scenario": "admin-review-detail-approved",
+      "rule": "color-contrast",
+      "nodes": 3
+    },
+    {
+      "scenario": "admin-review-detail-invalidated",
+      "rule": "color-contrast",
+      "nodes": 3
+    },
+    {
+      "scenario": "admin-review-detail-author",
+      "rule": "color-contrast",
+      "nodes": 3
+    },
+    {
+      "scenario": "admin-review-detail-hash",
+      "rule": "color-contrast",
+      "nodes": 3
+    },
+    {
+      "scenario": "admin-review-approve-dialog",
+      "rule": "color-contrast",
+      "nodes": 4
+    },
+    {
+      "scenario": "admin-review-changes-dialog",
+      "rule": "color-contrast",
+      "nodes": 3
+    },
+    {
+      "scenario": "admin-review-409",
+      "rule": "color-contrast",
+      "nodes": 4
+    },
+    {
+      "scenario": "admin-publication-banner-dialog",
+      "rule": "color-contrast",
+      "nodes": 1
+    },
+    {
+      "scenario": "admin-publication-contacts-dialog",
+      "rule": "color-contrast",
+      "nodes": 1
+    },
+    {
+      "scenario": "admin-publication-social-dialog",
+      "rule": "color-contrast",
+      "nodes": 2
+    },
+    {
+      "scenario": "admin-history-restore-dialog",
+      "rule": "color-contrast",
+      "nodes": 2
     }
   ],
   "incompleteJustification": "axe-core cannot resolve final colors through CSS gradients and image overlays; screenshots and the previously validated visual measurements remain evidence for those nodes."

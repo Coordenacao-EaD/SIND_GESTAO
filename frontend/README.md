@@ -27,7 +27,7 @@ npm run dev
 
 Abre em `http://localhost:5173`.
 
-Durante a F2.2A, o painel demonstrativo da Home fica disponível diretamente em `http://localhost:5173/admin/home`. Ele não é exposto no menu público e não persiste nem publica alterações.
+Durante a F2.2A–F2.2D, o painel demonstrativo fica disponível em `http://localhost:5173/admin/home`, incluindo contatos, redes sociais, revisões, publicação simulada e histórico. Ele não é exposto no menu público e não persiste nem publica alterações reais — aprovar uma revisão não publica o conteúdo.
 
 ## Como gerar o build de produção
 
@@ -149,9 +149,9 @@ Nenhum componente de seção precisa mudar.
 
 - [Contratos administrativos da Home](./docs/HOME_ADMIN_CONTRACTS.md)
 
-## Interface administrativa da F2.2A
+## Interface administrativa da F2.2A/F2.2B/F2.2C
 
-- [Painel administrativo e editor visual do banner](./docs/HOME_ADMIN_UI.md)
+- [Painel, editores visuais e fila de revisões da Home](./docs/HOME_ADMIN_UI.md)
 
 ## Declaração explícita
 

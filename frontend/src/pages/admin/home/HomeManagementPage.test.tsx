@@ -21,7 +21,7 @@ describe("HomeManagementPage", () => {
 
   it("reuses the administrative banner contract in the form and preview", () => {
     renderAdmin();
-    expect(screen.getByRole("heading", { name: "Banner principal" })).toBeInTheDocument();
+    expect(screen.getAllByRole("heading", { name: "Banner principal" })).not.toHaveLength(0);
     expect(screen.getByLabelText(/^Título do banner/)).toHaveValue("Juntos somos mais fortes.");
     expect(screen.getByRole("heading", { level: 3, name: "Juntos somos mais fortes." })).toBeInTheDocument();
     expect(screen.getByText("hero-union-1672")).toBeInTheDocument();
@@ -81,8 +81,8 @@ describe("HomeManagementPage", () => {
   });
 
   it.each([
-    ["loading", "Carregando gestão da Home"],
-    ["empty", "Nenhum banner configurado"],
+    ["loading", "Carregando página inicial"],
+    ["empty", "Nenhum conteúdo configurado"],
     ["unauthenticated", "401"],
     ["forbidden", "403"],
     ["conflict", "409"],
@@ -100,13 +100,27 @@ describe("HomeManagementPage", () => {
     const user = userEvent.setup();
     renderAdmin("/admin/home?scenario=conflict");
     await user.click(screen.getByRole("button", { name: "Tentar novamente" }));
-    await waitFor(() => expect(screen.getByRole("heading", { name: "Banner principal" })).toBeInTheDocument());
+    await waitFor(() => expect(screen.getAllByRole("heading", { name: "Banner principal" })).not.toHaveLength(0));
   });
 
-  it("keeps unfinished content areas explicitly outside the active interface", () => {
+  it("exposes contacts and social links while keeping later phases explicit", () => {
     renderAdmin();
     const navigation = screen.getByRole("navigation", { name: "Navegação administrativa" });
-    expect(within(navigation).queryByText(/Contatos|Redes sociais/)).not.toBeInTheDocument();
-    expect(screen.getByText(/Contatos, redes sociais e revisão completa/)).toBeInTheDocument();
+    expect(within(navigation).getByText("Contatos públicos")).toBeInTheDocument();
+    expect(within(navigation).getByText("Redes sociais")).toBeInTheDocument();
+    // A F2.2C promoveu Revisões de "Próximas etapas" para item ativo do menu; Histórico continua futuro.
+    expect(within(navigation).getByRole("link", { name: /Revisões/ })).toHaveAttribute("href", "/admin/home/reviews");
+    expect(screen.queryByText("Revisão completa")).not.toBeInTheDocument();
+    expect(screen.getByText("Histórico e restauração")).toBeInTheDocument();
+  });
+
+  it.each([
+    ["Editar contatos", "Contatos públicos"],
+    ["Editar redes sociais", "Redes sociais"],
+  ])("opens the editor from the dashboard action %s", async (action, heading) => {
+    const user = userEvent.setup();
+    renderAdmin();
+    await user.click(screen.getByRole("link", { name: action }));
+    expect(screen.getByRole("heading", { level: 1, name: heading })).toBeInTheDocument();
   });
 });
