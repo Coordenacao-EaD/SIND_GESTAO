@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:18.4-bookworm
+    environment:
+      POSTGRES_DB: sind_gestao_dev
+      POSTGRES_USER: sind_gestao_dev
+      POSTGRES_PASSWORD: local_development_only
+      TZ: UTC
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - sind_gestao_postgres_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sind_gestao_dev -d sind_gestao_dev"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+
+volumes:
+  sind_gestao_postgres_data:
