@@ -9,8 +9,8 @@
   "scripts": {
     "lint": "oxlint src test",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run test/config test/database/database-config.test.ts",
-    "test:db": "vitest run test/database/postgresql.infrastructure.test.ts test/database/editorial-migrations.infrastructure.test.ts",
+    "test": "vitest run test/config test/database/database-config.test.ts test/modules/site-home/content-integrity.test.ts test/modules/site-home/site-home-version.service.test.ts",
+    "test:db": "vitest run test/database/postgresql.infrastructure.test.ts test/database/editorial-migrations.infrastructure.test.ts test/database/reviews-versions-migrations.infrastructure.test.ts test/database/f3.1-final-acceptance.infrastructure.test.ts test/modules/site-home/site-home.repository.integration.test.ts test/modules/site-home/site-home-version.service.integration.test.ts",
     "db:help": "dbmate --help",
     "db:version": "dbmate --version",
     "db:new": "dbmate --migrations-dir db/migrations --schema-file db/schema.sql new",

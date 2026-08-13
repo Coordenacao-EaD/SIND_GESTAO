@@ -102,8 +102,9 @@ describe("PostgreSQL infrastructure", () => {
     );
     const output = `${stdout}\n${stderr}`;
     expect(output).toContain("Applied: 0");
-    expect(output).toContain("Pending: 1");
+    expect(output).toContain("Pending: 2");
     expect(output).toContain("20260812170941_create_editorial_home_tables.sql");
+    expect(output).toContain("20260813163735_create_home_reviews_and_versions.sql");
   });
 
   it("DB-INF-004: closes the connection and stops the container", async () => {

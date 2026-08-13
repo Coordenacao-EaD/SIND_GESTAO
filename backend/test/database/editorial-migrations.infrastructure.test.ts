@@ -109,13 +109,13 @@ describe("F3.1B2 editorial migrations", () => {
     }
   });
 
-  it("MIG-B2-001: starts clean and reports one pending migration", async () => {
+  it("MIG-B2-001: starts clean and reports the project migrations as pending", async () => {
     expect(process.env.DATABASE_URL).toBeUndefined();
     expect(await tableNames()).toEqual([]);
     const status = await runDbmate("status");
     expect(status).toContain(MIGRATION_FILE);
     expect(status).toContain("Applied: 0");
-    expect(status).toContain("Pending: 1");
+    expect(status).toContain("Pending: 2");
 
     await client!.query("CREATE TABLE migration_scope_sentinel (id integer PRIMARY KEY)");
     await client!.query("INSERT INTO migration_scope_sentinel (id) VALUES (1)");
@@ -127,7 +127,7 @@ describe("F3.1B2 editorial migrations", () => {
     expect(await tableNames()).toEqual([...EDITORIAL_TABLES].sort());
 
     const status = await runDbmate("status");
-    expect(status).toContain("Applied: 1");
+    expect(status).toContain("Applied: 2");
     expect(status).toContain("Pending: 0");
 
     const idColumns = await client!.query<{
@@ -169,8 +169,13 @@ describe("F3.1B2 editorial migrations", () => {
     const foreignKeys = await client!.query<{ delete_action: string; update_action: string }>(
       `SELECT rc.delete_rule AS delete_action, rc.update_rule AS update_action
          FROM information_schema.referential_constraints rc
+        JOIN information_schema.table_constraints tc
+          ON tc.constraint_schema = rc.constraint_schema
+         AND tc.constraint_name = rc.constraint_name
         WHERE rc.constraint_schema = 'public'
-          AND rc.constraint_name LIKE 'fk_%'`,
+          AND rc.constraint_name LIKE 'fk_%'
+          AND tc.table_name = ANY($1::text[])`,
+      [[...EDITORIAL_TABLES]],
     );
     expect(foreignKeys.rows).toHaveLength(9);
     expect(foreignKeys.rows).toEqual(
@@ -201,10 +206,13 @@ describe("F3.1B2 editorial migrations", () => {
       ]),
     );
 
-    const excludedTables = await client!.query<{ name: string | null }>(
+    const followUpTables = await client!.query<{ name: string | null }>(
       "SELECT to_regclass('public.site_home_reviews')::text AS name UNION ALL SELECT to_regclass('public.site_home_versions')::text",
     );
-    expect(excludedTables.rows).toEqual([{ name: null }, { name: null }]);
+    expect(followUpTables.rows).toEqual([
+      { name: "site_home_reviews" },
+      { name: "site_home_versions" },
+    ]);
   });
 
   it("MIG-B2-003: database constraints reject invalid editorial data", async () => {
@@ -352,6 +360,8 @@ describe("F3.1B2 editorial migrations", () => {
   });
 
   it("MIG-B2-004: down removes only the migration tables and preserves dbmate and preexisting objects", async () => {
+    const b3Down = await runDbmate("down");
+    expect(b3Down).toContain("20260813163735_create_home_reviews_and_versions.sql");
     const down = await runDbmate("down");
     expect(down).toContain(MIGRATION_FILE);
     expect(await tableNames()).toEqual([]);
@@ -363,7 +373,7 @@ describe("F3.1B2 editorial migrations", () => {
 
     const status = await runDbmate("status");
     expect(status).toContain("Applied: 0");
-    expect(status).toContain("Pending: 1");
+    expect(status).toContain("Pending: 2");
   });
 
   it("MIG-B2-005: re-up succeeds with clean editorial tables", async () => {
@@ -373,7 +383,7 @@ describe("F3.1B2 editorial migrations", () => {
     const actors = await client!.query<{ count: string }>("SELECT count(*) FROM app_users");
     expect(actors.rows).toEqual([{ count: "0" }]);
     const status = await runDbmate("status");
-    expect(status).toContain("Applied: 1");
+    expect(status).toContain("Applied: 2");
     expect(status).toContain("Pending: 0");
   });
 });
