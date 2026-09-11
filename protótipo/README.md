@@ -28,6 +28,7 @@ Protótipo navegável e responsivo da página inicial de um portal público sind
 │   ├── comunicados.html
 │   ├── comunicado.html
 │   ├── transparencia.html
+│   ├── galeria.html
 │   └── filie-se.html
 └── assets/
     ├── css/

@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Transparência institucional do Sinprotec com acesso público a informações institucionais e acesso autenticado à prestação de contas.">
-  <title>Transparência | Sinprotec</title>
+  <meta name="description" content="Galeria do Sinprotec com registros visuais das assembleias, reuniões, mobilizações, formações e eventos institucionais do Sindicato.">
+  <title>Galeria | Sinprotec</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../assets/css/styles.css">
   <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/galeria.js" defer></script>
 </head>
-<body class="union-page transparency-page">
+<body class="union-page gallery-page">
   <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
 
   <div class="site-shell">
@@ -30,7 +31,7 @@
         <nav class="desktop-nav" aria-label="Menu principal">
           <a class="nav-link" href="../index.html">Início</a>
           <div class="nav-dropdown" data-dropdown>
-            <button class="nav-link nav-dropdown__button" type="button" aria-expanded="false" aria-haspopup="true" data-dropdown-toggle>
+            <button class="nav-link nav-dropdown__button is-active" type="button" aria-expanded="false" aria-haspopup="true" data-dropdown-toggle>
               Institucional
               <i class="bi bi-chevron-down icon icon--small" aria-hidden="true"></i>
             </button>
@@ -38,13 +39,13 @@
               <a href="sindicato.html">O Sindicato</a>
               <a href="diretoria.html">Diretoria</a>
               <a href="estatuto.html">Estatuto</a>
-              <a href="galeria.html">Galeria</a>
+              <a href="galeria.html" aria-current="page">Galeria</a>
             </div>
           </div>
           <a class="nav-link" href="../index.html#servicos">Serviços</a>
           <a class="nav-link" href="noticias.html">Notícias</a>
           <a class="nav-link" href="comunicados.html">Comunicados</a>
-          <a class="nav-link is-active" href="transparencia.html" aria-current="page">Transparência</a>
+          <a class="nav-link" href="transparencia.html">Transparência</a>
           <a class="nav-link" href="documentos.html">Documentos</a>
           <a class="nav-link" href="filie-se.html">Filie-se</a>
           <a class="nav-link" href="contato.html">Fale Conosco</a>
@@ -84,12 +85,12 @@
           <a href="sindicato.html">O Sindicato</a>
           <a href="diretoria.html">Diretoria</a>
           <a href="estatuto.html">Estatuto</a>
-          <a href="galeria.html">Galeria</a>
+          <a href="galeria.html" aria-current="page">Galeria</a>
         </div>
         <a href="../index.html#servicos">Serviços</a>
         <a href="noticias.html">Notícias</a>
         <a href="comunicados.html">Comunicados</a>
-        <a href="transparencia.html" aria-current="page">Transparência</a>
+        <a href="transparencia.html">Transparência</a>
         <a href="documentos.html">Documentos</a>
         <a href="filie-se.html">Filie-se</a>
         <a href="contato.html">Fale Conosco</a>
@@ -97,130 +98,115 @@
     </aside>
 
     <main id="conteudo">
-      <section class="union-hero transparency-hero" aria-labelledby="titulo-pagina">
+      <section class="union-hero gallery-hero" aria-labelledby="titulo-pagina">
         <div class="container union-hero__content">
           <nav class="breadcrumb" aria-label="Navegação estrutural">
-            <a href="../index.html">Início</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">Transparência</span>
+            <a href="../index.html">Início</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">Galeria</span>
           </nav>
-          <h1 id="titulo-pagina">Transparência</h1>
-          <p>Informações institucionais apresentadas com clareza, responsabilidade e respeito aos níveis de acesso.</p>
+          <h1 id="titulo-pagina">Galeria</h1>
+          <p>Registros das ações, encontros e atividades promovidas pelo Sindicato.</p>
         </div>
       </section>
 
-      <section class="transparency-intro" aria-labelledby="transparencia-titulo">
+      <section class="gallery-intro" aria-labelledby="galeria-titulo">
         <div class="container">
-          <div class="transparency-intro__copy institution-copy">
-            <span class="section-kicker">Transparência institucional</span>
-            <h2 id="transparencia-titulo">Informação pública e acesso responsável</h2>
-            <p>O SIND_GESTÃO organiza informações institucionais e documentos públicos do Sindicato, mantendo separados os conteúdos que exigem autenticação e autorização.</p>
-            <p>A prestação de contas financeira é destinada aos filiados cadastrados e autenticados. Nesta área pública são apresentados apenas os caminhos de acesso e os conteúdos classificados como públicos.</p>
+          <div class="gallery-intro__copy institution-copy">
+            <span class="section-kicker">Registro visual</span>
+            <h2 id="galeria-titulo">As atividades do Sindicato em imagens</h2>
+            <p>A Galeria reúne registros visuais de assembleias, reuniões, mobilizações, formações, eventos e demais atividades institucionais do Sindicato.</p>
+            <p>Os registros são organizados por evento. Cada um informa a categoria, a data, o local e o contexto da atividade, e reúne as fotos correspondentes para consulta ampliada.</p>
           </div>
-          <aside class="document-notice" aria-label="Aviso sobre o protótipo">
+          <aside class="document-notice" aria-label="Aviso sobre os registros">
             <i class="bi bi-info-circle" aria-hidden="true"></i>
-            <p>Este é um protótipo demonstrativo. Os conteúdos utilizados servem para representar a organização, a navegação e as regras de acesso definidas no projeto.</p>
+            <p>Registros demonstrativos: as imagens, datas e descrições desta galeria são ilustrativas e reutilizam imagens do próprio protótipo. Na solução definitiva, serão substituídas pelos registros oficiais do Sindicato.</p>
           </aside>
         </div>
       </section>
 
-      <section class="institution-section institution-section--soft" aria-labelledby="acessos-titulo">
+      <section class="gallery-library" aria-labelledby="acervo-titulo">
         <div class="container">
-          <div class="institution-heading institution-heading--center">
-            <span class="section-kicker">Níveis de acesso</span>
-            <h2 id="acessos-titulo">Consulte o conteúdo adequado ao seu perfil</h2>
-            <p>A classificação de visibilidade orienta o que pode ser consultado livremente e o que depende de autenticação.</p>
-          </div>
-
-          <div class="principles-grid">
-            <article class="principle-card">
-              <i class="bi bi-globe" aria-hidden="true"></i>
-              <h3>Informações institucionais</h3>
-              <p>História, estrutura do Sindicato, Diretoria e demais informações classificadas como públicas.</p>
-              <a class="button button--secondary" href="sindicato.html">Conhecer o Sindicato</a>
-            </article>
-
-            <article class="principle-card">
-              <i class="bi bi-file-earmark-text" aria-hidden="true"></i>
-              <h3>Documentos públicos</h3>
-              <p>Estatuto e demais documentos institucionais que podem ser disponibilizados sem autenticação.</p>
-              <a class="button button--secondary" href="estatuto.html">Consultar Estatuto</a>
-            </article>
-
-            <article class="principle-card">
-              <i class="bi bi-shield-lock" aria-hidden="true"></i>
-              <h3>Prestação de contas</h3>
-              <p>Receitas, despesas, demonstrativos, comprovantes e relatórios financeiros ficam disponíveis somente na Área do Filiado.</p>
-              <a class="button button--primary" href="login.html"><i class="bi bi-person-lock icon" aria-hidden="true"></i>Acessar prestação de contas</a>
-            </article>
-
-            <article class="principle-card">
-              <i class="bi bi-chat-dots" aria-hidden="true"></i>
-              <h3>Dúvidas e atendimento</h3>
-              <p>Entre em contato com o Sindicato para solicitar informações ou esclarecer dúvidas sobre documentos e serviços.</p>
-              <a class="button button--secondary" href="contato.html">Fale Conosco</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="transparency-guidance-section" aria-labelledby="prestacao-titulo">
-        <div class="container">
-          <aside class="document-guidance">
-            <div class="document-guidance__icon"><i class="bi bi-lock" aria-hidden="true"></i></div>
+          <div class="documents-library__heading">
             <div>
-              <h2 id="prestacao-titulo">Como acessar a prestação de contas</h2>
-              <ul>
-                <li>Selecione o botão <strong>Acessar prestação de contas</strong>.</li>
-                <li>Entre na Área do Filiado utilizando o acesso demonstrativo do protótipo.</li>
-                <li>Na área restrita, acesse o módulo de Prestação de Contas.</li>
-                <li>Consulte somente as informações que estiverem validadas e disponibilizadas ao perfil Filiado.</li>
-              </ul>
-              <p>Esse fluxo representa a regra definida no projeto: a área pública direciona o usuário, mas não expõe dados financeiros.</p>
+              <span class="section-kicker">Acervo de registros</span>
+              <h2 id="acervo-titulo">Eventos e atividades</h2>
             </div>
-          </aside>
+            <p aria-live="polite">Registros encontrados: <strong data-gallery-count>7</strong></p>
+          </div>
+
+          <form class="document-filters gallery-filters" aria-label="Filtrar registros da galeria" data-gallery-filters>
+            <label class="document-field">
+              <span>Categoria</span>
+              <select data-gallery-category>
+                <option value="todas">Todas as categorias</option>
+                <option value="assembleias">Assembleias</option>
+                <option value="reunioes">Reuniões</option>
+                <option value="mobilizacoes">Mobilizações</option>
+                <option value="formacao">Formação</option>
+                <option value="eventos">Eventos Institucionais</option>
+              </select>
+            </label>
+            <label class="document-field">
+              <span>Ano</span>
+              <select data-gallery-year>
+                <option value="todos">Todos os anos</option>
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+              </select>
+            </label>
+            <button class="document-clear" type="button" data-gallery-clear>
+              <i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i>
+              Limpar filtros
+            </button>
+          </form>
+
+          <div class="gallery-grid" data-gallery-grid></div>
+
+          <div class="news-public-empty" data-gallery-empty hidden>
+            <i class="bi bi-images" aria-hidden="true"></i>
+            <h3>Nenhum registro encontrado</h3>
+            <p>Não há registros para a combinação de filtros selecionada.</p>
+            <button class="button button--secondary" type="button" data-gallery-clear>Limpar filtros</button>
+          </div>
         </div>
       </section>
 
-      <section class="institution-section" aria-labelledby="principios-titulo">
+      <section class="institution-section institution-section--soft" aria-labelledby="memoria-titulo">
         <div class="container">
           <div class="institution-heading institution-heading--center">
-            <span class="section-kicker">Governança da informação</span>
-            <h2 id="principios-titulo">Princípios representados no protótipo</h2>
-            <p>A transparência não significa tornar todo conteúdo público. O acesso depende da finalidade da informação e do perfil autorizado.</p>
+            <span class="section-kicker">Registro e preservação</span>
+            <h2 id="memoria-titulo">Memória institucional</h2>
+            <p>Os registros visuais contribuem para documentar as atividades, preservar a memória institucional e ampliar a transparência das ações sindicais.</p>
           </div>
-          <div class="principles-grid">
+          <div class="principles-grid gallery-memory-grid">
+            <article class="principle-card">
+              <i class="bi bi-camera" aria-hidden="true"></i>
+              <h3>Documentar</h3>
+              <p>Cada atividade é registrada com data, categoria, local e descrição do contexto.</p>
+            </article>
+            <article class="principle-card">
+              <i class="bi bi-archive" aria-hidden="true"></i>
+              <h3>Preservar</h3>
+              <p>O acervo organizado por evento mantém a trajetória do Sindicato disponível para consulta.</p>
+            </article>
             <article class="principle-card">
               <i class="bi bi-eye" aria-hidden="true"></i>
-              <h3>Clareza</h3>
-              <p>Informações organizadas de forma direta e compreensível para os usuários.</p>
-            </article>
-            <article class="principle-card">
-              <i class="bi bi-person-check" aria-hidden="true"></i>
-              <h3>Acesso por perfil</h3>
-              <p>Conteúdos restritos são direcionados aos usuários cadastrados e autorizados.</p>
-            </article>
-            <article class="principle-card">
-              <i class="bi bi-shield-check" aria-hidden="true"></i>
-              <h3>Proteção de dados</h3>
-              <p>Informações pessoais e financeiras não devem ser expostas na área pública.</p>
-            </article>
-            <article class="principle-card">
-              <i class="bi bi-clock-history" aria-hidden="true"></i>
-              <h3>Rastreabilidade</h3>
-              <p>Na solução definitiva, operações críticas deverão preservar histórico, responsabilidade e situação dos registros.</p>
+              <h3>Dar transparência</h3>
+              <p>A divulgação dos registros aproxima a categoria das ações realizadas pela entidade.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="institution-cta transparency-cta" aria-labelledby="chamada-titulo">
+      <section class="institution-cta gallery-cta" aria-labelledby="chamada-titulo">
         <div class="container institution-cta__inner">
           <div>
-            <h2 id="chamada-titulo">Prestação de contas com acesso controlado.</h2>
-            <p>Os filiados cadastrados e autenticados poderão consultar as informações financeiras disponibilizadas pelo Sindicato.</p>
+            <h2 id="chamada-titulo">Acompanhe também nossas notícias e comunicados.</h2>
+            <p>Informações oficiais sobre as ações e as atividades do Sindicato.</p>
           </div>
           <div class="institution-cta__actions">
-            <a class="button button--white" href="login.html"><i class="bi bi-box-arrow-in-right icon" aria-hidden="true"></i>Entrar na Área do Filiado</a>
-            <a class="button button--outline-light" href="contato.html">Fale Conosco</a>
+            <a class="button button--white" href="noticias.html"><i class="bi bi-newspaper icon" aria-hidden="true"></i>Notícias</a>
+            <a class="button button--outline-light" href="comunicados.html"><i class="bi bi-megaphone icon" aria-hidden="true"></i>Comunicados</a>
           </div>
         </div>
       </section>
@@ -261,7 +247,7 @@
           <h2>Transparência</h2>
           <a href="transparencia.html">Transparência institucional</a>
           <a href="login.html">Prestação de Contas</a>
-          <a href="estatuto.html">Documentos públicos</a>
+          <a href="documentos.html">Documentos públicos</a>
           <a href="contato.html">Solicitar informação</a>
         </nav>
         <address class="footer-contact" id="rodape-contato">
@@ -283,6 +269,40 @@
       </div>
     </footer>
   </div>
+
+  <dialog class="gallery-modal" aria-labelledby="gallery-modal-title" aria-describedby="gallery-modal-description" aria-modal="true" data-gallery-modal>
+    <div class="gallery-modal__panel">
+      <button class="icon-button gallery-modal__close" type="button" aria-label="Fechar visualização" data-gallery-close>
+        <i class="bi bi-x-lg icon" aria-hidden="true"></i>
+      </button>
+      <figure class="gallery-modal__figure">
+        <div class="gallery-modal__stage">
+          <img src="../assets/images/noticias/assembleia.png" alt="" width="1619" height="971" decoding="async" data-gallery-modal-image>
+          <button class="gallery-modal__nav gallery-modal__nav--prev" type="button" aria-label="Foto anterior" data-gallery-prev>
+            <i class="bi bi-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button class="gallery-modal__nav gallery-modal__nav--next" type="button" aria-label="Próxima foto" data-gallery-next>
+            <i class="bi bi-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <figcaption class="gallery-modal__caption" aria-live="polite">
+          <span class="gallery-modal__counter" data-gallery-modal-counter>Foto 1 de 1</span>
+          <span data-gallery-modal-caption>Legenda da foto.</span>
+        </figcaption>
+      </figure>
+      <div class="gallery-modal__body">
+        <span class="news-category" data-gallery-modal-category>Categoria</span>
+        <h2 id="gallery-modal-title" data-gallery-modal-title>Registro</h2>
+        <p id="gallery-modal-description" data-gallery-modal-description>Descrição do registro.</p>
+        <dl class="transparency-modal__meta">
+          <div><dt>Data</dt><dd><time datetime="" data-gallery-modal-date>—</time></dd></div>
+          <div><dt>Local</dt><dd data-gallery-modal-location>—</dd></div>
+          <div><dt>Fotos</dt><dd data-gallery-modal-total>—</dd></div>
+        </dl>
+        <p class="gallery-modal__note"><i class="bi bi-info-circle" aria-hidden="true"></i>Registro demonstrativo com imagem reutilizada do protótipo.</p>
+      </div>
+    </div>
+  </dialog>
 
   <dialog class="modal" aria-modal="true" data-modal>
     <div class="modal__content">
