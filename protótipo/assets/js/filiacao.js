@@ -152,8 +152,8 @@ function validateFiliationForm(form) {
 }
 
 function renderErrorSummary(form, errors) {
-  const summary = form.querySelector("[data-filiacao-error-summary]");
-  const list = form.querySelector("[data-filiacao-error-list]");
+  const summary = document.querySelector("[data-filiacao-error-summary]");
+  const list = document.querySelector("[data-filiacao-error-list]");
   if (!summary || !list) return;
   if (!errors.length) {
     summary.hidden = true;
@@ -288,6 +288,7 @@ function initializeFiliationForm() {
 
   const formSection = document.querySelector("[data-filiacao-form-section]");
   const confirmationSection = document.querySelector("[data-filiacao-confirmation]");
+  const formHeading = formSection.querySelector(".institution-heading");
 
   initializeFieldMasks(form);
   initializeFileUploads(form);
@@ -300,13 +301,14 @@ function initializeFiliationForm() {
     renderErrorSummary(form, errors);
 
     if (errors.length) {
-      const summary = form.querySelector("[data-filiacao-error-summary]");
+      const summary = document.querySelector("[data-filiacao-error-summary]");
       summary?.scrollIntoView({ behavior: "smooth", block: "start" });
-      form.querySelector(`#${errors[0].id}`)?.focus();
+      summary?.focus({ preventScroll: true });
       return;
     }
 
-    formSection.hidden = true;
+    formHeading.hidden = true;
+    form.hidden = true;
     confirmationSection.hidden = false;
     confirmationSection.scrollIntoView({ behavior: "smooth", block: "start" });
     confirmationSection.querySelector("h2")?.focus();
@@ -328,7 +330,8 @@ function initializeFiliationForm() {
       resetUploads(form);
       clearAllErrors(form);
       confirmationSection.hidden = true;
-      formSection.hidden = false;
+      formHeading.hidden = false;
+      form.hidden = false;
       formSection.scrollIntoView({ behavior: "smooth", block: "start" });
       form.querySelector("#filiacao-nome")?.focus();
     });

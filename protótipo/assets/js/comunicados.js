@@ -205,6 +205,10 @@ const comunicados = [
   }
 ];
 
+// Registros de públicos restritos permanecem nos dados para a futura Área do Filiado, mas não são exibidos na área pública.
+const restrictedCommunicationAudiences = ["filiados", "diretoria"];
+const publicComunicados = comunicados.filter((item) => !restrictedCommunicationAudiences.includes(item.publicoSlug));
+
 const communicationStatusLabels = { vigente: "Vigente", encerrado: "Encerrado", urgente: "Urgente" };
 
 function normalizeCommunicationText(value = "") {
@@ -260,7 +264,7 @@ function initializeCommunicationsListing() {
   const listStart = document.querySelector("[data-communication-list-start]");
   const pageSize = 4;
   let currentPage = 1;
-  let filtered = comunicados;
+  let filtered = publicComunicados;
 
   function renderPagination(totalPages) {
     pagination.replaceChildren();
@@ -300,7 +304,7 @@ function initializeCommunicationsListing() {
 
   function applyFilters() {
     const term = normalizeCommunicationText(search.value);
-    filtered = comunicados.filter((item) => {
+    filtered = publicComunicados.filter((item) => {
       const searchable = normalizeCommunicationText(getCommunicationSearchText(item));
       return (!term || searchable.includes(term))
         && (category.value === "todas" || item.categoriaSlug === category.value)
@@ -353,7 +357,7 @@ function renderCommunicationContent(container, item) {
 function initializeCommunicationDetail() {
   const article = document.querySelector("[data-communication-detail]");
   if (!article) return;
-  const item = comunicados.find((communication) => communication.id === Number(new URLSearchParams(window.location.search).get("id")));
+  const item = publicComunicados.find((communication) => communication.id === Number(new URLSearchParams(window.location.search).get("id")));
   const notFound = document.querySelector("[data-communication-not-found]");
   if (!item) {
     article.hidden = true;
@@ -397,7 +401,7 @@ function initializeCommunicationDetail() {
   attachmentEmpty.hidden = item.anexos.length !== 0;
   attachments.hidden = item.anexos.length === 0;
 
-  const related = comunicados
+  const related = publicComunicados
     .filter((communication) => communication.id !== item.id)
     .sort((a, b) => Number(b.categoriaSlug === item.categoriaSlug || b.publicoSlug === item.publicoSlug) - Number(a.categoriaSlug === item.categoriaSlug || a.publicoSlug === item.publicoSlug))
     .slice(0, 3);

@@ -14,10 +14,10 @@ const noticias = [
   },
   {
     id: 2,
-    titulo: "Nova prestação de contas já está disponível para consulta",
+    titulo: "Nova prestação de contas já está disponível na Área do Filiado",
     categoria: "Transparência",
     categoriaSlug: "transparencia",
-    resumo: "Relatório financeiro do período pode ser consultado na área pública de transparência.",
+    resumo: "Os demonstrativos financeiros detalhados do período são destinados aos filiados autenticados e podem ser consultados na Área do Filiado. A área pública de Transparência reúne as informações institucionais.",
     autor: "Secretaria Financeira",
     data: "18 de maio de 2024",
     dataISO: "2024-05-18",

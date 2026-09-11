@@ -52,9 +52,9 @@ function initializeLoginForm() {
   const form = document.querySelector("[data-auth-login-form]");
   if (!form) return;
 
-  const summary = form.querySelector("[data-auth-login-summary]");
-  const summaryList = form.querySelector("[data-auth-login-summary-list]");
-  const message = form.querySelector("[data-auth-login-message]");
+  const summary = document.querySelector("[data-auth-login-summary]");
+  const summaryList = document.querySelector("[data-auth-login-summary-list]");
+  const message = document.querySelector("[data-auth-login-message]");
   const submitButton = form.querySelector("[data-auth-login-submit]");
 
   function clearMessage() {
@@ -126,14 +126,14 @@ function initializeLoginForm() {
 
     if (errors.length) {
       summary?.scrollIntoView({ behavior: "smooth", block: "start" });
-      form.querySelector(`#${errors[0].id}`)?.focus();
+      summary?.focus({ preventScroll: true });
       return;
     }
 
     if (email !== DEMO_CREDENTIALS.email || senha !== DEMO_CREDENTIALS.senha) {
       showMessage("Credenciais demonstrativas inválidas. Utilize os dados de acesso informados nesta página.");
       senhaInput.value = "";
-      senhaInput.focus();
+      message?.focus();
       return;
     }
 
@@ -163,8 +163,8 @@ function initializeRecoverForm() {
   const formSection = document.querySelector("[data-auth-recover-form-section]");
   const confirmationSection = document.querySelector("[data-auth-recover-confirmation]");
   const maskedEmailEl = document.querySelector("[data-auth-recover-masked-email]");
-  const summary = form.querySelector("[data-auth-recover-summary]");
-  const summaryList = form.querySelector("[data-auth-recover-summary-list]");
+  const summary = document.querySelector("[data-auth-recover-summary]");
+  const summaryList = document.querySelector("[data-auth-recover-summary-list]");
 
   function renderSummary(errors) {
     if (!summary || !summaryList) return;
@@ -208,7 +208,7 @@ function initializeRecoverForm() {
 
     if (errors.length) {
       summary?.scrollIntoView({ behavior: "smooth", block: "start" });
-      emailInput.focus();
+      summary?.focus({ preventScroll: true });
       return;
     }
 

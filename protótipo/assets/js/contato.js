@@ -114,8 +114,8 @@ function validateContactForm(form) {
 }
 
 function renderContactErrorSummary(form, errors) {
-  const summary = form.querySelector("[data-contato-error-summary]");
-  const list = form.querySelector("[data-contato-error-list]");
+  const summary = document.querySelector("[data-contato-error-summary]");
+  const list = document.querySelector("[data-contato-error-list]");
   if (!summary || !list) return;
 
   if (!errors.length) {
@@ -302,9 +302,9 @@ function initializeContactForm() {
     renderContactErrorSummary(form, errors);
 
     if (errors.length) {
-      const summary = form.querySelector("[data-contato-error-summary]");
+      const summary = document.querySelector("[data-contato-error-summary]");
       summary?.scrollIntoView({ behavior: "smooth", block: "start" });
-      focusField(form, errors[0].id);
+      summary?.focus({ preventScroll: true });
       return;
     }
 

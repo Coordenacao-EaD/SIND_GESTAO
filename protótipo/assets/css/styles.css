@@ -6591,6 +6591,7 @@ body.modal-open {
   border: 1px solid rgba(200, 59, 50, 0.45);
   border-radius: var(--radius-md);
   background: #fdecea;
+  scroll-margin-top: 120px;
 }
 
 .filiation-error-summary h3 {
@@ -7449,6 +7450,7 @@ body.modal-open {
   border: 1px solid rgba(200, 59, 50, 0.45);
   border-radius: var(--radius-md);
   background: #fdecea;
+  scroll-margin-top: 120px;
 }
 
 .contact-error-summary h3 {
@@ -8081,6 +8083,7 @@ body.modal-open {
   border-radius: var(--radius-md);
   background: #fdecea;
   text-align: left;
+  scroll-margin-top: 120px;
 }
 
 .auth-error-summary h3 {
@@ -8113,6 +8116,7 @@ body.modal-open {
   border-radius: var(--radius-sm);
   font-size: 0.86rem;
   text-align: left;
+  scroll-margin-top: 120px;
 }
 
 .auth-message--error {
