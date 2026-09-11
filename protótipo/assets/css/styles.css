@@ -8474,3 +8474,135 @@ body.modal-open {
     transition: none;
   }
 }
+
+/* Área pública: Documentos */
+.document-visibility {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 24px;
+  padding: 3px 10px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.document-visibility .bi {
+  font-size: 0.78rem;
+}
+
+.document-visibility--public {
+  border-color: rgba(46, 125, 50, 0.35);
+  background: #eaf5eb;
+  color: #1f5e25;
+}
+
+.document-visibility--members {
+  border-color: rgba(232, 173, 52, 0.55);
+  background: var(--color-gold-soft);
+  color: #8a5d0b;
+}
+
+.document-visibility--restricted {
+  border-color: #cfd8e0;
+  background: #eef1f4;
+  color: #12304a;
+}
+
+.public-documents-page .icon-list {
+  max-width: 820px;
+}
+
+.document-card__file-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.74rem;
+  line-height: 1.4;
+}
+
+.document-card__file-note .bi {
+  flex: 0 0 auto;
+  margin-top: 1px;
+  color: var(--color-gold-dark);
+}
+
+.access-levels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.access-level-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.access-level-card .document-visibility {
+  margin-bottom: 10px;
+}
+
+.access-level-card .check-list {
+  margin-top: 14px;
+  font-size: 0.88rem;
+}
+
+.access-level-card--current {
+  border-color: rgba(46, 125, 50, 0.45);
+  box-shadow: var(--shadow-soft);
+}
+
+.access-level-card__footer {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.access-level-card__footer > p {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 0.84rem;
+  font-weight: 650;
+}
+
+.access-level-card__footer > p .bi {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  color: var(--color-gold-dark);
+}
+
+.access-level-card__footer .button {
+  width: 100%;
+  margin-top: 14px;
+}
+
+@media (max-width: 1024px) {
+  .access-levels-grid {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .public-documents-page .documents-library__heading > p {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 389px) {
+  .document-visibility {
+    font-size: 0.6rem;
+  }
+}

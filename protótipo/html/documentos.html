@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consulte os documentos institucionais classificados como públicos pelo Sinprotec, organizados por categoria e nível de visibilidade.">
+  <title>Documentos Públicos | Sinprotec</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/documentos.js" defer></script>
+</head>
+<body class="union-page documents-page public-documents-page">
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+
+  <div class="site-shell">
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" data-menu-open>
+          <i class="bi bi-list icon" aria-hidden="true"></i>
+        </button>
+
+        <a class="brand" href="../index.html" aria-label="Sinprotec — Página Inicial">
+          <img src="../assets/images/logo.png" alt="" width="65" height="65">
+          <span class="brand__copy">
+            <strong>Sinprotec</strong>
+            <small>Sindicato de Servidores Públicos</small>
+          </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Menu principal">
+          <a class="nav-link" href="../index.html">Início</a>
+          <div class="nav-dropdown" data-dropdown>
+            <button class="nav-link nav-dropdown__button" type="button" aria-expanded="false" aria-haspopup="true" data-dropdown-toggle>
+              Institucional
+              <i class="bi bi-chevron-down icon icon--small" aria-hidden="true"></i>
+            </button>
+            <div class="nav-dropdown__menu" data-dropdown-menu>
+              <a href="sindicato.html">O Sindicato</a>
+              <a href="diretoria.html">Diretoria</a>
+              <a href="estatuto.html">Estatuto</a>
+            </div>
+          </div>
+          <a class="nav-link" href="../index.html#servicos">Serviços</a>
+          <a class="nav-link" href="noticias.html">Notícias</a>
+          <a class="nav-link" href="comunicados.html">Comunicados</a>
+          <a class="nav-link" href="transparencia.html">Transparência</a>
+          <a class="nav-link is-active" href="documentos.html" aria-current="page">Documentos</a>
+          <a class="nav-link" href="filie-se.html">Filie-se</a>
+          <a class="nav-link" href="contato.html">Fale Conosco</a>
+        </nav>
+
+        <a class="member-button" href="login.html">
+          <i class="bi bi-person icon" aria-hidden="true"></i>
+          <span>Área do Filiado</span>
+        </a>
+        <a class="member-icon" href="login.html" aria-label="Área do Filiado">
+          <i class="bi bi-person icon" aria-hidden="true"></i>
+        </a>
+      </div>
+    </header>
+
+    <div class="menu-backdrop" data-menu-backdrop hidden></div>
+    <aside class="mobile-menu" id="mobile-menu" aria-hidden="true" aria-label="Menu mobile" data-mobile-menu>
+      <div class="mobile-menu__top">
+        <a class="brand brand--panel" href="../index.html" aria-label="Sinprotec — Página Inicial">
+          <img src="../assets/images/logo.png" alt="" width="68" height="68">
+          <span class="brand__copy">
+            <strong>Sinprotec</strong>
+            <small>Sindicato de Servidores Públicos</small>
+          </span>
+        </a>
+        <button class="icon-button" type="button" aria-label="Fechar menu" data-menu-close>
+          <i class="bi bi-x-lg icon" aria-hidden="true"></i>
+        </button>
+      </div>
+      <nav class="mobile-nav" aria-label="Menu principal mobile">
+        <a href="../index.html">Início</a>
+        <button type="button" aria-expanded="false" data-mobile-submenu-toggle>
+          Institucional
+          <i class="bi bi-chevron-down icon icon--small" aria-hidden="true"></i>
+        </button>
+        <div class="mobile-submenu" data-mobile-submenu>
+          <a href="sindicato.html">O Sindicato</a>
+          <a href="diretoria.html">Diretoria</a>
+          <a href="estatuto.html">Estatuto</a>
+        </div>
+        <a href="../index.html#servicos">Serviços</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="comunicados.html">Comunicados</a>
+        <a href="transparencia.html">Transparência</a>
+        <a href="documentos.html" aria-current="page">Documentos</a>
+        <a href="filie-se.html">Filie-se</a>
+        <a href="contato.html">Fale Conosco</a>
+      </nav>
+    </aside>
+
+    <main id="conteudo">
+      <section class="union-hero documents-hero" aria-labelledby="titulo-pagina">
+        <div class="container union-hero__content">
+          <nav class="breadcrumb" aria-label="Navegação estrutural">
+            <a href="../index.html">Início</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">Documentos</span>
+          </nav>
+          <h1 id="titulo-pagina">Documentos Públicos</h1>
+          <p>Consulta organizada dos documentos institucionais classificados como públicos.</p>
+        </div>
+      </section>
+
+      <section class="documents-intro" aria-labelledby="documentos-titulo">
+        <div class="container">
+          <div class="documents-intro__copy institution-copy">
+            <span class="section-kicker">Gestão de documentos</span>
+            <h2 id="documentos-titulo">Documentos institucionais organizados e classificados</h2>
+            <p>O SIND_GESTÃO organiza os documentos do Sindicato por categoria e registra, para cada um deles, a situação, o ano de referência, o setor responsável e o nível de visibilidade.</p>
+            <p>A classificação de visibilidade define quem pode consultar cada documento. Esta biblioteca apresenta somente os documentos classificados como <strong>Públicos</strong>. Os conteúdos destinados aos filiados ou de uso administrativo permanecem em áreas restritas, acessíveis mediante autenticação e autorização.</p>
+          </div>
+
+          <ul class="icon-list">
+            <li><i class="bi bi-tags" aria-hidden="true"></i><span><strong>Organização por categoria:</strong> normas, editais e convocações, relatórios e políticas.</span></li>
+            <li><i class="bi bi-diagram-3" aria-hidden="true"></i><span><strong>Classificação de visibilidade:</strong> cada documento é registrado como Público, Filiados ou Administrativo.</span></li>
+            <li><i class="bi bi-shield-lock" aria-hidden="true"></i><span><strong>Separação entre público e restrito:</strong> conteúdos restritos não são listados nesta página.</span></li>
+            <li><i class="bi bi-clock-history" aria-hidden="true"></i><span><strong>Controle de situação:</strong> versão, situação e responsável são informados em cada registro.</span></li>
+          </ul>
+
+          <aside class="document-notice" aria-label="Aviso sobre conteúdos financeiros">
+            <i class="bi bi-info-circle" aria-hidden="true"></i>
+            <p>Prestação de contas, receitas, despesas, comprovantes e relatórios financeiros não fazem parte desta biblioteca pública. Esses conteúdos são disponibilizados somente na Área do Filiado.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="documents-library" aria-labelledby="biblioteca-titulo">
+        <div class="container">
+          <div class="documents-library__heading">
+            <div>
+              <span class="section-kicker">Biblioteca pública</span>
+              <h2 id="biblioteca-titulo">Consulta de documentos</h2>
+            </div>
+            <p aria-live="polite">Documentos públicos encontrados: <strong data-document-count>6</strong></p>
+          </div>
+
+          <form class="document-filters" role="search" aria-label="Filtrar documentos públicos" data-document-filters>
+            <label class="document-field document-field--search">
+              <span>Pesquisar documentos</span>
+              <span class="document-field__control">
+                <i class="bi bi-search" aria-hidden="true"></i>
+                <input type="search" placeholder="Título, descrição ou categoria" autocomplete="off" data-document-search>
+              </span>
+            </label>
+            <label class="document-field">
+              <span>Categoria</span>
+              <select data-document-category>
+                <option value="todos">Todas as categorias</option>
+                <option value="normas">Normas Institucionais</option>
+                <option value="editais">Editais e Convocações</option>
+                <option value="relatorios">Relatórios Institucionais</option>
+                <option value="politicas">Políticas</option>
+              </select>
+            </label>
+            <label class="document-field">
+              <span>Ano</span>
+              <select data-document-year>
+                <option value="todos">Todos os anos</option>
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+              </select>
+            </label>
+            <button class="document-clear" type="button" data-document-clear>
+              <i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i>
+              Limpar filtros
+            </button>
+          </form>
+
+          <div class="document-list" data-document-list>
+            <article class="document-card" data-document-card data-title="Estatuto Social" data-description="Documento que estabelece as normas gerais de organização, funcionamento e representação do sindicato." data-category="normas" data-category-label="Normas Institucionais" data-year="2024" data-status="vigente" data-status-label="Vigente" data-version="Versão atual: 15/03/2024" data-size="Formato PDF" data-responsible="Secretaria-Geral" data-visibility="publico" data-visibility-label="Público" data-file="">
+              <div class="document-card__icon" aria-hidden="true"><i class="bi bi-file-earmark-pdf-fill"></i><span>PDF</span></div>
+              <div class="document-card__content">
+                <div class="document-card__top">
+                  <span class="document-status document-status--current"><span class="visually-hidden">Situação: </span>Vigente</span>
+                  <span class="document-category"><span class="visually-hidden">Categoria: </span>Normas Institucionais</span>
+                  <span class="document-visibility document-visibility--public"><i class="bi bi-unlock" aria-hidden="true"></i><span class="visually-hidden">Visibilidade: </span>Público</span>
+                </div>
+                <h3>Estatuto Social</h3>
+                <p>Documento que estabelece as normas gerais de organização, funcionamento e representação do sindicato.</p>
+                <dl class="document-meta">
+                  <div><dt>Versão</dt><dd>15/03/2024</dd></div>
+                  <div><dt>Ano</dt><dd>2024</dd></div>
+                  <div><dt>Responsável</dt><dd>Secretaria-Geral</dd></div>
+                </dl>
+              </div>
+              <div class="document-card__actions">
+                <button class="document-button document-button--view" type="button" aria-label="Visualizar Estatuto Social" data-document-action="view"><i class="bi bi-eye" aria-hidden="true"></i>Visualizar</button>
+                <p class="document-card__file-note"><i class="bi bi-info-circle" aria-hidden="true"></i>Arquivo definitivo ainda não inserido.</p>
+              </div>
+            </article>
+
+            <article class="document-card" data-document-card data-title="Regimento Interno" data-description="Define as regras internas de funcionamento administrativo e das instâncias deliberativas da entidade." data-category="normas" data-category-label="Normas Institucionais" data-year="2024" data-status="atualizado" data-status-label="Atualizado" data-version="Atualizado em 10/02/2024" data-size="Formato PDF" data-responsible="Secretaria-Geral" data-visibility="publico" data-visibility-label="Público" data-file="">
+              <div class="document-card__icon" aria-hidden="true"><i class="bi bi-file-earmark-pdf-fill"></i><span>PDF</span></div>
+              <div class="document-card__content">
+                <div class="document-card__top">
+                  <span class="document-status document-status--updated"><span class="visually-hidden">Situação: </span>Atualizado</span>
+                  <span class="document-category"><span class="visually-hidden">Categoria: </span>Normas Institucionais</span>
+                  <span class="document-visibility document-visibility--public"><i class="bi bi-unlock" aria-hidden="true"></i><span class="visually-hidden">Visibilidade: </span>Público</span>
+                </div>
+                <h3>Regimento Interno</h3>
+                <p>Define as regras internas de funcionamento administrativo e das instâncias deliberativas da entidade.</p>
+                <dl class="document-meta">
+                  <div><dt>Atualização</dt><dd>10/02/2024</dd></div>
+                  <div><dt>Ano</dt><dd>2024</dd></div>
+                  <div><dt>Responsável</dt><dd>Secretaria-Geral</dd></div>
+                </dl>
+              </div>
+              <div class="document-card__actions">
+                <button class="document-button document-button--view" type="button" aria-label="Visualizar Regimento Interno" data-document-action="view"><i class="bi bi-eye" aria-hidden="true"></i>Visualizar</button>
+                <p class="document-card__file-note"><i class="bi bi-info-circle" aria-hidden="true"></i>Arquivo definitivo ainda não inserido.</p>
+              </div>
+            </article>
+
+            <article class="document-card" data-document-card data-title="Edital de Convocação — Assembleia Geral Ordinária 2026" data-description="Torna pública a convocação da Assembleia Geral Ordinária, com pauta, data, local e quórum de instalação." data-category="editais" data-category-label="Editais e Convocações" data-year="2026" data-status="publicado" data-status-label="Publicado" data-version="Publicado em 03/08/2026" data-size="Formato PDF" data-responsible="Presidência" data-visibility="publico" data-visibility-label="Público" data-file="">
+              <div class="document-card__icon" aria-hidden="true"><i class="bi bi-file-earmark-pdf-fill"></i><span>PDF</span></div>
+              <div class="document-card__content">
+                <div class="document-card__top">
+                  <span class="document-status document-status--current"><span class="visually-hidden">Situação: </span>Publicado</span>
+                  <span class="document-category"><span class="visually-hidden">Categoria: </span>Editais e Convocações</span>
+                  <span class="document-visibility document-visibility--public"><i class="bi bi-unlock" aria-hidden="true"></i><span class="visually-hidden">Visibilidade: </span>Público</span>
+                </div>
+                <h3>Edital de Convocação — Assembleia Geral Ordinária 2026</h3>
+                <p>Torna pública a convocação da Assembleia Geral Ordinária, com pauta, data, local e quórum de instalação.</p>
+                <dl class="document-meta">
+                  <div><dt>Publicação</dt><dd>03/08/2026</dd></div>
+                  <div><dt>Ano</dt><dd>2026</dd></div>
+                  <div><dt>Responsável</dt><dd>Presidência</dd></div>
+                </dl>
+              </div>
+              <div class="document-card__actions">
+                <button class="document-button document-button--view" type="button" aria-label="Visualizar Edital de Convocação — Assembleia Geral Ordinária 2026" data-document-action="view"><i class="bi bi-eye" aria-hidden="true"></i>Visualizar</button>
+                <p class="document-card__file-note"><i class="bi bi-info-circle" aria-hidden="true"></i>Arquivo definitivo ainda não inserido.</p>
+              </div>
+            </article>
+
+            <article class="document-card" data-document-card data-title="Convocação de Assembleia Geral Extraordinária" data-description="Convocação da assembleia extraordinária realizada em maio de 2024, mantida para consulta do histórico institucional." data-category="editais" data-category-label="Editais e Convocações" data-year="2024" data-status="encerrado" data-status-label="Encerrado" data-version="Publicado em 17/05/2024" data-size="Formato PDF" data-responsible="Diretoria Executiva" data-visibility="publico" data-visibility-label="Público" data-file="">
+              <div class="document-card__icon" aria-hidden="true"><i class="bi bi-file-earmark-pdf-fill"></i><span>PDF</span></div>
+              <div class="document-card__content">
+                <div class="document-card__top">
+                  <span class="document-status document-status--historical"><span class="visually-hidden">Situação: </span>Encerrado</span>
+                  <span class="document-category"><span class="visually-hidden">Categoria: </span>Editais e Convocações</span>
+                  <span class="document-visibility document-visibility--public"><i class="bi bi-unlock" aria-hidden="true"></i><span class="visually-hidden">Visibilidade: </span>Público</span>
+                </div>
+                <h3>Convocação de Assembleia Geral Extraordinária</h3>
+                <p>Convocação da assembleia extraordinária realizada em maio de 2024, mantida para consulta do histórico institucional.</p>
+                <dl class="document-meta">
+                  <div><dt>Publicação</dt><dd>17/05/2024</dd></div>
+                  <div><dt>Ano</dt><dd>2024</dd></div>
+                  <div><dt>Responsável</dt><dd>Diretoria Executiva</dd></div>
+                </dl>
+              </div>
+              <div class="document-card__actions">
+                <button class="document-button document-button--view" type="button" aria-label="Visualizar Convocação de Assembleia Geral Extraordinária" data-document-action="view"><i class="bi bi-eye" aria-hidden="true"></i>Visualizar</button>
+                <p class="document-card__file-note"><i class="bi bi-info-circle" aria-hidden="true"></i>Arquivo definitivo ainda não inserido.</p>
+              </div>
+            </article>
+
+            <article class="document-card" data-document-card data-title="Relatório Institucional de Atividades 2025" data-description="Apresenta as ações de representação, negociação, formação e comunicação realizadas no ano. Não contém informações financeiras." data-category="relatorios" data-category-label="Relatórios Institucionais" data-year="2025" data-status="publicado" data-status-label="Publicado" data-version="Publicado em 15/12/2025" data-size="Formato PDF" data-responsible="Secretaria de Comunicação" data-visibility="publico" data-visibility-label="Público" data-file="">
+              <div class="document-card__icon" aria-hidden="true"><i class="bi bi-file-earmark-pdf-fill"></i><span>PDF</span></div>
+              <div class="document-card__content">
+                <div class="document-card__top">
+                  <span class="document-status document-status--current"><span class="visually-hidden">Situação: </span>Publicado</span>
+                  <span class="document-category"><span class="visually-hidden">Categoria: </span>Relatórios Institucionais</span>
+                  <span class="document-visibility document-visibility--public"><i class="bi bi-unlock" aria-hidden="true"></i><span class="visually-hidden">Visibilidade: </span>Público</span>
+                </div>
+                <h3>Relatório Institucional de Atividades 2025</h3>
+                <p>Apresenta as ações de representação, negociação, formação e comunicação realizadas no ano. Não contém informações financeiras.</p>
+                <dl class="document-meta">
+                  <div><dt>Publicação</dt><dd>15/12/2025</dd></div>
+                  <div><dt>Ano</dt><dd>2025</dd></div>
+                  <div><dt>Responsável</dt><dd>Secretaria de Comunicação</dd></div>
+                </dl>
+              </div>
+              <div class="document-card__actions">
+                <button class="document-button document-button--view" type="button" aria-label="Visualizar Relatório Institucional de Atividades 2025" data-document-action="view"><i class="bi bi-eye" aria-hidden="true"></i>Visualizar</button>
+                <p class="document-card__file-note"><i class="bi bi-info-circle" aria-hidden="true"></i>Arquivo definitivo ainda não inserido.</p>
+              </div>
+            </article>
+
+            <article class="document-card" data-document-card data-title="Política de Privacidade" data-description="Informa como os dados pessoais são coletados, utilizados, armazenados e protegidos pelo sindicato, conforme a LGPD." data-category="politicas" data-category-label="Políticas" data-year="2026" data-status="vigente" data-status-label="Vigente" data-version="Versão atual: 30/07/2026" data-size="PDF • 1,4 KB" data-responsible="Encarregado de Dados (LGPD)" data-visibility="publico" data-visibility-label="Público" data-file="../assets/documents/politica-privacidade.pdf">
+              <div class="document-card__icon" aria-hidden="true"><i class="bi bi-file-earmark-pdf-fill"></i><span>PDF</span></div>
+              <div class="document-card__content">
+                <div class="document-card__top">
+                  <span class="document-status document-status--current"><span class="visually-hidden">Situação: </span>Vigente</span>
+                  <span class="document-category"><span class="visually-hidden">Categoria: </span>Políticas</span>
+                  <span class="document-visibility document-visibility--public"><i class="bi bi-unlock" aria-hidden="true"></i><span class="visually-hidden">Visibilidade: </span>Público</span>
+                </div>
+                <h3>Política de Privacidade</h3>
+                <p>Informa como os dados pessoais são coletados, utilizados, armazenados e protegidos pelo sindicato, conforme a LGPD.</p>
+                <dl class="document-meta">
+                  <div><dt>Versão</dt><dd>30/07/2026</dd></div>
+                  <div><dt>Ano</dt><dd>2026</dd></div>
+                  <div><dt>Responsável</dt><dd>Encarregado de Dados (LGPD)</dd></div>
+                  <div><dt>Arquivo</dt><dd>PDF, 1,4 KB</dd></div>
+                </dl>
+              </div>
+              <div class="document-card__actions">
+                <a class="document-button document-button--view" href="../assets/documents/politica-privacidade.pdf" target="_blank" rel="noopener" aria-label="Visualizar Política de Privacidade (abre em nova aba)"><i class="bi bi-eye" aria-hidden="true"></i>Visualizar</a>
+                <a class="document-button document-button--download" href="../assets/documents/politica-privacidade.pdf" download aria-label="Download da Política de Privacidade (PDF, 1,4 KB)"><i class="bi bi-download" aria-hidden="true"></i>Download</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="document-empty" data-document-empty hidden>
+            <i class="bi bi-file-earmark-x" aria-hidden="true"></i>
+            <h3>Nenhum documento encontrado</h3>
+            <p>Revise os termos pesquisados ou limpe os filtros.</p>
+            <button class="button button--secondary" type="button" data-document-clear>Limpar filtros</button>
+          </div>
+
+          <aside class="document-guidance" aria-labelledby="regras-titulo">
+            <div class="document-guidance__icon"><i class="bi bi-info-lg" aria-hidden="true"></i></div>
+            <div>
+              <h2 id="regras-titulo">Regras de publicação representadas</h2>
+              <ul>
+                <li>Somente documentos com visibilidade <strong>Público</strong> são listados nesta página.</li>
+                <li>Cada documento possui categoria, ano, situação e responsável registrados.</li>
+                <li>Documentos sem arquivo definitivo são apresentados de forma demonstrativa, sem download.</li>
+                <li>Conteúdos financeiros e documentos destinados aos filiados ficam disponíveis apenas na Área do Filiado.</li>
+                <li>Na solução definitiva, a visibilidade deverá ser verificada pelo sistema antes de cada consulta ou download.</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="institution-section institution-section--soft" aria-labelledby="niveis-titulo">
+        <div class="container">
+          <div class="institution-heading institution-heading--center">
+            <span class="section-kicker">Níveis de acesso</span>
+            <h2 id="niveis-titulo">Quem pode consultar cada documento</h2>
+            <p>Todo documento cadastrado recebe um nível de visibilidade. Essa classificação define em qual área ele aparece e quais perfis podem acessá-lo.</p>
+          </div>
+
+          <div class="access-levels-grid">
+            <article class="principle-card access-level-card access-level-card--current">
+              <i class="bi bi-globe" aria-hidden="true"></i>
+              <span class="document-visibility document-visibility--public"><i class="bi bi-unlock" aria-hidden="true"></i>Público</span>
+              <h3>Consulta aberta</h3>
+              <p>Documentos institucionais que podem ser consultados por qualquer pessoa, sem necessidade de login.</p>
+              <ul class="check-list">
+                <li>Estatuto Social e Regimento Interno</li>
+                <li>Editais e convocações</li>
+                <li>Relatórios institucionais de atividades</li>
+                <li>Políticas e normas públicas</li>
+              </ul>
+              <div class="access-level-card__footer">
+                <p><i class="bi bi-geo-alt" aria-hidden="true"></i>Você está aqui: Documentos Públicos</p>
+              </div>
+            </article>
+
+            <article class="principle-card access-level-card">
+              <i class="bi bi-people" aria-hidden="true"></i>
+              <span class="document-visibility document-visibility--members"><i class="bi bi-person-lock" aria-hidden="true"></i>Filiados</span>
+              <h3>Acesso autenticado</h3>
+              <p>Conteúdos destinados aos filiados cadastrados, disponíveis somente após o login na Área do Filiado.</p>
+              <ul class="check-list">
+                <li>Prestação de contas e demonstrativos</li>
+                <li>Receitas, despesas e comprovantes</li>
+                <li>Relatórios financeiros</li>
+                <li>Comunicados e documentos restritos</li>
+              </ul>
+              <div class="access-level-card__footer">
+                <p><i class="bi bi-person-lock" aria-hidden="true"></i>Disponível na Área do Filiado</p>
+                <a class="button button--secondary" href="login.html">Acessar Área do Filiado</a>
+              </div>
+            </article>
+
+            <article class="principle-card access-level-card">
+              <i class="bi bi-briefcase" aria-hidden="true"></i>
+              <span class="document-visibility document-visibility--restricted"><i class="bi bi-shield-lock" aria-hidden="true"></i>Administrativo</span>
+              <h3>Uso interno e restrito</h3>
+              <p>Documentos de gestão interna, acessíveis somente a perfis administrativos autorizados.</p>
+              <ul class="check-list">
+                <li>Documentos em elaboração ou revisão</li>
+                <li>Dados cadastrais e pessoais de filiados</li>
+                <li>Pareceres e registros internos</li>
+                <li>Histórico de alterações e auditoria</li>
+              </ul>
+              <div class="access-level-card__footer">
+                <p><i class="bi bi-eye-slash" aria-hidden="true"></i>Não é exibido na área pública nem na Área do Filiado</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="institution-cta documents-cta" aria-labelledby="chamada-titulo">
+        <div class="container institution-cta__inner">
+          <div>
+            <h2 id="chamada-titulo">Procurando documentos destinados aos filiados?</h2>
+            <p>Prestação de contas, comunicados restritos e demais documentos com visibilidade Filiados estão disponíveis na Área do Filiado.</p>
+          </div>
+          <div class="institution-cta__actions">
+            <a class="button button--white" href="login.html"><i class="bi bi-box-arrow-in-right icon" aria-hidden="true"></i>Entrar na Área do Filiado</a>
+            <a class="button button--outline-light" href="contato.html">Fale Conosco</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="footer-logo" href="../index.html" aria-label="Sinprotec — Página Inicial">
+            <img src="../assets/images/logo.png" alt="" width="65" height="65">
+            <span class="brand__copy"><strong>Sindicato</strong><small>de Servidores Públicos</small></span>
+          </a>
+          <p>Em defesa dos servidores, em benefício da sociedade.</p>
+          <div class="social-links" aria-label="Redes sociais">
+            <a href="#" aria-label="Facebook" data-demo="Facebook"><i class="bi bi-facebook icon" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram" data-demo="Instagram"><i class="bi bi-instagram icon" aria-hidden="true"></i></a>
+            <a href="#" aria-label="YouTube" data-demo="YouTube"><i class="bi bi-youtube icon" aria-hidden="true"></i></a>
+            <a href="#" aria-label="E-mail" data-demo="E-mail"><i class="bi bi-envelope-fill icon" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <nav class="footer-links" aria-label="Institucional">
+          <h2>Institucional</h2>
+          <a href="sindicato.html">Quem Somos</a>
+          <a href="diretoria.html">Diretoria</a>
+          <a href="estatuto.html">Estatuto</a>
+          <a href="sindicato.html#historia-titulo">História</a>
+          <a href="#" data-demo="Trabalhe Conosco">Trabalhe Conosco</a>
+        </nav>
+        <nav class="footer-links" aria-label="Serviços">
+          <h2>Serviços</h2>
+          <a href="#" data-demo="Convênios e Benefícios">Convênios e Benefícios</a>
+          <a href="#" data-demo="Assessoria Jurídica">Assessoria Jurídica</a>
+          <a href="#" data-demo="Guias e Requerimentos">Guias e Requerimentos</a>
+          <a href="contato.html">Atendimento</a>
+          <a href="#" data-demo="Perguntas Frequentes">Perguntas Frequentes</a>
+        </nav>
+        <nav class="footer-links" aria-label="Transparência">
+          <h2>Transparência</h2>
+          <a href="transparencia.html">Transparência institucional</a>
+          <a href="login.html">Prestação de Contas</a>
+          <a href="documentos.html" aria-current="page">Documentos públicos</a>
+          <a href="contato.html">Solicitar informação</a>
+        </nav>
+        <address class="footer-contact" id="rodape-contato">
+          <h2>Contato</h2>
+          <p><i class="bi bi-telephone icon" aria-hidden="true"></i> (11) 1234-5678</p>
+          <p><i class="bi bi-envelope icon" aria-hidden="true"></i> contato@sindicatoservidores.org.br</p>
+          <p><i class="bi bi-geo-alt icon" aria-hidden="true"></i> Rua dos Servidores, 123 — Centro<br>São Paulo/SP</p>
+          <a class="footer-contact__link" href="contato.html">Fale Conosco<i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </address>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom__inner">
+          <p>© 2026 Sindicato de Servidores Públicos. Todos os direitos reservados.</p>
+          <div>
+            <a href="../assets/documents/politica-privacidade.pdf" target="_blank" rel="noopener">Política de Privacidade</a>
+            <a href="#" data-demo="Termos de Uso">Termos de Uso</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <dialog class="document-modal" aria-labelledby="document-modal-title" aria-describedby="document-modal-description" aria-modal="true" data-document-modal>
+    <div class="document-modal__panel">
+      <button class="icon-button document-modal__close" type="button" aria-label="Fechar informações do documento" data-document-modal-close>
+        <i class="bi bi-x-lg icon" aria-hidden="true"></i>
+      </button>
+      <div class="document-modal__header">
+        <i class="bi bi-file-earmark-pdf-fill" aria-hidden="true"></i>
+        <div>
+          <span data-document-modal-category>Categoria</span>
+          <h2 id="document-modal-title" data-document-modal-title>Documento</h2>
+          <p data-document-modal-version>Versão</p>
+        </div>
+      </div>
+      <div class="document-modal__body">
+        <p id="document-modal-description" data-document-modal-description>Descrição do documento.</p>
+        <dl class="transparency-modal__meta">
+          <div><dt>Situação</dt><dd data-document-modal-status>—</dd></div>
+          <div><dt>Ano</dt><dd data-document-modal-year>—</dd></div>
+          <div><dt>Responsável</dt><dd data-document-modal-responsible>—</dd></div>
+          <div><dt>Visibilidade</dt><dd data-document-modal-visibility>—</dd></div>
+        </dl>
+        <div class="document-modal__message">
+          <i class="bi bi-info-circle" aria-hidden="true"></i>
+          <p>Documento demonstrativo. O arquivo definitivo ainda não foi inserido.</p>
+        </div>
+        <div class="document-modal__actions">
+          <button class="button button--secondary" type="button" data-document-modal-close>Fechar</button>
+          <button class="document-button document-button--download" type="button" disabled>
+            <i class="bi bi-download" aria-hidden="true"></i>
+            Download indisponível
+          </button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" aria-modal="true" data-modal>
+    <div class="modal__content">
+      <button class="icon-button modal__close" type="button" aria-label="Fechar janela" data-modal-close>
+        <i class="bi bi-x-lg icon" aria-hidden="true"></i>
+      </button>
+      <i class="bi bi-info-circle icon modal__icon" data-modal-icon aria-hidden="true"></i>
+      <h2 data-modal-title>Recurso demonstrativo</h2>
+      <p data-modal-message>Esta ação está preparada para a próxima etapa do protótipo.</p>
+      <button class="button button--primary" type="button" data-modal-close>Entendi</button>
+    </div>
+  </dialog>
+
+  <div class="toast" role="status" aria-live="polite" aria-atomic="true" data-toast hidden></div>
+</body>
+</html>

@@ -36,11 +36,9 @@ Protótipo navegável e responsivo da página inicial de um portal público sind
     │   ├── main.js
     │   ├── noticias.js
     │   ├── comunicados.js
-    │   ├── transparencia.js
     │   └── filiacao.js
     ├── documents/
     │   ├── estatuto-social.pdf, regimento-interno.pdf, ata-fundacao.pdf, normas-institucionais.pdf
-    │   ├── transparencia/ (6 documentos demonstrativos)
     │   └── filiacao/politica-privacidade.pdf
     └── images/
         ├── logo.png
