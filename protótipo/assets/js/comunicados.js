@@ -14,7 +14,7 @@ const comunicados = [
     inicioVigencia: "20/05/2024",
     fimVigencia: "31/05/2024",
     autor: "Secretaria-Geral",
-    anexos: [{ nome: "Comunicado de expediente — feriados", arquivo: "../assets/documents/comunicados/expediente-feriados.pdf", tipo: "PDF", tamanho: "850 KB" }]
+    anexos: [{ nome: "Comunicado de expediente — feriados", arquivo: null, tipo: "PDF", demonstrativo: true }]
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const comunicados = [
     inicioVigencia: "17/05/2024",
     fimVigencia: "24/05/2024",
     autor: "Diretoria Executiva",
-    anexos: [{ nome: "Convocação da assembleia extraordinária", arquivo: "../assets/documents/comunicados/assembleia-extraordinaria.pdf", tipo: "PDF", tamanho: "720 KB" }]
+    anexos: [{ nome: "Convocação da assembleia extraordinária", arquivo: null, tipo: "PDF", demonstrativo: true }]
   },
   {
     id: 3,
@@ -99,7 +99,7 @@ const comunicados = [
     inicioVigencia: "08/05/2024",
     fimVigencia: "08/06/2024",
     autor: "Secretaria-Geral",
-    anexos: [{ nome: "Orientações para atualização cadastral", arquivo: "../assets/documents/comunicados/atualizacao-cadastral.pdf", tipo: "PDF", tamanho: "640 KB" }]
+    anexos: [{ nome: "Orientações para atualização cadastral", arquivo: null, tipo: "PDF", demonstrativo: true }]
   },
   {
     id: 7,
@@ -341,7 +341,7 @@ function renderCommunicationContent(container, item) {
   const paragraphTwo = document.createElement("p");
   paragraphTwo.textContent = "Nos dias indicados, os atendimentos presenciais poderão ser reduzidos. Os canais digitais permanecerão disponíveis para orientações e solicitações.";
   const heading = document.createElement("h2");
-  heading.textContent = "Horários de atendimento";
+  heading.textContent = "Exemplo demonstrativo de horários de atendimento";
   const list = document.createElement("ul");
   ["segunda-feira: atendimento normal;", "terça-feira: atendimento até as 14h;", "quarta-feira: sede fechada;", "quinta-feira: retorno às atividades normais."].forEach((text) => {
     const listItem = document.createElement("li");
@@ -391,10 +391,10 @@ function initializeCommunicationDetail() {
     card.className = "communication-attachment";
     card.innerHTML = `
       <div class="communication-attachment__icon"><i class="bi bi-file-earmark-pdf-fill" aria-hidden="true"></i></div>
-      <div><h3>${attachment.nome}</h3><p>${attachment.tipo} • ${attachment.tamanho}</p></div>
+      <div><h3>${attachment.nome}</h3><p>${attachment.tipo} • Documento demonstrativo — arquivo oficial ainda não inserido.</p></div>
       <div class="communication-attachment__actions">
-        <button type="button" data-attachment-action="Visualizar"><i class="bi bi-eye" aria-hidden="true"></i>Visualizar</button>
-        <button type="button" data-attachment-action="Download"><i class="bi bi-download" aria-hidden="true"></i>Download</button>
+        <button type="button" disabled><i class="bi bi-eye" aria-hidden="true"></i>Visualização indisponível</button>
+        <button type="button" disabled><i class="bi bi-download" aria-hidden="true"></i>Download indisponível</button>
       </div>`;
     return card;
   }));

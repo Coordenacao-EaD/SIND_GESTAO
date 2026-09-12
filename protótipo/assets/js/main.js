@@ -45,9 +45,9 @@ const modalContent = {};
 
 const directors = {
   presidente: {
-    name: "João da Silva",
+    name: "Nome demonstrativo",
     role: "Presidente",
-    imageAlt: "Placeholder da fotografia institucional de João da Silva",
+    imageAlt: "Placeholder da fotografia institucional de Nome demonstrativo",
     intro: "Responsável pela representação geral da entidade e pela coordenação das atividades da Diretoria Executiva.",
     duties: [
       "Representar oficialmente o sindicato.",
@@ -57,9 +57,9 @@ const directors = {
     ]
   },
   "vice-presidente": {
-    name: "Maria Oliveira",
+    name: "Nome demonstrativo",
     role: "Vice-Presidente",
-    imageAlt: "Placeholder da fotografia institucional de Maria Oliveira",
+    imageAlt: "Placeholder da fotografia institucional de Nome demonstrativo",
     intro: "Atua no apoio à Presidência e na articulação das ações institucionais da gestão.",
     duties: [
       "Apoiar a representação institucional.",
@@ -69,9 +69,9 @@ const directors = {
     ]
   },
   "secretario-geral": {
-    name: "Carlos Santos",
+    name: "Nome demonstrativo",
     role: "Secretário-Geral",
-    imageAlt: "Placeholder da fotografia institucional de Carlos Santos",
+    imageAlt: "Placeholder da fotografia institucional de Nome demonstrativo",
     intro: "Organiza os registros institucionais e acompanha o funcionamento administrativo da Diretoria.",
     duties: [
       "Organizar pautas e registros de reuniões.",
@@ -81,9 +81,9 @@ const directors = {
     ]
   },
   tesoureiro: {
-    name: "Paulo Souza",
+    name: "Nome demonstrativo",
     role: "Tesoureiro",
-    imageAlt: "Placeholder da fotografia institucional de Paulo Souza",
+    imageAlt: "Placeholder da fotografia institucional de Nome demonstrativo",
     intro: "Acompanha o planejamento financeiro e os procedimentos de prestação de contas da entidade.",
     duties: [
       "Acompanhar a execução financeira.",
@@ -93,9 +93,9 @@ const directors = {
     ]
   },
   formacao: {
-    name: "Ana Pereira",
+    name: "Nome demonstrativo",
     role: "Secretária de Formação",
-    imageAlt: "Placeholder da fotografia institucional de Ana Pereira",
+    imageAlt: "Placeholder da fotografia institucional de Nome demonstrativo",
     intro: "Coordena iniciativas formativas voltadas aos servidores e ao fortalecimento da participação coletiva.",
     duties: [
       "Planejar atividades de formação.",
@@ -105,9 +105,9 @@ const directors = {
     ]
   },
   comunicacao: {
-    name: "Luís Henrique",
+    name: "Nome demonstrativo",
     role: "Secretário de Comunicação",
-    imageAlt: "Placeholder da fotografia institucional de Luís Henrique",
+    imageAlt: "Placeholder da fotografia institucional de Nome demonstrativo",
     intro: "Acompanha a comunicação institucional e o relacionamento informativo com os servidores.",
     duties: [
       "Planejar comunicados institucionais.",
