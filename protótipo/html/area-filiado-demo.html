@@ -3,203 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tela demonstrativa de chegada após o acesso simulado à Área do Filiado.">
-  <title>Área do Filiado — Demonstração | Sinprotec</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <meta name="description" content="Olá, Filiado — ambiente demonstrativo da Área do Filiado SINPROTEC/MT.">
+  <title>Olá, Filiado | Área do Filiado — SINPROTEC/MT</title>
   <link rel="stylesheet" href="../assets/css/styles.css">
-  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/area-filiado.js" defer></script>
 </head>
-<body class="union-page auth-page">
+<body class="filiado-page">
   <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
-
-  <div class="site-shell">
-    <header class="site-header" data-header>
-      <div class="container header-inner">
-        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" data-menu-open>
-          <i class="bi bi-list icon" aria-hidden="true"></i>
-        </button>
-
-        <a class="brand" href="../index.html" aria-label="Sinprotec — Página Inicial">
-          <img src="../assets/images/logo.png" alt="" width="65" height="65">
-          <span class="brand__copy">
-            <strong>Sinprotec</strong>
-            <small>SINPROTEC/MT</small>
-          </span>
-        </a>
-
-        <nav class="desktop-nav" aria-label="Menu principal">
-          <a class="nav-link" href="../index.html">Início</a>
-          <div class="nav-dropdown" data-dropdown>
-            <button class="nav-link nav-dropdown__button" type="button" aria-expanded="false" aria-haspopup="true" data-dropdown-toggle>
-              Institucional
-              <i class="bi bi-chevron-down icon icon--small" aria-hidden="true"></i>
-            </button>
-            <div class="nav-dropdown__menu" data-dropdown-menu>
-              <a href="sindicato.html">O Sindicato</a>
-              <a href="diretoria.html">Diretoria</a>
-              <a href="estatuto.html">Estatuto</a>
-              <a href="galeria.html">Galeria</a>
-            </div>
-          </div>
-          <a class="nav-link" href="noticias.html">Notícias</a>
-          <a class="nav-link" href="comunicados.html">Comunicados</a>
-          <a class="nav-link" href="transparencia.html">Transparência</a>
-          <a class="nav-link" href="documentos.html">Documentos</a>
-          <a class="nav-link" href="filie-se.html">Filie-se</a>
-          <a class="nav-link" href="contato.html">Fale Conosco</a>
-        </nav>
-
-        <a class="member-button is-active" href="login.html">
-          <i class="bi bi-person icon" aria-hidden="true"></i>
-          <span>Área do Filiado</span>
-        </a>
-        <a class="member-icon" href="login.html" aria-label="Área do Filiado">
-          <i class="bi bi-person icon" aria-hidden="true"></i>
-        </a>
-      </div>
-    </header>
-
-    <div class="menu-backdrop" data-menu-backdrop hidden></div>
-    <aside class="mobile-menu" id="mobile-menu" aria-hidden="true" aria-label="Menu mobile" data-mobile-menu>
-      <div class="mobile-menu__top">
-        <a class="brand brand--panel" href="../index.html" aria-label="Sinprotec — Página Inicial">
-          <img src="../assets/images/logo.png" alt="" width="68" height="68">
-          <span class="brand__copy">
-            <strong>Sinprotec</strong>
-            <small>SINPROTEC/MT</small>
-          </span>
-        </a>
-        <button class="icon-button" type="button" aria-label="Fechar menu" data-menu-close>
-          <i class="bi bi-x-lg icon" aria-hidden="true"></i>
-        </button>
-      </div>
-      <nav class="mobile-nav" aria-label="Menu principal mobile">
-        <a href="../index.html">Início</a>
-        <button type="button" aria-expanded="false" data-mobile-submenu-toggle>
-          Institucional
-          <i class="bi bi-chevron-down icon icon--small" aria-hidden="true"></i>
-        </button>
-        <div class="mobile-submenu" data-mobile-submenu>
-          <a href="sindicato.html">O Sindicato</a>
-          <a href="diretoria.html">Diretoria</a>
-          <a href="estatuto.html">Estatuto</a>
-          <a href="galeria.html">Galeria</a>
-        </div>
-        <a href="noticias.html">Notícias</a>
-        <a href="comunicados.html">Comunicados</a>
-        <a href="transparencia.html">Transparência</a>
-        <a href="documentos.html">Documentos</a>
-        <a href="filie-se.html">Filie-se</a>
-        <a href="contato.html">Fale Conosco</a>
-        <a href="login.html">Área do Filiado</a>
-      </nav>
+  <header class="filiado-header">
+    <a class="filiado-brand" href="area-filiado-demo.html"><img src="../assets/images/logo.png" alt="Logo SINPROTEC/MT" width="60" height="60"><span><strong>SINPROTEC/MT</strong><small>Área do Filiado</small></span></a>
+    <div class="filiado-user"><span><strong>Filiado Demonstrativo</strong><small>Perfil: Filiado</small></span><a class="button button--secondary" href="login.html">Sair</a></div>
+  </header>
+  <div class="filiado-layout">
+    <aside class="filiado-sidebar">
+      <details class="filiado-menu" open><summary>Menu da Área do Filiado</summary><nav aria-label="Área do Filiado"><a href="area-filiado-demo.html" aria-current="page">Painel</a><a href="filiado-dados.html">Meus Dados</a><a href="filiado-comunicados.html">Comunicados e Notificações</a><a href="filiado-assembleias.html">Assembleias e Reuniões</a><a href="filiado-documentos.html">Atas e Documentos</a><span aria-disabled="true">Prestação de Contas<small>Em implementação</small></span><span aria-disabled="true">Minhas Solicitações<small>Em implementação</small></span><span aria-disabled="true">Enquetes e Votações<small>Em implementação</small></span><span aria-disabled="true">Denúncias e Manifestações<small>Em implementação</small></span></nav></details>
+      <a class="filiado-back" href="../index.html">← Voltar ao site</a>
     </aside>
-
-    <main id="conteudo">
-      <section class="union-hero auth-hero" aria-labelledby="titulo-pagina">
-        <div class="container union-hero__content">
-          <nav class="breadcrumb" aria-label="Navegação estrutural">
-            <a href="../index.html">Início</a><i class="bi bi-chevron-right" aria-hidden="true"></i><a href="login.html">Área do Filiado</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">Demonstração</span>
-          </nav>
-          <h1 id="titulo-pagina">Área do Filiado — Demonstração</h1>
-          <p>Nenhuma sessão real foi criada.</p>
-        </div>
-      </section>
-
-      <section class="institution-section" aria-labelledby="demo-titulo">
-        <div class="container auth-demo">
-          <div class="auth-demo__intro">
-            <i class="bi bi-check-circle auth-demo__icon" aria-hidden="true"></i>
-            <h2 id="demo-titulo">Acesso demonstrativo concluído</h2>
-            <p>Esta tela representa apenas o ponto de chegada após a autenticação. Os conteúdos, permissões e funcionalidades da Área do Filiado serão definidos nos módulos responsáveis.</p>
-            <p class="auth-demo__notice"><i class="bi bi-info-circle" aria-hidden="true"></i>Nenhuma sessão real foi criada.</p>
-          </div>
-
-          <div class="auth-demo-grid">
-            <article class="auth-demo-card">
-              <i class="bi bi-person-circle" aria-hidden="true"></i>
-              <h3>Meu Perfil</h3>
-              <p>Funcionalidade não disponível neste protótipo.</p>
-            </article>
-            <article class="auth-demo-card">
-              <i class="bi bi-folder2" aria-hidden="true"></i>
-              <h3>Meus Documentos</h3>
-              <p>Funcionalidade não disponível neste protótipo.</p>
-            </article>
-            <article class="auth-demo-card">
-              <i class="bi bi-card-checklist" aria-hidden="true"></i>
-              <h3>Minhas Solicitações</h3>
-              <p>Funcionalidade não disponível neste protótipo.</p>
-            </article>
-            <article class="auth-demo-card">
-              <i class="bi bi-megaphone" aria-hidden="true"></i>
-              <h3>Comunicados Restritos</h3>
-              <p>Funcionalidade não disponível neste protótipo.</p>
-            </article>
-          </div>
-
-          <div class="auth-demo__exit">
-            <a class="button button--secondary" href="login.html"><i class="bi bi-box-arrow-left icon" aria-hidden="true"></i>Sair da demonstração</a>
-          </div>
-        </div>
-      </section>
+    <main id="conteudo" tabindex="-1">
+      <p class="filiado-notice">Ambiente demonstrativo — a versão final exigirá autenticação.</p>
+      <div class="filiado-heading"><p class="filiado-eyebrow">ÁREA DO FILIADO / PAINEL</p><h1>Olá, Filiado</h1><p>Seu espaço de informação e acompanhamento junto ao Sindicato.</p></div>
+<section aria-labelledby="resumo"><h2 id="resumo">Resumo demonstrativo</h2><div class="filiado-stats">
+<article class="filiado-card"><h3>Situação cadastral</h3><strong class="filiado-value">Regular</strong><p>Cadastro fictício para demonstração.</p><a href="filiado-dados.html">Consultar meus dados →</a></article>
+<article class="filiado-card"><h3>Comunicados recentes</h3><strong class="filiado-value">3 informes</strong><p>2 não lidos nesta demonstração.</p><a href="filiado-comunicados.html">Ler comunicados →</a></article>
+<article class="filiado-card"><h3>Próxima atividade</h3><strong class="filiado-value">24 set. 2026</strong><p>Assembleia Geral Demonstrativa · 14h · híbrida.</p><a href="filiado-assembleias.html#assembleia-geral">Consultar agenda →</a></article>
+<article class="filiado-card"><h3>Solicitações em andamento</h3><strong class="filiado-value">Em implementação</strong><p>O acompanhamento será disponibilizado no próximo bloco.</p></article>
+<article class="filiado-card"><h3>Enquete / votação ativa</h3><strong class="filiado-value">Não habilitada</strong><p>Nenhuma consulta ativa nesta demonstração.</p></article>
+</div></section><section aria-labelledby="modulos"><h2 id="modulos">Serviços e informações</h2><div class="filiado-grid"><article class="filiado-card"><span class="filiado-number">01</span><h3>Meus Dados</h3><p>Confira seus dados pessoais, funcionais e sindicais.</p><a class="filiado-link" href="filiado-dados.html">Acessar módulo →</a></article><article class="filiado-card"><span class="filiado-number">02</span><h3>Comunicados e Notificações</h3><p>Leia os informes destinados aos filiados.</p><a class="filiado-link" href="filiado-comunicados.html">Acessar módulo →</a></article><article class="filiado-card"><span class="filiado-number">03</span><h3>Assembleias e Reuniões</h3><p>Consulte a agenda, as pautas e os documentos relacionados.</p><a class="filiado-link" href="filiado-assembleias.html">Acessar módulo →</a></article><article class="filiado-card"><span class="filiado-number">04</span><h3>Atas e Documentos</h3><p>Consulte documentos públicos e restritos a filiados.</p><a class="filiado-link" href="filiado-documentos.html">Acessar módulo →</a></article><article class="filiado-card"><span class="filiado-number">05</span><h3>Prestação de Contas</h3><p>Consulte demonstrativos e documentos financeiros disponibilizados aos filiados.</p><span class="filiado-badge filiado-badge--pending" aria-disabled="true">Em implementação</span></article><article class="filiado-card"><span class="filiado-number">06</span><h3>Minhas Solicitações</h3><p>Acompanhe solicitações enviadas ao Sindicato.</p><span class="filiado-badge filiado-badge--pending" aria-disabled="true">Em implementação</span></article><article class="filiado-card"><span class="filiado-number">07</span><h3>Enquetes e Votações</h3><p>Participe de consultas e votações quando habilitadas para seu perfil.</p><span class="filiado-badge filiado-badge--pending" aria-disabled="true">Em implementação</span></article><article class="filiado-card"><span class="filiado-number">08</span><h3>Denúncias e Manifestações</h3><p>Registre e acompanhe manifestações destinadas aos Conselhos competentes.</p><span class="filiado-badge filiado-badge--pending" aria-disabled="true">Em implementação</span></article></div></section>
     </main>
-
-    <footer class="site-footer" id="contato">
-      <div class="container footer-grid">
-        <div class="footer-brand">
-          <a class="footer-logo" href="../index.html" aria-label="SINPROTEC/MT — Página Inicial">
-            <img src="../assets/images/logo.png" alt="" width="65" height="65">
-            <span class="brand__copy"><strong>SINPROTEC/MT</strong></span>
-          </a>
-          <p>Em defesa dos servidores, em benefício da sociedade.</p>
-          <p id="rodape-contato">Dados institucionais de contato serão atualizados com as informações oficiais.</p>
-        </div>
-        <nav class="footer-links" aria-label="Institucional">
-          <h2>Institucional</h2>
-          <a href="sindicato.html">O Sindicato</a>
-          <a href="diretoria.html">Diretoria</a>
-          <a href="estatuto.html">Estatuto</a>
-          <a href="galeria.html">Galeria</a>
-        </nav>
-        <nav class="footer-links" aria-label="Conteúdo">
-          <h2>Conteúdo</h2>
-          <a href="noticias.html">Notícias</a>
-          <a href="comunicados.html">Comunicados</a>
-          <a href="documentos.html">Documentos</a>
-        </nav>
-        <nav class="footer-links" aria-label="Serviços">
-          <h2>Serviços</h2>
-          <a href="filie-se.html">Filie-se</a>
-          <a href="contato.html">Contato</a>
-          <a href="login.html">Área do Filiado</a>
-        </nav>
-        <nav class="footer-links" aria-label="Transparência">
-          <h2>Transparência</h2>
-          <a href="transparencia.html">Transparência Institucional</a>
-          <a href="login.html">Prestação de Contas</a>
-        </nav>
-      </div>
-      <div class="footer-bottom">
-        <div class="container footer-bottom__inner">
-          <p>© SINPROTEC/MT. Protótipo demonstrativo.</p>
-        </div>
-      </div>
-    </footer>
   </div>
-
-  <dialog class="modal" aria-modal="true" data-modal>
-    <div class="modal__content">
-      <button class="icon-button modal__close" type="button" aria-label="Fechar janela" data-modal-close>
-        <i class="bi bi-x-lg icon" aria-hidden="true"></i>
-      </button>
-      <i class="bi bi-people icon modal__icon" data-modal-icon aria-hidden="true"></i>
-      <h2 data-modal-title>Recurso demonstrativo</h2>
-      <p data-modal-message>Esta ação está preparada para a próxima etapa do portal.</p>
-      <button class="button button--primary" type="button" data-modal-close>Entendi</button>
-    </div>
-  </dialog>
-
-  <div class="toast" role="status" aria-live="polite" aria-atomic="true" data-toast hidden></div>
+  <footer class="filiado-footer">SINPROTEC/MT · Protótipo demonstrativo. Esta demonstração não mantém sessão autenticada.</footer>
 </body>
 </html>
