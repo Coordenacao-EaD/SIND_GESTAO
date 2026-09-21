@@ -203,16 +203,115 @@
     });
   }
 
-  function renderDashboard(profileId) {
-    const dashboard = document.querySelector("[data-admin-dashboard]");
+  const DEMO_DATA_NOTICE =
+    "Dados demonstrativos do protótipo — não representam informações reais do sindicato.";
 
-    if (!dashboard) {
-      return;
-    }
+  const DASHBOARD_STATS = Object.freeze([
+    { id: "affiliates", label: "Filiados ativos", value: "428", permission: "affiliates" },
+    { id: "affiliationRequests", label: "Filiações pendentes", value: "6", permission: "affiliationRequests" },
+    { id: "requests", label: "Solicitações abertas", value: "12", permission: "requests" },
+    { id: "assemblies", label: "Próximas assembleias", value: "2", permission: "assemblies" },
+    { id: "finance", label: "Prestações aguardando conferência", value: "4", permission: "finance" }
+  ]);
 
-    const profile = PROFILES[profileId];
+  const DASHBOARD_PENDING_ITEMS = Object.freeze([
+    { id: "affiliationRequests", label: "6 filiações aguardando análise.", permissions: ["affiliationRequests"] },
+    { id: "news", label: "1 comunicado aguardando revisão.", permissions: ["news"] },
+    { id: "documents", label: "2 documentos pendentes de publicação.", permissions: ["documents"] },
+    { id: "requests", label: "5 solicitações em análise.", permissions: ["requests"] },
+    { id: "finance", label: "4 prestações de contas aguardando conferência.", permissions: ["finance"] },
+    {
+      id: "financePresidency",
+      label: "1 prestação de contas aguardando validação da Presidência.",
+      permissions: ["finance", "voting"]
+    },
+    { id: "voting", label: "1 enquete aguardando liberação da Presidência.", permissions: ["voting"] }
+  ]);
 
-    dashboard.innerHTML = `
+  const DASHBOARD_EVENTS = Object.freeze([
+    { date: "28/09", label: "Assembleia geral ordinária", permission: "assemblies" },
+    { date: "05/10", label: "Reunião de diretoria", permission: "assemblies" }
+  ]);
+
+  const DASHBOARD_ACTIVITY = Object.freeze([
+    { label: "Ata da assembleia de junho foi atualizada.", permission: "minutes" },
+    { label: "Solicitação de declaração foi respondida.", permission: "requests" },
+    { label: "Comunicado sobre reajuste salarial foi publicado.", permission: "news" },
+    { label: "Prestação de contas de agosto foi enviada para conferência.", permission: "finance" }
+  ]);
+
+  const DASHBOARD_QUICK_ACCESS = Object.freeze([
+    { label: "Cadastrar filiado", permission: "affiliates" },
+    { label: "Criar assembleia", permission: "assemblies" },
+    { label: "Novo documento", permission: "documents" },
+    { label: "Novo comunicado", permission: "news" },
+    { label: "Gerenciar usuários e permissões", permission: "users" }
+  ]);
+
+  function profileHasAllPermissions(profile, permissions) {
+    return permissions.every((permission) => hasPermission(profile, permission));
+  }
+
+  function renderAdministrativeDashboard(profile) {
+    const stats = DASHBOARD_STATS.filter((stat) => hasPermission(profile, stat.permission));
+
+    const pendingItems = DASHBOARD_PENDING_ITEMS.filter((item) =>
+      profileHasAllPermissions(profile, item.permissions)
+    );
+
+    const events = DASHBOARD_EVENTS.filter((event) => hasPermission(profile, event.permission));
+
+    const activity = DASHBOARD_ACTIVITY.filter((entry) => hasPermission(profile, entry.permission));
+
+    const quickAccess = DASHBOARD_QUICK_ACCESS.filter((entry) => hasPermission(profile, entry.permission));
+
+    const statsMarkup = stats.length
+      ? stats
+          .map(
+            (stat) => `
+              <li class="admin-stat-card">
+                <span class="admin-stat-card__label">${stat.label}</span>
+                <strong class="admin-stat-card__value">${stat.value}</strong>
+              </li>
+            `
+          )
+          .join("")
+      : `<li class="admin-empty-state">Nenhum indicador disponível para este perfil de demonstração.</li>`;
+
+    const pendingMarkup = pendingItems.length
+      ? pendingItems.map((item) => `<li class="admin-list__item">${item.label}</li>`).join("")
+      : `<li class="admin-empty-state">Nenhuma pendência para este perfil de demonstração.</li>`;
+
+    const eventsMarkup = events.length
+      ? events
+          .map(
+            (event) => `
+              <li class="admin-list__item">
+                <span class="admin-list__meta">${event.date}</span>
+                ${event.label}
+              </li>
+            `
+          )
+          .join("")
+      : `<li class="admin-empty-state">Nenhum evento próximo para este perfil de demonstração.</li>`;
+
+    const activityMarkup = activity.length
+      ? activity.map((entry) => `<li class="admin-list__item">${entry.label}</li>`).join("")
+      : `<li class="admin-empty-state">Nenhuma atividade recente para este perfil de demonstração.</li>`;
+
+    const quickAccessMarkup = quickAccess.length
+      ? quickAccess
+          .map(
+            (entry) => `
+              <li>
+                <button class="admin-quick-access__button" type="button">${entry.label}</button>
+              </li>
+            `
+          )
+          .join("")
+      : `<li class="admin-empty-state">Nenhum atalho disponível para este perfil de demonstração.</li>`;
+
+    return `
       <header class="admin-page-heading">
         <div>
           <span class="admin-page-heading__eyebrow">Painel</span>
@@ -227,14 +326,128 @@
           </p>
         </div>
       </header>
+
+      <p class="admin-demo-notice" role="note">${DEMO_DATA_NOTICE}</p>
+
+      <ul class="admin-stat-cards">
+        ${statsMarkup}
+      </ul>
+
+      <div class="admin-dashboard__grid">
+        <section class="admin-panel admin-panel--primary" aria-labelledby="admin-pending-title">
+          <h2 id="admin-pending-title">Pendências que exigem ação</h2>
+          <ul class="admin-list">${pendingMarkup}</ul>
+        </section>
+
+        <div class="admin-dashboard__side">
+          <section class="admin-panel" aria-labelledby="admin-events-title">
+            <h2 id="admin-events-title">Próximos eventos</h2>
+            <ul class="admin-list">${eventsMarkup}</ul>
+          </section>
+
+          <section class="admin-panel" aria-labelledby="admin-activity-title">
+            <h2 id="admin-activity-title">Atividade recente</h2>
+            <ul class="admin-list">${activityMarkup}</ul>
+          </section>
+
+          <section class="admin-panel" aria-labelledby="admin-quick-access-title">
+            <h2 id="admin-quick-access-title">Acesso rápido</h2>
+            <ul class="admin-quick-access">${quickAccessMarkup}</ul>
+          </section>
+        </div>
+      </div>
     `;
   }
 
-  /*
-   * Estas duas funções serão preenchidas nas próximas etapas.
-   * Mantemos os pontos de integração desde agora para que o shell
-   * administrativo já tenha uma estrutura estável.
-   */
+  const COUNCIL_CONTENT = Object.freeze({
+    ethics: {
+      title: "Conselho de Ética",
+      description:
+        "Visão restrita a este Conselho. Nenhum conteúdo de outro Conselho ou da administração geral é exibido neste painel."
+    },
+    fiscal: {
+      title: "Conselho Fiscal",
+      description:
+        "Visão restrita a este Conselho. Nenhum conteúdo de outro Conselho ou da administração geral é exibido neste painel."
+    }
+  });
+
+  function renderCouncilDashboard(profile) {
+    const council = COUNCIL_CONTENT[profile.council];
+
+    return `
+      <header class="admin-page-heading">
+        <div>
+          <span class="admin-page-heading__eyebrow">Painel do Conselho</span>
+
+          <h1 id="admin-dashboard-title">
+            ${council.title}
+          </h1>
+
+          <p>${council.description}</p>
+        </div>
+      </header>
+
+      <p class="admin-demo-notice" role="note">${DEMO_DATA_NOTICE}</p>
+
+      <div class="admin-dashboard__grid admin-dashboard__grid--council">
+        <section class="admin-panel admin-panel--primary" aria-labelledby="admin-council-manifestations-title">
+          <h2 id="admin-council-manifestations-title">Manifestações recebidas</h2>
+
+          <ul class="admin-stat-cards">
+            <li class="admin-stat-card">
+              <span class="admin-stat-card__label">Aguardando análise</span>
+              <strong class="admin-stat-card__value">—</strong>
+            </li>
+            <li class="admin-stat-card">
+              <span class="admin-stat-card__label">Em andamento</span>
+              <strong class="admin-stat-card__value">—</strong>
+            </li>
+            <li class="admin-stat-card">
+              <span class="admin-stat-card__label">Concluídas</span>
+              <strong class="admin-stat-card__value">—</strong>
+            </li>
+          </ul>
+
+          <p class="admin-empty-state">
+            Os quantitativos deste protótipo ainda não foram definidos e são
+            exibidos como “—”.
+          </p>
+        </section>
+
+        <div class="admin-dashboard__side">
+          <section class="admin-panel" aria-labelledby="admin-council-documents-title">
+            <h2 id="admin-council-documents-title">Documentos relacionados</h2>
+            <ul class="admin-list">
+              <li class="admin-empty-state">Nenhum documento demonstrativo cadastrado.</li>
+            </ul>
+          </section>
+
+          <section class="admin-panel" aria-labelledby="admin-council-history-title">
+            <h2 id="admin-council-history-title">Histórico</h2>
+            <ul class="admin-list">
+              <li class="admin-empty-state">Nenhum histórico demonstrativo cadastrado.</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderDashboard(profileId) {
+    const dashboard = document.querySelector("[data-admin-dashboard]");
+
+    if (!dashboard) {
+      return;
+    }
+
+    const profile = PROFILES[profileId];
+
+    dashboard.innerHTML = isCouncilProfile(profile)
+      ? renderCouncilDashboard(profile)
+      : renderAdministrativeDashboard(profile);
+  }
+
   const NAV_GROUPS = Object.freeze([
     {
       label: "",
