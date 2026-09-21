@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Painel demonstrativo da Área Administrativa do SINPROTEC/MT."
+  >
+  <title>Painel Administrativo | SINPROTEC/MT</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="../assets/js/area-admin.js" defer></script>
+</head>
+
+<body class="admin-page">
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+
+  <div class="admin-shell">
+    <aside
+      class="admin-sidebar"
+      data-admin-sidebar
+      aria-label="Navegação administrativa"
+    ></aside>
+
+    <div class="admin-workspace">
+      <header class="admin-topbar" data-admin-topbar></header>
+
+      <main id="conteudo" class="admin-main" tabindex="-1">
+        <section
+          class="admin-dashboard"
+          data-admin-dashboard
+          aria-labelledby="admin-dashboard-title"
+        >
+          <div class="admin-dashboard__loading" role="status">
+            Carregando painel administrativo de demonstração...
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
