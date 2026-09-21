@@ -286,10 +286,19 @@ button {
 
 .member-button,
 .member-icon,
+.admin-access-button,
+.admin-access-icon,
 .button,
 .icon-button,
 .menu-toggle {
   cursor: pointer;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 10px;
 }
 
 .member-button {
@@ -363,6 +372,52 @@ button {
 .icon-button:focus-visible {
   background: var(--color-gold);
   border-color: var(--color-gold);
+  color: var(--color-white);
+}
+
+/* Acesso secundário e demonstrativo à Área Administrativa, isolado do padrão gold do Área do Filiado */
+.admin-access-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background var(--ease), color var(--ease), border-color var(--ease);
+}
+
+.admin-access-button:hover,
+.admin-access-button:focus-visible {
+  background: var(--color-footer);
+  border-color: var(--color-footer);
+  color: var(--color-white);
+}
+
+.admin-access-icon {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-muted);
+  transition: background var(--ease), color var(--ease), border-color var(--ease);
+}
+
+.admin-access-icon:hover,
+.admin-access-icon:focus-visible {
+  background: var(--color-footer);
+  border-color: var(--color-footer);
   color: var(--color-white);
 }
 
@@ -1242,11 +1297,13 @@ button {
   }
 
   .menu-toggle,
-  .member-icon {
+  .member-icon,
+  .admin-access-icon {
     display: inline-flex;
   }
 
-  .member-button {
+  .member-button,
+  .admin-access-button {
     display: none;
   }
 
@@ -1487,9 +1544,14 @@ button {
   }
 
   .menu-toggle,
-  .member-icon {
+  .member-icon,
+  .admin-access-icon {
     width: 40px;
     height: 40px;
+  }
+
+  .header-actions {
+    gap: 8px;
   }
 
   .brand img {
@@ -9294,6 +9356,26 @@ body.admin-menu-open {
 
 .admin-sidebar__user small {
   color: rgba(255, 255, 255, 0.6);
+}
+
+/* Ação secundária de retorno ao site público, isolada do padrão gold da navegação principal */
+.admin-sidebar__back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: background var(--ease), color var(--ease);
+}
+
+.admin-sidebar__back:hover,
+.admin-sidebar__back:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
 }
 
 .admin-workspace {

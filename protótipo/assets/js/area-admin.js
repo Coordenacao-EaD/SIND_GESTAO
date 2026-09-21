@@ -724,6 +724,11 @@
         <span>${profile.label}</span>
         <small>Ambiente de protótipo</small>
       </div>
+
+      <a class="admin-sidebar__back" href="../index.html">
+        <span aria-hidden="true">&larr;</span>
+        Voltar ao site público
+      </a>
     `;
   }
 
