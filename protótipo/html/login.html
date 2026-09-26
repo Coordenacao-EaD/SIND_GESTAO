@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Acesse a Área do Filiado do sindicato. Ambiente demonstrativo, sem autenticação real.">
-  <title>Área do Filiado | Sinprotec</title>
+  <meta name="description" content="Acesse o sistema do sindicato. Ambiente demonstrativo, sem autenticação real.">
+  <title>Entrar | Sinprotec</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../assets/css/styles.css">
   <script src="../assets/js/main.js" defer></script>
@@ -100,10 +100,10 @@
       <section class="union-hero auth-hero" aria-labelledby="titulo-pagina">
         <div class="container union-hero__content">
           <nav class="breadcrumb" aria-label="Navegação estrutural">
-            <a href="../index.html">Início</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">Área do Filiado</span>
+            <a href="../index.html">Início</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">Entrar</span>
           </nav>
-          <h1 id="titulo-pagina">Área do Filiado</h1>
-          <p>Acesse os serviços e informações disponíveis no ambiente restrito.</p>
+          <h1 id="titulo-pagina">Acessar minha conta</h1>
+          <p>Entre com seus dados de acesso para chegar à Área do Filiado ou à Área Administrativa, conforme seu perfil.</p>
         </div>
       </section>
 
@@ -113,12 +113,12 @@
             <div class="auth-card__icon" aria-hidden="true"><i class="bi bi-shield-lock"></i></div>
             <span class="auth-card__badge">Ambiente demonstrativo</span>
             <h2 id="login-titulo">Acesse sua conta</h2>
-            <p>Informe seus dados de acesso para entrar na Área do Filiado.</p>
+            <p>Informe seus dados de acesso e escolha o perfil de demonstração para entrar no sistema.</p>
             <p class="auth-card__disclaimer">Este protótipo não realiza autenticação real.</p>
 
             <div class="auth-demo-credentials">
               <i class="bi bi-info-circle" aria-hidden="true"></i>
-              <p>Para testar o protótipo, utilize:<br><strong>E-mail:</strong> filiado@demo.com<br><strong>Senha:</strong> 123456</p>
+              <p>Neste protótipo, qualquer e-mail e senha válidos são aceitos.<br>O destino da navegação é definido pelo perfil selecionado abaixo.</p>
             </div>
 
             <div class="auth-error-summary" data-auth-login-summary role="alert" tabindex="-1" hidden>
@@ -156,6 +156,24 @@
 
               <a class="auth-forgot-link" href="recuperar-senha.html">Esqueci minha senha</a>
 
+              <fieldset class="auth-profile-select">
+                <legend>Perfil de demonstração</legend>
+                <p class="auth-profile-select__hint">Neste protótipo, o perfil de acesso é selecionado apenas para demonstração da navegação.</p>
+                <div class="auth-field">
+                  <label for="login-perfil">Selecione o perfil para simular o acesso</label>
+                  <select id="login-perfil" name="perfil">
+                    <option value="filiado" selected>Filiado</option>
+                    <option value="administrador">Administrador Geral</option>
+                    <option value="diretoria">Diretoria</option>
+                    <option value="presidencia">Presidência</option>
+                    <option value="tesouraria">Tesouraria</option>
+                    <option value="secretaria">Secretaria</option>
+                    <option value="conselhoEtica">Conselho de Ética</option>
+                    <option value="conselhoFiscal">Conselho Fiscal</option>
+                  </select>
+                </div>
+              </fieldset>
+
               <button class="button button--primary auth-submit" type="submit" data-auth-login-submit>
                 <i class="bi bi-box-arrow-in-right icon" aria-hidden="true"></i>Entrar
               </button>
@@ -163,7 +181,7 @@
               <p class="auth-secondary-link">Ainda não é filiado? <a href="filie-se.html">Solicite sua filiação</a></p>
             </form>
 
-            <p class="auth-responsibility-note">O Site Institucional disponibiliza apenas o acesso à Área do Filiado. A autenticação, as permissões e os conteúdos restritos pertencem aos módulos internos do sistema.</p>
+            <p class="auth-responsibility-note">O Site Institucional disponibiliza apenas o acesso unificado ao sistema. A autenticação, as permissões e os conteúdos restritos pertencem aos módulos internos do sistema.</p>
           </article>
 
           <aside class="document-guidance auth-security" aria-labelledby="seguranca-titulo">

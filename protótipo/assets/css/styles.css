@@ -8225,7 +8225,8 @@ body.modal-open {
   font-weight: 700;
 }
 
-.auth-field input {
+.auth-field input,
+.auth-field select {
   width: 100%;
   min-height: 46px;
   border: 1px solid var(--color-border);
@@ -8237,7 +8238,8 @@ body.modal-open {
   padding: 11px 14px;
 }
 
-.auth-field input:focus {
+.auth-field input:focus,
+.auth-field select:focus {
   border-color: var(--color-gold);
   outline: 3px solid rgba(232, 173, 52, 0.18);
 }
@@ -8334,6 +8336,30 @@ body.modal-open {
 .auth-forgot-link:hover,
 .auth-forgot-link:focus-visible {
   color: #12304a;
+}
+
+.auth-profile-select {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 16px;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.auth-profile-select legend {
+  padding: 0 6px;
+  color: var(--color-text);
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.auth-profile-select__hint {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
 
 .auth-submit {

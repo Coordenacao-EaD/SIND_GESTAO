@@ -1,4 +1,15 @@
-const DEMO_CREDENTIALS = { email: "filiado@demo.com", senha: "123456" };
+const ADMIN_PROFILE_STORAGE_KEY = "sindGestao.adminDemoProfile";
+
+const PROFILE_DESTINATIONS = {
+  filiado: { type: "filiado" },
+  administrador: { type: "admin", adminProfile: "administrador" },
+  diretoria: { type: "admin", adminProfile: "diretoria" },
+  presidencia: { type: "admin", adminProfile: "presidencia" },
+  tesouraria: { type: "admin", adminProfile: "tesouraria" },
+  secretaria: { type: "admin", adminProfile: "secretaria" },
+  conselhoEtica: { type: "admin", adminProfile: "conselhoEtica" },
+  conselhoFiscal: { type: "admin", adminProfile: "conselhoFiscal" }
+};
 
 const authFieldMessages = {
   "login-email": { empty: "Informe seu e-mail.", invalid: "Informe um endereço de e-mail válido." },
@@ -130,12 +141,9 @@ function initializeLoginForm() {
       return;
     }
 
-    if (email !== DEMO_CREDENTIALS.email || senha !== DEMO_CREDENTIALS.senha) {
-      showMessage("Credenciais demonstrativas inválidas. Utilize os dados de acesso informados nesta página.");
-      senhaInput.value = "";
-      message?.focus();
-      return;
-    }
+    const perfilSelect = form.querySelector("#login-perfil");
+    const perfilId = perfilSelect ? perfilSelect.value : "filiado";
+    const destination = PROFILE_DESTINATIONS[perfilId] || PROFILE_DESTINATIONS.filiado;
 
     const originalText = submitButton.textContent;
     submitButton.disabled = true;
@@ -143,9 +151,18 @@ function initializeLoginForm() {
 
     window.setTimeout(() => {
       senhaInput.value = "";
+
+      if (destination.type === "admin") {
+        try {
+          window.localStorage.setItem(ADMIN_PROFILE_STORAGE_KEY, destination.adminProfile);
+        } catch (error) {
+          // A persistência é apenas uma conveniência do protótipo.
+        }
+        window.location.href = "admin-painel.html";
+        return;
+      }
+
       window.location.href = "area-filiado-demo.html";
-      submitButton.disabled = false;
-      submitButton.textContent = originalText;
     }, 900);
   });
 }
