@@ -529,6 +529,15 @@ button {
   box-shadow: 0 12px 24px rgba(232, 173, 52, 0.28);
 }
 
+.header-join-button {
+  flex-shrink: 0;
+  min-width: 0;
+  min-height: 44px;
+  padding: 0 14px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
 .button--outline-light {
   min-width: 220px;
   border-color: rgba(255, 255, 255, 0.9);
@@ -1291,7 +1300,7 @@ button {
   }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1024px) {
   .desktop-nav {
     display: none;
   }
@@ -1307,14 +1316,8 @@ button {
     display: none;
   }
 
-  .header-inner {
-    justify-content: space-between;
-  }
-
-  .brand {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  .site-header .brand {
+    margin-right: auto;
   }
 
   .brand img {
@@ -1540,6 +1543,7 @@ button {
   }
 
   .header-inner {
+    gap: 8px;
     padding: 0 10px;
   }
 
@@ -1552,6 +1556,22 @@ button {
 
   .header-actions {
     gap: 8px;
+  }
+
+  .header-join-button {
+    width: 40px;
+    min-height: 40px;
+    padding: 0;
+  }
+
+  .header-join-button span {
+    display: none;
+  }
+
+  @media (max-width: 360px) {
+    .site-header .brand__copy {
+      display: none;
+    }
   }
 
   .brand img {
