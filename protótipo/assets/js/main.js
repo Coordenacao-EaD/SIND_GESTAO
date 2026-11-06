@@ -118,6 +118,132 @@ const directors = {
   }
 };
 
+// Estado exclusivo da demonstração visual: não representa autenticação real
+// e não guarda senha nem token. Valores: "filiado", "administrativo" ou "servidorCadastrado".
+const HEADER_DEMO_ACCESS_KEY = "sindGestao.demoAccessType";
+const HEADER_ADMIN_PROFILE_KEY = "sindGestao.adminDemoProfile";
+
+const ADMIN_PROFILE_LABELS = {
+  administrador: "Administrador",
+  diretoria: "Diretoria",
+  presidencia: "Presidência",
+  tesouraria: "Tesouraria",
+  secretaria: "Secretaria",
+  conselhoEtica: "Conselho de Ética",
+  conselhoFiscal: "Conselho Fiscal"
+};
+
+function readDemoAccess() {
+  try {
+    const accessType = window.localStorage.getItem(HEADER_DEMO_ACCESS_KEY);
+
+    if (accessType === "filiado") {
+      return {
+        userLabel: "Filiado Demonstrativo",
+        areaLabel: "Área do Filiado",
+        areaPage: "area-filiado-demo.html",
+        areaIcon: "bi-person-badge"
+      };
+    }
+
+    // Sem área própria: o perfil só é identificado no cabeçalho público.
+    if (accessType === "servidorCadastrado") {
+      return { userLabel: "Servidor cadastrado" };
+    }
+
+    if (accessType === "administrativo") {
+      const profileId = window.localStorage.getItem(HEADER_ADMIN_PROFILE_KEY);
+
+      return {
+        userLabel: ADMIN_PROFILE_LABELS[profileId] || ADMIN_PROFILE_LABELS.administrador,
+        areaLabel: "Área Administrativa",
+        areaPage: "admin-painel.html",
+        areaIcon: "bi-speedometer2"
+      };
+    }
+  } catch (error) {
+    // Sem armazenamento disponível, o cabeçalho público é mantido.
+  }
+
+  return null;
+}
+
+function clearDemoAccess() {
+  try {
+    window.localStorage.removeItem(HEADER_DEMO_ACCESS_KEY);
+    window.localStorage.removeItem(HEADER_ADMIN_PROFILE_KEY);
+  } catch (error) {
+    // A persistência é apenas uma conveniência do protótipo.
+  }
+}
+
+function renderDemoAccessHeader() {
+  const actions = document.querySelector(".site-header .header-actions");
+  const loginHref = actions?.querySelector(".member-button")?.getAttribute("href");
+  const access = readDemoAccess();
+  if (!loginHref || !access) return;
+
+  // O link de login já traz o caminho relativo correto de cada página.
+  const htmlBase = loginHref.replace("login.html", "");
+  const homeHref = htmlBase ? "index.html" : "../index.html";
+
+  const user = document.createElement("span");
+  user.className = "header-demo-user";
+  user.innerHTML = '<i class="bi bi-person-circle icon" aria-hidden="true"></i><span></span>';
+  user.querySelector("span").textContent = access.userLabel;
+
+  const logout = document.createElement("a");
+  logout.className = "member-button header-demo-logout";
+  logout.href = homeHref;
+  logout.setAttribute("aria-label", "Sair");
+  logout.innerHTML = '<i class="bi bi-box-arrow-right icon" aria-hidden="true"></i><span>Sair</span>';
+  logout.addEventListener("click", clearDemoAccess);
+
+  if (!access.areaPage) {
+    user.classList.add("header-demo-user--persistent");
+    actions.replaceChildren(user, logout);
+    hidePublicAccessLinks();
+    return;
+  }
+
+  const area = document.createElement("a");
+  area.className = "button button--primary header-join-button header-demo-area";
+  area.href = `${htmlBase}${access.areaPage}`;
+  area.setAttribute("aria-label", access.areaLabel);
+  area.innerHTML = `<i class="bi ${access.areaIcon} icon" aria-hidden="true"></i><span></span>`;
+  area.querySelector("span").textContent = access.areaLabel;
+
+  actions.replaceChildren(user, area, logout);
+}
+
+// Servidor cadastrado: sem área própria; a Home oferece apenas o atalho de participação.
+function renderServidorShortcut() {
+  const shortcut = document.querySelector("[data-servidor-atalho]");
+  if (!shortcut) return;
+  let accessType = null;
+  try {
+    accessType = window.localStorage.getItem(HEADER_DEMO_ACCESS_KEY);
+  } catch (error) {
+    accessType = null;
+  }
+  shortcut.hidden = accessType !== "servidorCadastrado";
+}
+
+function hidePublicAccessLinks() {
+  document.querySelectorAll(".hero__actions, .membership-cta").forEach((element) => {
+    element.hidden = true;
+  });
+
+  // "Prestação de Contas" também aponta para o login, mas não é um atalho de acesso.
+  document.querySelectorAll(".mobile-nav a, .footer-links a").forEach((link) => {
+    const href = link.getAttribute("href") || "";
+    const label = link.textContent.trim();
+    if (href.endsWith("filie-se.html") || (href.endsWith("login.html") && label !== "Prestação de Contas")) {
+      link.hidden = true;
+    }
+  });
+}
+
 function setHeaderState() {
   if (!header) return;
   header.classList.toggle("is-scrolled", window.scrollY > 18);
@@ -347,6 +473,8 @@ function scrollToTarget(targetId) {
   return true;
 }
 
+renderDemoAccessHeader();
+renderServidorShortcut();
 setHeaderState();
 window.addEventListener("scroll", setHeaderState, { passive: true });
 
@@ -507,6 +635,14 @@ if (documentModal) {
 }
 
 filterDocuments();
+
+// Ações demonstrativas sem destino oficial (antes eram links href="#").
+document.querySelectorAll("button[data-demo]").forEach((button) => {
+  button.addEventListener("click", () => {
+    showToast(`${button.dataset.demo}: recurso demonstrativo do protótipo.`);
+    closeMenu();
+  });
+});
 
 document.querySelectorAll("a[href^='#']").forEach((link) => {
   link.addEventListener("click", (event) => {

@@ -1,5 +1,16 @@
 // Interações locais de apresentação. Não cria sessão nem persiste dados.
 (() => {
+  // Sair apenas encerra o estado de demonstração definido no login.
+  document.querySelector('[data-demo-logout]')?.addEventListener('click', () => {
+    try {
+      window.localStorage.removeItem('sindGestao.demoAccessType');
+      window.localStorage.removeItem('sindGestao.adminDemoProfile');
+      window.sessionStorage.removeItem('sindGestao.demoSolicitacoes');
+    } catch (error) {
+      // A persistência é apenas uma conveniência do protótipo.
+    }
+  });
+
   const menu = document.querySelector('.filiado-menu');
   const compact = window.matchMedia('(max-width: 900px)');
   const adaptMenu = () => { if (menu) menu.open = !compact.matches; };

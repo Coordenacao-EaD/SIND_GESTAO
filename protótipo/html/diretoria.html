@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../assets/css/styles.css">
   <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/conteudo-publico-dinamico.js" defer></script>
 </head>
 <body class="union-page board-page">
   <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
@@ -108,12 +109,12 @@
           <div class="institution-copy">
             <span class="section-kicker">Composição vigente</span>
             <h2 id="gestao-titulo">Composição demonstrativa</h2>
-            <p>A Diretoria é responsável pela representação institucional, pela condução das atividades administrativas e pela execução das decisões aprovadas pelas instâncias do sindicato.</p>
+            <p data-conteudo="board.intro">A Diretoria é responsável pela representação institucional, pela condução das atividades administrativas e pela execução das decisões aprovadas pelas instâncias do sindicato.</p>
             <p>Os nomes, cargos e atribuições apresentados são demonstrativos. A composição e o mandato oficiais ainda serão informados.</p>
           </div>
           <div class="mandate-badge" aria-label="Mandato oficial a confirmar">
             <i class="bi bi-calendar2-check" aria-hidden="true"></i>
-            <span><small>Mandato oficial</small><strong>A confirmar</strong></span>
+            <span><small>Mandato oficial</small><strong data-conteudo-mandato>A confirmar</strong></span>
           </div>
         </div>
       </section>
@@ -126,7 +127,7 @@
               <h2 id="executiva-titulo">Composição da Diretoria</h2>
               <p>Diretoria Executiva e Secretarias reunidas em uma estrutura preparada para futuros agrupamentos.</p>
             </div>
-            <div class="board-grid">
+            <div class="board-grid" data-conteudo-diretoria>
               <article class="director-card" data-board-group="diretoria-executiva">
                 <div class="director-card__photo">
                   <img src="../assets/images/diretoria/placeholder.svg" alt="Placeholder da fotografia institucional de Nome demonstrativo" width="720" height="720">

@@ -1,7 +1,10 @@
 const ADMIN_PROFILE_STORAGE_KEY = "sindGestao.adminDemoProfile";
+// Estado exclusivo da demonstração visual: não é autenticação, senha nem token.
+const DEMO_ACCESS_STORAGE_KEY = "sindGestao.demoAccessType";
 
 const PROFILE_DESTINATIONS = {
   filiado: { type: "filiado" },
+  servidorCadastrado: { type: "servidorCadastrado" },
   administrador: { type: "admin", adminProfile: "administrador" },
   diretoria: { type: "admin", adminProfile: "diretoria" },
   presidencia: { type: "admin", adminProfile: "presidencia" },
@@ -59,6 +62,20 @@ function initializePasswordToggle() {
   });
 }
 
+function preselectStoredAdminProfile(form) {
+  const perfilSelect = form.querySelector("#login-perfil");
+  if (!perfilSelect) return;
+
+  try {
+    const storedProfile = window.localStorage.getItem(ADMIN_PROFILE_STORAGE_KEY);
+    if (PROFILE_DESTINATIONS[storedProfile]?.type === "admin") {
+      perfilSelect.value = storedProfile;
+    }
+  } catch (error) {
+    // A persistência é apenas uma conveniência do protótipo.
+  }
+}
+
 function initializeLoginForm() {
   const form = document.querySelector("[data-auth-login-form]");
   if (!form) return;
@@ -67,6 +84,8 @@ function initializeLoginForm() {
   const summaryList = document.querySelector("[data-auth-login-summary-list]");
   const message = document.querySelector("[data-auth-login-message]");
   const submitButton = form.querySelector("[data-auth-login-submit]");
+
+  preselectStoredAdminProfile(form);
 
   function clearMessage() {
     if (!message) return;
@@ -155,11 +174,31 @@ function initializeLoginForm() {
       if (destination.type === "admin") {
         try {
           window.localStorage.setItem(ADMIN_PROFILE_STORAGE_KEY, destination.adminProfile);
+          window.localStorage.setItem(DEMO_ACCESS_STORAGE_KEY, "administrativo");
         } catch (error) {
           // A persistência é apenas uma conveniência do protótipo.
         }
         window.location.href = "admin-painel.html";
         return;
+      }
+
+      // Servidor cadastrado não possui área própria: permanece na Home pública.
+      if (destination.type === "servidorCadastrado") {
+        try {
+          window.localStorage.removeItem(ADMIN_PROFILE_STORAGE_KEY);
+          window.localStorage.setItem(DEMO_ACCESS_STORAGE_KEY, "servidorCadastrado");
+        } catch (error) {
+          // A persistência é apenas uma conveniência do protótipo.
+        }
+        window.location.href = "../index.html";
+        return;
+      }
+
+      try {
+        window.localStorage.removeItem(ADMIN_PROFILE_STORAGE_KEY);
+        window.localStorage.setItem(DEMO_ACCESS_STORAGE_KEY, "filiado");
+      } catch (error) {
+        // A persistência é apenas uma conveniência do protótipo.
       }
 
       window.location.href = "area-filiado-demo.html";

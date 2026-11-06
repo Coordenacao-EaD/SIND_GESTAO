@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enquetes e Votações — participação demonstrativa de Servidores Cadastrados no portal SINPROTEC/MT.">
+  <title>Enquetes e Votações | Sinprotec</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/filiado-votacoes-dinamicas.js" defer></script>
+  <script src="../assets/js/servidor-votacoes.js" defer></script>
+</head>
+<body class="union-page servidor-votacoes-page">
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+  <div class="site-shell">
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" data-menu-open><i class="bi bi-list icon" aria-hidden="true"></i></button>
+        <a class="brand" href="../index.html" aria-label="Sinprotec — Página Inicial">
+          <img src="../assets/images/logo.png" alt="" width="65" height="65">
+          <span class="brand__copy"><strong>Sinprotec</strong><small>SINPROTEC/MT</small></span>
+        </a>
+        <nav class="desktop-nav" aria-label="Menu principal">
+          <a class="nav-link" href="../index.html">Início</a>
+          <a class="nav-link" href="sindicato.html">O Sindicato</a>
+          <a class="nav-link" href="noticias.html">Notícias</a>
+          <a class="nav-link" href="documentos.html">Documentos</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="button button--primary header-join-button" href="filie-se.html" aria-label="Filie-se">
+            <i class="bi bi-people icon" aria-hidden="true"></i>
+            <span>Filie-se</span>
+          </a>
+
+          <a class="member-button" href="login.html">
+            <i class="bi bi-box-arrow-in-right icon" aria-hidden="true"></i>
+            <span>Entrar</span>
+          </a>
+
+          <a class="member-icon" href="login.html" aria-label="Entrar">
+            <i class="bi bi-box-arrow-in-right icon" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="menu-backdrop" data-menu-backdrop hidden></div>
+    <aside class="mobile-menu" id="mobile-menu" aria-hidden="true" aria-label="Menu mobile" data-mobile-menu>
+      <div class="mobile-menu__top">
+        <a class="brand brand--panel" href="../index.html" aria-label="Sinprotec — Página Inicial">
+          <img src="../assets/images/logo.png" alt="" width="68" height="68">
+          <span class="brand__copy"><strong>Sinprotec</strong><small>SINPROTEC/MT</small></span>
+        </a>
+        <button class="icon-button" type="button" aria-label="Fechar menu" data-menu-close><i class="bi bi-x-lg icon" aria-hidden="true"></i></button>
+      </div>
+      <nav class="mobile-nav" aria-label="Menu principal mobile">
+        <a href="../index.html">Início</a>
+        <button type="button" aria-expanded="false" data-mobile-submenu-toggle>Institucional<i class="bi bi-chevron-down icon icon--small" aria-hidden="true"></i></button>
+        <div class="mobile-submenu" data-mobile-submenu>
+          <a href="sindicato.html">O Sindicato</a>
+          <a href="diretoria.html">Diretoria</a>
+          <a href="estatuto.html">Estatuto</a>
+          <a href="galeria.html">Galeria</a>
+        </div>
+        <a href="noticias.html">Notícias</a>
+        <a href="comunicados.html">Comunicados</a>
+        <a href="transparencia.html">Transparência</a>
+        <a href="documentos.html">Documentos</a>
+        <a href="filie-se.html">Filie-se</a>
+        <a href="contato.html">Fale Conosco</a>
+      </nav>
+    </aside>
+
+    <main id="conteudo">
+      <section class="union-hero" aria-labelledby="titulo-pagina">
+        <div class="container union-hero__content">
+          <nav class="breadcrumb" aria-label="Navegação estrutural"><a href="../index.html">Início</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">Enquetes e Votações</span></nav>
+          <h1 id="titulo-pagina">Enquetes e Votações</h1>
+          <p>Participação de Servidores Cadastrados.</p>
+        </div>
+      </section>
+
+      <section class="servidor-votacoes" aria-label="Consultas para Servidores Cadastrados">
+        <div class="container">
+          <p class="filiado-notice">Ambiente demonstrativo — as consultas, votos, resultados e datas desta página são fictícios e não representam deliberações reais do SINPROTEC/MT.</p>
+
+          <!-- Conteúdo renderizado por servidor-votacoes.js a partir de localStorage["sindGestao.votingDemo"],
+               somente para a sessão demonstrativa "Servidor cadastrado". -->
+          <div data-servidor-votacoes-root aria-live="polite">
+            <section class="servidor-votacoes__restrito">
+              <p>Carregando consultas...</p>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contato">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="footer-logo" href="../index.html" aria-label="SINPROTEC/MT — Página Inicial">
+            <img src="../assets/images/logo.png" alt="" width="65" height="65">
+            <span class="brand__copy"><strong>SINPROTEC/MT</strong></span>
+          </a>
+          <p>Em defesa dos servidores, em benefício da sociedade.</p>
+          <p id="rodape-contato">Dados institucionais de contato serão atualizados com as informações oficiais.</p>
+        </div>
+        <nav class="footer-links" aria-label="Institucional">
+          <h2>Institucional</h2>
+          <a href="sindicato.html">O Sindicato</a>
+          <a href="diretoria.html">Diretoria</a>
+          <a href="estatuto.html">Estatuto</a>
+          <a href="galeria.html">Galeria</a>
+        </nav>
+        <nav class="footer-links" aria-label="Conteúdo">
+          <h2>Conteúdo</h2>
+          <a href="noticias.html">Notícias</a>
+          <a href="comunicados.html">Comunicados</a>
+          <a href="documentos.html">Documentos</a>
+        </nav>
+        <nav class="footer-links" aria-label="Serviços">
+          <h2>Serviços</h2>
+          <a href="filie-se.html">Filie-se</a>
+          <a href="contato.html">Contato</a>
+          <a href="login.html">Área do Filiado</a>
+        </nav>
+        <nav class="footer-links" aria-label="Transparência">
+          <h2>Transparência</h2>
+          <a href="transparencia.html">Transparência Institucional</a>
+          <a href="login.html">Prestação de Contas</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom__inner">
+          <p>© SINPROTEC/MT. Protótipo demonstrativo.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <dialog class="modal" aria-modal="true" data-modal><div class="modal__content"><button class="icon-button modal__close" type="button" aria-label="Fechar janela" data-modal-close><i class="bi bi-x-lg icon" aria-hidden="true"></i></button><i class="bi bi-people icon modal__icon" data-modal-icon aria-hidden="true"></i><h2 data-modal-title>Recurso demonstrativo</h2><p data-modal-message>Esta ação está preparada para a próxima etapa do portal.</p><button class="button button--primary" type="button" data-modal-close>Entendi</button></div></dialog>
+  <div class="toast" role="status" aria-live="polite" aria-atomic="true" data-toast hidden></div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* T36 — Relatórios administrativos. Reaproveita a base visual de admin-documentos.css. */
+
+.admin-rep__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.admin-rep__selector {
+  padding: 1.2rem 1.2rem 0.4rem;
+}
+
+.admin-rep__selector label span {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.admin-rep__selector select {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.75rem 0.8rem;
+  border: 1px solid #cfd5da;
+  border-radius: 9px;
+  background: #fff;
+  font: inherit;
+}
+
+.admin-rep__title {
+  margin: 1rem 0 0.2rem;
+  font-size: 1.25rem;
+  color: #0b3d6b;
+}
+
+.admin-rep__emitted {
+  margin: 0 0 0.8rem;
+  font-size: 0.85rem;
+  color: #4a5a6a;
+}
+
+.admin-rep__filters {
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  align-items: end;
+}
+
+.admin-rep__filter-actions {
+  display: flex;
+  align-items: end;
+}
+
+.admin-rep__hint {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.75rem;
+  color: #5b6876;
+}
+
+.admin-rep__stats {
+  margin: 1rem 1.2rem;
+}
+
+.admin-rep__groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+  padding: 0 1.2rem 1.2rem;
+}
+
+.admin-rep__group {
+  border: 1px solid #e1e5e9;
+  border-radius: 12px;
+}
+
+.admin-rep__table caption {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  color: #0b3d6b;
+}
+
+.admin-rep__table th[scope="row"] {
+  font-weight: 600;
+  text-align: left;
+}
+
+.admin-rep__bar {
+  display: inline-block;
+  width: 70px;
+  height: 8px;
+  margin-right: 0.35rem;
+  overflow: hidden;
+  vertical-align: middle;
+  background: #e6ebf0;
+  border-radius: 999px;
+}
+
+.admin-rep__bar > span {
+  display: block;
+  height: 100%;
+  background: #0b3d6b;
+}
+
+.admin-rep__notes {
+  margin: 0 1.2rem 1.2rem;
+  padding-left: 1.2rem;
+  font-size: 0.85rem;
+  color: #4a5a6a;
+}
+
+@media (max-width: 650px) {
+  .admin-rep__groups {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Emissão: somente o relatório é impresso. */
+@media print {
+  .admin-sidebar,
+  .admin-topbar,
+  .admin-sidebar-backdrop,
+  .skip-link,
+  .admin-rep__actions button,
+  .admin-rep__filter-actions,
+  .admin-rep__selector label,
+  .admin-rep__selector select {
+    display: none !important;
+  }
+
+  .admin-shell,
+  .admin-workspace,
+  .admin-main {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .admin-rep__groups {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-rep__bar > span {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}

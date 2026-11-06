@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atas e Documentos — ambiente demonstrativo da Área do Filiado SINPROTEC/MT.">
+  <title>Prestação de Contas | SIND_GESTÃO</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="../assets/js/filiado-prestacao-contas-dinamica.js" defer></script>
+  <script src="../assets/js/area-filiado.js" defer></script>
+</head>
+<body class="filiado-page">
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+  <header class="filiado-header">
+    <a class="filiado-brand" href="area-filiado-demo.html"><img src="../assets/images/logo.png" alt="Logo SINPROTEC/MT" width="60" height="60"><span><strong>SINPROTEC/MT</strong><small>Área do Filiado</small></span></a>
+    <div class="filiado-user"><span><strong>Filiado Demonstrativo</strong><small>Perfil: Filiado</small></span><a class="button button--secondary" href="../index.html" data-demo-logout>Sair</a></div>
+  </header>
+  <div class="filiado-layout">
+    <aside class="filiado-sidebar">
+      <details class="filiado-menu" open><summary>Menu da Área do Filiado</summary><nav aria-label="Área do Filiado"><a href="../index.html">Início</a><a href="area-filiado-demo.html">Painel</a><a href="filiado-dados.html">Meus Dados</a><a href="filiado-comunicados.html">Comunicados e Notificações</a><a href="filiado-assembleias.html">Assembleias e Reuniões</a><a href="filiado-documentos.html">Atas e Documentos</a><a href="filiado-prestacao-contas.html" aria-current="page">Prestação de Contas</a><a href="filiado-solicitacoes.html">Minhas Solicitações</a><a href="filiado-votacoes.html">Enquetes e Votações</a><a href="filiado-manifestacoes.html">Denúncias e Manifestações</a></nav></details>
+    </aside>
+    <main id="conteudo" tabindex="-1">
+
+  <p class="filiado-notice">
+    Ambiente demonstrativo — valores, documentos, datas e lançamentos desta página são fictícios e utilizados exclusivamente para validação do protótipo.
+  </p>
+
+  <p class="filiado-eyebrow">ÁREA DO FILIADO / PRESTAÇÃO DE CONTAS</p>
+
+  <header class="filiado-page-header prestacao-cabecalho">
+    <div>
+      <h1>Prestação de Contas</h1>
+      <p>
+        Consulte a movimentação financeira, os demonstrativos e os documentos
+        disponibilizados pelo Sindicato.
+      </p>
+    </div>
+
+    <div class="prestacao-periodo">
+      <label for="exercicio">Exercício</label>
+      <select id="exercicio" aria-label="Selecionar exercício" data-pc-exercicio>
+        <option selected>2026</option>
+        <option>2025</option>
+      </select>
+    </div>
+  </header>
+
+
+  <!-- STATUS DA PRESTACAO -->
+
+  <section class="prestacao-status" aria-labelledby="status-prestacao" data-pc-status>
+    <div>
+      <span class="prestacao-status__icone" aria-hidden="true">✓</span>
+      <div>
+        <span class="filiado-badge">JAN — SET / 2026</span>
+        <h2 id="status-prestacao">Prestação disponibilizada aos filiados</h2>
+        <p>
+          Demonstrativo fictício com informações consolidadas até setembro de 2026.
+        </p>
+      </div>
+    </div>
+
+    <div class="prestacao-validacao">
+      <span>Validação demonstrativa</span>
+      <strong>Presidência + Tesouraria</strong>
+      <small>Validação cruzada concluída</small>
+    </div>
+  </section>
+
+
+  <!-- RESUMO -->
+
+  <section aria-labelledby="resumo-financeiro">
+    <div class="prestacao-section__header">
+      <div>
+        <span class="filiado-badge">RESUMO</span>
+        <h2 id="resumo-financeiro">Resumo financeiro</h2>
+      </div>
+      <p>Valores acumulados do período demonstrativo.</p>
+    </div>
+
+    <div class="filiado-grid prestacao-resumo" data-pc-resumo>
+
+      <article class="filiado-card prestacao-card-financeiro">
+        <span class="prestacao-card-label">Receitas</span>
+        <strong class="filiado-value">R$ 128.450,00</strong>
+        <p>Total de entradas registradas no período.</p>
+      </article>
+
+      <article class="filiado-card prestacao-card-financeiro">
+        <span class="prestacao-card-label">Despesas</span>
+        <strong class="filiado-value">R$ 113.280,00</strong>
+        <p>Total de despesas registradas no período.</p>
+      </article>
+
+      <article class="filiado-card prestacao-card-financeiro">
+        <span class="prestacao-card-label">Resultado do período</span>
+        <strong class="filiado-value">R$ 15.170,00</strong>
+        <p>Diferença demonstrativa entre receitas e despesas.</p>
+      </article>
+
+      <article class="filiado-card prestacao-card-financeiro">
+        <span class="prestacao-card-label">Saldo demonstrativo</span>
+        <strong class="filiado-value">R$ 42.870,00</strong>
+        <p>Saldo acumulado fictício após as movimentações.</p>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- COMPOSICAO -->
+
+  <section class="prestacao-section" aria-labelledby="composicao-financeira">
+
+    <div class="prestacao-section__header">
+      <div>
+        <span class="filiado-badge">COMPOSIÇÃO</span>
+        <h2 id="composicao-financeira">Receitas e despesas por categoria</h2>
+      </div>
+    </div>
+
+    <div class="prestacao-duas-colunas">
+
+      <article class="prestacao-painel">
+        <div class="prestacao-painel__titulo">
+          <h3>Receitas</h3>
+          <strong>R$ 128.450,00</strong>
+        </div>
+
+        <div class="prestacao-categoria">
+          <div>
+            <strong>Contribuições e mensalidades</strong>
+            <span>R$ 118.200,00</span>
+          </div>
+          <progress max="128450" value="118200">92%</progress>
+        </div>
+
+        <div class="prestacao-categoria">
+          <div>
+            <strong>Outras receitas</strong>
+            <span>R$ 10.250,00</span>
+          </div>
+          <progress max="128450" value="10250">8%</progress>
+        </div>
+      </article>
+
+
+      <article class="prestacao-painel">
+        <div class="prestacao-painel__titulo">
+          <h3>Despesas</h3>
+          <strong>R$ 113.280,00</strong>
+        </div>
+
+        <ul class="prestacao-categorias-lista">
+          <li><span>Administrativas</span><strong>R$ 28.350,00</strong></li>
+          <li><span>Assessorias e serviços</span><strong>R$ 34.800,00</strong></li>
+          <li><span>Eventos e reuniões</span><strong>R$ 18.400,00</strong></li>
+          <li><span>Comunicação</span><strong>R$ 11.230,00</strong></li>
+          <li><span>Infraestrutura</span><strong>R$ 17.500,00</strong></li>
+          <li><span>Tarifas e encargos</span><strong>R$ 3.000,00</strong></li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- MOVIMENTACOES -->
+
+  <section class="prestacao-section" aria-labelledby="movimentacoes-titulo">
+
+    <div class="prestacao-section__header">
+      <div>
+        <span class="filiado-badge">MOVIMENTAÇÃO</span>
+        <h2 id="movimentacoes-titulo">Lançamentos demonstrativos</h2>
+      </div>
+      <p>Exemplos de registros que compõem a prestação.</p>
+    </div>
+
+    <div class="prestacao-table-wrap">
+      <table class="prestacao-table">
+        <thead>
+          <tr>
+            <th scope="col">Data</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Documento</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Situação</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>10/09/2026</td>
+            <td>Receita demonstrativa de contribuições</td>
+            <td>Contribuições</td>
+            <td>REC-2026-041</td>
+            <td><span class="prestacao-tipo prestacao-tipo--receita">Receita</span></td>
+            <td>R$ 18.200,00</td>
+            <td><span class="prestacao-status-tag">Validado</span></td>
+          </tr>
+
+          <tr>
+            <td>06/09/2026</td>
+            <td>Serviço administrativo demonstrativo</td>
+            <td>Administrativo</td>
+            <td>DES-2026-038</td>
+            <td><span class="prestacao-tipo prestacao-tipo--despesa">Despesa</span></td>
+            <td>R$ 4.350,00</td>
+            <td><span class="prestacao-status-tag">Validado</span></td>
+          </tr>
+
+          <tr>
+            <td>27/08/2026</td>
+            <td>Assessoria demonstrativa</td>
+            <td>Serviços</td>
+            <td>DES-2026-034</td>
+            <td><span class="prestacao-tipo prestacao-tipo--despesa">Despesa</span></td>
+            <td>R$ 6.800,00</td>
+            <td><span class="prestacao-status-tag">Validado</span></td>
+          </tr>
+
+          <tr>
+            <td>19/08/2026</td>
+            <td>Receita demonstrativa de mensalidades</td>
+            <td>Contribuições</td>
+            <td>REC-2026-033</td>
+            <td><span class="prestacao-tipo prestacao-tipo--receita">Receita</span></td>
+            <td>R$ 21.400,00</td>
+            <td><span class="prestacao-status-tag">Validado</span></td>
+          </tr>
+
+          <tr>
+            <td>12/08/2026</td>
+            <td>Evento institucional demonstrativo</td>
+            <td>Eventos</td>
+            <td>DES-2026-029</td>
+            <td><span class="prestacao-tipo prestacao-tipo--despesa">Despesa</span></td>
+            <td>R$ 5.200,00</td>
+            <td><span class="prestacao-status-tag">Validado</span></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <p class="prestacao-observacao">
+      A versão final poderá permitir filtros por período, categoria, tipo de movimentação e situação.
+    </p>
+  </section>
+
+
+  <!-- DOCUMENTOS -->
+
+  <section class="prestacao-section" aria-labelledby="documentos-financeiros">
+
+    <div class="prestacao-section__header">
+      <div>
+        <span class="filiado-badge">DOCUMENTOS</span>
+        <h2 id="documentos-financeiros">Demonstrativos e comprovantes</h2>
+      </div>
+    </div>
+
+    <div class="prestacao-documentos" data-pc-documentos>
+
+      <article class="prestacao-documento">
+        <div class="prestacao-documento__icone" aria-hidden="true">PDF</div>
+
+        <div class="prestacao-documento__texto">
+          <strong>Demonstrativo financeiro — Jan a Set/2026</strong>
+          <p>Resumo demonstrativo de receitas, despesas e resultado do período.</p>
+        </div>
+
+        <div class="prestacao-documento__acoes">
+          <a href="../assets/docs/financeiro/demonstrativo-financeiro-2026.html"
+             target="_blank"
+             rel="noopener noreferrer">
+             Visualizar
+          </a>
+
+          <a href="../assets/docs/financeiro/demonstrativo-financeiro-2026.html"
+             download>
+             Baixar
+          </a>
+        </div>
+      </article>
+
+
+      <article class="prestacao-documento">
+        <div class="prestacao-documento__icone" aria-hidden="true">DOC</div>
+
+        <div class="prestacao-documento__texto">
+          <strong>Comprovante demonstrativo</strong>
+          <p>Documento fictício associado a uma despesa do período.</p>
+        </div>
+
+        <div class="prestacao-documento__acoes">
+          <a href="../assets/docs/financeiro/comprovante-demonstrativo.html"
+             target="_blank"
+             rel="noopener noreferrer">
+             Visualizar
+          </a>
+
+          <a href="../assets/docs/financeiro/comprovante-demonstrativo.html"
+             download>
+             Baixar
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- HISTORICO -->
+
+  <section class="prestacao-section" aria-labelledby="historico-prestacoes" data-pc-historico>
+
+    <div class="prestacao-section__header">
+      <div>
+        <span class="filiado-badge">HISTÓRICO</span>
+        <h2 id="historico-prestacoes">Prestações anteriores</h2>
+      </div>
+    </div>
+
+    <details class="prestacao-exercicio">
+      <summary>
+        <span>Exercício 2025</span>
+        <span class="prestacao-status-tag">Disponibilizada</span>
+      </summary>
+
+      <div class="prestacao-exercicio__content">
+        <p>
+          Prestação fictícia mantida para demonstrar a consulta histórica
+          dos exercícios anteriores.
+        </p>
+
+        <a href="../assets/docs/financeiro/relatorio-sintetico-2025.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          Visualizar relatório sintético
+        </a>
+      </div>
+    </details>
+
+  </section>
+
+
+  <aside class="prestacao-regra-acesso">
+    <strong>Acesso do Filiado</strong>
+    <p>
+      Esta área é destinada exclusivamente à consulta. Inclusão de receitas,
+      despesas, documentos, validação ou alteração de registros pertence aos
+      perfis administrativos autorizados.
+    </p>
+  </aside>
+
+</main>
+  </div>
+  <footer class="filiado-footer">SINPROTEC/MT · Protótipo demonstrativo. Esta demonstração não mantém sessão autenticada.</footer>
+</body>
+</html>
+

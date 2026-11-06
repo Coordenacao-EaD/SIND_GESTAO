@@ -207,7 +207,8 @@ const comunicados = [
 
 // Registros de públicos restritos permanecem nos dados para a futura Área do Filiado, mas não são exibidos na área pública.
 const restrictedCommunicationAudiences = ["filiados", "diretoria"];
-const publicComunicados = comunicados.filter((item) => !restrictedCommunicationAudiences.includes(item.publicoSlug));
+// Recalculada depois da integração administrativa (ver appendAdministrativePublishedCommunicationsDemo).
+let publicComunicados = comunicados.filter((item) => !restrictedCommunicationAudiences.includes(item.publicoSlug));
 
 const communicationStatusLabels = { vigente: "Vigente", encerrado: "Encerrado", urgente: "Urgente" };
 
@@ -334,6 +335,14 @@ function initializeCommunicationsListing() {
 }
 
 function renderCommunicationContent(container, item) {
+  if (item.administrativo) {
+    container.replaceChildren(...String(item.corpo || item.resumo).split(/\n+/).map((texto) => texto.trim()).filter(Boolean).map((texto) => {
+      const paragraph = document.createElement("p");
+      paragraph.textContent = texto;
+      return paragraph;
+    }));
+    return;
+  }
   const paragraphOne = document.createElement("p");
   paragraphOne.textContent = item.id === 1
     ? "Informamos que, em razão dos próximos feriados, a sede sindical funcionará em horários diferenciados."
@@ -380,7 +389,9 @@ function initializeCommunicationDetail() {
   date.textContent = item.data;
   date.dateTime = item.dataISO;
   document.querySelector("[data-communication-audience-detail]").textContent = item.publicoAlvo;
-  document.querySelector("[data-communication-validity]").textContent = `De ${item.inicioVigencia} a ${item.fimVigencia}`;
+  document.querySelector("[data-communication-validity]").textContent = item.fimVigencia
+    ? `De ${item.inicioVigencia} a ${item.fimVigencia}`
+    : (item.inicioVigencia ? `A partir de ${item.inicioVigencia}` : "Vigência não informada");
   document.querySelector("[data-communication-author]").textContent = item.autor;
   renderCommunicationContent(document.querySelector("[data-communication-content]"), item);
 
@@ -435,5 +446,49 @@ function initializeCommunicationDetail() {
   document.querySelector("[data-communication-print]")?.addEventListener("click", () => window.print());
 }
 
-initializeCommunicationsListing();
-initializeCommunicationDetail();
+// Comunicados administrativos Publicados de Público geral (leitor compartilhado, somente leitura).
+// O modelo administrativo não possui período de vigência: a vigência é exibida a partir da
+// data de publicação, sem data final inventada. Uma cópia estática de mesmo título não
+// sobrescreve o comunicado administrativo.
+function appendAdministrativePublishedCommunicationsDemo() {
+  try {
+    const api = window.SindGestaoConteudoPublico;
+    if (!api || comunicados.some((item) => item.administrativo)) return;
+    const publicados = api.publishedCommunications("Comunicado").map((item) => {
+      const dataISO = /^\d{4}-\d{2}-\d{2}$/.test(item.publishedDateISO || "") ? item.publishedDateISO : "";
+      return {
+        id: item.publicId,
+        titulo: item.title,
+        categoria: api.usable(item.category) ? item.category : "Institucional",
+        categoriaSlug: item.categorySlug || "institucional",
+        resumo: item.summary || "",
+        corpo: item.body || "",
+        data: item.publishedDateLabel || api.dateLabelFromIso(dataISO) || "Data não informada",
+        dataISO,
+        ano: dataISO.slice(0, 4),
+        publicoAlvo: "Público geral",
+        publicoSlug: "publico-geral",
+        situacao: "vigente",
+        inicioVigencia: api.dateLabelFromIso(dataISO),
+        fimVigencia: "",
+        autor: item.author || "Sindicato",
+        anexos: [],
+        administrativo: true
+      };
+    });
+    if (!publicados.length) return;
+    const ids = new Set(publicados.map((item) => item.id));
+    const titulos = new Set(publicados.map((item) => api.normalize(item.titulo)));
+    const estaticos = comunicados.filter((item) => !ids.has(item.id) && !titulos.has(api.normalize(item.titulo)));
+    comunicados.splice(0, comunicados.length, ...publicados, ...estaticos);
+  } catch {
+    // Sem base administrativa legível, a base estática permanece.
+  }
+  publicComunicados = comunicados.filter((item) => !restrictedCommunicationAudiences.includes(item.publicoSlug));
+}
+
+if (!document.body.classList.contains("admin-page")) {
+  appendAdministrativePublishedCommunicationsDemo();
+  initializeCommunicationsListing();
+  initializeCommunicationDetail();
+}

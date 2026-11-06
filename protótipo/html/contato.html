@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../assets/css/styles.css">
   <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/conteudo-publico-dinamico.js" defer></script>
   <script src="../assets/js/contato.js" defer></script>
 </head>
 <body class="union-page contact-page">
@@ -121,26 +122,26 @@
             <article class="contact-channel-card">
               <div class="contact-channel-card__icon" aria-hidden="true"><i class="bi bi-geo-alt"></i></div>
               <h3>Endereço</h3>
-              <p class="contact-channel-card__value">Endereço oficial a confirmar</p>
+              <p class="contact-channel-card__value" data-conteudo-contato="address">Endereço oficial a confirmar</p>
               <a class="contact-channel-card__action" href="#localizacao">Ver localização<i class="bi bi-arrow-right" aria-hidden="true"></i></a>
             </article>
             <article class="contact-channel-card">
               <div class="contact-channel-card__icon" aria-hidden="true"><i class="bi bi-telephone"></i></div>
               <h3>Telefone</h3>
-              <p class="contact-channel-card__value">Telefone oficial a confirmar</p>
+              <p class="contact-channel-card__value" data-conteudo-contato="phone">Telefone oficial a confirmar</p>
               <p class="contact-channel-card__desc">Para informações e orientações gerais.</p>
-              <span class="contact-channel-card__desc">Canal oficial a confirmar</span>
+              <span class="contact-channel-card__desc" data-conteudo-contato-pendente="phone">Canal oficial a confirmar</span>
             </article>
             <article class="contact-channel-card">
               <div class="contact-channel-card__icon" aria-hidden="true"><i class="bi bi-envelope"></i></div>
               <h3>E-mail</h3>
-              <p class="contact-channel-card__value contact-channel-card__value--break">E-mail oficial a confirmar</p>
-              <span class="contact-channel-card__desc">Canal oficial a confirmar</span>
+              <p class="contact-channel-card__value contact-channel-card__value--break" data-conteudo-contato="email">E-mail oficial a confirmar</p>
+              <span class="contact-channel-card__desc" data-conteudo-contato-pendente="email">Canal oficial a confirmar</span>
             </article>
             <article class="contact-channel-card">
               <div class="contact-channel-card__icon" aria-hidden="true"><i class="bi bi-clock"></i></div>
               <h3>Atendimento</h3>
-              <p class="contact-channel-card__value">Horários oficiais a confirmar</p>
+              <p class="contact-channel-card__value" data-conteudo-contato="hours">Horários oficiais a confirmar</p>
               <p class="contact-channel-card__desc">Exceto feriados e períodos de expediente especial.</p>
             </article>
           </div>
@@ -153,14 +154,14 @@
             <article class="contact-map-card" id="localizacao" aria-labelledby="localizacao-titulo">
               <h3 id="localizacao-titulo">Localização</h3>
               <address class="contact-map-card__address">
-                Endereço oficial a confirmar<br>
+                <span data-conteudo-contato="address">Endereço oficial a confirmar</span><br>
                 <span class="contact-map-card__reference">Localização demonstrativa; aguarda dados oficiais.</span>
               </address>
-              <p class="contact-map-card__hours"><i class="bi bi-clock" aria-hidden="true"></i>Atendimento presencial: horários oficiais a confirmar</p>
+              <p class="contact-map-card__hours"><i class="bi bi-clock" aria-hidden="true"></i>Atendimento presencial: <span data-conteudo-contato="hours">horários oficiais a confirmar</span></p>
               <figure class="contact-map-figure">
                 <img src="../assets/images/contato/mapa-localizacao.jpg" alt="Mapa demonstrativo indicando a localização da sede do sindicato">
               </figure>
-              <a class="button button--secondary" href="#" data-demo="Abrir no mapa">Abrir no mapa</a>
+              <button class="button button--secondary" type="button" disabled>Mapa disponível após a confirmação do endereço oficial</button>
             </article>
 
             <aside class="document-guidance contact-guidance" aria-labelledby="orientacoes-titulo">

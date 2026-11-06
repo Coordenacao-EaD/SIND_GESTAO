@@ -2,6 +2,8 @@
   "use strict";
 
   const STORAGE_KEY = "sindGestao.adminDemoProfile";
+  // Estado exclusivo da demonstração visual: não é autenticação, senha nem token.
+  const DEMO_ACCESS_STORAGE_KEY = "sindGestao.demoAccessType";
   const DEFAULT_PROFILE_ID = "administrador";
 
   const PROFILES = Object.freeze({
@@ -12,7 +14,9 @@
       mode: "administrative",
       permissions: [
         "users",
+        "usersView",
         "affiliates",
+        "affiliatesManage",
         "affiliationRequests",
         "assemblies",
         "minutes",
@@ -20,8 +24,14 @@
         "news",
         "notifications",
         "requests",
+        // "finance": consulta técnica no T32; não valida nem publica.
+        "finance",
+        // "votingView": T34, consulta técnica; não cria nem libera.
+        "votingView",
         "reports",
-        "settings"
+        "settings",
+        // "institutionalContent": T36, cria/edita e encaminha conteúdo institucional.
+        "institutionalContent"
       ]
     },
 
@@ -39,7 +49,13 @@
         "news",
         "notifications",
         "requests",
-        "reports"
+        // "finance": somente consulta no T32.
+        "finance",
+        // "votingView": T34, somente consultas já Liberadas.
+        "votingView",
+        "reports",
+        // "institutionalContent": T36, cria/edita e encaminha conteúdo institucional.
+        "institutionalContent"
       ]
     },
 
@@ -49,6 +65,7 @@
       shortLabel: "Presidência",
       mode: "administrative",
       permissions: [
+        "usersView",
         "affiliates",
         "affiliationRequests",
         "assemblies",
@@ -59,7 +76,9 @@
         "requests",
         "finance",
         "voting",
-        "reports"
+        "reports",
+        // "institutionalContent": T36, revisa, aprova e publica conteúdo institucional.
+        "institutionalContent"
       ]
     },
 
@@ -71,6 +90,8 @@
       permissions: [
         "finance",
         "documents",
+        // "requests": T33, somente solicitações encaminhadas à Tesouraria.
+        "requests",
         "reports"
       ]
     },
@@ -82,13 +103,18 @@
       mode: "administrative",
       permissions: [
         "affiliates",
+        "affiliatesManage",
         "affiliationRequests",
         "assemblies",
         "minutes",
         "documents",
         "news",
         "notifications",
-        "requests"
+        "requests",
+        // "votingView": T34, consulta operacional das consultas já Liberadas.
+        "votingView",
+        // "institutionalContent": T36, cria/edita e encaminha conteúdo institucional.
+        "institutionalContent"
       ]
     },
 
@@ -98,7 +124,8 @@
       shortLabel: "Conselho de Ética",
       mode: "council",
       council: "ethics",
-      permissions: ["councilEthics"]
+      // "documents": acesso ao T31 restrito ao escopo do próprio Conselho.
+      permissions: ["councilEthics", "documents"]
     },
 
     conselhoFiscal: {
@@ -107,7 +134,9 @@
       shortLabel: "Conselho Fiscal",
       mode: "council",
       council: "fiscal",
-      permissions: ["councilFiscal"]
+      // "documents": acesso ao T31 restrito ao escopo do próprio Conselho.
+      // "finance": consulta/fiscalização no T32, sem criar, validar ou arquivar.
+      permissions: ["councilFiscal", "documents", "finance"]
     }
   });
 
@@ -136,7 +165,27 @@
     }
   }
 
+  function clearDemoAccess() {
+    try {
+      window.localStorage.removeItem(STORAGE_KEY);
+      window.localStorage.removeItem(DEMO_ACCESS_STORAGE_KEY);
+    } catch (error) {
+      // A persistência é apenas uma conveniência do protótipo.
+    }
+  }
+
   let activeProfileId = readStoredProfileId();
+
+  // T36: consulta somente leitura das permissões, para que Relatórios e Configurações
+  // apliquem exatamente a mesma matriz do menu (sem cópia paralela de perfis).
+  window.SindGestaoAdminPerfis = Object.freeze({
+    ids: () => Object.keys(PROFILES),
+    label: (profileId) => (isValidProfileId(profileId) ? PROFILES[profileId].label : ""),
+    isCouncil: (profileId) => isValidProfileId(profileId) && PROFILES[profileId].mode === "council",
+    hasPermission: (profileId, permission) =>
+      isValidProfileId(profileId) && PROFILES[profileId].permissions.includes(permission),
+    current: () => readStoredProfileId()
+  });
 
   function getActiveProfileId() {
     return activeProfileId;
@@ -193,8 +242,14 @@
             ${profileOptionsMarkup(profileId)}
           </select>
         </label>
+
+        <a class="button button--secondary admin-topbar__logout" href="../index.html" data-demo-logout>
+          Sair
+        </a>
       </div>
     `;
+
+    topbar.querySelector("[data-demo-logout]")?.addEventListener("click", clearDemoAccess);
 
     const select = topbar.querySelector("[data-admin-profile-select]");
 
@@ -246,7 +301,7 @@
   ]);
 
   const DASHBOARD_QUICK_ACCESS = Object.freeze([
-    { label: "Cadastrar filiado", permission: "affiliates" },
+    { label: "Cadastrar filiado", permission: "affiliatesManage" },
     { label: "Criar assembleia", permission: "assemblies" },
     { label: "Novo documento", permission: "documents" },
     { label: "Novo comunicado", permission: "news" },
@@ -458,6 +513,13 @@
       label: "",
       items: [
         {
+          id: "publicHome",
+          label: "Início",
+          href: "../index.html",
+          icon: "⌂",
+          alwaysAvailable: true
+        },
+        {
           id: "dashboard",
           label: "Painel",
           href: "admin-painel.html",
@@ -473,21 +535,21 @@
         {
           id: "users",
           label: "Usuários e permissões",
-          href: "#usuarios",
+          href: "admin-usuarios.html",
           icon: "👥",
-          permission: "users"
+          permission: "usersView"
         },
         {
           id: "affiliates",
           label: "Filiados",
-          href: "#filiados",
+          href: "admin-filiados.html",
           icon: "◉",
           permission: "affiliates"
         },
         {
           id: "affiliationRequests",
           label: "Solicitações de filiação",
-          href: "#solicitacoes-filiacao",
+          href: "admin-filiacoes.html",
           icon: "✓",
           permission: "affiliationRequests"
         }
@@ -500,42 +562,42 @@
         {
           id: "assemblies",
           label: "Assembleias e reuniões",
-          href: "#assembleias",
+          href: "admin-assembleias.html",
           icon: "◫",
           permission: "assemblies"
         },
         {
           id: "minutes",
           label: "Atas",
-          href: "#atas",
+          href: "admin-documentos.html#atas",
           icon: "≡",
           permission: "minutes"
         },
         {
           id: "documents",
           label: "Documentos",
-          href: "#documentos",
+          href: "admin-documentos.html#documentos",
           icon: "▤",
           permission: "documents"
         },
         {
           id: "news",
           label: "Notícias e comunicados",
-          href: "#comunicados",
+          href: "admin-comunicacao.html",
           icon: "✦",
           permission: "news"
         },
         {
           id: "notifications",
           label: "Notificações",
-          href: "#notificacoes",
+          href: "admin-notificacoes.html",
           icon: "●",
           permission: "notifications"
         },
         {
           id: "requests",
-          label: "Solicitações",
-          href: "#solicitacoes",
+          label: "Solicitações dos Filiados",
+          href: "admin-solicitacoes.html",
           icon: "↔",
           permission: "requests"
         }
@@ -548,7 +610,7 @@
         {
           id: "finance",
           label: "Prestação de contas",
-          href: "#prestacao-contas",
+          href: "admin-prestacao-contas.html",
           icon: "$",
           permission: "finance"
         }
@@ -561,9 +623,11 @@
         {
           id: "voting",
           label: "Enquetes e votações",
-          href: "#votacoes",
+          href: "admin-votacoes.html",
           icon: "✓",
-          permission: "voting"
+          permission: "voting",
+          // T34: "voting" (Presidência) cria e libera; "votingView" apenas consulta.
+          anyPermission: ["voting", "votingView"]
         }
       ]
     },
@@ -574,7 +638,7 @@
         {
           id: "councilEthics",
           label: "Conselho de Ética",
-          href: "#conselho-etica",
+          href: "admin-conselhos.html",
           icon: "◇",
           permission: "councilEthics",
           confidentialScope: "ethics"
@@ -582,7 +646,7 @@
         {
           id: "councilFiscal",
           label: "Conselho Fiscal",
-          href: "#conselho-fiscal",
+          href: "admin-conselhos.html",
           icon: "◇",
           permission: "councilFiscal",
           confidentialScope: "fiscal"
@@ -596,16 +660,18 @@
         {
           id: "reports",
           label: "Relatórios",
-          href: "#relatorios",
+          href: "admin-relatorios.html",
           icon: "▥",
           permission: "reports"
         },
         {
           id: "settings",
           label: "Configurações",
-          href: "#configuracoes",
+          href: "admin-configuracoes.html",
           icon: "⚙",
-          permission: "settings"
+          // T36: parâmetros exigem "settings"; o conteúdo institucional exige
+          // "institutionalContent". Tesouraria e Conselhos não possuem nenhuma das duas.
+          anyPermission: ["settings", "institutionalContent"]
         }
       ]
     }
@@ -619,54 +685,73 @@
     return profile.mode === "council";
   }
 
-  function navItemState(profile, item) {
+  function isNavItemVisible(profile, item) {
     if (item.alwaysAvailable) {
-      return "allowed";
+      return true;
     }
 
     if (item.confidentialScope) {
-      return profile.council === item.confidentialScope
-        ? "allowed"
-        : "disabled";
+      return profile.council === item.confidentialScope;
     }
 
-    return hasPermission(profile, item.permission)
-      ? "allowed"
-      : "disabled";
+    if (Array.isArray(item.anyPermission)) {
+      return item.anyPermission.some((permission) => hasPermission(profile, permission));
+    }
+
+    return hasPermission(profile, item.permission);
   }
 
-  function navItemMarkup(profile, item) {
-    const state = navItemState(profile, item);
+  function currentPageFile() {
+    const file = window.location.pathname.split("/").pop();
 
-    if (state === "allowed") {
-      return `
-        <li class="admin-nav__item">
-          <a
-            class="admin-nav__link${item.id === "dashboard" ? " is-active" : ""}"
-            href="${item.href}"
-            ${item.id === "dashboard" ? 'aria-current="page"' : ""}
-          >
-            <span class="admin-nav__icon" aria-hidden="true">${item.icon}</span>
-            <span>${item.label}</span>
-          </a>
-        </li>
-      `;
+    return file ? decodeURIComponent(file) : "admin-painel.html";
+  }
+
+  function isNavItemCurrent(item) {
+    const page = currentPageFile();
+    const hrefFile = (href) => String(href).split("#")[0];
+    const isKnownModule = NAV_GROUPS.some((group) =>
+      group.items.some((entry) => hrefFile(entry.href) === page)
+    );
+
+    // Páginas sem item próprio no menu mantêm o Painel como referência.
+    if (!isKnownModule) {
+      return item.id === "dashboard";
     }
+
+    if (hrefFile(item.href) !== page) {
+      return false;
+    }
+
+    // Vários itens podem abrir a mesma página (ex.: Atas/Documentos por hash):
+    // destaca somente o item cujo hash corresponde ao atual.
+    const itemHash = item.href.includes("#") ? `#${item.href.split("#")[1]}` : "";
+    const siblings = NAV_GROUPS.flatMap((group) => group.items)
+      .filter((entry) => hrefFile(entry.href) === page);
+
+    if (siblings.length < 2 || !itemHash) {
+      return true;
+    }
+
+    const currentHash = window.location.hash;
+    const matchesSibling = siblings.some((entry) => entry.href.endsWith(currentHash) && currentHash);
+
+    return matchesSibling ? itemHash === currentHash : siblings[0] === item;
+  }
+
+  function navItemMarkup(item) {
+    const isCurrent = isNavItemCurrent(item);
 
     return `
       <li class="admin-nav__item">
-        <span
-          class="admin-nav__link is-disabled"
-          aria-disabled="true"
-          title="Sem permissão neste perfil de demonstração"
+        <a
+          class="admin-nav__link${isCurrent ? " is-active" : ""}"
+          href="${item.href}"
+          ${isCurrent ? 'aria-current="page"' : ""}
         >
           <span class="admin-nav__icon" aria-hidden="true">${item.icon}</span>
           <span>${item.label}</span>
-          <span class="admin-nav__lock" aria-hidden="true">🔒</span>
-          <span class="sr-only">
-            Sem permissão neste perfil de demonstração
-          </span>
-        </span>
+        </a>
       </li>
     `;
   }
@@ -682,6 +767,14 @@
 
     const groupsMarkup = NAV_GROUPS
       .map((group) => {
+        const visibleItems = group.items.filter((item) =>
+          isNavItemVisible(profile, item)
+        );
+
+        if (!visibleItems.length) {
+          return "";
+        }
+
         const label = group.label
           ? `<p class="admin-nav__group-label">${group.label}</p>`
           : "";
@@ -690,9 +783,7 @@
           <section class="admin-nav__group">
             ${label}
             <ul class="admin-nav__list">
-              ${group.items
-                .map((item) => navItemMarkup(profile, item))
-                .join("")}
+              ${visibleItems.map(navItemMarkup).join("")}
             </ul>
           </section>
         `;
@@ -703,9 +794,15 @@
 
     sidebar.innerHTML = `
       <div class="admin-sidebar__brand">
-        <span class="admin-sidebar__brand-mark" aria-hidden="true">S</span>
+        <img
+          class="admin-sidebar__brand-logo"
+          src="../assets/images/logo.png"
+          alt=""
+          width="56"
+          height="56"
+        >
 
-        <div>
+        <div class="admin-sidebar__brand-copy">
           <strong>SINPROTEC/MT</strong>
           <span>Administração</span>
         </div>
@@ -724,11 +821,6 @@
         <span>${profile.label}</span>
         <small>Ambiente de protótipo</small>
       </div>
-
-      <a class="admin-sidebar__back" href="../index.html">
-        <span aria-hidden="true">&larr;</span>
-        Voltar ao site público
-      </a>
     `;
   }
 

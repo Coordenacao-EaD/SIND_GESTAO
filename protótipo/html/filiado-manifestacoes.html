@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atas e Documentos — ambiente demonstrativo da Área do Filiado SINPROTEC/MT.">
+  <title>Denúncias e Manifestações | SIND_GESTÃO</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="../assets/js/area-filiado.js" defer></script>
+</head>
+<body class="filiado-page">
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+  <header class="filiado-header">
+    <a class="filiado-brand" href="area-filiado-demo.html"><img src="../assets/images/logo.png" alt="Logo SINPROTEC/MT" width="60" height="60"><span><strong>SINPROTEC/MT</strong><small>Área do Filiado</small></span></a>
+    <div class="filiado-user"><span><strong>Filiado Demonstrativo</strong><small>Perfil: Filiado</small></span><a class="button button--secondary" href="../index.html" data-demo-logout>Sair</a></div>
+  </header>
+  <div class="filiado-layout">
+    <aside class="filiado-sidebar">
+      <details class="filiado-menu" open><summary>Menu da Área do Filiado</summary><nav aria-label="Área do Filiado"><a href="../index.html">Início</a><a href="area-filiado-demo.html">Painel</a><a href="filiado-dados.html">Meus Dados</a><a href="filiado-comunicados.html">Comunicados e Notificações</a><a href="filiado-assembleias.html">Assembleias e Reuniões</a><a href="filiado-documentos.html">Atas e Documentos</a><a href="filiado-prestacao-contas.html">Prestação de Contas</a><a href="filiado-solicitacoes.html">Minhas Solicitações</a><a href="filiado-votacoes.html">Enquetes e Votações</a><a href="filiado-manifestacoes.html" aria-current="page">Denúncias e Manifestações</a></nav></details>
+    </aside>
+    <main id="conteudo" tabindex="-1">
+
+  <p class="filiado-notice">
+    Ambiente demonstrativo — nenhuma denúncia, manifestação, arquivo ou dado pessoal informado nesta tela é enviado ao Sindicato.
+  </p>
+
+  <p class="filiado-eyebrow">ÁREA DO FILIADO / MANIFESTAÇÕES</p>
+
+  <header class="filiado-page-header">
+    <div>
+      <h1>Denúncias e Manifestações</h1>
+      <p>
+        Registre uma manifestação destinada ao Conselho competente ou acompanhe
+        um registro demonstrativo por protocolo e chave.
+      </p>
+    </div>
+  </header>
+
+  <section class="manifestacao-orientacao" aria-labelledby="manifestacao-orientacao">
+    <div>
+      <span class="filiado-badge">ACESSO RESTRITO</span>
+      <h2 id="manifestacao-orientacao">Escolha o Conselho destinatário</h2>
+      <p>
+        O conteúdo deve ser acessível somente aos membros autorizados do
+        Conselho selecionado. Conselho de Ética e Conselho Fiscal possuem
+        escopos separados.
+      </p>
+    </div>
+  </section>
+
+  <div class="manifestacao-acoes-principais">
+    <button class="button button--primary"
+            type="button"
+            id="abrir-manifestacao">
+      NOVA MANIFESTAÇÃO
+    </button>
+
+    <button class="button button--secondary"
+            type="button"
+            id="abrir-acompanhamento">
+      ACOMPANHAR MANIFESTAÇÃO
+    </button>
+  </div>
+
+
+  <section class="manifestacao-explicacao" aria-label="Funcionamento demonstrativo">
+
+    <article class="manifestacao-info-card">
+      <span class="manifestacao-info-card__numero">01</span>
+      <h3>Defina o destinatário</h3>
+      <p>Selecione Conselho de Ética ou Conselho Fiscal.</p>
+    </article>
+
+    <article class="manifestacao-info-card">
+      <span class="manifestacao-info-card__numero">02</span>
+      <h3>Escolha a identificação</h3>
+      <p>
+        A manifestação pode ser identificada ou utilizar identidade protegida.
+      </p>
+    </article>
+
+    <article class="manifestacao-info-card">
+      <span class="manifestacao-info-card__numero">03</span>
+      <h3>Receba protocolo e chave</h3>
+      <p>
+        O acompanhamento protegido ocorre por protocolo e chave próprios.
+      </p>
+    </article>
+
+  </section>
+
+
+  <section class="manifestacao-estados" aria-labelledby="manifestacao-estados">
+    <div class="prestacao-section__header">
+      <div>
+        <span class="filiado-badge">ANDAMENTO</span>
+        <h2 id="manifestacao-estados">Estados previstos</h2>
+      </div>
+    </div>
+
+    <div class="manifestacao-fluxo">
+      <span>Recebida</span>
+      <span>Em análise</span>
+      <span>Respondida</span>
+      <span>Finalizada</span>
+      <span>Arquivada</span>
+    </div>
+  </section>
+
+
+  <aside class="prestacao-regra-acesso">
+    <strong>Privacidade e segregação</strong>
+    <p>
+      Esta tela representa apenas o fluxo funcional. A implementação real
+      deverá garantir controle de acesso, segregação entre os Conselhos,
+      proteção dos dados e tratamento adequado da identidade protegida.
+      Fluxo, responsabilidades dos Conselhos, proteção de identidade, retenção
+      e protocolo ainda dependem de validação institucional do Sindicato.
+    </p>
+  </aside>
+
+
+  <!-- GAVETA: NOVA MANIFESTACAO -->
+
+  <div class="manifestacao-overlay"
+       id="manifestacao-overlay"
+       hidden></div>
+
+  <aside class="manifestacao-drawer"
+         id="manifestacao-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="manifestacao-drawer-titulo"
+         hidden>
+
+    <div class="manifestacao-drawer__header">
+      <div>
+        <span class="filiado-badge">REGISTRO DEMONSTRATIVO</span>
+        <h2 id="manifestacao-drawer-titulo">Nova manifestação</h2>
+      </div>
+
+      <button type="button"
+              class="manifestacao-fechar"
+              id="fechar-manifestacao"
+              aria-label="Fechar">
+        ×
+      </button>
+    </div>
+
+    <form id="form-manifestacao">
+
+      <div class="manifestacao-campo">
+        <label for="manifestacao-conselho">Conselho destinatário *</label>
+        <select id="manifestacao-conselho" required>
+          <option value="">Selecione</option>
+          <option value="etica">Conselho de Ética</option>
+          <option value="fiscal">Conselho Fiscal</option>
+        </select>
+      </div>
+
+
+      <fieldset class="manifestacao-identidade">
+        <legend>Forma de identificação *</legend>
+
+        <label class="manifestacao-opcao">
+          <input type="radio"
+                 name="identidade"
+                 value="identificada"
+                 required>
+
+          <span>
+            <strong>Identificada</strong>
+            <small>
+              Na implementação real, os membros autorizados poderão identificar
+              o responsável pela manifestação.
+            </small>
+          </span>
+        </label>
+
+        <label class="manifestacao-opcao">
+          <input type="radio"
+                 name="identidade"
+                 value="protegida"
+                 required>
+
+          <span>
+            <strong>Identidade protegida</strong>
+            <small>
+              Identidade protegida — dados pessoais do manifestante não são associados
+              diretamente a este registro no protótipo. O acompanhamento é feito por
+              protocolo e chave.
+            </small>
+          </span>
+        </label>
+      </fieldset>
+
+
+      <div class="manifestacao-campo">
+        <label for="manifestacao-assunto">Assunto *</label>
+        <input id="manifestacao-assunto"
+               type="text"
+               maxlength="120"
+               required>
+      </div>
+
+
+      <div class="manifestacao-campo">
+        <label for="manifestacao-descricao">Descrição *</label>
+        <textarea id="manifestacao-descricao"
+                  rows="7"
+                  required></textarea>
+      </div>
+
+
+      <div class="manifestacao-campo">
+        <label for="manifestacao-anexo">Anexo opcional</label>
+        <input id="manifestacao-anexo"
+               type="file">
+
+        <small>
+          O arquivo não será enviado nem armazenado neste protótipo.
+        </small>
+      </div>
+
+
+      <label class="manifestacao-ciencia">
+        <input type="checkbox"
+               id="manifestacao-ciencia"
+               required>
+
+        <span>
+          Estou ciente de que este é apenas um fluxo demonstrativo e que
+          nenhuma informação será efetivamente encaminhada.
+        </span>
+      </label>
+
+
+      <div class="manifestacao-drawer__acoes">
+        <button type="button"
+                class="button button--secondary"
+                id="cancelar-manifestacao">
+          CANCELAR
+        </button>
+
+        <button type="submit"
+                class="button button--primary">
+          REGISTRAR MANIFESTAÇÃO
+        </button>
+      </div>
+
+    </form>
+
+
+    <div class="manifestacao-confirmacao"
+         id="manifestacao-confirmacao"
+         role="status"
+         hidden>
+
+      <span class="manifestacao-confirmacao__icone" aria-hidden="true">✓</span>
+
+      <h3>Manifestação registrada para demonstração</h3>
+
+      <p>
+        Nenhum conteúdo foi enviado ao Sindicato.
+      </p>
+
+      <div class="manifestacao-protocolo-box">
+        <span>Protocolo</span>
+        <strong id="manifestacao-protocolo"></strong>
+      </div>
+
+      <div class="manifestacao-protocolo-box">
+        <span>Chave de acompanhamento</span>
+        <strong id="manifestacao-chave"></strong>
+      </div>
+
+      <p class="manifestacao-alerta-chave">
+        Em uma implementação real, a chave deverá ser guardada pelo usuário.
+        Ela será necessária para consultar o andamento de manifestações com
+        identidade protegida.
+      </p>
+
+      <button class="button button--primary"
+              type="button"
+              id="acompanhar-apos-registro">
+        ACOMPANHAR MANIFESTAÇÃO
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- GAVETA: ACOMPANHAMENTO -->
+
+  <aside class="manifestacao-drawer"
+         id="acompanhamento-drawer"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="acompanhamento-titulo"
+         hidden>
+
+    <div class="manifestacao-drawer__header">
+      <div>
+        <span class="filiado-badge">CONSULTA DEMONSTRATIVA</span>
+        <h2 id="acompanhamento-titulo">Acompanhar manifestação</h2>
+      </div>
+
+      <button type="button"
+              class="manifestacao-fechar"
+              id="fechar-acompanhamento"
+              aria-label="Fechar">
+        ×
+      </button>
+    </div>
+
+
+    <form id="form-acompanhamento">
+
+      <div class="manifestacao-campo">
+        <label for="consulta-protocolo">Protocolo *</label>
+        <input id="consulta-protocolo"
+               type="text"
+               placeholder="MAN-2026-0001"
+               required>
+      </div>
+
+      <div class="manifestacao-campo">
+        <label for="consulta-chave">Chave de acompanhamento *</label>
+        <input id="consulta-chave"
+               type="text"
+               required>
+      </div>
+
+      <p class="manifestacao-ajuda">
+        Nenhum dado informado nesta consulta é enviado a servidor.
+      </p>
+
+      <button type="submit"
+              class="button button--primary">
+        CONSULTAR ANDAMENTO
+      </button>
+
+    </form>
+
+
+    <div id="resultado-acompanhamento"
+         class="manifestacao-resultado"
+         hidden>
+
+      <div class="manifestacao-resultado__topo">
+        <span class="votacao-status votacao-status--aberta" id="resultado-status-badge">
+          EM ANÁLISE
+        </span>
+
+        <strong id="resultado-protocolo"></strong>
+      </div>
+
+      <dl class="manifestacao-resumo">
+        <div>
+          <dt>Destinatário</dt>
+          <dd id="resultado-conselho"></dd>
+        </div>
+
+        <div>
+          <dt>Identificação</dt>
+          <dd id="resultado-identidade"></dd>
+        </div>
+
+        <div>
+          <dt>Situação</dt>
+          <dd id="resultado-status">Em análise</dd>
+        </div>
+      </dl>
+
+
+      <!-- Conteúdo substituído pela situação real do registro (filiado-manifestacoes.js). -->
+      <div class="manifestacao-timeline" id="resultado-timeline">
+
+        <div class="manifestacao-timeline__item manifestacao-timeline__item--concluido">
+          <span>✓</span>
+          <div>
+            <strong>Recebida</strong>
+            <small>Registro demonstrativo recebido.</small>
+          </div>
+        </div>
+
+        <div class="manifestacao-timeline__item manifestacao-timeline__item--atual">
+          <span>2</span>
+          <div>
+            <strong>Em análise</strong>
+            <small>Status atual nesta demonstração.</small>
+          </div>
+        </div>
+
+        <div class="manifestacao-timeline__item">
+          <span>3</span>
+          <div>
+            <strong>Respondida</strong>
+          </div>
+        </div>
+
+        <div class="manifestacao-timeline__item">
+          <span>4</span>
+          <div>
+            <strong>Finalizada</strong>
+          </div>
+        </div>
+
+      </div>
+
+      <section id="resultado-resposta" class="prestacao-regra-acesso" hidden>
+        <strong>Resposta formal</strong>
+        <p id="resultado-resposta-texto"></p>
+        <small id="resultado-resposta-data"></small>
+      </section>
+
+      <div class="manifestacao-ajuda">
+        <strong>Andamento</strong>
+        <ol id="resultado-eventos-lista"></ol>
+      </div>
+
+    </div>
+
+
+    <p id="manifestacao-nao-localizada"
+       class="votacao-erro"
+       role="alert"
+       hidden>
+      Manifestação não localizada neste ambiente demonstrativo.
+    </p>
+
+  </aside>
+
+</main>
+  </div>
+  <footer class="filiado-footer">SINPROTEC/MT · Protótipo demonstrativo. Esta demonstração não mantém sessão autenticada.</footer>
+  <script src="../assets/js/filiado-manifestacoes.js"></script>`r`n</body>
+</html>

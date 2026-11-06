@@ -106,7 +106,7 @@
             <div class="auth-card__icon" aria-hidden="true"><i class="bi bi-shield-lock"></i></div>
             <span class="auth-card__badge">Ambiente demonstrativo</span>
             <h2 id="login-titulo">Acesse sua conta</h2>
-            <p>Informe seus dados de acesso e escolha o perfil de demonstração para entrar no sistema.</p>
+            <p>Escolha o perfil de demonstração e informe seus dados de acesso para entrar no sistema.</p>
             <p class="auth-card__disclaimer">Este protótipo não realiza autenticação real.</p>
 
             <div class="auth-demo-credentials">
@@ -122,6 +122,25 @@
             <p class="auth-message" data-auth-login-message role="alert" tabindex="-1" hidden></p>
 
             <form class="auth-form" data-auth-login-form novalidate>
+              <fieldset class="auth-profile-select">
+                <legend>Perfil de demonstração</legend>
+                <p class="auth-profile-select__hint">Neste protótipo, o perfil de acesso é selecionado apenas para demonstração da navegação.</p>
+                <div class="auth-field">
+                  <label for="login-perfil">Selecione o perfil para simular o acesso</label>
+                  <select id="login-perfil" name="perfil">
+                    <option value="filiado" selected>Filiado</option>
+                    <option value="servidorCadastrado">Servidor cadastrado</option>
+                    <option value="administrador">Administrador Geral</option>
+                    <option value="diretoria">Diretoria</option>
+                    <option value="presidencia">Presidência</option>
+                    <option value="tesouraria">Tesouraria</option>
+                    <option value="secretaria">Secretaria</option>
+                    <option value="conselhoEtica">Conselho de Ética</option>
+                    <option value="conselhoFiscal">Conselho Fiscal</option>
+                  </select>
+                </div>
+              </fieldset>
+
               <div class="auth-field">
                 <label for="login-email">E-mail</label>
                 <input type="email" id="login-email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email" aria-describedby="login-email-erro" required>
@@ -148,24 +167,6 @@
               </div>
 
               <a class="auth-forgot-link" href="recuperar-senha.html">Esqueci minha senha</a>
-
-              <fieldset class="auth-profile-select">
-                <legend>Perfil de demonstração</legend>
-                <p class="auth-profile-select__hint">Neste protótipo, o perfil de acesso é selecionado apenas para demonstração da navegação.</p>
-                <div class="auth-field">
-                  <label for="login-perfil">Selecione o perfil para simular o acesso</label>
-                  <select id="login-perfil" name="perfil">
-                    <option value="filiado" selected>Filiado</option>
-                    <option value="administrador">Administrador Geral</option>
-                    <option value="diretoria">Diretoria</option>
-                    <option value="presidencia">Presidência</option>
-                    <option value="tesouraria">Tesouraria</option>
-                    <option value="secretaria">Secretaria</option>
-                    <option value="conselhoEtica">Conselho de Ética</option>
-                    <option value="conselhoFiscal">Conselho Fiscal</option>
-                  </select>
-                </div>
-              </fieldset>
 
               <button class="button button--primary auth-submit" type="submit" data-auth-login-submit>
                 <i class="bi bi-box-arrow-in-right icon" aria-hidden="true"></i>Entrar

@@ -108,7 +108,52 @@ const galeriaRegistros = [
   }
 ];
 
+// Integração com a versão Publicada da seção Galeria (T36). Cada item publicado
+// ("Título | Legenda | Referência") atualiza o registro de mesmo título ou, se inédito,
+// é acrescentado uma única vez. Sem versão Publicada válida, o acervo estático é mantido.
+function aplicarGaleriaPublicada() {
+  const api = window.SindGestaoConteudoPublico;
+  const secao = api?.publishedSection("gallery");
+  if (!secao) return;
+
+  const caminhosConhecidos = new Map(
+    Object.entries(galeriaImagens).map(([chave, imagem]) => [imagem.src.replace(/^\.\.\//, ""), chave])
+  );
+  const dataPublicacao = /^\d{4}-\d{2}-\d{2}/.test(secao.publishedAt || "") ? secao.publishedAt.slice(0, 10) : null;
+
+  api.galleryItems(secao.data.items).forEach((item, indice) => {
+    const caminho = api.safeLocalImage(item.image);
+    const chaveImagem = caminho ? caminhosConhecidos.get(caminho) : null;
+    const existente = galeriaRegistros.find((r) => api.normalize(r.titulo) === api.normalize(item.title));
+
+    if (existente) {
+      const capa = existente.fotos[0];
+      if (api.usable(item.caption)) capa.legenda = item.caption;
+      if (chaveImagem) capa.imagem = chaveImagem;
+      return;
+    }
+
+    const id = `publicado-${indice}-${api.normalize(item.title).replace(/[^a-z0-9]+/g, "-")}`;
+    if (galeriaRegistros.some((r) => r.id === id)) return;
+    galeriaRegistros.unshift({
+      id,
+      titulo: item.title,
+      categoria: "eventos",
+      dataISO: dataPublicacao,
+      local: "",
+      descricao: api.usable(item.caption) ? item.caption : "",
+      fotos: [{
+        // Referência inexistente ou inválida usa a imagem reserva já existente no protótipo.
+        imagem: chaveImagem || "reserva",
+        alt: `Registro: ${item.title}`,
+        legenda: api.usable(item.caption) ? item.caption : item.title
+      }]
+    });
+  });
+}
+
 function formatarDataGaleria(dataISO) {
+  if (!dataISO) return "Data não informada";
   return new Date(`${dataISO}T12:00:00`).toLocaleDateString("pt-BR", {
     day: "numeric",
     month: "long",
@@ -121,7 +166,7 @@ function textoQuantidadeFotos(total) {
 }
 
 function aplicarImagemGaleria(elemento, chave) {
-  const imagem = galeriaImagens[chave];
+  const imagem = galeriaImagens[chave] || galeriaImagens.acordo;
   elemento.src = imagem.src;
   elemento.width = imagem.width;
   elemento.height = imagem.height;
@@ -133,7 +178,12 @@ function tratarFalhaImagemGaleria(elemento) {
   });
 }
 
-function criarCardGaleria(registro) {
+function escaparGaleria(valor) {
+  return String(valor ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
+}
+
+function criarCardGaleria(registroOriginal) {
+  const registro = { ...registroOriginal, titulo: escaparGaleria(registroOriginal.titulo), descricao: escaparGaleria(registroOriginal.descricao), local: escaparGaleria(registroOriginal.local) };
   const article = document.createElement("article");
   article.className = "gallery-card";
   article.dataset.galleryCard = registro.id;
@@ -166,10 +216,10 @@ function criarCardGaleria(registro) {
     <span class="news-category">${galeriaCategorias[registro.categoria]}</span>
     <h3>${registro.titulo}</h3>
     <div class="gallery-card__meta">
-      <time datetime="${registro.dataISO}"><i class="bi bi-calendar3" aria-hidden="true"></i>${formatarDataGaleria(registro.dataISO)}</time>
-      <span><i class="bi bi-geo-alt" aria-hidden="true"></i>${registro.local}</span>
+      <time datetime="${registro.dataISO || ""}"><i class="bi bi-calendar3" aria-hidden="true"></i>${formatarDataGaleria(registro.dataISO)}</time>
+      ${registro.local ? `<span><i class="bi bi-geo-alt" aria-hidden="true"></i>${registro.local}</span>` : ""}
     </div>
-    <p>${registro.descricao}</p>
+    ${registro.descricao ? `<p>${registro.descricao}</p>` : ""}
     <button class="news-read-link gallery-card__action" type="button" data-gallery-open="${registro.id}" aria-label="Ver fotos de ${registro.titulo}">Ver fotos <i class="bi bi-arrow-right" aria-hidden="true"></i></button>
   `;
 
@@ -210,7 +260,7 @@ function initializeGallery() {
     const ano = yearSelect.value;
     const filtrados = galeriaRegistros.filter((registro) => (
       (categoria === "todas" || registro.categoria === categoria)
-      && (ano === "todos" || registro.dataISO.startsWith(ano))
+      && (ano === "todos" || String(registro.dataISO || "").startsWith(ano))
     ));
 
     grid.replaceChildren(...filtrados.map(criarCardGaleria));
@@ -245,8 +295,8 @@ function initializeGallery() {
     modalTitle.textContent = registroAtual.titulo;
     modalDescription.textContent = registroAtual.descricao;
     modalDate.textContent = formatarDataGaleria(registroAtual.dataISO);
-    modalDate.dateTime = registroAtual.dataISO;
-    modalLocation.textContent = registroAtual.local;
+    modalDate.dateTime = registroAtual.dataISO || "";
+    modalLocation.textContent = registroAtual.local || "Local não informado";
     modalTotal.textContent = textoQuantidadeFotos(registroAtual.fotos.length);
 
     const possuiVariasFotos = registroAtual.fotos.length > 1;
@@ -318,4 +368,9 @@ function initializeGallery() {
   aplicarFiltros();
 }
 
+try {
+  aplicarGaleriaPublicada();
+} catch {
+  // Sem versão Publicada legível, o acervo estático permanece.
+}
 initializeGallery();

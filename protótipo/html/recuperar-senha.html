@@ -90,22 +90,19 @@
     </aside>
 
     <main id="conteudo">
-      <section class="union-hero auth-hero" aria-labelledby="titulo-pagina">
-        <div class="container union-hero__content">
+      <section class="auth-main auth-recover" aria-labelledby="titulo-pagina">
+        <div class="container auth-recover__intro">
           <nav class="breadcrumb" aria-label="Navegação estrutural">
             <a href="../index.html">Início</a><i class="bi bi-chevron-right" aria-hidden="true"></i><a href="login.html">Área do Filiado</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">Recuperar Senha</span>
           </nav>
-          <h1 id="titulo-pagina">Recuperação de Senha</h1>
-          <p>Informe seu e-mail para iniciar a recuperação de acesso.</p>
+          <h1 id="titulo-pagina">Recuperação de senha</h1>
         </div>
-      </section>
 
-      <section class="auth-main" aria-labelledby="recuperar-titulo">
         <div class="container auth-main__grid auth-main__grid--single">
           <article class="auth-card" data-auth-recover-form-section>
             <div class="auth-card__icon" aria-hidden="true"><i class="bi bi-key"></i></div>
             <h2 id="recuperar-titulo">Recupere seu acesso</h2>
-            <p>Informe o e-mail utilizado no cadastro. Na solução definitiva, as instruções serão enviadas para o endereço cadastrado.</p>
+            <p>Informe o e-mail utilizado no cadastro para iniciar a recuperação.</p>
 
             <div class="auth-error-summary" data-auth-recover-summary role="alert" tabindex="-1" hidden>
               <h3><i class="bi bi-exclamation-circle" aria-hidden="true"></i>Revise os campos destacados</h3>
@@ -125,16 +122,18 @@
 
               <p class="auth-secondary-link"><a href="login.html">Voltar para o login</a></p>
             </form>
+
+            <p class="auth-recover__note"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Protótipo demonstrativo. Na solução definitiva, as instruções serão enviadas para o endereço cadastrado.</span></p>
           </article>
 
           <article class="auth-card auth-confirmation" data-auth-recover-confirmation aria-live="polite" hidden>
-            <i class="bi bi-check-circle auth-confirmation__icon" aria-hidden="true"></i>
+            <div class="auth-card__icon auth-card__icon--success" aria-hidden="true"><i class="bi bi-check-lg"></i></div>
             <h2 tabindex="-1">Solicitação validada</h2>
-            <p>Este protótipo não envia e-mails. Em uma implementação real, as instruções de recuperação seriam enviadas ao endereço cadastrado.</p>
-            <p class="auth-confirmation__email">E-mail informado: <strong data-auth-recover-masked-email>—</strong></p>
+            <p class="auth-confirmation__email"><span>E-mail informado</span><strong data-auth-recover-masked-email>—</strong></p>
+            <p class="auth-recover__note"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Este protótipo não envia e-mails. Em uma implementação real, as instruções de recuperação seriam enviadas ao endereço cadastrado.</span></p>
             <div class="auth-confirmation__actions">
-              <a class="button button--secondary" href="login.html">Voltar para o login</a>
-              <button class="button button--primary" type="button" data-auth-recover-restart>Informar outro e-mail</button>
+              <a class="button button--primary" href="login.html">Voltar para o login</a>
+              <button class="button button--secondary" type="button" data-auth-recover-restart>Informar outro e-mail</button>
             </div>
           </article>
         </div>

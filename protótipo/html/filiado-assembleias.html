@@ -6,18 +6,19 @@
   <meta name="description" content="Assembleias e Reuniões — ambiente demonstrativo da Área do Filiado SINPROTEC/MT.">
   <title>Assembleias e Reuniões | Área do Filiado — SINPROTEC/MT</title>
   <link rel="stylesheet" href="../assets/css/styles.css">
+  <!-- Deve ser carregado antes de area-filiado.js (captura de [data-record]). -->
+  <script src="../assets/js/filiado-assembleias-dinamicas.js" defer></script>
   <script src="../assets/js/area-filiado.js" defer></script>
 </head>
 <body class="filiado-page">
   <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
   <header class="filiado-header">
     <a class="filiado-brand" href="area-filiado-demo.html"><img src="../assets/images/logo.png" alt="Logo SINPROTEC/MT" width="60" height="60"><span><strong>SINPROTEC/MT</strong><small>Área do Filiado</small></span></a>
-    <div class="filiado-user"><span><strong>Filiado Demonstrativo</strong><small>Perfil: Filiado</small></span><a class="button button--secondary" href="login.html">Sair</a></div>
+    <div class="filiado-user"><span><strong>Filiado Demonstrativo</strong><small>Perfil: Filiado</small></span><a class="button button--secondary" href="../index.html" data-demo-logout>Sair</a></div>
   </header>
   <div class="filiado-layout">
     <aside class="filiado-sidebar">
-      <details class="filiado-menu" open><summary>Menu da Área do Filiado</summary><nav aria-label="Área do Filiado"><a href="area-filiado-demo.html">Painel</a><a href="filiado-dados.html">Meus Dados</a><a href="filiado-comunicados.html">Comunicados e Notificações</a><a href="filiado-assembleias.html" aria-current="page">Assembleias e Reuniões</a><a href="filiado-documentos.html">Atas e Documentos</a><span aria-disabled="true">Prestação de Contas<small>Em implementação</small></span><span aria-disabled="true">Minhas Solicitações<small>Em implementação</small></span><span aria-disabled="true">Enquetes e Votações<small>Em implementação</small></span><span aria-disabled="true">Denúncias e Manifestações<small>Em implementação</small></span></nav></details>
-      <a class="filiado-back" href="../index.html">← Voltar ao site</a>
+      <details class="filiado-menu" open><summary>Menu da Área do Filiado</summary><nav aria-label="Área do Filiado"><a href="../index.html">Início</a><a href="area-filiado-demo.html">Painel</a><a href="filiado-dados.html">Meus Dados</a><a href="filiado-comunicados.html">Comunicados e Notificações</a><a href="filiado-assembleias.html" aria-current="page">Assembleias e Reuniões</a><a href="filiado-documentos.html">Atas e Documentos</a><a href="filiado-prestacao-contas.html">Prestação de Contas</a><a href="filiado-solicitacoes.html">Minhas Solicitações</a><a href="filiado-votacoes.html">Enquetes e Votações</a><a href="filiado-manifestacoes.html">Denúncias e Manifestações</a></nav></details>
     </aside>
     <main id="conteudo" tabindex="-1">
       <p class="filiado-notice">Ambiente demonstrativo — a versão final exigirá autenticação.</p>

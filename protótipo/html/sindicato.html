@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../assets/css/styles.css">
   <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/conteudo-publico-dinamico.js" defer></script>
 </head>
 <body class="union-page">
   <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
@@ -98,7 +99,7 @@
             <i class="bi bi-chevron-right" aria-hidden="true"></i>
             <span aria-current="page">O Sindicato</span>
           </nav>
-          <h1 id="titulo-pagina">O Sindicato</h1>
+          <h1 id="titulo-pagina" data-conteudo="institutional.title">O Sindicato</h1>
           <p>Identidade, representação e compromisso com o serviço público.</p>
         </div>
       </section>
@@ -108,7 +109,7 @@
           <div class="institution-copy">
             <span class="section-kicker">Nossa trajetória</span>
             <h2 id="historia-titulo">Nossa História</h2>
-            <p>O SINPROTEC/MT atua na representação de seus filiados e na defesa de seus interesses coletivos.</p>
+            <p data-conteudo="institutional.summary">O SINPROTEC/MT atua na representação de seus filiados e na defesa de seus interesses coletivos.</p>
             <p>Os marcos históricos e a data de fundação serão apresentados após confirmação nos documentos oficiais da entidade.</p>
             <p>Seu trabalho envolve a defesa dos interesses da categoria, o acompanhamento de pautas institucionais e a promoção de iniciativas que contribuam para o fortalecimento dos servidores e da sociedade.</p>
           </div>
@@ -132,7 +133,7 @@
               </div>
               <div>
                 <h3>Missão</h3>
-                <p>Representar e defender os servidores públicos, promovendo valorização profissional, participação coletiva, transparência e respeito aos direitos da categoria.</p>
+                <p data-conteudo="institutional.mission">Representar e defender os servidores públicos, promovendo valorização profissional, participação coletiva, transparência e respeito aos direitos da categoria.</p>
               </div>
             </article>
             <article class="institution-card purpose-card">
@@ -278,7 +279,7 @@
               <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
             </div>
             <div class="contact-map-card__actions">
-              <a class="button button--secondary" href="#" data-demo="Abrir no mapa">Abrir no mapa</a>
+              <button class="button button--secondary" type="button" disabled>Mapa disponível após a confirmação do endereço oficial</button>
               <a class="button button--primary" href="contato.html">Fale Conosco</a>
             </div>
           </article>

@@ -475,13 +475,21 @@ function initializeNewsDetail() {
   document.querySelector("[data-detail-cover]").append(cover);
   document.querySelector("[data-detail-caption]").textContent = `Imagem institucional — ${noticia.categoria}`;
 
+  if (noticia.administrativo) {
+    const paragrafos = String(noticia.corpo || noticia.resumo).split(/\n+/).map((texto) => texto.trim()).filter(Boolean)
+      .map((texto) => ({ tipo: "paragrafo", texto }));
+    renderArticleContent(document.querySelector("[data-detail-content]"), paragrafos);
+  }
+
   const opening = {
     tipo: "paragrafo",
     texto: noticia.id === 1
       ? "O sindicato e representantes do governo retomaram as reuniões da mesa de negociação para tratar das principais demandas apresentadas pela categoria."
       : noticia.resumo
   };
-  renderArticleContent(document.querySelector("[data-detail-content]"), [opening, ...createDefaultArticleContent(noticia)]);
+  if (!noticia.administrativo) {
+    renderArticleContent(document.querySelector("[data-detail-content]"), [opening, ...createDefaultArticleContent(noticia)]);
+  }
 
   document.querySelector("[data-author-name]").textContent = noticia.autor;
   const related = noticias
@@ -524,5 +532,42 @@ function initializeNewsDetail() {
   });
 }
 
-initializeNewsListing();
-initializeNewsDetail();
+// Notícias administrativas Publicadas de Público geral (leitor compartilhado, somente leitura).
+// Ficam antes da base estática; uma notícia estática de mesmo título é substituída, nunca duplicada.
+function appendAdministrativePublishedNewsDemo() {
+  try {
+    const api = window.SindGestaoConteudoPublico;
+    if (!api || noticias.some((item) => item.administrativo)) return;
+    const publicadas = api.publishedCommunications("Notícia").map((item) => {
+      const dataISO = /^\d{4}-\d{2}-\d{2}$/.test(item.publishedDateISO || "") ? item.publishedDateISO : "";
+      return {
+        id: item.publicId,
+        titulo: item.title,
+        categoria: api.usable(item.category) ? item.category : "Institucional",
+        categoriaSlug: item.categorySlug || "institucional",
+        resumo: item.summary || "",
+        corpo: item.body || "",
+        autor: item.author || "Sindicato",
+        data: item.publishedDateLabel || api.dateLabelFromIso(dataISO) || "Data não informada",
+        dataISO,
+        ano: dataISO.slice(0, 4),
+        imagem: api.safeCoverImage(item.image, "../") || "../assets/images/placeholders/noticia-direitos.jpg",
+        leitura: "Leitura de 2 minutos",
+        administrativo: true
+      };
+    });
+    if (!publicadas.length) return;
+    const ids = new Set(publicadas.map((item) => item.id));
+    const titulos = new Set(publicadas.map((item) => api.normalize(item.titulo)));
+    const estaticas = noticias.filter((item) => !ids.has(item.id) && !titulos.has(api.normalize(item.titulo)));
+    noticias.splice(0, noticias.length, ...publicadas, ...estaticas);
+  } catch {
+    // Sem base administrativa legível, a base estática permanece.
+  }
+}
+
+if (!document.body.classList.contains("admin-page")) {
+  appendAdministrativePublishedNewsDemo();
+  initializeNewsListing();
+  initializeNewsDetail();
+}

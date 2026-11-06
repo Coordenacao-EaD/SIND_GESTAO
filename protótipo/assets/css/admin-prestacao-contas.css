@@ -1,0 +1,72 @@
+/* T32 — Prestação de Contas: complementos sobre admin-documentos.css (padrão T31). */
+
+.admin-pc__filters {
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.admin-pc__table td.admin-pc__money {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.admin-pc__table th:nth-child(4),
+.admin-pc__table th:nth-child(5),
+.admin-pc__table th:nth-child(6) {
+  text-align: right;
+}
+
+.admin-pc__money--positive { color: #17643a; }
+.admin-pc__money--negative { color: #8c2626; }
+
+.admin-pc__values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .8rem;
+  margin-bottom: 1rem;
+}
+
+.admin-pc__values div {
+  padding: .8rem;
+  background: #f7f8fa;
+  border: 1px solid #e1e5e9;
+  border-radius: 9px;
+}
+
+.admin-pc__values span,
+.admin-pc__values strong {
+  display: block;
+}
+
+.admin-pc__values span {
+  font-size: .75rem;
+  font-weight: 700;
+  color: #34465a;
+}
+
+.admin-pc__values strong {
+  margin-top: .25rem;
+  font-size: 1.05rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.admin-pc__balance-output {
+  display: block;
+  padding: .75rem .8rem;
+  border: 1px dashed #cfd5da;
+  border-radius: 9px;
+  background: #f7f8fa;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.admin-docs__status--aguardando-validacao { background: #fff4d6; color: #7a5200; }
+.admin-docs__status--publicada { background: #e3f6ea; color: #17643a; }
+.admin-docs__status--arquivada { background: #eceff3; color: #4a5a6a; }
+
+@media (max-width: 650px) {
+  .admin-pc__filters,
+  .admin-pc__values {
+    grid-template-columns: 1fr;
+  }
+}

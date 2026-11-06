@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/conteudo-publico-dinamico.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
@@ -95,14 +96,14 @@
             <img class="hero__image" src="assets/images/banner.jpg" alt="Pessoas unindo as mãos em sinal de cooperação">
             <div class="hero__content">
               <h1>
-                <span>Juntos somos mais fortes.</span>
-                <span class="hero__title-secondary">Unidos, conquistamos direitos.</span>
+                <span data-conteudo="home.heroTitle">Juntos somos mais fortes.</span>
+                <span class="hero__title-secondary" data-conteudo="home.heroSubtitle">Unidos, conquistamos direitos.</span>
               </h1>
-              <p>Defendemos os direitos, valorizamos o servidor e construímos um serviço público cada vez melhor para toda a sociedade.</p>
+              <p data-conteudo="home.heroText">Defendemos os direitos, valorizamos o servidor e construímos um serviço público cada vez melhor para toda a sociedade.</p>
               <div class="hero__actions">
                 <a class="button button--primary" href="html/filie-se.html">
                   <i class="bi bi-people icon" aria-hidden="true"></i>
-                  Filie-se
+                  <span data-conteudo="home.ctaLabel">Filie-se</span>
                 </a>
                 <a class="button button--outline-light" href="html/login.html">
                   <i class="bi bi-box-arrow-in-right icon" aria-hidden="true"></i>
@@ -116,23 +117,23 @@
 
       <section class="quick-links-section" id="servicos" aria-label="Atalhos rápidos">
         <div class="container">
-          <div class="quick-links">
-            <a href="#" data-demo="Convênios e Benefícios">
+          <div class="quick-links" data-conteudo-destaques>
+            <button type="button" data-demo="Convênios e Benefícios">
               <i class="bi bi-tag icon" aria-hidden="true"></i>
               <span>Convênios<br>e Benefícios</span>
-            </a>
-            <a href="#" data-demo="Assessoria Jurídica">
+            </button>
+            <button type="button" data-demo="Assessoria Jurídica">
               <i class="bi bi-bank icon" aria-hidden="true"></i>
               <span>Assessoria<br>Jurídica</span>
-            </a>
-            <a href="#" data-demo="Guias e Requerimentos">
+            </button>
+            <button type="button" data-demo="Guias e Requerimentos">
               <i class="bi bi-file-earmark-text icon" aria-hidden="true"></i>
               <span>Guias e<br>Requerimentos</span>
-            </a>
-            <a href="#" data-demo="Calendário de Atividades">
+            </button>
+            <button type="button" data-demo="Calendário de Atividades">
               <i class="bi bi-calendar3 icon" aria-hidden="true"></i>
               <span>Calendário<br>de Atividades</span>
-            </a>
+            </button>
             <a href="html/contato.html">
               <i class="bi bi-chat-dots icon" aria-hidden="true"></i>
               <span>Fale com o<br>Sindicato</span>
@@ -145,13 +146,27 @@
         </div>
       </section>
 
+      <!-- Exibido somente para "Servidor cadastrado" na sessão demonstrativa (main.js). -->
+      <section class="servidor-atalho-section" aria-label="Participação de Servidores Cadastrados" data-servidor-atalho hidden>
+        <div class="container">
+          <a class="servidor-atalho" href="html/servidor-votacoes.html">
+            <i class="bi bi-check2-square icon servidor-atalho__icon" aria-hidden="true"></i>
+            <span class="servidor-atalho__text">
+              <strong>Enquetes e Votações</strong>
+              <small>Participação de Servidores Cadastrados: consulte e participe das consultas disponíveis.</small>
+            </span>
+            <i class="bi bi-arrow-right icon" aria-hidden="true"></i>
+          </a>
+        </div>
+      </section>
+
       <section class="content-section">
         <div class="container main-grid">
           <section class="about-panel" id="sobre" aria-labelledby="sobre-titulo">
             <div class="section-heading section-heading--line">
               <h2 id="sobre-titulo">Sobre o Sindicato</h2>
             </div>
-            <p>O SINPROTEC/MT atua na representação de seus filiados e na defesa de seus interesses coletivos, com diálogo e participação sindical.</p>
+            <p data-conteudo="home.aboutText">O SINPROTEC/MT atua na representação de seus filiados e na defesa de seus interesses coletivos, com diálogo e participação sindical.</p>
             <a class="button button--secondary" href="html/sindicato.html">Conheça nossa história</a>
           </section>
 
@@ -160,7 +175,7 @@
               <h2 id="noticias-titulo">Últimas Notícias</h2>
               <a href="html/noticias.html">Ver todas</a>
             </div>
-            <div class="news-list">
+            <div class="news-list" data-home-news>
               <article class="news-card">
                 <a href="html/noticia.html?id=1">
                   <span class="news-card__image">
@@ -205,7 +220,7 @@
               <h2 id="comunicados-titulo">Comunicados Recentes</h2>
               <a href="html/comunicados.html">Ver todos</a>
             </div>
-            <div class="announcement-list">
+            <div class="announcement-list" data-home-communications>
               <article class="announcement-item">
                 <i class="bi bi-megaphone icon" aria-hidden="true"></i>
                 <a href="html/comunicado.html?id=1">
