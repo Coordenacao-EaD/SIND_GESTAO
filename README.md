@@ -78,7 +78,7 @@ A documentação técnica específica do protótipo está em [`protótipo/README
 O workflow `.github/workflows/tests.yml` executa os testes automatizados do protótipo com:
 
 ```bash
-node --test tests/
+node --test tests/*.test.mjs
 ```
 
 Os testes atuais verificam, entre outros pontos:
