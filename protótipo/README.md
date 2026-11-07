@@ -1,82 +1,132 @@
-﻿# SINPROTEC/MT — protótipo público
+# SIND_GESTÃO — Protótipo acadêmico do SINPROTEC/MT
 
-Portal estático em HTML, CSS e JavaScript puro, com 16 páginas existentes. Não há backend, banco de dados, autenticação real ou envio real dos formulários. Dados editoriais, documentos, composição da Diretoria e fluxos de acesso são demonstrativos.
+Protótipo navegável desenvolvido em HTML, CSS e JavaScript para representar e validar a proposta de um sistema web de gestão sindical do SINPROTEC/MT.
 
-## Estrutura
+Esta versão foi construída para fins acadêmicos e de validação de requisitos. Não possui backend, banco de dados, autenticação real, armazenamento definitivo de arquivos ou infraestrutura de produção. Os dados utilizados são demonstrativos e os estados de navegação e simulação são mantidos no próprio navegador.
+
+## Escopo representado
+
+O protótipo contempla três contextos principais:
+
+- **Área Pública:** Página Inicial, O Sindicato, Diretoria, Estatuto, Notícias, Comunicados, Transparência, Documentos, Galeria, Filie-se, Contato e telas de acesso.
+- **Área do Filiado:** painel, dados cadastrais, comunicados e notificações, assembleias e reuniões, atas e documentos, prestação de contas, solicitações, enquetes e votações e denúncias e manifestações.
+- **Área Administrativa:** Usuários e Permissões, Solicitações de Filiação, Filiados, Notícias e Comunicados, Notificações, Assembleias e Reuniões, Atas e Documentos, Prestação de Contas, Solicitações dos Filiados, Enquetes e Votações, Denúncias e Manifestações dos Conselhos, Relatórios e Configurações/Conteúdo Institucional.
+
+Também existe um ponto de acesso específico para o perfil **Servidor cadastrado** participar de Enquetes e Votações quando estiver incluído no público da consulta, sem criação de uma Área do Servidor separada.
+
+## Perfis demonstrativos
+
+A navegação e as permissões são representadas por perfis demonstrativos:
+
+- Administrador Geral
+- Diretoria
+- Presidência
+- Tesouraria
+- Secretaria
+- Conselho de Ética
+- Conselho Fiscal
+- Filiado
+- Servidor cadastrado
+
+A Presidência é tratada como uma variação de autorização da Diretoria no projeto, e não como um novo perfil-base.
+
+## Estrutura do repositório
 
 ```text
 protótipo/
 ├── index.html
 ├── README.md
 ├── html/
-│   ├── sindicato.html
-│   ├── diretoria.html
-│   ├── estatuto.html
-│   ├── documentos.html
-│   ├── noticias.html
-│   ├── noticia.html
-│   ├── comunicados.html
-│   ├── comunicado.html
-│   ├── galeria.html
-│   ├── transparencia.html
-│   ├── contato.html
-│   ├── filie-se.html
-│   ├── login.html
-│   ├── recuperar-senha.html
-│   └── area-filiado-demo.html
-└── assets/
-    ├── css/styles.css
-    ├── js/
-    │   ├── main.js
-    │   ├── noticias.js
-    │   ├── comunicados.js
-    │   ├── documentos.js
-    │   ├── galeria.js
-    │   ├── contato.js
-    │   ├── filiacao.js
-    │   └── autenticacao-demo.js
-    ├── documents/
-    │   ├── politica-privacidade.pdf
-    │   └── filiacao/politica-privacidade.pdf
-    └── images/
-        ├── logo.png
-        ├── banner.jpg
-        ├── sede-sindicato.jpg
-        ├── diretoria/placeholder.svg
-        ├── noticias/       (negociacao.png, direitos.png, assembleia.png)
-        ├── placeholders/   (imagens de notícias)
-        ├── contato/        (mapa-localizacao.jpg, atendimento.jpg)
-        ├── filiacao/       (uniao-servidores.jpg, filiacao-placeholder.jpg)
-        └── login/acesso-seguro.svg
+│   ├── páginas públicas e de acesso
+│   ├── páginas da Área do Filiado
+│   ├── páginas da Área Administrativa
+│   └── servidor-votacoes.html
+├── assets/
+│   ├── css/
+│   ├── js/
+│   ├── images/
+│   ├── docs/
+│   └── documents/
+└── tests/
+    ├── admin-usuarios.test.mjs
+    └── integracao-publica.test.mjs
 ```
 
-## Páginas e comportamento
+Na versão atual, o protótipo possui 39 páginas HTML, incluindo a página inicial, páginas públicas, Área do Filiado, Área Administrativa e a página específica de votações para Servidor cadastrado.
 
-- **Home:** atalhos e cards correspondentes aos registros de `noticias.js` (IDs 1, 3 e 4) e `comunicados.js` (IDs 1, 3 e 4). Os cards são HTML estático: alterações nesses registros devem ser refletidas na Home.
-- **Sindicato, Diretoria e Estatuto:** apresentação institucional. A Diretoria preserva cargos, cards e modal com nomes demonstrativos; mandato e dados oficiais aguardam confirmação. O Estatuto explica os instrumentos institucionais e encaminha à biblioteca, sem duplicar busca e filtros.
-- **Documentos:** biblioteca pública com busca, categoria, ano e metadados de situação, responsabilidade e visibilidade. Registros sem arquivo abrem informações demonstrativas e não oferecem download ativo.
-- **Notícias e Comunicados:** listagem, filtros, paginação e detalhes por `?id=`. Comunicados destinados a filiados ou à Diretoria são excluídos da exibição pública, inclusive do detalhe. Esses registros continuam no JavaScript estático e não devem conter informações sigilosas.
-- **Galeria:** categorias, imagens ilustrativas locais e consulta de álbuns.
-- **Transparência:** informações institucionais e encaminhamento ao login para prestação de contas; sem demonstrativos financeiros detalhados públicos.
-- **Contato e Filiação:** formulários com validações e confirmações demonstrativas. Os PDFs de privacidade tratam exclusivamente desses formulários, não de uma política institucional completa.
-- **Login, recuperação e área de demonstração:** telas existentes de simulação, sem controle de acesso real. Não constituem uma Área do Filiado implementada.
+## Principais regras representadas
 
-`main.js` controla navegação, menus, modais e filtros comuns de documentos. Os demais scripts concentram o comportamento de suas respectivas páginas. Bootstrap Icons 1.13.1 é carregado via CDN; as demais imagens e estilos são locais.
+Entre as decisões validadas no protótipo estão:
 
-O rodapé comum contém Institucional, Conteúdo, Serviços e Transparência. Prestação de Contas e Área do Filiado levam a `login.html`. Política institucional, termos e redes sociais ficam omitidos enquanto não houver destinos oficiais. Endereço, telefone, e-mail e horários aguardam confirmação; não há links de contato fictícios ativos.
+- exibição de menus administrativos conforme o perfil;
+- separação entre os escopos do Conselho de Ética e do Conselho Fiscal;
+- preparação da prestação de contas pela Tesouraria e validação/publicação pela Presidência;
+- revisão de conteúdos antes da publicação;
+- exibição pública apenas de conteúdos com status **Publicado**;
+- restrição de conteúdos destinados somente a filiados ou outros públicos;
+- participação em votações conforme público, período e regra de voto único;
+- acompanhamento de solicitações e filiação por protocolo demonstrativo;
+- manifestações identificadas ou com identidade protegida;
+- integração entre conteúdos administrativos e páginas públicas.
 
-## Execução local e GitHub Pages
+## Tecnologias
 
-Abra `index.html` no navegador ou execute `python -m http.server 8000` neste diretório e acesse `http://localhost:8000/`.
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap Icons via CDN
+- GitHub Actions
+- GitHub Pages
 
-Os caminhos são relativos: páginas em `html/` acessam `../assets/` e retornam por `../index.html`, permitindo hospedagem em subdiretórios do GitHub Pages.
+O protótipo não utiliza framework de frontend e não possui backend nesta etapa.
 
-O workflow existente `../.github/workflows/pages.yml` publica **somente este diretório** via GitHub Actions, em pushes relevantes para `main` ou execução manual. Este bloco não executa publicação.
+## Execução local
 
-## Validação e limites atuais
+Abra `index.html` diretamente no navegador ou execute um servidor local dentro da pasta `protótipo`, por exemplo:
 
-Foram conferidos os destinos locais, âncoras, referências ARIA, imagens e a sintaxe dos oito scripts; os cards da Home foram comparados aos registros de origem. Os dois PDFs existentes são legíveis pelo extrator, mas apresentam aviso de ponteiro `startxref` e precisam de revisão futura dos arquivos oficiais.
+```bash
+python -m http.server 8000
+```
 
-A revisão visual nas larguras 1440, 1366, 1024, 768, 390 e 360 px, o console no navegador e a interação com menus e modais ainda precisam ser executados: não havia navegador disponível nesta sessão. A antiga barra de abas do Estatuto foi retirada junto com a biblioteca duplicada; a ausência de overflow ainda requer confirmação visual.
+Depois acesse:
 
-Permanecem seis atalhos `data-demo`: Convênios e Benefícios, Assessoria Jurídica, Guias e Requerimentos e Calendário de Atividades na Home; Abrir no mapa em Contato e Sindicato. Não há módulos ou destinos oficiais para esses atalhos.
+```text
+http://localhost:8000/
+```
+
+## GitHub Pages
+
+O workflow `.github/workflows/pages.yml` publica somente a pasta `protótipo/` no GitHub Pages.
+
+Protótipo navegável:
+
+https://eneidaandre.github.io/SIND_GESTAO/
+
+## Validação
+
+A validação foi realizada durante a construção do protótipo, com revisão dos fluxos, perfis, permissões, navegação e integração entre áreas.
+
+O repositório mantém dois testes automatizados:
+
+- `tests/admin-usuarios.test.mjs`: apoio à validação de Usuários e Permissões;
+- `tests/integracao-publica.test.mjs`: validação da integração entre conteúdos administrativos e área pública.
+
+Também foram feitas revisões visuais e funcionais das páginas públicas e das áreas restritas demonstrativas.
+
+## Limites desta etapa
+
+Este repositório representa um **protótipo acadêmico navegável**. Não deve ser interpretado como sistema pronto para produção.
+
+Uma futura implementação técnica poderá incluir:
+
+- banco de dados;
+- backend;
+- APIs;
+- autenticação e autorização reais;
+- armazenamento definitivo de arquivos;
+- integrações externas;
+- testes de produção;
+- controles adicionais de segurança;
+- infraestrutura;
+- implantação;
+- monitoramento e manutenção.
