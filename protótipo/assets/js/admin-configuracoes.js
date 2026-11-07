@@ -4,7 +4,7 @@
 //    Rascunho → Em revisão → Aprovado → Publicado
 //    Em revisão → Ajustes solicitados → Em edição → Em revisão
 // Base única: localStorage["sindGestao.institutionalContentDemo"]. "Publicado" significa
-// apenas autorizado neste fluxo administrativo: a área pública NÃO lê esta base ainda.
+// conteúdo autorizado no fluxo administrativo e apto a alimentar as páginas públicas integradas.
 // Não há configurações técnicas (servidor, banco, e-mail, segurança) neste protótipo.
 (() => {
   "use strict";
@@ -33,8 +33,8 @@
     presidencia: { edit: false, review: true, publish: true, params: false, label: "Revisa, devolve para ajustes, aprova e publica. Nunca aprova versão que tenha criado ou editado." }
   });
 
-  const PUBLIC_NOTICE = "Conteúdo publicado no fluxo administrativo demonstrativo. A integração com a área pública será realizada na etapa final.";
-  const PREVIEW_NOTICE = "Pré-visualização demonstrativa. O conteúdo ainda não está integrado à área pública.";
+  const PUBLIC_NOTICE = "Conteúdo publicado no fluxo administrativo demonstrativo e disponível para integração com a área pública.";
+  const PREVIEW_NOTICE = "Pré-visualização demonstrativa. Somente versões com status Publicado são utilizadas pela área pública.";
 
   /*
    * Seções e campos. Os valores iniciais reproduzem o conteúdo estático já existente
@@ -49,16 +49,14 @@
         { name: "heroSubtitle", label: "Chamada secundária" },
         { name: "heroText", label: "Texto de apresentação", type: "textarea" },
         { name: "ctaLabel", label: "Texto do botão principal (CTA)", required: true },
-        { name: "aboutText", label: "Texto “Sobre o Sindicato”", type: "textarea" },
-        { name: "highlights", label: "Destaques / atalhos (um por linha)", type: "list" }
+        { name: "aboutText", label: "Texto “Sobre o Sindicato”", type: "textarea" }
       ],
       seed: {
         heroTitle: "Juntos somos mais fortes.",
         heroSubtitle: "Unidos, conquistamos direitos.",
         heroText: "Defendemos os direitos, valorizamos o servidor e construímos um serviço público cada vez melhor para toda a sociedade.",
         ctaLabel: "Filie-se",
-        aboutText: "O SINPROTEC/MT atua na representação de seus filiados e na defesa de seus interesses coletivos, com diálogo e participação sindical.",
-        highlights: "Convênios e Benefícios\nAssessoria Jurídica\nGuias e Requerimentos\nCalendário de Atividades\nFale com o Sindicato\nPerguntas Frequentes"
+        aboutText: "O SINPROTEC/MT atua na representação de seus filiados e na defesa de seus interesses coletivos, com diálogo e participação sindical."
       }
     },
     {
