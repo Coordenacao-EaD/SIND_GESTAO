@@ -35,7 +35,7 @@
   };
 
   const VALIDATION_NOTICE =
-    "Ambiente demonstrativo. O fluxo, as responsabilidades, a proteção de identidade e as regras de retenção dependem de validação institucional.";
+    "Ambiente demonstrativo. O fluxo e a separação de acesso entre os Conselhos foram validados no protótipo; armazenamento definitivo, retenção e notificações reais pertencem à implementação técnica futura.";
   const PROTECTED_NOTICE =
     "Identidade protegida — dados pessoais do manifestante não são associados diretamente a este registro no protótipo.";
 
