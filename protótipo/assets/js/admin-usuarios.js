@@ -21,6 +21,7 @@
       "users",
       "usersView",
       "affiliates",
+      "affiliatesManage",
       "affiliationRequests",
       "assemblies",
       "minutes",
@@ -28,8 +29,11 @@
       "news",
       "notifications",
       "requests",
+      "finance",
+      "votingView",
       "reports",
-      "settings"
+      "settings",
+      "institutionalContent"
     ],
 
     diretoria: [
@@ -41,7 +45,10 @@
       "news",
       "notifications",
       "requests",
-      "reports"
+      "finance",
+      "votingView",
+      "reports",
+      "institutionalContent"
     ],
 
     presidencia: [
@@ -56,32 +63,40 @@
       "requests",
       "finance",
       "voting",
-      "reports"
+      "reports",
+      "institutionalContent"
     ],
 
     tesouraria: [
       "finance",
       "documents",
+      "requests",
       "reports"
     ],
 
     secretaria: [
       "affiliates",
+      "affiliatesManage",
       "affiliationRequests",
       "assemblies",
       "minutes",
       "documents",
       "news",
       "notifications",
-      "requests"
+      "requests",
+      "votingView",
+      "institutionalContent"
     ],
 
     conselhoEtica: [
-      "councilEthics"
+      "councilEthics",
+      "documents"
     ],
 
     conselhoFiscal: [
-      "councilFiscal"
+      "councilFiscal",
+      "documents",
+      "finance"
     ],
 
     filiado: [],
@@ -90,7 +105,8 @@
   };
 
   const PERMISSION_OPTIONS = [
-    ["affiliates", "Filiados"],
+    ["affiliates", "Consultar filiados"],
+    ["affiliatesManage", "Gerenciar filiados"],
     ["affiliationRequests", "Solicitações de filiação"],
     ["assemblies", "Assembleias e reuniões"],
     ["minutes", "Atas"],
@@ -99,9 +115,11 @@
     ["notifications", "Notificações"],
     ["requests", "Solicitações"],
     ["finance", "Prestação de contas"],
-    ["voting", "Enquetes e votações"],
+    ["voting", "Enquetes e votações — gestão"],
+    ["votingView", "Enquetes e votações — consulta"],
     ["reports", "Relatórios"],
-    ["settings", "Configurações"]
+    ["settings", "Configurações técnicas"],
+    ["institutionalContent", "Conteúdo institucional"]
   ];
 
   const DEFAULT_USERS = [
