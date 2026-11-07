@@ -111,7 +111,7 @@ O repositório mantém dois testes automatizados:
 - `tests/admin-usuarios.test.mjs`: valida a renderização e a acessibilidade das ações de Usuários e Permissões;
 - `tests/integracao-publica.test.mjs`: valida publicação por status, integração entre conteúdos administrativos e área pública, Notícias e Comunicados, votação do Servidor cadastrado e isolamento de dados restritos.
 
-O workflow `.github/workflows/tests.yml` executa `node --test tests/` automaticamente quando houver alterações no protótipo ou nos testes.
+O workflow `.github/workflows/tests.yml` executa `node --test tests/*.test.mjs` automaticamente quando houver alterações no protótipo ou nos testes.
 
 Também foram feitas revisões visuais e funcionais das páginas públicas e das áreas restritas demonstrativas.
 
