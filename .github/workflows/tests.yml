@@ -31,4 +31,4 @@ jobs:
 
       - name: Executar testes do prototipo
         working-directory: "./protótipo"
-        run: node --test tests/
+        run: node --test tests/*.test.mjs
